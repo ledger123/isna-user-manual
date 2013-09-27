@@ -1,0 +1,5943 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+SQL-Ledger User Guide
+\end_layout
+
+\begin_layout Author
+Written by
+\begin_inset Newline newline
+\end_inset
+
+Sebastian Weitmann
+\begin_inset Newline newline
+\end_inset
+
+Armaghan Saqib
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+International SQL-Ledger Network Association
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Preface
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Section
+Introducing SQL-Ledger
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger is an open source accounting/ERP solution written by Dieter Simader.
+ Its version 1.0 was released in Jan.
+ 29, 1999.
+ So as of this writing in 2013, it is 14 years old software which is under
+ constant development and enhancement during this period.
+ This makes it suitable enough for small as well as for large businesses.
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger has an impressive feature set which even many commercial / properieto
+ry ERP solutions don't provide.
+ It internal design and user interface are simple which make it easy to
+ learn.
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger is an open source software which means that it comes with full
+ source code and you can modify it as you wish and need not to worry about
+ discovering any undocumented bug which may cost you tons of money to get
+ fixed or force you to some other solution when the company behind it goes
+ out of business.
+\end_layout
+
+\begin_layout Standard
+Ledger123 is an enhanced version of SQL-Ledger.
+ It was created to fix some of the bugs in SQL-Ledger which were not getting
+ fixed.
+ We still call Ledger123 as 'Enhanced SQL-Ledger'.
+\end_layout
+
+\begin_layout Subsection
+Versions
+\end_layout
+
+\begin_layout Standard
+The current release of stock SQL-Ledger is 3.0.5.
+ Ledger123 is based upon 3.0.3 with its enhancements.
+ We call it Ledger123 release 3.
+ Ledger123 tries to incorporate all the goodness which comes from stock
+ SQL-Ledger.
+ So you get best of both worlds.
+\end_layout
+
+\begin_layout Standard
+To make things simple, we assume that you are using Ledger123 release 3
+ (Enhanced SQL-Ledger release 3).
+ Though most of the sections would apply equally well to the stock SQL-Ledger
+ 3 as well as older version.
+ This is particularly true if you are not using inventory related functions
+ because most of the enhancements in Ledger 123 are related to inventory.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Getting up and running
+\end_layout
+
+\begin_layout Subsection
+Installing enhanced sql-ledger using 'git clone'
+\end_layout
+
+\begin_layout Standard
+The recommended way to download and install our enhanced SQL-Ledger is to
+ use 'git' package.
+ To install git on Ubuntu, you run 'sudo apt-get install git-core'.
+ Once git is successfully installed, you can follow following steps:
+\end_layout
+
+\begin_layout Enumerate
+Download the sql-ledger github repository.
+ You will get a fully working sql-ledger installation which includes our
+ enhancements.
+ (The default 'master' branch)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git clone git://github.com/ledger123/ledger123.git 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From now onwards you can upgrade to our latest enhancements (which includes
+ any latest releases from sql-ledger.com) with the following simple commmand:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git pull
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let us say you are not interested in our enhancements and just want to maintain
+ and upgrade to the sql-ledger release from sql-ledger.com.
+ Switch to the sql-ledger branch first time:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git checkout -b sql-ledger origin/sql-ledger
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From now onwards upgrading to official sql-ledger from sql-ledger.com is
+ as easy as:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git pull
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Note that you can always switch back and forth between our enhanced sql-ledger
+ and the official one by git checkout as:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git checkout master # enhanced sql-ledger
+\end_layout
+
+\begin_layout Plain Layout
+
+git checkout sql-ledger # official sql-ledger
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+You can switch back to any past sql-ledger version.
+ First see a log of all commits and 40 chars hashes:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git log --pretty=oneline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+To revert to sql-ledger 2.8.17
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git checkout 7b15e9b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger Virtual Machine
+\end_layout
+
+\begin_layout Section
+Our enhancements to standard SQL-Ledger
+\end_layout
+
+\begin_layout Subsection
+Departments
+\end_layout
+
+\begin_layout Enumerate
+Restrict user to a particular department using admin.pl.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Default department for user.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Department is mandatory on invoices/orders/quotes if there is at least one
+ department defined.
+ 
+\end_layout
+
+\begin_layout Subsection
+Warehouses
+\end_layout
+
+\begin_layout Enumerate
+Warehouse transfers module.
+\end_layout
+
+\begin_layout Enumerate
+Restrict user to a particular warehouse using admin.pl.
+\end_layout
+
+\begin_layout Enumerate
+Default warehouse for user.
+\end_layout
+
+\begin_layout Enumerate
+Track warehouse inventory from sales and purchase invoices.
+\end_layout
+
+\begin_layout Enumerate
+Track inventory-in-transit between warehouse movement.
+\end_layout
+
+\begin_layout Enumerate
+Warehouse is mandatory on invoices if there is at least one warehouse defined.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Warehouse onhand and activity reports.
+ 
+\end_layout
+
+\begin_layout Subsection
+COGS
+\end_layout
+
+\begin_layout Enumerate
+Re-posting script which corrects cogs errors due to invoice editing.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Invoice and invoice-item cogs/revenue information with gross profit %age.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Onhand value report which shows the inventory onhand quantities and value
+ based upon fifo costing.
+ 
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Enumerate
+Per-invoice and per-item cogs/revenue information.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enhanced tax reports.
+ Audit trail report.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Drill-down to transactions from income statement.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Invoice date and customer/vendor filter in ‘All Items’ report.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Account description in ‘GL Reports’.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Account activity report using ‘GL Reports’.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Save report search conditions and layout in user menu.
+ Recall with a single click.
+ 
+\end_layout
+
+\begin_layout Subsection
+Others
+\end_layout
+
+\begin_layout Enumerate
+'Add Customer', 'Add Vendor' links on invoices/orders/quotes/POS screens.
+ These links appear only if allowed by access control settings.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enhanced assemblies.
+ You can get a report of all stock-assembly actions.
+ Warehouses are correctly updated with any assemblies made and components
+ used.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enhanced bank reconciliation.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Added back the 'Shipping–Transfer' function from sql-ledger 2.6.
+ 
+\end_layout
+
+\begin_layout Enumerate
+LedgerDoctor script which identifies potential problems with data entry.
+ 
+\end_layout
+
+\begin_layout Enumerate
+CSV data import.
+ (invoices,transactions,gl,orders,customers,vendors,parts,chart) 
+\end_layout
+
+\begin_layout Enumerate
+Disabled incorrect item weight update from orders and invoices 
+\end_layout
+
+\begin_layout Enumerate
+Parts group is mandatory if there is at least on group defined.
+ 
+\end_layout
+
+\begin_layout Section
+Explanation of bugs and gotchas in official version
+\end_layout
+
+\begin_layout Subsection
+Orders
+\end_layout
+
+\begin_layout Enumerate
+Warehouse information is not updated when you receive orders by editing
+ Rcvd quantity on orders.
+ 
+\end_layout
+
+\begin_layout Enumerate
+When you make changes to invoice created from an order (add/remove item,
+ quantities), inventory onhand count goes out of order.
+ This is caused any invoice created from order does not update the inventory
+ onhand.
+ 
+\end_layout
+
+\begin_layout Standard
+We have fixed these issues by not allowing to receive orders by editing
+ them.
+ We also do not allow editing invoices created from orders to avoid corrupting
+ onhand quantities.
+\end_layout
+
+\begin_layout Subsection
+COGS
+\end_layout
+
+\begin_layout Enumerate
+Incorrect accounting transaction is posted for sale returns.
+ COGS gets corrupted when you edit an invoice.
+ 
+\end_layout
+
+\begin_layout Enumerate
+We have modified the posting of sale returns to post correct cogs.
+ 
+\end_layout
+
+\begin_layout Standard
+We have added a reposting script to correct any corrupted cogs values when
+ you edit an invoice.
+\end_layout
+
+\begin_layout Subsection
+Warehouses
+\end_layout
+
+\begin_layout Standard
+Default warehouse functionality is broken in many ways.
+ If somebody is successfully using it without ledger123 enhancements, I
+ would love to know how?
+\end_layout
+
+\begin_layout Chapter
+Setting up your business on SQL-Ledger
+\end_layout
+
+\begin_layout Standard
+The next step after successful SQL-Ledger installation is to setup your
+ initial business data.
+ You need do do this before you start making your day to day transactions.
+\end_layout
+
+\begin_layout Section
+Defaults
+\end_layout
+
+\begin_layout Standard
+System–Defaults menu allows you to setup your company, address and related
+ information in SQL-Ledger.
+ Document numbering is also controlled by system defaults.
+\end_layout
+
+\begin_layout Standard
+We setup defaults for document numbers as shown on the following screen
+ shot.
+ You can change these to your liking or organizational needs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename defaults.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Customers
+\end_layout
+
+\begin_layout Standard
+You need to add at least one customer before creating invoices.
+ Use Customers--Add Customer to add new customers.
+\end_layout
+
+\begin_layout Standard
+To change existing customers, first you list them using Customers–Reports–Search.
+ Customers are listed with hyperlinks to edit each customer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Vendors
+\end_layout
+
+\begin_layout Standard
+You need to add at least one vendor before creating invoices.
+ Use Vendors–Add Vendor to add new vendors.
+\end_layout
+
+\begin_layout Standard
+To change existing vendors, first you list them using Vendors–Reports–Search.
+ Vendors are listed with hyperlinks to edit each vendor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Type of Business 
+\end_layout
+
+\begin_layout Section
+Employees 
+\end_layout
+
+\begin_layout Section
+Departments
+\end_layout
+
+\begin_layout Standard
+Departments are optional and can be used to classify transactions according
+ to a department code.
+\end_layout
+
+\begin_layout Subsection
+Managing Departments
+\end_layout
+
+\begin_layout Standard
+Departments can be added, changed or deleted using 'System–Departments'
+ menu option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename departments1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger departments can be mapped to the various departments (sales,
+ purchase etc.), branches (London, Oxford etc.) or product divisions (Product
+ 1, Product2 etc.) within your organization.
+\end_layout
+
+\begin_layout Standard
+Departments can be marked as 'Cost Center' or 'Profit Center'.
+ Cost center departments appear only in purchasing module.
+ Profit center departments appear both in purchasing and sales modules.
+\end_layout
+
+\begin_layout Standard
+You can also change 'Department' to anything you like (eg.Branch) using the
+ sql-ledger language customization feature.
+ Note: Departments lookup does not appear on transaction forms unless you
+ define at least one department from System→Departments menu option.
+\end_layout
+
+\begin_layout Subsection
+Default Department
+\end_layout
+
+\begin_layout Standard
+You can define a default default for users through sql-ledger administrative
+ interface.
+ You can also restrict the user to view and make transactions to his department
+ only by setting his role to User.
+ Users with role Administrator, Manager, Supervisor always have access to
+ all departments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse1a.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Using Departments
+\end_layout
+
+\begin_layout Standard
+Once departments are defined you can specify them in your invoices, orders,
+ quotations and other transactions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename departments2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Standard
+Reports allow you to view all or department specific transactions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename departments3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Income Statement and Balance sheet can also be compared and displayed by
+ department.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename departments4.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Projects
+\end_layout
+
+\begin_layout Standard
+Projects are optional and can be used for following things:
+\end_layout
+
+\begin_layout Enumerate
+Track income and expenses to specific projects using invoices and general
+ ledger transactions.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enter time card data.
+ 
+\end_layout
+
+\begin_layout Standard
+Notes Projects lookup appears on transactions forms only if you have created
+ at least one project.
+\end_layout
+
+\begin_layout Subsection
+Managing Projects
+\end_layout
+
+\begin_layout Standard
+You can add or change projects through Projects menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project1.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Using Projects
+\end_layout
+
+\begin_layout Standard
+Once you have defined projects, you can use them in sales and purchase invoices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Chart of Accounts
+\end_layout
+
+\begin_layout Section
+Templates
+\end_layout
+
+\begin_layout Standard
+Print forms for invoices, orders, quotations and financial reports can be
+ customized by you by editing form templates.
+ There are three type of templates:
+\end_layout
+
+\begin_layout Subsection
+HTML Templates
+\end_layout
+
+\begin_layout Standard
+HTML templates are easier to modify because it of wide spread knowledge
+ of html.
+ Only basic html knowledge is required to edit html templates.
+\end_layout
+
+\begin_layout Standard
+TODO: Attach:templates1.jpg
+\end_layout
+
+\begin_layout Subsection
+Latex Templates
+\end_layout
+
+\begin_layout Standard
+Latex templates are bit complex to understand and modify but offer complete
+ control over printed invoice, order or quotation forms.
+ See below for basic introduction to latex.
+\end_layout
+
+\begin_layout Standard
+TODO: Attach:templates3.jpg
+\end_layout
+
+\begin_layout Subsection
+Text Templates.
+ Used only with Point-of-Sale interface
+\end_layout
+
+\begin_layout Standard
+Text templates are used only for Point-of-Sale receipts printing.
+ These templates allow you to print on 40 character receipt printers.
+\end_layout
+
+\begin_layout Standard
+TODO: Attach:templates4.jpg
+\end_layout
+
+\begin_layout Subsection
+Editing Templates
+\end_layout
+
+\begin_layout Standard
+Templates can be edit through sql-ledger.
+ When you click on a template, it is displayed with 'Edit' button at the
+ end of the template.
+ Clicking the 'Edit' button will open the template in a text box where it
+ can be edited and saved.
+\end_layout
+
+\begin_layout Standard
+Attach:templates2.jpg
+\end_layout
+
+\begin_layout Subsection
+Template Variables
+\end_layout
+
+\begin_layout Standard
+Sql-ledger replaces actual data into templates using variables which we
+ call template variables.
+ Template variables are enclosed within <% and %>.
+\end_layout
+
+\begin_layout Standard
+Here are some template variables to give you an idea.
+ The best way to view all these template variables and understand their
+ usage is by going through existing templates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<%name%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%address1%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%address2%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%city%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%state%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%zipcode%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%country%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%contact%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%invnumber%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%invdate%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%duedate%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%ordnumber%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%employee%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%shippingpoint%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%shipvia%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%runningnumber%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%number%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%description%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%deliverydate%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%qty%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%unit%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%sellprice%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%discountrate%>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%linetotal%>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Template control commands
+\end_layout
+
+\begin_layout Standard
+Template processing engine in sql-ledger allows simple if statement and
+ loops.
+ Example of these are described below:
+\end_layout
+
+\begin_layout Subsubsection
+'if' is used to print a column data conditionally
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<%if contact%>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <br><%contact%>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <br>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%end contact%>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<%if taxincluded%>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <th colspan=7 align=right>Total</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <td colspan=2 align=right><%invtotal%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%end taxincluded%>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<%if not taxincluded%>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <th colspan=7 align=right>Subtotal</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <td colspan=2 align=right><%subtotal%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%end taxincluded%>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<%if paid%>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <th colspan=7 align=right>Paid</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <td colspan=2 align=right>- <%paid%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+   </tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%end paid%>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+'for' loop to print all lines on an invoice
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<%foreach number%>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <tr valign=top>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td align=right><%runningnumber%>.</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td><%number%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td><%description%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td><%deliverydate%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td align=right><%qty%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td><%unit%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td align=right><%sellprice%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td align=right><%discountrate%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+          <td align=right><%linetotal%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+        </tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%end number%>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<%foreach tax%>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+     <th colspan=7 align=right><%taxdescription%> on <%taxbase%> @ <%taxrate%>
+ %</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+     <td colspan=2 align=right><%tax%></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%end tax%>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+An Introduction to Latex
+\end_layout
+
+\begin_layout Standard
+Latex is a complete collection of software tools to create high quaility
+ print documents.
+ Latex templates are used in SQL-Ledger to create high quality print forms
+ like invoices, purhcase orders etc.
+\end_layout
+
+\begin_layout Standard
+Latex is included with Redhat distributions (rpm -qa | grep tetex).
+ 
+\end_layout
+
+\begin_layout Standard
+For FreeBSD, you can install the teTex port from /usr/ports/print/teTeX.
+\end_layout
+
+\begin_layout Standard
+Latex migh seem overwhelming to a new comer but it is really a simple toolkit
+ to use for customizing the SQL-Ledger templates.
+ In this very short introduction of Latex, we shall go through the basic
+ document format and its use in SQL-Ledger.
+\end_layout
+
+\begin_layout Standard
+Here is 'Hello world!' in latex.
+\end_layout
+
+\begin_layout Subsubsection
+Create a text file (hello.tex) in your home folder with following text:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+documentclass[a4paper,11pt]{article}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{document}
+\end_layout
+
+\begin_layout Plain Layout
+
+Hello world!
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{document}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Compile this tex file into dvi file and use xdvi to view it:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+latex hello.tex
+\end_layout
+
+\begin_layout Plain Layout
+
+xdvi hello.dvi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+You can also convert it to pdf:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+pdflatex hello.tex
+\end_layout
+
+\begin_layout Plain Layout
+
+xpdf hello.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Structure of a Latex Document
+\end_layout
+
+\begin_layout Standard
+Latex commands start with a backslash (
+\backslash
+).
+ Parameters can follow the command.
+ Optional parameters are enclosed in [] while mandatory ones are enclosed
+ in {}.
+ {} can also be used to terminated a command mixed within some text (to
+ make it easier to understand the command for the compiler).
+ Special characters in latex (#, $, %, ^, &, _, {, }, ~) are escaped with
+ 
+\backslash
+ except for the 
+\backslash
+ character itself (because is used to break a line).
+ To use literal backslash (
+\backslash
+) use can use special command $
+\backslash
+backslash$.
+\end_layout
+
+\begin_layout Standard
+Single line comments start with % while multi-line comments can be enclosed
+ between 
+\backslash
+begin{comment} and 
+\backslash
+end{comment} structure.
+\end_layout
+
+\begin_layout Standard
+Every latex document starts with 
+\backslash
+documentclass with parameters ([a4paper,11pt]{article}) following it.
+\end_layout
+
+\begin_layout Section
+Parts
+\end_layout
+
+\begin_layout Standard
+Parts are tangible items you keep in your stock.
+ You purchase them from your vendors and sell them to your customers for
+ profit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename parts1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Services
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename services1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Assemblies
+\end_layout
+
+\begin_layout Standard
+An assembly is composed of components which are individual parts in the
+ inventory or other sub-assemblies.
+ Assemblies in SQL-Ledger allow you to do manage your manufacturing process.
+\end_layout
+
+\begin_layout Standard
+Work flow for using assemblies:
+\end_layout
+
+\begin_layout Enumerate
+Define assemblies.
+ Goods & Services--Add Assembly.
+\end_layout
+
+\begin_layout Enumerate
+Build assemblies.
+ Goods & Services--Stock Assembly.
+ Individual parts are removed and assemblies are added to the stock inventory.
+\end_layout
+
+\begin_layout Enumerate
+Sell assembly items like any other item.
+\end_layout
+
+\begin_layout Standard
+Please note that you cannot buy parts defined as assemblies.
+\end_layout
+
+\begin_layout Subsection
+Define assemblies
+\end_layout
+
+\begin_layout Standard
+As assembly is just like any other inventory item in your sql-ledger with
+ the additional information about its components.
+ You define new assemblies using Goods and Service -- Add Assembly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename assembly1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Stock assemblies
+\end_layout
+
+\begin_layout Standard
+This option reduces the quantities of the components and increases the onhand
+ quantity of the assemblies.
+ COGS is not recorded at this point.
+\end_layout
+
+\begin_layout Standard
+COGS for the assembly is recorded from individual components when you sell
+ the assembly.
+ FIFO allocation also occurs at the time of sale.
+ (Rows are inserted in invoice table for component parts with assemblyitem=TRUE)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename stock1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Standard
+More Reports--Goods and Services--Stock Assembly gives you a list of your
+ Stock Assembly actions.
+ This report lists the parts taken out of assembly as well as assemblies
+ built.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename stock5.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Goods and Services--Assemblies gives you list of all or selected assemblies
+ with their components.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename stock3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Goods and Servers--Components gives you a list order by partnumber and the
+ assembly in which it is used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename stock4.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Work Order You can print work order for a sales orders.
+ Work order lists all component parts required to fullfil a given order
+ of assembly items.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename workorder1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Labour/Overhead
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename labour1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Groups
+\end_layout
+
+\begin_layout Standard
+Groups are used to group togather the parts and services.
+ You can filter parts and services reports by selecting a group on search
+ screens.
+\end_layout
+
+\begin_layout Standard
+Groups have another useful functionality.
+ When you check the POS button box during group add or change, they appear
+ as buttons on POS (point-of-sale) screens making it easier to select items
+ within each group.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename group1.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Pricegroups
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger has very flexiable pricing mechanism.
+ For example:
+\end_layout
+
+\begin_layout Enumerate
+You can define customer specific prices for each part.
+ 
+\end_layout
+
+\begin_layout Enumerate
+You can define quantity breaks.
+ (If someone buys 10 units instead of 1, he/she can automatically gets lower
+ price.) 
+\end_layout
+
+\begin_layout Enumerate
+And you can specify start and end dates to offer a special price during,
+ for example, Christmas season.
+ 
+\end_layout
+
+\begin_layout Standard
+Price groups take this concept further and allow you to define 'groups'
+ of special prices.
+ Let us say you sell to distributor, dealer and end-user.
+ Each of these groups of customers gets tiered discount/price.
+\end_layout
+
+\begin_layout Standard
+There are three steps to use price groups:
+\end_layout
+
+\begin_layout Enumerate
+Create three price groups; distributor, dealer and enduser.
+ (Goods & Services-Add Pricegroup)
+\end_layout
+
+\begin_layout Enumerate
+Define item prices for these price groups.
+ To do this, open the item for editing and select the price group and set
+ the price according to the price group tier.
+ Leave the customer column blank.
+ Repeat this for all items.
+ (Clicking 'Update' will allow you to set prices for multiple pricegroups
+ for a single item.) 
+\end_layout
+
+\begin_layout Enumerate
+Open the customer record for editing and set the applicable price group
+ for that customer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pricegroup1.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Warehouses
+\end_layout
+
+\begin_layout Standard
+Warehouses are optional and can be used to manage your inventory at more
+ than one physical place.
+\end_layout
+
+\begin_layout Standard
+Important: Once you have defined warehouses, these are no longer optional
+ and you cannot save a transaction (invoice or transfer) without specifying
+ a warehouse.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse1.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Adding warehouses
+\end_layout
+
+\begin_layout Standard
+You can add, change or delete warehouses through 'System–Warehouses' option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse1.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Default warehouse
+\end_layout
+
+\begin_layout Standard
+You can define a default warehouse for users through administrative interface.
+ You can restrict a user to view and make transactions to his warehouse
+ by setting his role to User.
+ Users with role Administrator, Manager, Supervisor always have access to
+ all warehouses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse1a.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Using warehouses
+\end_layout
+
+\begin_layout Standard
+Warehouse drop down is enabled on relevant transactions forms once you define
+ at least one warehouse.
+ When you purchase goods, quantity is added to the specified warehouse.
+ When you sell goods, quantity is subtracted from the specified warehouse.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Warehouse transfers
+\end_layout
+
+\begin_layout Standard
+You can move inventory between warehouses by using 'Warehouses–Add Transfer'
+ menu option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse4.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transfers delivered
+\end_layout
+
+\begin_layout Standard
+Some companies also need to track the in-transit goods between warehouse
+ transfers.
+ Delivered date is usually different from transfer date.
+\end_layout
+
+\begin_layout Standard
+When you login, you will see the number of transfers which have been sent
+ to your default warehouse but not received by you yet.
+\end_layout
+
+\begin_layout Standard
+To 'receive' the transfers, click the 'Warehouses–Reports–Deliveries' menu
+ option, specify criteria and click Continue to display the transfers pending
+ to be received.
+ Here you specify the dates when the goods were delivered at 'your' warehouse
+ and click 'Save Delivered'.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse_pending2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Enumerate
+Goods & Services–Parts report provides summary of your on hand quantity
+ at selected or all warehouses.
+ Click 'Warehouse' check box to display onhand by warehouse.
+\end_layout
+
+\begin_layout Enumerate
+Warehouses–Reports–Transfers gives you a list of transfers.
+ Summary lists transfer transactions and Detail lists all items in each
+ transfer transaction.
+ You can click on transfer number hyper link to edit the transfer.
+\end_layout
+
+\begin_layout Enumerate
+Warehouses–Reports–Onhand gives you inventory onhand for all warehouses
+ or for a particular warehouse.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Warehouses–Reports–Activity gives you all activity of a particular item
+ or all items.
+ Select warehouse to see the activity in a particular warehouse.
+ Activity report shows activity from purchase invoices, sales invoices and
+ transfers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse3.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Enabling multiple warehouses for old dataset
+\end_layout
+
+\begin_layout Standard
+If you have upgraded your sql-ledger installation with our enhanced version,
+ you need to run few queries to bring your old data in sync with the new
+ warehouses structure.
+\end_layout
+
+\begin_layout Standard
+Assemblies are a special case.
+ In standard sql-ledger, 'Stock Assembly' action does not create any transaction
+/log and directly updates the onhand quantities in parts table.
+ If you are using assemblies, you will almost always need to adjust the
+ components and assemblies quantities after running these queries.
+ See step 4 below.
+\end_layout
+
+\begin_layout Standard
+Important: Make sure you have a current backup before doing this.
+\end_layout
+
+\begin_layout Standard
+TODO: Copy queries and other text here.
+ See how code can be formatted properly
+\end_layout
+
+\begin_layout Section
+Translations
+\end_layout
+
+\begin_layout Section
+Taxes
+\end_layout
+
+\begin_layout Standard
+Defining and using taxes in sql-ledger is a four step process:
+\end_layout
+
+\begin_layout Subsection
+Define tax accounts in chart
+\end_layout
+
+\begin_layout Standard
+You create (or edit) tax accounts in chart of accounts using System–Accounts
+ menu option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename taxes1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Define tax percentages
+\end_layout
+
+\begin_layout Standard
+You set percentages for each tax using System–Taxes menu option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename taxes2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mark Items/services as taxable
+\end_layout
+
+\begin_layout Standard
+You mark each part or service taxable during add or edit process.
+ You do this using Goods & Services menu option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename taxes3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mark customers/vendors for applicable taxes
+\end_layout
+
+\begin_layout Standard
+Tax will not be calculated for your customers or vendors unless you mark
+ them as taxable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename taxes4.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data import from other applications
+\end_layout
+
+\begin_layout Standard
+Sometimes you need to import your sales data into sql-ledger which was produced
+ elsewhere.
+\end_layout
+
+\begin_layout Standard
+You might have a web store where you download your daily sales in CSV format
+ and want to import it into Sql-Ledger.
+ Or you are just moving to sql-ledger from your legacy accounting software
+ and want to move all existing data from old software to sql-ledger.
+\end_layout
+
+\begin_layout Standard
+Following sections provide detailed steps for importing CSV text files.
+\end_layout
+
+\begin_layout Subsection
+Sale invoices
+\end_layout
+
+\begin_layout Standard
+Sales invoices can be imported from text files.
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Standard
+Here is a sample import data.
+ You prepare data in this format and save it in a text file.
+ The last column AR is accounts receivable account number which is 1100
+ in UK chart of accounts.
+\end_layout
+
+\begin_layout Standard
+If your data contains invoices with more than one item, repeat the row with
+ same invoice header information and change the item number and price informatio
+n.
+ SQL-Ledger will import all these rows as a single invoice.
+ (See invoice number A100 above)
+\end_layout
+
+\begin_layout Standard
+For list of additional data columns that can be imported see step 4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+\align left
+
+invnumber,transdate,duedate,customernumber,curr,invoicedescription,partnumber,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+qty,sellprice,employeenumber,AR,department,warehouse 
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+A100,10/12/2008,10/30/2008,AE001,GBP,Invoice description comes here,B001,10,102,
+E-001,1100,HARDWARE,LONDON
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+A100,10/12/2008,10/30/2008,AE001,GBP,Invoice description comes here,F003,6,69,E-
+001,1100,HARDWARE,LONDON
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+A101,10/12/2008,10/31/2008,CP002,GBP,Test description,F003,2,32,E-002,1100,SERVI
+CES,PARIS
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+A102,10/13/2008,11/1/2008,ER003,GBP,Sale of goods,T007,6,12,E-003,1100,SERVICES,
+LONDON
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+
+A103,10/14/2008,11/2/2008,SP007,GBP,Sale,K001,12,32,E-004,1100,HARDWARE,PARIS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Upload and preview
+\end_layout
+
+\begin_layout Standard
+Using Impor--Sales Invoices menu option, upload this file into Sql-Ledger.
+ You will be shown what will be imported before actual import is done.
+ At this point you can check and uncheck the invoices to be imported.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_invoices.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Confirm data import
+\end_layout
+
+\begin_layout Standard
+When you click the Import Sales Invoices button, invoices will be imported.
+ You will be show which invoices were imported successfully.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_invoices2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Additional data which can be imported
+\end_layout
+
+\begin_layout Standard
+Sample csv file provided above contains only the most commonly used columns.
+ Here is the complete list.
+\end_layout
+
+\begin_layout Standard
+transdate
+\end_layout
+
+\begin_layout Standard
+invnumber
+\end_layout
+
+\begin_layout Standard
+customernumber
+\end_layout
+
+\begin_layout Standard
+curr
+\end_layout
+
+\begin_layout Standard
+duedate
+\end_layout
+
+\begin_layout Standard
+employeenumber
+\end_layout
+
+\begin_layout Standard
+ordnumber
+\end_layout
+
+\begin_layout Standard
+quonumber
+\end_layout
+
+\begin_layout Standard
+datepaid
+\end_layout
+
+\begin_layout Standard
+shippingpoint
+\end_layout
+
+\begin_layout Standard
+shipvia
+\end_layout
+
+\begin_layout Standard
+waybill
+\end_layout
+
+\begin_layout Standard
+terms
+\end_layout
+
+\begin_layout Standard
+notes
+\end_layout
+
+\begin_layout Standard
+intnotes
+\end_layout
+
+\begin_layout Standard
+language_code
+\end_layout
+
+\begin_layout Standard
+ponumber
+\end_layout
+
+\begin_layout Standard
+cashdiscount
+\end_layout
+
+\begin_layout Standard
+discountterms
+\end_layout
+
+\begin_layout Standard
+partnumber
+\end_layout
+
+\begin_layout Standard
+description
+\end_layout
+
+\begin_layout Standard
+sellprice
+\end_layout
+
+\begin_layout Standard
+discount
+\end_layout
+
+\begin_layout Standard
+qty
+\end_layout
+
+\begin_layout Standard
+unit
+\end_layout
+
+\begin_layout Standard
+serialnumber
+\end_layout
+
+\begin_layout Standard
+projectnumber
+\end_layout
+
+\begin_layout Standard
+deliverydate
+\end_layout
+
+\begin_layout Standard
+AR
+\end_layout
+
+\begin_layout Standard
+taxincluded
+\end_layout
+
+\begin_layout Subsection
+Receipts and Payments
+\end_layout
+
+\begin_layout Standard
+You can import payments and match them to invoices using 'Import–Payments'.
+ Following points should be kept in mind.
+\end_layout
+
+\begin_layout Enumerate
+Payments are matched first on Invoice DCN column and then, if no match is
+ found, on payment amount.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Both AR and AP invoices are matched with payments.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The amount matched is calculated as debit minus credit.
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Standard
+Create or format the data in a CSV file with structure similar to the given
+ below.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+datepaid,memo,debit,credit,dcn
+\end_layout
+
+\begin_layout Plain Layout
+
+2008/11/03,"payment ref 2121",,38.76,
+\end_layout
+
+\begin_layout Plain Layout
+
+2008/10/04,"cash payment",,527.5, 2008/10/10,"CC Receipt",,243.08,
+\end_layout
+
+\begin_layout Plain Layout
+
+2009/11/01,"Payment matched by DCN",,1401.72,1122
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Upload and perview
+\end_layout
+
+\begin_layout Standard
+Import script will read the CSV file and match the payments to AR or AP
+ invoices first on DCN Number and then on invoice due amount, if needed.
+\end_layout
+
+\begin_layout Standard
+In this example, one AP invoice is matched on amount and the other one is
+ matched on DCN number.
+ The other two are AR invoices which are matched on amount.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_payments2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Confirm data import
+\end_layout
+
+\begin_layout Standard
+Once you click 'Import Payments', payments are imported and applied to the
+ matched invoices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_payments3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Advanced receipts/payments import
+\end_layout
+
+\begin_layout Enumerate
+You can easily change the script to match the payments on other invoice
+ columns like invoice number.
+ The procedures to modify are 'sub payments' in 'SL/IM.pm' and 'sub im_payment'
+ in 'bin/mozilla/im.pl'.
+\end_layout
+
+\begin_layout Enumerate
+To match payments only to AR (or AP) invoices, change the UNION queries
+ in SL/IM.pm to select invoices from AR or AP only as required.
+\end_layout
+
+\begin_layout Subsection
+AR/AP Transactions
+\end_layout
+
+\begin_layout Standard
+You can import AR and AP transactions.
+\end_layout
+
+\begin_layout Standard
+For AR transactions, format your data using following sample:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+invnumber,customernumber,transdate,amount,description,notes,source,memo
+\end_layout
+
+\begin_layout Plain Layout
+
+00003,AE001,10-11-07,2030,"desc1","notes1","source1","memo1"
+\end_layout
+
+\begin_layout Plain Layout
+
+00004,CP002,07-12-07,3213,"desc1","notes2","source2","memo2"
+\end_layout
+
+\begin_layout Plain Layout
+
+00005,SP007,09-12-07,-200,"desc1","notes3","source3","memo3"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For AP transactions, format your data using following sample:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+invnumber,vendornumber,transdate,amount,description,notes,source,memo 
+\end_layout
+
+\begin_layout Plain Layout
+
+00003,CB001,10-10-08,2030,"desc1","notes1","source1","memo1" 
+\end_layout
+
+\begin_layout Plain Layout
+
+00004,ES002,10-12-08,3213,"desc2","notes2","source2","memo2" 
+\end_layout
+
+\begin_layout Plain Layout
+
+00005,SA003,12-12-08,-200,"desc3","notes3","source3","memo3"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+General Ledger
+\end_layout
+
+\begin_layout Standard
+This feature will help you to move your data from most of the accounting
+ software to sql-ledger in few easy steps:
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Standard
+Format your data according to following sample.
+ Keep in mind that:
+\end_layout
+
+\begin_layout Enumerate
+Import script creates one GL transaction for each unique 'reference' number.
+ 
+\end_layout
+
+\begin_layout Enumerate
+There can be any number of lines (rows) in each transaction.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Account must exist in chart of accounts Debits and credits must be equal
+ before the CSV file can be imported.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+reference,transdate,description,notes,accno,debit,credit,source,memo
+\end_layout
+
+\begin_layout Plain Layout
+
+GL001,01-20-2008,"Paid for training,support",Next session in 2009,8203,124,0,232
+11,new hiring
+\end_layout
+
+\begin_layout Plain Layout
+
+GL001,01-20-2008,"Paid for training,support",Next session in 2009,1230,0,124,232
+11,new hiring
+\end_layout
+
+\begin_layout Plain Layout
+
+GL002,10-19-2008,"Overdue pymt for inv 11,12,13",,1230,204,0,"11,12,13",
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+GL002,10-19-2008,"Overdue pymt for inv 11,12,13",,1102,0,204,"11,12,13",
+\end_layout
+
+\begin_layout Plain Layout
+
+GL003,11-20-2008,Invalid transaction for testing,This account is not in
+ chart,00121,0,255,source2,memo2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Upload and preview
+\end_layout
+
+\begin_layout Standard
+Using 'Imports–GL Transaction' load the CSV file into sql-ledger.
+ Import script will show the rows which contain valid account number and
+ can be imported.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl_import2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Confirm data import
+\end_layout
+
+\begin_layout Standard
+Click Import GL to finish the import script.
+ Transactions successfully imported will be show on the next page.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl_import3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Customers and Vendors
+\end_layout
+
+\begin_layout Standard
+Customer and Vendor import is similar (except the number column which is
+ customernumber or vendornumber).
+\end_layout
+
+\begin_layout Standard
+Prepare your data file using the sample text provided below.
+ (Change customernumber to vendornumber for vendor import)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+customernumber,name,firstname,lastname,contacttitle,phone,fax,email,notes,addres
+s1,address2,city,state,zipcode,country
+\end_layout
+
+\begin_layout Plain Layout
+
+001,Ledger123,Armaghan,Saqib,Consultant,,,saqib@ledger123.com,"These are,
+ just, sample notes",,,London,,"AA7 8BB",UK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Parts
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Standard
+Format your data according to following sample format.
+ Please note that:
+\end_layout
+
+\begin_layout Enumerate
+Import procedure assigns a unique parts_id to each part imported or group
+ created.
+\end_layout
+
+\begin_layout Enumerate
+Duplicates are not allowed and duplicate check is done on partnumber.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+partnumber,description,unit,partsgroup,listprice,sellprice,lastcost,rop,bin,imag
+e,drawing,notes
+\end_layout
+
+\begin_layout Plain Layout
+
+B002,"Brush Set",NOS,brush,9.99,9.99,7,150,TOP,noimage,brush.jpg,notes about
+ brush set 
+\end_layout
+
+\begin_layout Plain Layout
+
+D010,"Deluxe Hand Saw",NOS,SAW,17.99,17.99,16,50,TOP,saw.jpg,nodrawing,notes
+ about hand saw 
+\end_layout
+
+\begin_layout Plain Layout
+
+D011,"Digger Hand Trencher",NOS,Picks & Hatchets,18.99,18.99,15,200,TOP,,nodrawing
+,notes about hand saw
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Upload and preview
+\end_layout
+
+\begin_layout Standard
+To start the import process, click 'Data Import–Parts' in the menu.
+ Following page will be displayed.
+ Click 'Browse' to select your CSV file, mark the taxes applicable and select
+ the account links (Defaults are enough most of the time) Click 'Continue'
+ when done.
+ You will be presented with the following screen.
+ On this screen you can mark the parts to be imported by checking or un-checking
+ the checkbox on each line.
+\end_layout
+
+\begin_layout Standard
+Please note:
+\end_layout
+
+\begin_layout Enumerate
+The parts which are already in the system (based on partnumber) will not
+ imported.
+ (You will not see a check box with them)
+\end_layout
+
+\begin_layout Enumerate
+Parts groups which are new will be added.
+ These are marked by a '+' sign after group name.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_parts1.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_parts2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Confirm data import
+\end_layout
+
+\begin_layout Standard
+Click 'Import Parts'.
+ Your CSV file will be processed and parts will be imported.
+ Any new groups will also be added.
+ You will see an output like the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_parts3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Vendor price list
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+partnumber,vendornumber,vendorpartnumber,lastcost,curr,leadtime
+\end_layout
+
+\begin_layout Plain Layout
+
+B001,CB001,V-CB001,10,GBP,15 B002,ES002,,14,GBP,45 M004,SA003,,21,GBP,30
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Upload and preview
+\end_layout
+
+\begin_layout Standard
+Click 'Data Import–Parts Vendors', specify the file with the 'Browse' button
+ and click 'Import Parts Vendors' button.
+ Following page will be displayed.
+ Here you can un-check the rows which you do not want to import.
+ Rows with invalid vendor number or partnumber will not have the checkbox.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_partsvendors.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Customer price list
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+partnumber,customernumber,pricegroup,pricebreak,sellprice,validfrom,validto,curr
+\end_layout
+
+\begin_layout Plain Layout
+
+B001,AE001,PG1,10,11,03-01-2008,,GBP
+\end_layout
+
+\begin_layout Plain Layout
+
+B002,BP011,,20,12,,03-01-2009,GBP
+\end_layout
+
+\begin_layout Plain Layout
+
+M004,CP002,,15,20,03-01-2008,03-05-2008,GBP
+\end_layout
+
+\begin_layout Plain Layout
+
+D08,CP002,test,25,25,,,GBP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Upload and preview
+\end_layout
+
+\begin_layout Standard
+Click 'Data Import–Parts Customers', specify the file with the 'Browse'
+ button and click 'Import Parts Customers' button.
+ Following page will be displayed.
+ Here you can un-check the rows which you do not want to import.
+ Rows with invalid customer number or partnumber will not have the checkbox.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename import_partscustomers.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Chart of accounts
+\end_layout
+
+\begin_layout Subsubsection
+Format your data
+\end_layout
+
+\begin_layout Enumerate
+Prepare your chart of accounts in your spreadsheet software according to
+ the sample given below.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Upload the chart csv file using 'Import–Chart' menu option.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Check/uncheck the accounts to be imported and click continue to import the
+ selected accounts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+accno,description,charttype,category,link 
+\end_layout
+
+\begin_layout Plain Layout
+
+1000,"CURRENT ASSETS",H,A, 
+\end_layout
+
+\begin_layout Plain Layout
+
+1060,"Checking Account",A,A,AR_paid:AP_paid 
+\end_layout
+
+\begin_layout Plain Layout
+
+1065,"Petty Cash",A,A,AR_paid:AP_paid 
+\end_layout
+
+\begin_layout Plain Layout
+
+1200,"Accounts Receivables",A,A,AR 
+\end_layout
+
+\begin_layout Plain Layout
+
+1205,"Allowance for doubtful accounts",A,A, 
+\end_layout
+
+\begin_layout Plain Layout
+
+1500,"INVENTORY ASSETS",H,A, 
+\end_layout
+
+\begin_layout Plain Layout
+
+1520,"Inventory / General",A,A,IC 
+\end_layout
+
+\begin_layout Plain Layout
+
+1530,"Inventory / Aftermarket Parts",A,A,IC 
+\end_layout
+
+\begin_layout Plain Layout
+
+1800,"CAPITAL ASSETS",H,A,
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Running your business on SQL-Ledger 
+\end_layout
+
+\begin_layout Section
+AR
+\end_layout
+
+\begin_layout Subsection
+AR Transaction
+\end_layout
+
+\begin_layout Standard
+AR--Add Transaction menu option is used to create AR Transactions.
+ These transactions allow you to record your sales in correct GL accounts
+ without creating an invoice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sales Invoice
+\end_layout
+
+\begin_layout Standard
+Sales invoices are created using AR--Sales Invoice menu option.
+ The only mandatory columns are Customer and Invoice Date.
+ Rest of the columns can be left blank.
+\end_layout
+
+\begin_layout Standard
+Once you enter an item (part, service) and click 'Update', a new line opens.
+ This way you can enter any number of items (parts, services etc.) in the
+ detail portion of the invoice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename arinvoice.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Receipts
+\end_layout
+
+\begin_layout Standard
+You can record cash receipts from customer while creating invoices (for
+ cash sales) or afterward using Cash--Receipt menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+AP
+\end_layout
+
+\begin_layout Section
+Payments
+\end_layout
+
+\begin_layout Section
+General Ledger 
+\end_layout
+
+\begin_layout Section
+Recurring Transactions
+\end_layout
+
+\begin_layout Standard
+Recurring Transactions allow you to auto-generate pre-defined invoices,
+ transactions and orders.
+\end_layout
+
+\begin_layout Standard
+This feature can be used for the following:
+\end_layout
+
+\begin_layout Enumerate
+Recurring billing to a customer (For rent, web hosting, school fee, installment
+ etc.) 
+\end_layout
+
+\begin_layout Enumerate
+Recurring billing from your vendor 
+\end_layout
+
+\begin_layout Enumerate
+Monthly orders to your vendors or from your customers.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Monthly payroll posting using GL Recurring Transactions.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Month-end adjustments and allocations.
+\end_layout
+
+\begin_layout Subsection
+Scheduling
+\end_layout
+
+\begin_layout Standard
+To generate the next number for a given transaction, leave the Next Number
+ blank.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename recurring2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Generating
+\end_layout
+
+\begin_layout Standard
+When recurring transactions are due you are reminded when you login to sql-ledge
+r.
+ With a single click you can generate all recurring transactions, print
+ or email invoices and orders.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename recurring3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exchange Rates
+\end_layout
+
+\begin_layout Standard
+You can define and use multiple currencies in SQL-Ledger.
+\end_layout
+
+\begin_layout Subsection
+Defining currencies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename curr1.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Buying and selling in foreign currencies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename curr2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename curr3.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exchange rate difference
+\end_layout
+
+\begin_layout Subsection
+Funds transfers in foreign currencies
+\end_layout
+
+\begin_layout Standard
+Let us say the exchange rate is 1 GBP = 2.0289 (or reverse 1 USD = 0.4929
+ GBP)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename curr4.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename curr5.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quotations
+\end_layout
+
+\begin_layout Section
+RFQ
+\end_layout
+
+\begin_layout Section
+Sales Order
+\end_layout
+
+\begin_layout Section
+Purchase Order
+\end_layout
+
+\begin_layout Standard
+Here is the default work flow to use purchase orders.
+\end_layout
+
+\begin_layout Enumerate
+Create a purchase order to inform vendor your intent to purchase goods.
+\end_layout
+
+\begin_layout Enumerate
+To records the goods received, use Shipping–Receive.
+\end_layout
+
+\begin_layout Enumerate
+Create a vendor invoice: Open the order and click the Vendor Invoice button.
+ You can create invoice from a partially received order.
+ 
+\end_layout
+
+\begin_layout Standard
+Note: An alternate work flow is also supported with some code changes (available
+ as orders2 branch at github.com/ledger123).
+ This allows you to partially/fully receive orders by editing them.
+ 'Shipping-Receive' and 'Shipping-Ship' are not available in this branch.
+\end_layout
+
+\begin_layout Subsection
+Notes
+\end_layout
+
+\begin_layout Standard
+Here are few points to remember:
+\end_layout
+
+\begin_layout Enumerate
+When you create an invoice from order, you cannot edit the quantities on
+ invoice screen or add or remove items.
+ 
+\end_layout
+
+\begin_layout Enumerate
+When you create invoice from a partially received order, this order is marked
+ closed and a new order with same number but remaining quantities and new
+ order date is created.
+ 
+\end_layout
+
+\begin_layout Standard
+When you are using the alternate workflow: (using orders2 code branch)
+\end_layout
+
+\begin_layout Enumerate
+Stock onhand is increased when you save a PO with quantity in Rcvd column.
+ No accounting entries are made.
+ (COGS/expense, Vendor balances etc.) 
+\end_layout
+
+\begin_layout Enumerate
+You can create an invoice directly from PO by entering the qty received
+ in Rcvd column and clicking the Vendor Invoice button.
+ This automatically saves the order, updates stock and opens Add Vendor
+ Invoice screen with information carried forward from the PO.
+ 
+\end_layout
+
+\begin_layout Section
+Shipping
+\end_layout
+
+\begin_layout Standard
+Shipping module allows you to ship from and receive to warehouses from your
+ orders.
+ Here is the work flow to use the shipping module.
+\end_layout
+
+\begin_layout Enumerate
+Create a sales or purchase order.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ship/Receive this order from/to a warehouses.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Open the order and create invoice from it.
+ 
+\end_layout
+
+\begin_layout Standard
+See also the documentation of orders entry module.
+\end_layout
+
+\begin_layout Standard
+Shipping module serves the same purpose as putting the quantity in Ship
+ or Recd column of a sales order or a purchase order but allows a different
+ warehouse to be specified and maintain inventory quantities at warehouses.
+\end_layout
+
+\begin_layout Standard
+Following paragraphs discuss the correct work flow to use the shipping module
+ for purchases and sales.
+\end_layout
+
+\begin_layout Subsection
+Purchases
+\end_layout
+
+\begin_layout Enumerate
+Create purchase orders for the inventory you want to purchase.
+ If you do not specify a warehouse with order, you can receive the order
+ to any warehouse.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Receive inventory using Shipping–Receive menu option.
+ Select the desired warehouse during this process.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Create AP/Vendor invoice by opening the purchase order which has been received
+ in the above step and clicking the Purchase Invoice button.
+ Do not make any change to partnumber or quantity.
+ Just click the Post button.
+ 
+\end_layout
+
+\begin_layout Standard
+Note: When you create invoice from a partially received order, SL closes
+ that order and creates a new one with the remaining order quantities but
+ with same order number.
+\end_layout
+
+\begin_layout Subsection
+Sales
+\end_layout
+
+\begin_layout Enumerate
+Create a sales order for the inventory you want to sell.
+ If you do not specify a warehouse with order, you can ship the order from
+ any warehouse.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ship the order using Shipping–Ship.
+ Shipping warehouse cannot be changed if you have specified one on the order.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Create AR/Customer invoice by opening the sales order which has been shipped
+ in the above step and clicking the Sale Invoice button.
+ Do not make any change to partnumber or quantity.
+ Just click the Post button.
+\end_layout
+
+\begin_layout Standard
+Note: When you create from a partially received order, SL closes that order
+ and creates a new one with the remaining order quantities but with same
+ order number.
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Standard
+Inventory onhand at warehouses: 
+\end_layout
+
+\begin_layout Enumerate
+Goods & Services–All Items report.
+ Check the 'Warehouse' checkbox on search screen.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Warehouses–Reports–Onhand 
+\end_layout
+
+\begin_layout Standard
+Inventory receive/ship activity 
+\end_layout
+
+\begin_layout Enumerate
+Warehouses–Reports–Activity report.
+ 
+\end_layout
+
+\begin_layout Subsection
+Precautions
+\end_layout
+
+\begin_layout Standard
+Do not do any of the following things when using the shipping module.
+ It will make your inventory records incorrect.
+\end_layout
+
+\begin_layout Enumerate
+Creating any new sale or purchase invoices directly (that is, without going
+ through the order/ship/receive steps) 
+\end_layout
+
+\begin_layout Enumerate
+Editing any existing invoices.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Receiving purchase orders directly by putting the qty received in Recd column.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Shipping sales orders directly by putting the qty shipped in Ship column.
+\end_layout
+
+\begin_layout Section
+Time Cards 
+\end_layout
+
+\begin_layout Section
+Audit Control
+\end_layout
+
+\begin_layout Standard
+You can use System-Audit Control menu to enforce transaction control and
+ log user activities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename auditcontrol.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Enforce transaction reversal for all dates
+\end_layout
+
+\begin_layout Standard
+You can check this option to prevent any change to any transaction.
+ You can however add a reverse transaction to correct some mistake.
+ This option is highly recommended.
+\end_layout
+
+\begin_layout Subsection*
+Close Books up to
+\end_layout
+
+\begin_layout Standard
+When you close books upto a certain date, system does not allow changing
+ any transaction prior to this date.
+ Please note that this is not a year end process.
+\end_layout
+
+\begin_layout Subsection*
+Activate Audit trail
+\end_layout
+
+\begin_layout Standard
+All user activity (adding, changing, deleting transactions) is logged.
+ You can view this log using 'Others–Audit Trial' report.
+\end_layout
+
+\begin_layout Subsection*
+Remove Audit trail up to
+\end_layout
+
+\begin_layout Standard
+You can use this option to remove audit trail from database up to a certain
+ date.
+ Useful to make your backups small.
+\end_layout
+
+\begin_layout Chapter
+Keeping track of your business in SQL-Ledger 
+\end_layout
+
+\begin_layout Section
+Income Statement 
+\end_layout
+
+\begin_layout Section
+Balance Sheet 
+\end_layout
+
+\begin_layout Section
+Trial Balance 
+\end_layout
+
+\begin_layout Section
+Tax Report 
+\end_layout
+
+\begin_layout Section
+Outstanding 
+\end_layout
+
+\begin_layout Section
+Aging 
+\end_layout
+
+\begin_layout Section
+Reconciliation 
+\end_layout
+
+\begin_layout Section
+List Projects
+\end_layout
+
+\begin_layout Section
+Customer History 
+\end_layout
+
+\begin_layout Section
+Vendor History
+\end_layout
+
+\begin_layout Section
+Year End
+\end_layout
+
+\begin_layout Standard
+'System--Yearend' menu does the period closing in MyLedger.
+ It creates a GL transaction which clears the income accounts and posts
+ the difference (which is income or loss) to the specified retained earnings
+ account.
+\end_layout
+
+\begin_layout Standard
+Please note that:
+\end_layout
+
+\begin_layout Enumerate
+Year-end process can be run daily, weekly, monthly, quarterly or yearly.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Year-end GL transaction is not included in the income statement which covers
+ period containing a closing transactions.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The year-end GL transaction can be viewed through GL reports and edited
+ or deleted as required.
+\end_layout
+
+\begin_layout Standard
+This is year end screen and the GL transaction created by year-end process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename yearend.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename yearend2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data backup
+\end_layout
+
+\begin_layout Standard
+You can backup your data directly through sql-ledger.
+ There are two ways to get your backup using the 'System--Backup' menu.
+\end_layout
+
+\begin_layout Subsection*
+System--Backup--Send by Email
+\end_layout
+
+\begin_layout Standard
+Backup is sent to your email address through email.
+ You can add or change this email address through Preferences.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename backup.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+System--Backup--Save to File
+\end_layout
+
+\begin_layout Standard
+When you click this menu option your browser will display the save file
+ dialog and you can save backup file on your computer.
+\end_layout
+
+\begin_layout Section
+Basics of double-entry accounting system
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Standard
+Double entry accounting system, although much feared by non-accountants,
+ is a very simple but extremely powerful method of managing money.
+\end_layout
+
+\begin_layout Standard
+SL does much of the double entry accounting itself linking all parts of
+ the application through a chart of accounts.
+ You need to know about double entry system only when you are going to make
+ general ledger transactions.
+ Basic Principle
+\end_layout
+
+\begin_layout Standard
+Every business transaction affects at least two heads of accounts.
+\end_layout
+
+\begin_layout Standard
+For example:
+\end_layout
+
+\begin_layout Standard
+When you buy a car, you cash is decreased and your assets are increased.
+ When you sell a item on cash, your sale is increased and your cash is also
+ increased.
+ 
+\end_layout
+
+\begin_layout Subsection
+Account types
+\end_layout
+
+\begin_layout Standard
+There are five basic types of accounts which are given below:
+\end_layout
+
+\begin_layout Enumerate
+Assets 
+\end_layout
+
+\begin_layout Enumerate
+Liabilities 
+\end_layout
+
+\begin_layout Enumerate
+Capital 
+\end_layout
+
+\begin_layout Enumerate
+Sales 
+\end_layout
+
+\begin_layout Enumerate
+Expenses 
+\end_layout
+
+\begin_layout Subsection
+Accounting rules
+\end_layout
+
+\begin_layout Itemize
+Assets (1) and Expenses (5) are increased by debit and decreased by credit
+\end_layout
+
+\begin_layout Itemize
+Liabilities (2), Capital (3) and Sales (4) are increased by credit and decreased
+ by debit.
+\end_layout
+
+\begin_layout Subsection
+Examples
+\end_layout
+
+\begin_layout Subsubsection*
+You invest $1000 to start a new business:
+\end_layout
+
+\begin_layout Itemize
+Debit: Your bank account 
+\end_layout
+
+\begin_layout Itemize
+Credit: Capital account 
+\end_layout
+
+\begin_layout Subsubsection*
+You pay $100 check for office rent:
+\end_layout
+
+\begin_layout Itemize
+Debit: Office rent expense account 
+\end_layout
+
+\begin_layout Itemize
+Credit: Your bank account 
+\end_layout
+
+\begin_layout Subsubsection*
+You build a website for a customer asking him to pay $200.
+ Customer promises to pay after 20 days.
+\end_layout
+
+\begin_layout Itemize
+Debit: Accounts Receivables (Debtors) 
+\end_layout
+
+\begin_layout Itemize
+Credit: Sales 
+\end_layout
+
+\begin_layout Subsubsection*
+Your customer pays you $200 after 20 days.
+\end_layout
+
+\begin_layout Itemize
+Debit: Your bank account 
+\end_layout
+
+\begin_layout Itemize
+Credit: Accounts Receivables (Debtors)
+\end_layout
+
+\begin_layout Standard
+Here is a really simple and useful accounting tutorial: 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.a-systems.net/accounting.htm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cost of Goods Sold (COGS)
+\end_layout
+
+\begin_layout Standard
+Cost of Goods Sold (COGS) is the purchase price of the goods you just sold.
+ Your sales minus the COGS is your gross profit.
+ COGS is an important accounting information.
+ Correct COGS gives you a clear picture of the profitability of your products.
+\end_layout
+
+\begin_layout Standard
+Tip: To view the debit and credit accounting transactions for any sale or
+ purchase invoice, enter the invoice number on General Ledger–Reports screen
+ and click Continue button.
+\end_layout
+
+\begin_layout Subsection
+Sale invoices and COGS
+\end_layout
+
+\begin_layout Standard
+Let us make it clear with an example:
+\end_layout
+
+\begin_layout Standard
+You purchase 10 iPhones for $400 each.
+\end_layout
+
+\begin_layout Itemize
+Debit: Inventory $4000 
+\end_layout
+
+\begin_layout Itemize
+Credit: AP $4000
+\end_layout
+
+\begin_layout Standard
+A customer comes in and purchases 2 of these at $500 each.
+\end_layout
+
+\begin_layout Itemize
+Debit: AR $1000 Credit: Sales $1000 
+\end_layout
+
+\begin_layout Itemize
+Debit: COGS $800 Credit: Inventory $800 
+\end_layout
+
+\begin_layout Standard
+So your gross profit is $200.
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger posts COGS automatically with each sale invoice.
+ It calculates COGS on First-In First-Out (FIFO) basis.
+ This means is that if you purchase 5 more iPhones at $430 each, MyLedger
+ will keep calculating COGS @ $400 each until all 10 iPhones of first purchase
+ transaction are depleted.
+ Afterward it will calculate COGS @ $430.
+\end_layout
+
+\begin_layout Subsection
+Sales before purchases
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger allows you to sell goods without purchasing these in advance.
+ This is a common practice in many businesses where you have received the
+ goods but do not have the vendor invoice.
+\end_layout
+
+\begin_layout Standard
+This results in negative stock quantity on Goods & Services--Reports--All
+ Items report.
+ No COGS is posted for such transactions at the time of sale.
+ Later when you record purchases, COGS is automatically recorded for these
+ oversold items.
+\end_layout
+
+\begin_layout Subsection
+Editing Sale Invoices
+\end_layout
+
+\begin_layout Standard
+When you edit and repost an already posted sale invoice, COGS goes out of
+ sync and incorrect accounting entries are posted.
+ This causes incorrect income statement.
+\end_layout
+
+\begin_layout Standard
+To confirm this, display your income statement and write down the COGS amount.
+ Now open and repost any past sales invoice.
+ Compare the new COGS in income statement with the old one.
+\end_layout
+
+\begin_layout Standard
+Ideally you should never edit an invoice.
+ Instead post a reversal of the invoice (using a credit invoice) and create
+ a new invoice.
+ Check the box Enforce transaction reversal for all dates on System–Audit
+ Control screen.
+\end_layout
+
+\begin_layout Standard
+If you do need to edit invoices, you can correct COGS transactions by running
+ the re-posting of invoices through menu System--Repost COGS.
+\end_layout
+
+\begin_layout Chapter
+Ledger Cart
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+LedgerCart instantly creates an online store and order system using information
+ in your SQL-Ledger.
+ You just drop the cgi scripts into your webserver, install few cpan modules,
+ configure your db connection and you are ready to go.
+\end_layout
+
+\begin_layout Standard
+Users can browse products and services, add items to their cart and checkout
+ in a familiar way.
+ New order is added to SQL-ledger sales orders.
+\end_layout
+
+\begin_layout Subsection
+Features
+\end_layout
+
+\begin_layout Enumerate
+Extemely simple to install and configure.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Can be installed on dedicated or shared hosting.
+ 
+\end_layout
+
+\begin_layout Enumerate
+No additional database required.
+ Retrieves and saves all data from/to sql-ledger dataset.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Easy to customize.
+ All pages are standard html pages with template toolkit tokens.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Add new pages by creating standard html files and linking them in header.html
+ or sidebar.html.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Look and feel can be customized using css and templates.
+ 
+\end_layout
+
+\begin_layout Enumerate
+A single script 'index.pl' allows you to easily add more features by adding
+ new actions.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Add item descriptions.
+ These are displayed on product detail page and are stored in item notes.
+ Item descriptions can use markdown syntax.
+\end_layout
+
+\begin_layout Enumerate
+Add item images.
+ LedgerCart automatically creates thumbnails and shows full image on item
+ detail.
+\end_layout
+
+\begin_layout Enumerate
+Visitors can now add items to their cart and checkout with their billing
+ and shipping address.
+\end_layout
+
+\begin_layout Enumerate
+New customers can register during checkout.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Existing customers can get a new password to their email using 'forgot password'.
+ They can login with their email address and place orders.
+\end_layout
+
+\begin_layout Enumerate
+Customers can browse their orders and invoices when logged-in.
+\end_layout
+
+\begin_layout Subsection
+Limitations
+\end_layout
+
+\begin_layout Standard
+No payment gateways support yet.
+\end_layout
+
+\begin_layout Subsection
+Using LedgerCart as an online store 
+\end_layout
+
+\begin_layout Standard
+LedgerCart can instantly turn your SL installation into an online store
+ with little or no effort.
+ Customers can place order using the familiar shopping cart interface.
+ Your existing customers can generate a new password using 'Forgot password'
+ feature.
+\end_layout
+
+\begin_layout Subsection
+Using LedgerCart as Self service portal
+\end_layout
+
+\begin_layout Standard
+LedgerCart can be used to serve as a self-service internet portal just like
+ the self-service internet banking.
+ Your customers can view: 
+\end_layout
+
+\begin_layout Enumerate
+Their orders summary, order details and status 
+\end_layout
+
+\begin_layout Enumerate
+Invoices summary and details 
+\end_layout
+
+\begin_layout Enumerate
+Statements (payment summary and detail)
+\end_layout
+
+\begin_layout Subsection
+Screen shots
+\end_layout
+
+\begin_layout Standard
+Here are some screen shots.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cart_home.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cartlist.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cartitem1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cartitem2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cartcheckout.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Installation
+\end_layout
+
+\begin_layout Subsection
+Software packages
+\end_layout
+
+\begin_layout Standard
+Login to the server with your user name and password.
+ To be able to install the software, we have to change to the “root” account.
+ In this way, we get administrator rights.
+ Type:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+su -
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and enter your password.
+ 
+\end_layout
+
+\begin_layout Standard
+With the following command, we install the packages we need for LedgerCart:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+apt-get install libcgi-simple-perl libdbi-perl libtemplate-perl libobject-signat
+ure-perl libnumber-format-perl libmime-lite-perl libdbix-simple-perl libtext-mar
+kdown-perl libdate-calc-perl libgd-gd2-perl libdatetime-perl libhtml-format-perl
+ apg 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After that you need to install some further cpan modules:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cpan GD cpan GD::Thumbnail cpan MIME::Lite::TT::HTML
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then install LedgerCart in your SQL-Ledger directory:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git clone git://github.com/ledger123/ledgercart.git ledgercart
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Configuration and Admin access
+\end_layout
+
+\begin_layout Standard
+To configure LedgerCart for your installation, edit the config.pl file and
+ change the appropriate lines for your database connection information.
+ You can also change default thumbnail sizes here.
+\end_layout
+
+\begin_layout Subsubsection
+Admin User
+\end_layout
+
+\begin_layout Standard
+To enable admin access, create a customer using SQL-Ledger with your email
+ address and specify its id in $form{admin_id}.
+ Now using “forgot password” link, generate a new password which will be
+ sent to your email address.
+\end_layout
+
+\begin_layout Subsubsection
+Editing item descriptions, images and thumbnails
+\end_layout
+
+\begin_layout Standard
+When you are logged in as admin and visit item detail pages, you can edit
+ item descriptions as well as upload images and auto-create thumbnails.
+\end_layout
+
+\begin_layout Standard
+Item descriptions text uses simple markup language 'markdown' for html elements.
+ No html is allowed for security reasons.
+ See http://daringfireball.net/projects/markdown/dingus for markdown syntax.
+ Item descriptions are stored in item notes column and can be editing from
+ within SQL-Ledger as well.
+\end_layout
+
+\begin_layout Subsubsection
+Editing pages through admin access
+\end_layout
+
+\begin_layout Standard
+Once you login as admin, you can see 'Edit' links.
+ Pages can be edited right away.
+ You can use standard html and template toolkit tokens to edit pages.
+\end_layout
+
+\begin_layout Subsubsection
+Marking 'hot' and 'new' items
+\end_layout
+
+\begin_layout Standard
+When you are logged in as admin, add items to your cart and click the 'Save
+ cart as hot items' or 'Save cart as new items'.
+ This will mark those items as hot or new and will display them on man page
+ (in default templates).
+ In future, hot/new functionality will be made to work based upon actual
+ 'hot' or 'new' items.
+\end_layout
+
+\begin_layout Subsection
+Customization
+\end_layout
+
+\begin_layout Standard
+LedgerCart is extremely easy to customize.
+ LedgerCart consists of one big gateway script 'index.pl' which processes
+ html templates created with Template::Toolkit.
+\end_layout
+
+\begin_layout Enumerate
+Template::Toolkit templates are standard html files which can include Perl
+ variables within [% and %] delimiters.
+ You can copy the default templates and modify them as you please.
+\end_layout
+
+\begin_layout Enumerate
+New pages can be added by creating standard html files and linking them
+ to 'templatesfolder/header.html' or 'templatesfolder/sidebar.html'.
+\end_layout
+
+\begin_layout Enumerate
+You can also customize the theme.css to change the colors and other look
+ and feel according to your taste.
+\end_layout
+
+\begin_layout Enumerate
+Expert users can modify the 'index.pl' file to add their own variables which
+ can be interpolated within your LedgerCart templates.
+\end_layout
+
+\begin_layout Chapter
+Development and Customization
+\end_layout
+
+\begin_layout Section
+Customization
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger can be customized in three ways:
+\end_layout
+
+\begin_layout Subsection
+custom_xx.pl files
+\end_layout
+
+\begin_layout Standard
+You can create your own functions or override any existing function by creating
+ custom scripts in custom_xx.pl files and putting them in bin/mozilla folder.
+ For example, to add new functions to gl.pl file, add these functions to
+ custom_gl.pl file and put this file into bin/mozilla/ folder.
+ This file will be automatically loaded by sql-ledger before running any
+ functions in gl.pl files.
+\end_layout
+
+\begin_layout Standard
+Once your new functions are there, you can call them using your own custom
+ menu.
+ Custom menu entries are put in custom_menu.ini and follow the same syntax
+ as that of menu.ini.
+ This method of extending the sql-ledger is upgrade-safe and is the recommended
+ way.
+\end_layout
+
+\begin_layout Subsection
+Custom Modules
+\end_layout
+
+\begin_layout Standard
+You can build your own modules.
+ To write a module, you need to create at least three files:
+\end_layout
+
+\begin_layout Enumerate
+Module back-end code which will reside in ./sql-ledger/SL/MyModule.pm 
+\end_layout
+
+\begin_layout Enumerate
+Module front-end code which will reside in ./sql-ledger/bin/mozilla/mymodule.pl
+ 
+\end_layout
+
+\begin_layout Enumerate
+Gateway script in ./sql-ledger.
+ (You just need to make a copy of an existing one.
+ For example cp gl.pl mymodule.pl in ./sql-ledger/ folder.
+ 
+\end_layout
+
+\begin_layout Standard
+This method is also upgrade safe.
+\end_layout
+
+\begin_layout Subsection
+Modify the source code
+\end_layout
+
+\begin_layout Standard
+Sometimes there is a need to directly alter the sql-ledger source code for
+ particular needs.
+ We have, for example, modified few reports (GL Transactions, All Items)
+ in this way.
+ Your changes, however, will be overwritten when you upgrade to new version
+ and you will need to port these changes again to the new version.
+\end_layout
+
+\begin_layout Standard
+A bit discipline and an SCM software like GIT can help manage such changes
+ or patches with easy.
+ We, at ledger123.com, use GIT to track and manage such changes across newer
+ versions of sql-ledger.
+\end_layout
+
+\begin_layout Section
+SQL Queries
+\end_layout
+
+\begin_layout Standard
+These sql queries for sql-ledger can be used in phpPgAdmin or psql.
+\end_layout
+
+\begin_layout Subsection
+Simple SQL Queries
+\end_layout
+
+\begin_layout Subsubsection
+Sales summary report
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true,language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.invnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.transdate,
+\end_layout
+
+\begin_layout Plain Layout
+
+	c.name AS customer,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.netamount,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.amount - ar.netamount AS tax,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.amount,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.paid,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.invoice
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ar
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN customer c ON (c.id = ar.customer_id);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sales summary report with department and warehouse
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.invnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.transdate,
+\end_layout
+
+\begin_layout Plain Layout
+
+	c.name AS customer,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.netamount,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.amount - ar.netamount AS tax,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.amount,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.paid,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.invoice,
+\end_layout
+
+\begin_layout Plain Layout
+
+	d.description AS department,
+\end_layout
+
+\begin_layout Plain Layout
+
+	w.description AS warehouse
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ar
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN customer c ON (c.id = ar.customer_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN department d ON (d.id = ar.department_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN warehouse W ON (w.id = ar.warehouse_id);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sales report with items
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.invnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.transdate,
+\end_layout
+
+\begin_layout Plain Layout
+
+    c.name AS customer
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.partnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ar.description,
+\end_layout
+
+\begin_layout Plain Layout
+
+	i.qty,
+\end_layout
+
+\begin_layout Plain Layout
+
+	i.sellprice,
+\end_layout
+
+\begin_layout Plain Layout
+
+	i.qty * i.sellprice AS extended
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ar
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN customer c ON (c.id = ar.customer_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN invoice i ON (i.id = ar.trans_id);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+List of customers
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	customernumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	name,
+\end_layout
+
+\begin_layout Plain Layout
+
+	creditlimit
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM customer
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE LOWER(name) LIKE '%bank%'
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY name;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cash accounts with current balances
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	accno,
+\end_layout
+
+\begin_layout Plain Layout
+
+	description,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(
+\end_layout
+
+\begin_layout Plain Layout
+
+		SELECT SUM(amount) FROM acc_trans
+\end_layout
+
+\begin_layout Plain Layout
+
+		WHERE acc_trans.chart_id = chart.id
+\end_layout
+
+\begin_layout Plain Layout
+
+	) AS balance 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM chart
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE link LIKE '%_paid%';
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Parts list
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.partnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	pg.partsgroup,
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.description,
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.lastcost,
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.rop,
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.rop * p.lastcost AS reorder_amount
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM parts p
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN partsgroup pg ON (pg.id = p.partsgroup_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE inventory_accno_id IS NOT NULL
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY partnumber;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Advanced SQL Queries
+\end_layout
+
+\begin_layout Subsubsection
+Inventory onhand on specific date
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT   
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.partnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.description,
+\end_layout
+
+\begin_layout Plain Layout
+
+	pg.partsgroup,
+\end_layout
+
+\begin_layout Plain Layout
+
+	p.unit,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(
+\end_layout
+
+\begin_layout Plain Layout
+
+		SELECT SUM(0-i.qty) AS onhand
+\end_layout
+
+\begin_layout Plain Layout
+
+		FROM invoice i
+\end_layout
+
+\begin_layout Plain Layout
+
+		JOIN ap ON (ap.id = i.trans_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+		WHERE ap.transdate <= '01-01-08' AND i.parts_id = p.id
+\end_layout
+
+\begin_layout Plain Layout
+
+	) AS purchase,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(
+\end_layout
+
+\begin_layout Plain Layout
+
+		SELECT SUM(i.qty) AS onhand
+\end_layout
+
+\begin_layout Plain Layout
+
+		FROM invoice i
+\end_layout
+
+\begin_layout Plain Layout
+
+		JOIN ar ON (ar.id = i.trans_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+		WHERE ar.transdate <= '01-01-08'
+\end_layout
+
+\begin_layout Plain Layout
+
+		AND i.parts_id = p.id
+\end_layout
+
+\begin_layout Plain Layout
+
+	) AS sale
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM parts p 
+\end_layout
+
+\begin_layout Plain Layout
+
+LEFT JOIN partsgroup pg 
+\end_layout
+
+\begin_layout Plain Layout
+
+ON (pg.id = p.partsgroup_id);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Customer balances on a specific date
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	ct.id,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ct.customernumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ct.name,
+\end_layout
+
+\begin_layout Plain Layout
+
+	SUM(0 - ac.amount) AS balance
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM customer ct
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN ar aa ON (ct.id = aa.customer_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN acc_trans ac ON (aa.id = ac.trans_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN chart c ON (c.id = ac.chart_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE (ac.transdate <= '06-30-2007')
+\end_layout
+
+\begin_layout Plain Layout
+
+AND (c.link = 'AR')
+\end_layout
+
+\begin_layout Plain Layout
+
+GROUP BY 1,2,3
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY customernumber;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sales summary by month
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	TO_CHAR(transdate, 'YY-MM') AS month,
+\end_layout
+
+\begin_layout Plain Layout
+
+	d.description AS department,
+\end_layout
+
+\begin_layout Plain Layout
+
+	SUM(netamount)
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ar
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN department d ON (d.id = ar.department_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE (transdate BETWEEN '01.07.2005' AND '30.06.2006')
+\end_layout
+
+\begin_layout Plain Layout
+
+GROUP BY TO_CHAR(transdate, 'YY-MM'), d.description;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sales Summary by group and month
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	d.description AS department,
+\end_layout
+
+\begin_layout Plain Layout
+
+	pg.partsgroup,
+\end_layout
+
+\begin_layout Plain Layout
+
+	TO_CHAR(ar.transdate, 'YY-MM') AS month,
+\end_layout
+
+\begin_layout Plain Layout
+
+	SUM(0 - i.qty * i.sellprice) AS amount
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM invoice i
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN ar ON (ar.id = i.trans_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN parts p ON (p.id = i.parts_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN partsgroup pg ON (pg.id = p.partsgroup_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN department d ON (d.id = ar.department_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE ar.transdate BETWEEN '01.07.2005' AND '30.06.2006'
+\end_layout
+
+\begin_layout Plain Layout
+
+GROUP BY 
+\end_layout
+
+\begin_layout Plain Layout
+
+	d.description,
+\end_layout
+
+\begin_layout Plain Layout
+
+	pg.partsgroup,
+\end_layout
+
+\begin_layout Plain Layout
+
+	TO_CHAR(ar.transdate, 'YY-MM')
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY 1, 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cash received today with age of AR in days
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT
+\end_layout
+
+\begin_layout Plain Layout
+
+	c.accno,
+\end_layout
+
+\begin_layout Plain Layout
+
+	c.description AS acc_title,
+\end_layout
+
+\begin_layout Plain Layout
+
+	d.description AS department,
+\end_layout
+
+\begin_layout Plain Layout
+
+	a.invnumber,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ct.name,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ac.transdate - a.transdate AS days,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ac.source,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ac.amount,
+\end_layout
+
+\begin_layout Plain Layout
+
+	e.name AS salesper,
+\end_layout
+
+\begin_layout Plain Layout
+
+	a.notes,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ac.memo
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ar a
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN acc_trans ac ON (a.id = ac.trans_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN chart c ON (ac.chart_id = c.id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN customer ct ON (a.customer_id = ct.id)
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN employee e ON (a.employee_id = e.id)
+\end_layout
+
+\begin_layout Plain Layout
+
+LEFT JOIN department d ON (d.id = a.department_id)
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE (ac.transdate = '30.05.06')
+\end_layout
+
+\begin_layout Plain Layout
+
+	AND(c.link LIKE '%AR_paid%')
+\end_layout
+
+\begin_layout Plain Layout
+
+	AND (
+\end_layout
+
+\begin_layout Plain Layout
+
+		a.department_id IN 
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SELECT id 
+\end_layout
+
+\begin_layout Plain Layout
+
+		FROM department
+\end_layout
+
+\begin_layout Plain Layout
+
+		WHERE description IN ('LC','LS'))
+\end_layout
+
+\begin_layout Plain Layout
+
+	)
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY days;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Trial Balance with Month Headings
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT 
+\end_layout
+
+\begin_layout Plain Layout
+
+	accno,
+\end_layout
+
+\begin_layout Plain Layout
+
+	description,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '06-01') AS jan,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '06-02') AS fab,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '06-03') AS mar,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '06-04') AS apr,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '06-05') AS may,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '06-06') AS jun,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '05-07') AS jul,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '05-08') AS aug,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '05-09') AS sep,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '05-10') AS oct,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '05-11') AS nov,
+\end_layout
+
+\begin_layout Plain Layout
+
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND
+ TO_CHAR(transdate, 'YY-MM') = '05-12') AS dec, 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM chart
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE charttype = 'A'
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY accno;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Queries to troubleshoot database problems
+\end_layout
+
+\begin_layout Subsubsection
+Transactions without departments
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT 'AR', id, invnumber AS reference, transdate 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ar 
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE id NOT IN (SELECT DISTINCT trans_id FROM dpt_trans)
+\end_layout
+
+\begin_layout Plain Layout
+
+UNION ALL
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT 'AP', id, invnumber AS reference, transdate 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM ap 
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE id NOT IN (SELECT DISTINCT trans_id FROM dpt_trans)
+\end_layout
+
+\begin_layout Plain Layout
+
+UNION ALL
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT 'GL', id, reference, transdate 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM gl 
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE id NOT IN (SELECT DISTINCT trans_id FROM dpt_trans);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Unbalanced Journals
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT 'GL' AS mod, gl.reference, SUM(ac.amount) 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM acc_trans ac 
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN gl ON (gl.id = ac.trans_id) 
+\end_layout
+
+\begin_layout Plain Layout
+
+GROUP BY 1, 2  
+\end_layout
+
+\begin_layout Plain Layout
+
+HAVING SUM(ac.amount) <> 0
+\end_layout
+
+\begin_layout Plain Layout
+
+UNION ALL
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT 'AR' AS mod, ar.invnumber, SUM(ac.amount) 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM acc_trans ac JOIN ar ON (ar.id = ac.trans_id) 
+\end_layout
+
+\begin_layout Plain Layout
+
+GROUP BY 1, 2  
+\end_layout
+
+\begin_layout Plain Layout
+
+HAVING SUM(ac.amount) <> 0
+\end_layout
+
+\begin_layout Plain Layout
+
+UNION ALL
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT 'AP' AS mod, ap.invnumber, SUM(ac.amount) 
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM acc_trans ac 
+\end_layout
+
+\begin_layout Plain Layout
+
+JOIN ap ON (ap.id = ac.trans_id) 
+\end_layout
+
+\begin_layout Plain Layout
+
+GROUP BY 1, 2  HAVING SUM(ac.amount) <> 0
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Orphan Transactions
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT *
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM acc_trans 
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE trans_id NOT IN (
+\end_layout
+
+\begin_layout Plain Layout
+
+	SELECT id FROM ar UNION ALL SELECT id FROM ap UNION ALL SELECT id FROM
+ gl
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Correcting Assemblies Onhand
+\end_layout
+
+\begin_layout Standard
+Due to a bug/gotcha in orders handling in official sql-ledger, parts onhand
+ can go out of sync from actual transactions.
+ Following query will help you find the correct onhand quantity for a given
+ assembly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT 'Purchased', SUM(0-qty)  FROM invoice  WHERE parts_id = (SELECT id
+ FROM parts WHERE partnumber='TW01') AND trans_id IN (SELECT id FROM ap)
+\end_layout
+
+\begin_layout Plain Layout
+
+UNION ALL
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT 'Sold', SUM(0-qty) FROM invoice WHERE parts_id IN (SELECT aid FROM
+ assembly WHERE parts_id = (SELECT id FROM parts WHERE partnumber='TW01'))
+ AND trans_id IN (SELECT id FROM ar)
+\end_layout
+
+\begin_layout Plain Layout
+
+UNION ALL
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT 'Onhand', SUM(0-onhand) FROM parts WHERE id IN (SELECT aid FROM assembly
+ WHERE parts_id = (SELECT id FROM parts WHERE partnumber='TW01'));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+API
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger allows you to call any of its functions from command line.
+ An example will better illustrate this.
+\end_layout
+
+\begin_layout Standard
+The following code run from your Linux/Unix shell will add a new customer
+ to the customers table:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+./ct.pl " 
+\end_layout
+
+\begin_layout Plain Layout
+
+login=armaghan
+\end_layout
+
+\begin_layout Plain Layout
+
+&password=armaghan
+\end_layout
+
+\begin_layout Plain Layout
+
+&path=bin/mozilla
+\end_layout
+
+\begin_layout Plain Layout
+
+&db=customer
+\end_layout
+
+\begin_layout Plain Layout
+
+&action=save
+\end_layout
+
+\begin_layout Plain Layout
+
+&typeofcontact=company
+\end_layout
+
+\begin_layout Plain Layout
+
+&name=Ledger123
+\end_layout
+
+\begin_layout Plain Layout
+
+&firstname=Armaghan
+\end_layout
+
+\begin_layout Plain Layout
+
+&lastname=Saqib
+\end_layout
+
+\begin_layout Plain Layout
+
+&city=London
+\end_layout
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You could also insert this information using plain old SQL INSERT statement
+ but here is the problem.
+ Customer information is stored in at least three tables (customer, contact,
+ address).
+ You have to make sure you INSERT rows with correct id numbers in all three
+ tables.
+\end_layout
+
+\begin_layout Standard
+On the other hand API takes care of adding proper data rows in each tables
+ with a single call like above.
+ API also validates your data and runs any logic which is run when you are
+ adding a customer through web interface.
+ For example if you have defined a sequence for customer numbers, the next
+ number is assigned automatically from that sequence.
+\end_layout
+
+\begin_layout Subsection
+API Uses
+\end_layout
+
+\begin_layout Standard
+API can be used to “simulate” any sql-ledger function from command line.
+ You can add customers, vendors, parts as well as any type of transaction
+ (invoices, cash receipts and payments etc.)
+\end_layout
+
+\begin_layout Standard
+This makes it very easy to integrate sql-ledger with any other application.
+ For example you can integrate it with your CRM solution, POS system, or
+ e-commerce solutions like AgoraCart or Interchange.
+\end_layout
+
+\begin_layout Standard
+API also allows you to add new data entry interfaces with ease.
+ All you need to develop is the code which will interact with users and
+ leave the rest to the API.
+\end_layout
+
+\begin_layout Standard
+Import invoices and payment functions built in new versions of sql-ledger
+ are in fact “newer interfaces” built using the API.
+\end_layout
+
+\begin_layout Subsection
+Calling from PHP
+\end_layout
+
+\begin_layout Standard
+You can make API calls from any language using its shell execution mechnisim.
+ For example you can use the following php code to make SL api call.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+$module = './ct.pl';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params = 'login=armaghan';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&password=armaghan';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&path=bin/mozilla';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&db=customer';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&action=save';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&typeofcontact=company';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&name=Ledger123';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&firstname=Armaghan';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&lastname=Saqib';
+\end_layout
+
+\begin_layout Plain Layout
+
+$params .= '&city=London';
+\end_layout
+
+\begin_layout Plain Layout
+
+$output = shell_exec("$module 
+\backslash
+"$params
+\backslash
+"");
+\end_layout
+
+\begin_layout Plain Layout
+
+echo "<pre>$output</pre>";
+\end_layout
+
+\begin_layout Plain Layout
+
+?>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+asdfasdf
+\end_layout
+
+\end_body
+\end_document
