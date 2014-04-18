@@ -184,6 +184,10 @@ To make things simple, we assume that you are using Ledger123 release 3
 \end_layout
 
 \begin_layout Standard
+Website and other resources on Internet
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -596,6 +600,142 @@ The next step after successful SQL-Ledger installation is to setup your
 \end_layout
 
 \begin_layout Section
+Creating your first dataset
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename admin1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename admin2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename admin3.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename admin4.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename admin5.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Creating users and roles
+\end_layout
+
+\begin_layout Subsection
+Roles
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename role1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename role2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Users / Employees
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename user1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename emp1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename emp2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename user3.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename user4.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Defaults
 \end_layout
 
@@ -613,8 +753,8 @@ We setup defaults for document numbers as shown on the following screen
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename defaults.jpg
-	scale 50
+	filename defaults.png
+	scale 45
 
 \end_inset
 
@@ -637,8 +777,28 @@ To change existing customers, first you list them using Customers–Reports–Se
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename customer.png
-	scale 50
+	filename customer-search1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-search2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer1.png
+	scale 45
 
 \end_inset
 
@@ -661,8 +821,28 @@ To change existing vendors, first you list them using Vendors–Reports–Search
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename vendor.png
-	scale 50
+	filename vendor-search1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-search2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor1.png
+	scale 45
 
 \end_inset
 
@@ -674,7 +854,7 @@ Type of Business
 \end_layout
 
 \begin_layout Section
-Employees 
+Employees
 \end_layout
 
 \begin_layout Section
@@ -697,8 +877,17 @@ Departments can be added, changed or deleted using 'System–Departments'
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename departments1.jpg
+	filename department1.png
 	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename department2.png
 
 \end_inset
 
@@ -739,8 +928,8 @@ You can define a default default for users through sql-ledger administrative
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename warehouse1a.jpg
-	scale 50
+	filename department3.png
+	scale 45
 
 \end_inset
 
@@ -758,8 +947,8 @@ Once departments are defined you can specify them in your invoices, orders,
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename departments2.jpg
-	scale 50
+	filename department4.png
+	scale 45
 
 \end_inset
 
@@ -776,8 +965,8 @@ Reports allow you to view all or department specific transactions.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename departments3.jpg
-	scale 50
+	filename department5.png
+	scale 45
 
 \end_inset
 
@@ -791,7 +980,28 @@ Income Statement and Balance sheet can also be compared and displayed by
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename departments4.jpg
+	filename department6.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename department7.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename department8.png
+	scale 45
 
 \end_inset
 
@@ -832,7 +1042,25 @@ You can add or change projects through Projects menu.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename project1.jpg
+	filename project1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project3.png
 
 \end_inset
 
@@ -850,6 +1078,37 @@ Once you have defined projects, you can use them in sales and purchase invoices.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Project Reports
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project4.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project5.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project6.png
 
 \end_inset
 
@@ -1492,8 +1751,8 @@ Parts are tangible items you keep in your stock.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename parts1.jpg
-	scale 50
+	filename parts1.png
+	scale 45
 
 \end_inset
 
@@ -1506,8 +1765,22 @@ Services
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename services1.jpg
-	scale 50
+	filename parts2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Labor/Overhead
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename parts3.png
+	scale 45
 
 \end_inset
 
@@ -1559,8 +1832,8 @@ As assembly is just like any other inventory item in your sql-ledger with
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename assembly1.jpg
-	scale 50
+	filename parts4.png
+	scale 45
 
 \end_inset
 
@@ -1586,8 +1859,18 @@ COGS for the assembly is recorded from individual components when you sell
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename stock1.jpg
-	scale 50
+	filename assembly1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename assembly2.png
+	scale 45
 
 \end_inset
 
@@ -1607,8 +1890,28 @@ More Reports--Goods and Services--Stock Assembly gives you a list of your
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename stock5.jpg
-	scale 50
+	filename stock1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename stock2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename stock3.png
+	scale 45
 
 \end_inset
 
@@ -1622,8 +1925,18 @@ Goods and Services--Assemblies gives you list of all or selected assemblies
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename stock3.jpg
-	scale 50
+	filename assembly3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename assembly4.png
+	scale 45
 
 \end_inset
 
@@ -1637,8 +1950,8 @@ Goods and Servers--Components gives you a list order by partnumber and the
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename stock4.jpg
-	scale 50
+	filename assembly5.png
+	scale 45
 
 \end_inset
 
@@ -1667,8 +1980,8 @@ Labour/Overhead
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename labour1.jpg
-	scale 50
+	filename parts3.png
+	scale 45
 
 \end_inset
 
@@ -1694,7 +2007,38 @@ Groups have another useful functionality.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename group1.jpg
+	filename group1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename group2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename group3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename group4.png
+	scale 45
 
 \end_inset
 
@@ -1760,7 +2104,8 @@ Open the customer record for editing and set the applicable price group
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename pricegroup1.jpg
+	filename pricegroup.png
+	scale 45
 
 \end_inset
 
@@ -1822,7 +2167,8 @@ You can define a default warehouse for users through administrative interface.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename warehouse1a.jpg
+	filename department3.png
+	scale 45
 
 \end_inset
 
@@ -1990,8 +2336,18 @@ You create (or edit) tax accounts in chart of accounts using System–Accounts
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename taxes1.jpg
-	scale 50
+	filename tax0.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename tax2.png
+	scale 60
 
 \end_inset
 
@@ -2008,8 +2364,8 @@ You set percentages for each tax using System–Taxes menu option.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename taxes2.jpg
-	scale 50
+	filename tax1.png
+	scale 60
 
 \end_inset
 
@@ -2027,7 +2383,7 @@ You mark each part or service taxable during add or edit process.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename taxes3.jpg
+	filename tax4.png
 	scale 50
 
 \end_inset
@@ -2046,7 +2402,7 @@ Tax will not be calculated for your customers or vendors unless you mark
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename taxes4.jpg
+	filename tax3.png
 	scale 50
 
 \end_inset
@@ -3036,8 +3392,8 @@ AR--Add Transaction menu option is used to create AR Transactions.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename artrans.png
-	scale 40
+	filename ar1.png
+	scale 45
 
 \end_inset
 
@@ -3062,8 +3418,144 @@ Once you enter an item (part, service) and click 'Update', a new line opens.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename arinvoice.png
-	scale 35
+	filename ar2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transactions Report
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aging Report
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-search.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-summ.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-detail.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reminders
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reminder1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reminder2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Customer History Reports
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-history1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-history2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-history3.png
+	scale 45
 
 \end_inset
 
@@ -3081,8 +3573,38 @@ You can record cash receipts from customer while creating invoices (for
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename receipt.png
+	filename receipt1.png
 	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt4.png
+	scale 45
 
 \end_inset
 
@@ -3093,12 +3615,230 @@ You can record cash receipts from customer while creating invoices (for
 AP
 \end_layout
 
+\begin_layout Subsection
+AP Transactions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Purchase Invoice
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transactions Report
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename aptrans.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename aptrans2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aging Report
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-search.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap-aging2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap-aging3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Vendor History
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-history1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-history2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-history3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Payments
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename payment1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename payment2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename payment3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename payment4.png
+	scale 45
+
+\end_inset
+
+recon
+\end_layout
+
 \begin_layout Section
-General Ledger 
+General Ledger
+\end_layout
+
+\begin_layout Subsection
+Add Transaction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reports
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl4.png
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3558,15 +4298,15 @@ Keeping track of your business in SQL-Ledger
 \end_layout
 
 \begin_layout Section
+Trial Balance
+\end_layout
+
+\begin_layout Section
 Income Statement 
 \end_layout
 
 \begin_layout Section
 Balance Sheet 
-\end_layout
-
-\begin_layout Section
-Trial Balance 
 \end_layout
 
 \begin_layout Section
@@ -3578,23 +4318,55 @@ Outstanding
 \end_layout
 
 \begin_layout Section
-Aging 
+Aging
 \end_layout
 
 \begin_layout Section
-Reconciliation 
+Reconciliation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco4.png
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 List Projects
-\end_layout
-
-\begin_layout Section
-Customer History 
-\end_layout
-
-\begin_layout Section
-Vendor History
 \end_layout
 
 \begin_layout Section

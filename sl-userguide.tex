@@ -52,6 +52,47 @@ TODO
 \chapter{Introduction}
 
 
+\section{Introducing SQL-Ledger}
+
+SQL-Ledger is an open source accounting/ERP solution written by Dieter
+Simader. Its version 1.0 was released in Jan. 29, 1999. So as of this
+writing in 2013, it is 14 years old software which is under constant
+development and enhancement during this period. This makes it suitable
+enough for small as well as for large businesses.
+
+SQL-Ledger has an impressive feature set which even many commercial
+/ properietory ERP solutions don't provide. It internal design and
+user interface are simple which make it easy to learn.
+
+SQL-Ledger is an open source software which means that it comes with
+full source code and you can modify it as you wish and need not to
+worry about discovering any undocumented bug which may cost you tons
+of money to get fixed or force you to some other solution when the
+company behind it goes out of business.
+
+Ledger123 is an enhanced version of SQL-Ledger. It was created to
+fix some of the bugs in SQL-Ledger which were not getting fixed. We
+still call Ledger123 as 'Enhanced SQL-Ledger'.
+
+
+\subsection{Versions}
+
+The current release of stock SQL-Ledger is 3.0.5. Ledger123 is based
+upon 3.0.3 with its enhancements. We call it Ledger123 release 3.
+Ledger123 tries to incorporate all the goodness which comes from stock
+SQL-Ledger. So you get best of both worlds.
+
+To make things simple, we assume that you are using Ledger123 release
+3 (Enhanced SQL-Ledger release 3). Though most of the sections would
+apply equally well to the stock SQL-Ledger 3 as well as older version.
+This is particularly true if you are not using inventory related functions
+because most of the enhancements in Ledger 123 are related to inventory.
+
+Website and other resources on Internet
+
+
+
+
 \section{Getting up and running}
 
 
@@ -108,6 +149,8 @@ git checkout 7b15e9b
 \end{lstlisting}
 
 \end{enumerate}
+SQL-Ledger Virtual Machine
+
 
 \section{Our enhancements to standard SQL-Ledger}
 
@@ -212,6 +255,38 @@ your initial business data. You need do do this before you start making
 your day to day transactions.
 
 
+\section{Creating your first dataset}
+
+\includegraphics{admin1}
+
+\includegraphics{admin2}
+
+\includegraphics{admin3}
+
+\includegraphics{admin4}
+
+\includegraphics{admin5}
+
+
+\section{Creating users and roles}
+
+
+\subsection{Roles}
+
+\includegraphics{role1}
+
+\includegraphics{role2}
+
+
+\subsection{Users}
+
+\includegraphics{user1}
+
+\includegraphics{user3}
+
+\includegraphics{user4}
+
+
 \section{Defaults}
 
 System\textendash{}Defaults menu allows you to setup your company,
@@ -232,7 +307,11 @@ Customers--Add Customer to add new customers.
 To change existing customers, first you list them using Customers\textendash{}Reports\textendash{}Search.
 Customers are listed with hyperlinks to edit each customer.
 
-\includegraphics[scale=0.5]{customer}
+\includegraphics[scale=0.5]{customer-search1}
+
+\includegraphics{customer-search2}
+
+\includegraphics{customer1}
 
 
 \section{Vendors}
@@ -243,7 +322,11 @@ Vendors\textendash{}Add Vendor to add new vendors.
 To change existing vendors, first you list them using Vendors\textendash{}Reports\textendash{}Search.
 Vendors are listed with hyperlinks to edit each vendor.
 
-\includegraphics[scale=0.5]{vendor}
+\includegraphics[scale=0.5]{vendor-search1}
+
+\includegraphics{vendor-search2}
+
+\includegraphics{vendor1}
 
 
 \section{Type of Business }
@@ -263,7 +346,9 @@ according to a department code.
 Departments can be added, changed or deleted using 'System\textendash{}Departments'
 menu option.
 
-\includegraphics[scale=0.5]{departments1}
+\includegraphics[scale=0.5]{department1}
+
+\includegraphics{department2}
 
 SQL-Ledger departments can be mapped to the various departments (sales,
 purchase etc.), branches (London, Oxford etc.) or product divisions
@@ -286,7 +371,7 @@ interface. You can also restrict the user to view and make transactions
 to his department only by setting his role to User. Users with role
 Administrator, Manager, Supervisor always have access to all departments.
 
-\includegraphics[scale=0.5]{warehouse1a}
+\includegraphics[scale=0.5]{department3}
 
 
 \subsection{Using Departments}
@@ -294,19 +379,23 @@ Administrator, Manager, Supervisor always have access to all departments.
 Once departments are defined you can specify them in your invoices,
 orders, quotations and other transactions.
 
-\includegraphics[scale=0.5]{departments2}
+\includegraphics{department4}
 
 
 \subsection{Reports}
 
 Reports allow you to view all or department specific transactions.
 
-\includegraphics[scale=0.5]{departments3}
+\includegraphics{department5}
 
 Income Statement and Balance sheet can also be compared and displayed
 by department.
 
-\includegraphics{departments4}
+\includegraphics{department6}
+
+\includegraphics{department7}
+
+\includegraphics{department8}
 
 
 \section{Projects}
@@ -699,7 +788,7 @@ interface. You can restrict a user to view and make transactions to
 his warehouse by setting his role to User. Users with role Administrator,
 Manager, Supervisor always have access to all warehouses.
 
-\includegraphics{warehouse1a}
+\includegraphics{department3}
 
 
 \subsection{Using warehouses}
@@ -786,7 +875,9 @@ Defining and using taxes in sql-ledger is a four step process:
 You create (or edit) tax accounts in chart of accounts using System\textendash{}Accounts
 menu option.
 
-\includegraphics[scale=0.5]{taxes1}
+\includegraphics[scale=0.5]{tax0}
+
+\includegraphics{tax2}
 
 
 \subsection{Define tax percentages}
@@ -794,7 +885,7 @@ menu option.
 You set percentages for each tax using System\textendash{}Taxes menu
 option.
 
-\includegraphics[scale=0.5]{taxes2}
+\includegraphics[scale=0.5]{tax1}
 
 
 \subsection{Mark Items/services as taxable}
@@ -802,7 +893,7 @@ option.
 You mark each part or service taxable during add or edit process.
 You do this using Goods \& Services menu option.
 
-\includegraphics[scale=0.5]{taxes3}
+\includegraphics[scale=0.5]{tax4}
 
 
 \subsection{Mark customers/vendors for applicable taxes}
@@ -810,7 +901,7 @@ You do this using Goods \& Services menu option.
 Tax will not be calculated for your customers or vendors unless you
 mark them as taxable.
 
-\includegraphics[scale=0.5]{taxes4}
+\includegraphics[scale=0.5]{tax3}
 
 
 \section{Data import from other applications}
@@ -1131,7 +1222,7 @@ like the following:
 \includegraphics[scale=0.5]{import_parts3}
 
 
-\subsection{Vendor Price List}
+\subsection{Vendor price list}
 
 
 \subsubsection{Format your data}
@@ -1154,7 +1245,7 @@ will not have the checkbox.
 \includegraphics[scale=0.5]{import_partsvendors}
 
 
-\subsection{Customer Price List}
+\subsection{Customer price list}
 
 
 \subsubsection{Format your data}
@@ -1218,7 +1309,7 @@ AR--Add Transaction menu option is used to create AR Transactions.
 These transactions allow you to record your sales in correct GL accounts
 without creating an invoice.
 
-\includegraphics[scale=0.5]{artrans}
+\includegraphics[scale=0.4]{ar1}
 
 
 \subsection{Sales Invoice}
@@ -1231,7 +1322,43 @@ Once you enter an item (part, service) and click 'Update', a new line
 opens. This way you can enter any number of items (parts, services
 etc.) in the detail portion of the invoice.
 
-\includegraphics[scale=0.5]{arinvoice}
+\includegraphics[scale=0.35]{ar2}
+
+\includegraphics{ar3}
+
+
+\subsection{Transactions Report}
+
+\includegraphics{artrans}
+
+\includegraphics{artrans2}
+
+\includegraphics{artrans3}
+
+
+\subsection{Aging Report}
+
+\includegraphics{ar-aging-search}
+
+\includegraphics{ar-aging-summ}
+
+\includegraphics{ar-aging-detail}
+
+
+\subsection{Reminders}
+
+\includegraphics{reminder1}
+
+\includegraphics{reminder2}
+
+
+\subsection{Customer History Reports}
+
+\includegraphics{customer-history1}
+
+\includegraphics{customer-history2}
+
+\includegraphics{customer-history3}
 
 
 \section{Receipts}
@@ -1245,10 +1372,61 @@ You can record cash receipts from customer while creating invoices
 \section{AP}
 
 
+\subsection{AP Transactions}
+
+\includegraphics{ap1}
+
+
+\subsection{Purchase Invoice}
+
+\includegraphics{ap2}
+
+\includegraphics{ap3}
+
+
+\subsection{Transactions Report}
+
+\includegraphics{aptrans}
+
+\includegraphics{aptrans2}
+
+
+\subsection{Aging Report}
+
+\includegraphics{ar-aging-search}
+
+\includegraphics{ap-aging2}
+
+\includegraphics{ap-aging3}
+
+
+\subsection{Vendor History}
+
+\includegraphics{vendor-history1}
+
+\includegraphics{vendor-history2}
+
+\includegraphics{vendor-history3}
+
+
 \section{Payments}
 
 
-\section{General Ledger }
+\section{General Ledger}
+
+
+\subsection{Add Transaction}
+
+\includegraphics{gl1}
+
+
+\subsection{Reports}
+
+\includegraphics{gl2}
+
+\includegraphics{gl3}
+
+\includegraphics{gl4}
 
 
 \section{Recurring Transactions}
@@ -1690,4 +1868,650 @@ Control screen.
 If you do need to edit invoices, you can correct COGS transactions
 by running the re-posting of invoices through menu System--Repost
 COGS.
+
+
+\chapter{Ledger Cart}
+
+
+\section{Introduction}
+
+LedgerCart instantly creates an online store and order system using
+information in your SQL-Ledger. You just drop the cgi scripts into
+your webserver, install few cpan modules, configure your db connection
+and you are ready to go.
+
+Users can browse products and services, add items to their cart and
+checkout in a familiar way. New order is added to SQL-ledger sales
+orders.
+
+
+\subsection{Features}
+\begin{enumerate}
+\item Extemely simple to install and configure. 
+\item Can be installed on dedicated or shared hosting. 
+\item No additional database required. Retrieves and saves all data from/to
+sql-ledger dataset. 
+\item Easy to customize. All pages are standard html pages with template
+toolkit tokens. 
+\item Add new pages by creating standard html files and linking them in
+header.html or sidebar.html. 
+\item Look and feel can be customized using css and templates. 
+\item A single script 'index.pl' allows you to easily add more features
+by adding new actions. 
+\item Add item descriptions. These are displayed on product detail page
+and are stored in item notes. Item descriptions can use markdown syntax.
+\item Add item images. LedgerCart automatically creates thumbnails and shows
+full image on item detail.
+\item Visitors can now add items to their cart and checkout with their billing
+and shipping address.
+\item New customers can register during checkout. 
+\item Existing customers can get a new password to their email using 'forgot
+password'. They can login with their email address and place orders.
+\item Customers can browse their orders and invoices when logged-in.
+\end{enumerate}
+
+\subsection{Limitations}
+
+No payment gateways support yet.
+
+
+\subsection{Using LedgerCart as an online store }
+
+LedgerCart can instantly turn your SL installation into an online
+store with little or no effort. Customers can place order using the
+familiar shopping cart interface. Your existing customers can generate
+a new password using 'Forgot password' feature.
+
+
+\subsection{Using LedgerCart as Self service portal}
+
+LedgerCart can be used to serve as a self-service internet portal
+just like the self-service internet banking. Your customers can view: 
+\begin{enumerate}
+\item Their orders summary, order details and status 
+\item Invoices summary and details 
+\item Statements (payment summary and detail)
+\end{enumerate}
+
+\subsection{Screen shots}
+
+Here are some screen shots.
+
+\includegraphics[scale=0.5]{cart_home}
+
+\includegraphics[scale=0.5]{cartlist}
+
+\includegraphics[scale=0.5]{cartitem1}
+
+\includegraphics[scale=0.5]{cartitem2}
+
+\includegraphics[scale=0.5]{cartcheckout}
+
+
+\section{Installation}
+
+
+\subsection{Software packages}
+
+Login to the server with your user name and password. To be able to
+install the software, we have to change to the \textquotedblleft{}root\textquotedblright{}
+account. In this way, we get administrator rights. Type:
+
+\begin{lstlisting}[basicstyle={\scriptsize\ttfamily}]
+su -
+\end{lstlisting}
+
+
+and enter your password. 
+
+With the following command, we install the packages we need for LedgerCart:
+
+\begin{lstlisting}[basicstyle={\footnotesize\ttfamily},breaklines=true]
+apt-get install libcgi-simple-perl libdbi-perl libtemplate-perl libobject-signature-perl libnumber-format-perl libmime-lite-perl libdbix-simple-perl libtext-markdown-perl libdate-calc-perl libgd-gd2-perl libdatetime-perl libhtml-format-perl apg 
+\end{lstlisting}
+
+
+After that you need to install some further cpan modules:
+
+\begin{lstlisting}[basicstyle={\footnotesize\ttfamily},breaklines=true]
+cpan GD cpan GD::Thumbnail cpan MIME::Lite::TT::HTML
+\end{lstlisting}
+
+
+Then install LedgerCart in your SQL-Ledger directory:
+
+\begin{lstlisting}[basicstyle={\footnotesize\ttfamily},breaklines=true]
+git clone git://github.com/ledger123/ledgercart.git ledgercart
+\end{lstlisting}
+
+
+
+\subsection{Configuration and Admin access}
+
+To configure LedgerCart for your installation, edit the config.pl
+file and change the appropriate lines for your database connection
+information. You can also change default thumbnail sizes here.
+
+
+\subsubsection{Admin User}
+
+To enable admin access, create a customer using SQL-Ledger with your
+email address and specify its id in \$form\{admin\_id\}. Now using
+\textquotedblleft{}forgot password\textquotedblright{} link, generate
+a new password which will be sent to your email address.
+
+
+\subsubsection{Editing item descriptions, images and thumbnails}
+
+When you are logged in as admin and visit item detail pages, you can
+edit item descriptions as well as upload images and auto-create thumbnails.
+
+Item descriptions text uses simple markup language 'markdown' for
+html elements. No html is allowed for security reasons. See http://daringfireball.net/projects/markdown/dingus
+for markdown syntax. Item descriptions are stored in item notes column
+and can be editing from within SQL-Ledger as well.
+
+
+\subsubsection{Editing pages through admin access}
+
+Once you login as admin, you can see 'Edit' links. Pages can be edited
+right away. You can use standard html and template toolkit tokens
+to edit pages.
+
+
+\subsubsection{Marking 'hot' and 'new' items}
+
+When you are logged in as admin, add items to your cart and click
+the 'Save cart as hot items' or 'Save cart as new items'. This will
+mark those items as hot or new and will display them on man page (in
+default templates). In future, hot/new functionality will be made
+to work based upon actual 'hot' or 'new' items.
+
+
+\subsection{Customization}
+
+LedgerCart is extremely easy to customize. LedgerCart consists of
+one big gateway script 'index.pl' which processes html templates created
+with Template::Toolkit.
+\begin{enumerate}
+\item Template::Toolkit templates are standard html files which can include
+Perl variables within {[}\% and \%{]} delimiters. You can copy the
+default templates and modify them as you please.
+\item New pages can be added by creating standard html files and linking
+them to 'templatesfolder/header.html' or 'templatesfolder/sidebar.html'.
+\item You can also customize the theme.css to change the colors and other
+look and feel according to your taste.
+\item Expert users can modify the 'index.pl' file to add their own variables
+which can be interpolated within your LedgerCart templates.
+\end{enumerate}
+
+\chapter{Development and Customization}
+
+
+\section{Customization}
+
+SQL-Ledger can be customized in three ways:
+
+
+\subsection{custom\_xx.pl files}
+
+You can create your own functions or override any existing function
+by creating custom scripts in custom\_xx.pl files and putting them
+in bin/mozilla folder. For example, to add new functions to gl.pl
+file, add these functions to custom\_gl.pl file and put this file
+into bin/mozilla/ folder. This file will be automatically loaded by
+sql-ledger before running any functions in gl.pl files.
+
+Once your new functions are there, you can call them using your own
+custom menu. Custom menu entries are put in custom\_menu.ini and follow
+the same syntax as that of menu.ini. This method of extending the
+sql-ledger is upgrade-safe and is the recommended way.
+
+
+\subsection{Custom Modules}
+
+You can build your own modules. To write a module, you need to create
+at least three files:
+\begin{enumerate}
+\item Module back-end code which will reside in ./sql-ledger/SL/MyModule.pm 
+\item Module front-end code which will reside in ./sql-ledger/bin/mozilla/mymodule.pl 
+\item Gateway script in ./sql-ledger. (You just need to make a copy of an
+existing one. For example cp gl.pl mymodule.pl in ./sql-ledger/ folder. 
+\end{enumerate}
+This method is also upgrade safe.
+
+
+\subsection{Modify the source code}
+
+Sometimes there is a need to directly alter the sql-ledger source
+code for particular needs. We have, for example, modified few reports
+(GL Transactions, All Items) in this way. Your changes, however, will
+be overwritten when you upgrade to new version and you will need to
+port these changes again to the new version.
+
+A bit discipline and an SCM software like GIT can help manage such
+changes or patches with easy. We, at ledger123.com, use GIT to track
+and manage such changes across newer versions of sql-ledger.
+
+
+\section{SQL Queries}
+
+These sql queries for sql-ledger can be used in phpPgAdmin or psql.
+
+
+\subsection{Simple SQL Queries}
+
+
+\subsubsection{Sales summary report}
+
+\begin{lstlisting}[basicstyle={\scriptsize\ttfamily},breaklines=true,language=SQL]
+SELECT
+	ar.invnumber,
+	ar.transdate,
+	c.name AS customer,
+	ar.netamount,
+	ar.amount - ar.netamount AS tax,
+	ar.amount,
+	ar.paid,
+	ar.invoice
+FROM ar
+JOIN customer c ON (c.id = ar.customer_id);
+\end{lstlisting}
+
+
+
+\subsubsection{Sales summary report with department and warehouse}
+
+\begin{lstlisting}
+SELECT
+	ar.invnumber,
+	ar.transdate,
+	c.name AS customer,
+	ar.netamount,
+	ar.amount - ar.netamount AS tax,
+	ar.amount,
+	ar.paid,
+	ar.invoice,
+	d.description AS department,
+	w.description AS warehouse
+FROM ar
+JOIN customer c ON (c.id = ar.customer_id)
+JOIN department d ON (d.id = ar.department_id)
+JOIN warehouse W ON (w.id = ar.warehouse_id);
+\end{lstlisting}
+
+
+
+\subsubsection{Sales report with items}
+
+\begin{lstlisting}
+SELECT
+	ar.invnumber,
+	ar.transdate,
+    c.name AS customer
+	p.partnumber,
+	ar.description,
+	i.qty,
+	i.sellprice,
+	i.qty * i.sellprice AS extended
+FROM ar
+JOIN customer c ON (c.id = ar.customer_id)
+JOIN invoice i ON (i.id = ar.trans_id);
+\end{lstlisting}
+
+
+
+\subsubsection{List of customers}
+
+\begin{lstlisting}
+SELECT
+	customernumber,
+	name,
+	creditlimit
+FROM customer
+WHERE LOWER(name) LIKE '%bank%'
+ORDER BY name;
+\end{lstlisting}
+
+
+
+\subsubsection{Cash accounts with current balances}
+
+\begin{lstlisting}
+SELECT
+	accno,
+	description,
+	(
+		SELECT SUM(amount) FROM acc_trans
+		WHERE acc_trans.chart_id = chart.id
+	) AS balance 
+FROM chart
+WHERE link LIKE '%_paid%';
+\end{lstlisting}
+
+
+
+\subsubsection{Parts list}
+
+\begin{lstlisting}
+SELECT
+	p.partnumber,
+	pg.partsgroup,
+	p.description,
+	p.lastcost,
+	p.rop,
+	p.rop * p.lastcost AS reorder_amount
+FROM parts p
+JOIN partsgroup pg ON (pg.id = p.partsgroup_id)
+WHERE inventory_accno_id IS NOT NULL
+ORDER BY partnumber;
+\end{lstlisting}
+
+
+
+\subsection{Advanced SQL Queries}
+
+
+\subsubsection{Inventory onhand on specific date}
+
+\begin{lstlisting}
+SELECT   
+	p.partnumber,
+	p.description,
+	pg.partsgroup,
+	p.unit,
+	(
+		SELECT SUM(0-i.qty) AS onhand
+		FROM invoice i
+		JOIN ap ON (ap.id = i.trans_id)
+		WHERE ap.transdate <= '01-01-08' AND i.parts_id = p.id
+	) AS purchase,
+	(
+		SELECT SUM(i.qty) AS onhand
+		FROM invoice i
+		JOIN ar ON (ar.id = i.trans_id)
+		WHERE ar.transdate <= '01-01-08'
+		AND i.parts_id = p.id
+	) AS sale
+FROM parts p 
+LEFT JOIN partsgroup pg 
+ON (pg.id = p.partsgroup_id);
+\end{lstlisting}
+
+
+
+\subsubsection{Customer balances on a specific date}
+
+\begin{lstlisting}
+SELECT
+	ct.id,
+	ct.customernumber,
+	ct.name,
+	SUM(0 - ac.amount) AS balance
+FROM customer ct
+JOIN ar aa ON (ct.id = aa.customer_id)
+JOIN acc_trans ac ON (aa.id = ac.trans_id)
+JOIN chart c ON (c.id = ac.chart_id)
+WHERE (ac.transdate <= '06-30-2007')
+AND (c.link = 'AR')
+GROUP BY 1,2,3
+ORDER BY customernumber;
+\end{lstlisting}
+
+
+
+\subsubsection{Sales summary by month}
+
+\begin{lstlisting}
+SELECT
+	TO_CHAR(transdate, 'YY-MM') AS month,
+	d.description AS department,
+	SUM(netamount)
+FROM ar
+JOIN department d ON (d.id = ar.department_id)
+WHERE (transdate BETWEEN '01.07.2005' AND '30.06.2006')
+GROUP BY TO_CHAR(transdate, 'YY-MM'), d.description;
+\end{lstlisting}
+
+
+
+\subsubsection{Sales Summary by group and month}
+
+\begin{lstlisting}[basicstyle={\scriptsize\ttfamily}]
+SELECT
+	d.description AS department,
+	pg.partsgroup,
+	TO_CHAR(ar.transdate, 'YY-MM') AS month,
+	SUM(0 - i.qty * i.sellprice) AS amount
+FROM invoice i
+JOIN ar ON (ar.id = i.trans_id)
+JOIN parts p ON (p.id = i.parts_id)
+JOIN partsgroup pg ON (pg.id = p.partsgroup_id)
+JOIN department d ON (d.id = ar.department_id)
+WHERE ar.transdate BETWEEN '01.07.2005' AND '30.06.2006'
+GROUP BY 
+	d.description,
+	pg.partsgroup,
+	TO_CHAR(ar.transdate, 'YY-MM')
+ORDER BY 1, 2
+\end{lstlisting}
+
+
+
+\subsubsection{Cash received today with age of AR in days}
+
+\begin{lstlisting}[basicstyle={\scriptsize\ttfamily},breaklines=true]
+SELECT
+	c.accno,
+	c.description AS acc_title,
+	d.description AS department,
+	a.invnumber,
+	ct.name,
+	ac.transdate - a.transdate AS days,
+	ac.source,
+	ac.amount,
+	e.name AS salesper,
+	a.notes,
+	ac.memo
+FROM ar a
+JOIN acc_trans ac ON (a.id = ac.trans_id)
+JOIN chart c ON (ac.chart_id = c.id)
+JOIN customer ct ON (a.customer_id = ct.id)
+JOIN employee e ON (a.employee_id = e.id)
+LEFT JOIN department d ON (d.id = a.department_id)
+WHERE (ac.transdate = '30.05.06')
+	AND(c.link LIKE '%AR_paid%')
+	AND (
+		a.department_id IN 
+		(SELECT id 
+		FROM department
+		WHERE description IN ('LC','LS'))
+	)
+ORDER BY days;
+\end{lstlisting}
+
+
+
+\subsubsection{Trial Balance with Month Headings}
+
+\begin{lstlisting}[basicstyle={\scriptsize\ttfamily},breaklines=true]
+SELECT 
+	accno,
+	description,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '06-01') AS jan,  
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '06-02') AS fab,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '06-03') AS mar,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '06-04') AS apr,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '06-05') AS may,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '06-06') AS jun,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '05-07') AS jul,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '05-08') AS aug,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '05-09') AS sep,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '05-10') AS oct,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '05-11') AS nov,
+	(SELECT SUM(amount) FROM acc_trans ac   WHERE ac.chart_id = chart.id   AND TO_CHAR(transdate, 'YY-MM') = '05-12') AS dec, 
+FROM chart
+WHERE charttype = 'A'
+ORDER BY accno;
+\end{lstlisting}
+
+
+
+\subsection{Queries to troubleshoot database problems}
+
+
+\subsubsection{Transactions without departments}
+
+\begin{lstlisting}
+SELECT 'AR', id, invnumber AS reference, transdate 
+FROM ar 
+WHERE id NOT IN (SELECT DISTINCT trans_id FROM dpt_trans)
+UNION ALL
+SELECT 'AP', id, invnumber AS reference, transdate 
+FROM ap 
+WHERE id NOT IN (SELECT DISTINCT trans_id FROM dpt_trans)
+UNION ALL
+SELECT 'GL', id, reference, transdate 
+FROM gl 
+WHERE id NOT IN (SELECT DISTINCT trans_id FROM dpt_trans);
+\end{lstlisting}
+
+
+
+\subsubsection{Unbalanced Journals}
+
+\begin{lstlisting}
+SELECT 'GL' AS mod, gl.reference, SUM(ac.amount) 
+FROM acc_trans ac 
+JOIN gl ON (gl.id = ac.trans_id) 
+GROUP BY 1, 2  
+HAVING SUM(ac.amount) <> 0
+UNION ALL
+SELECT 'AR' AS mod, ar.invnumber, SUM(ac.amount) 
+FROM acc_trans ac JOIN ar ON (ar.id = ac.trans_id) 
+GROUP BY 1, 2  
+HAVING SUM(ac.amount) <> 0
+UNION ALL
+SELECT 'AP' AS mod, ap.invnumber, SUM(ac.amount) 
+FROM acc_trans ac 
+JOIN ap ON (ap.id = ac.trans_id) 
+GROUP BY 1, 2  HAVING SUM(ac.amount) <> 0
+ORDER BY 3
+\end{lstlisting}
+
+
+
+\subsubsection{Orphan Transactions}
+
+\begin{lstlisting}
+SELECT *
+FROM acc_trans 
+WHERE trans_id NOT IN (
+	SELECT id FROM ar UNION ALL SELECT id FROM ap UNION ALL SELECT id FROM gl
+);
+\end{lstlisting}
+
+
+
+\subsubsection{Correcting Assemblies Onhand}
+
+Due to a bug/gotcha in orders handling in official sql-ledger, parts
+onhand can go out of sync from actual transactions. Following query
+will help you find the correct onhand quantity for a given assembly.
+
+\begin{lstlisting}[basicstyle={\scriptsize\ttfamily},breaklines=true]
+SELECT 'Purchased', SUM(0-qty)  FROM invoice  WHERE parts_id = (SELECT id FROM parts WHERE partnumber='TW01') AND trans_id IN (SELECT id FROM ap)
+UNION ALL
+SELECT 'Sold', SUM(0-qty) FROM invoice WHERE parts_id IN (SELECT aid FROM assembly WHERE parts_id = (SELECT id FROM parts WHERE partnumber='TW01')) AND trans_id IN (SELECT id FROM ar)
+UNION ALL
+SELECT 'Onhand', SUM(0-onhand) FROM parts WHERE id IN (SELECT aid FROM assembly WHERE parts_id = (SELECT id FROM parts WHERE partnumber='TW01'));
+\end{lstlisting}
+
+
+
+\section{API}
+
+
+\subsection{Introduction}
+
+SQL-Ledger allows you to call any of its functions from command line.
+An example will better illustrate this.
+
+The following code run from your Linux/Unix shell will add a new customer
+to the customers table:
+
+\begin{lstlisting}
+./ct.pl " 
+login=armaghan
+&password=armaghan
+&path=bin/mozilla
+&db=customer
+&action=save
+&typeofcontact=company
+&name=Ledger123
+&firstname=Armaghan
+&lastname=Saqib
+&city=London
+"
+\end{lstlisting}
+
+
+You could also insert this information using plain old SQL INSERT
+statement but here is the problem. Customer information is stored
+in at least three tables (customer, contact, address). You have to
+make sure you INSERT rows with correct id numbers in all three tables.
+
+On the other hand API takes care of adding proper data rows in each
+tables with a single call like above. API also validates your data
+and runs any logic which is run when you are adding a customer through
+web interface. For example if you have defined a sequence for customer
+numbers, the next number is assigned automatically from that sequence.
+
+
+\subsection{API Uses}
+
+API can be used to \textquotedblleft{}simulate\textquotedblright{}
+any sql-ledger function from command line. You can add customers,
+vendors, parts as well as any type of transaction (invoices, cash
+receipts and payments etc.)
+
+This makes it very easy to integrate sql-ledger with any other application.
+For example you can integrate it with your CRM solution, POS system,
+or e-commerce solutions like AgoraCart or Interchange.
+
+API also allows you to add new data entry interfaces with ease. All
+you need to develop is the code which will interact with users and
+leave the rest to the API.
+
+Import invoices and payment functions built in new versions of sql-ledger
+are in fact \textquotedblleft{}newer interfaces\textquotedblright{}
+built using the API.
+
+
+\subsection{Calling from PHP}
+
+You can make API calls from any language using its shell execution
+mechnisim. For example you can use the following php code to make
+SL api call.
+
+\begin{lstlisting}
+<?php
+$module = './ct.pl';
+$params = 'login=armaghan';
+$params .= '&password=armaghan';
+$params .= '&path=bin/mozilla';
+$params .= '&db=customer';
+$params .= '&action=save';
+$params .= '&typeofcontact=company';
+$params .= '&name=Ledger123';
+$params .= '&firstname=Armaghan';
+$params .= '&lastname=Saqib';
+$params .= '&city=London';
+$output = shell_exec("$module \"$params\"");
+echo "<pre>$output</pre>";
+?>
+\end{lstlisting}
+
+
+asdfasdf
 \end{document}
