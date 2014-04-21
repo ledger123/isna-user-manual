@@ -604,6 +604,29 @@ Creating your first dataset
 \end_layout
 
 \begin_layout Standard
+You need to create a dataset in SQL-Ledger before you start using it to
+ manage your business accounts.
+ Behind the scenes each dataset is a postgresql database with tables, indexes
+ and some seed data like chart of accounts.
+\end_layout
+
+\begin_layout Standard
+To create a new data set, you need to login to the admin interface.
+ Admin interface is accessible through the following url:
+\end_layout
+
+\begin_layout Standard
+http://your-server-ip-address/sql-ledger/admin.pl
+\end_layout
+
+\begin_layout Standard
+You will be asked for a password.
+ The default password is blank.
+ Once you login first time, you are asked to set the password to something
+ secure.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename admin1.png
 	scale 60
@@ -611,6 +634,12 @@ Creating your first dataset
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Once you have logged-in to the admin interface, you will see the existing
+ datasets if any.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -624,6 +653,11 @@ Creating your first dataset
 \end_layout
 
 \begin_layout Standard
+To add your new dataset, you click 'Add Dataset' button and following page
+ is displayed.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename admin3.png
 	scale 60
@@ -631,6 +665,18 @@ Creating your first dataset
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+On this page you need to put your database credentials.
+ As a best practice you should create a postgresql user for use with SQL-Ledger.
+ By default this user is assumed to be 'sql-ledger'.
+ If you are not sure how to create this user, you can go ahead with the
+ default postgresql superuser which is normally 'postgres' and click 'Continue'
+\end_layout
+
+\begin_layout Standard
+All the other defaults on above page seem to work in most cases.
 \end_layout
 
 \begin_layout Standard
@@ -644,6 +690,14 @@ Creating your first dataset
 \end_layout
 
 \begin_layout Standard
+Once the above page is displayed, you can enter your company name, name
+ for your dataset (which is in lowercase without any spaces or special character
+s, encoding and one of the default chart of accounts.
+ Once you have made all the selections, click 'Continue' to create your
+ dataset.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename admin5.png
 	scale 45
@@ -653,12 +707,38 @@ Creating your first dataset
 
 \end_layout
 
+\begin_layout Standard
+Your dataset is now created and added to the list of existing datasets.
+\end_layout
+
 \begin_layout Section
 Creating users and roles
 \end_layout
 
+\begin_layout Standard
+A default admin account with name 'admin@datasetname' is created with each
+ new dataset.
+ Its password is set to blank.
+ (Be sure to change it something secure on your first login) Now you need
+ to login and create some new users as well as set their access privilages
+ using roles.
+\end_layout
+
+\begin_layout Standard
+To login to your newly created dataset visit http://your-server-ip-address/sql-l
+edger/login.pl
+\end_layout
+
 \begin_layout Subsection
 Roles
+\end_layout
+
+\begin_layout Standard
+Roles allow you to define which menu option is avilable to which user.
+ You can group your users into roles and then define the access privilages
+ for the roles.
+ Click the menu 'System--Roles' to display existing roles, change existing
+ one or add a new one.
 \end_layout
 
 \begin_layout Standard
@@ -669,6 +749,12 @@ Roles
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To add a new role, click 'Add Role' and check/uncheck the menus under 'Access
+ Control' to allow or disallow that menu to the role.
+ Once you have defined the access privilages, click 'Save' to add the role.
 \end_layout
 
 \begin_layout Standard
@@ -686,6 +772,35 @@ Users / Employees
 \end_layout
 
 \begin_layout Standard
+One you have defined the roles, it is time to define the actual users.
+ For this you click on 'HR--Employees--Add Employee'.
+ Here you fill all the information for the user.
+ 
+\end_layout
+
+\begin_layout Standard
+In the 'Role' field, select the appropriate role for this user.
+ 
+\end_layout
+
+\begin_layout Standard
+In the login name field, type the login name which should be preferably
+ in lower case without '@' sign and without other special characters.
+\end_layout
+
+\begin_layout Standard
+The 'Sales' checkbox is there to mark whether this user will appear in salespers
+ons list or not.
+\end_layout
+
+\begin_layout Standard
+On the screen you can add all your sql-ledger users as well as other employees
+ data.
+ If you do not want to allow a particular employee to login to sql-ledger,
+ just omit its username and password.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename user1.png
 	scale 60
@@ -693,6 +808,12 @@ Users / Employees
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To get list of existing employees, you use the 'HR--Reports' menu.
+ A search screen is display where you can select which information you need
+ to display and click 'Continue'
 \end_layout
 
 \begin_layout Standard
@@ -706,6 +827,12 @@ Users / Employees
 \end_layout
 
 \begin_layout Standard
+Now all employees and/or users are displayed.
+ You can click on the name of the user to open the detail of the user or
+ employee and change it as required.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename emp2.png
 	scale 45
@@ -716,6 +843,14 @@ Users / Employees
 \end_layout
 
 \begin_layout Standard
+Once you have created a user, he or she can login with his or her username.
+ The username is of the format 'login@datasetname'.
+ For example if you created a user with login 'armaghan' for a dataset named
+ 'rel3' then the user needs to login with 'armaghan@rel3' as his or her
+ username.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename user3.png
 	scale 60
@@ -723,6 +858,16 @@ Users / Employees
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Here you come.
+ Now you or your user has successfully logged-in to the SQL-Ledger and following
+ welcome screen is displayed.
+ The menu is on the left.
+ Only those menu options are visible to the user which have been allowed
+ by the assigned role to that user.
+ If no role has been created then user has access to all the menus.
 \end_layout
 
 \begin_layout Standard
@@ -850,11 +995,44 @@ To change existing vendors, first you list them using Vendors–Reports–Search
 \end_layout
 
 \begin_layout Section
-Type of Business 
+Type of Business
 \end_layout
 
-\begin_layout Section
-Employees
+\begin_layout Standard
+You define type of business using 'System--Type of Business'.
+ Type of business allows you to group your customers by a particular type.
+ It also allows you to setup default discount percentage for that group
+ of customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename typeofbiz1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename typeofbiz2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename typeofbiz3.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -888,6 +1066,7 @@ Departments can be added, changed or deleted using 'System–Departments'
 \begin_layout Standard
 \begin_inset Graphics
 	filename department2.png
+	scale 50
 
 \end_inset
 
@@ -918,8 +1097,7 @@ Default Department
 \end_layout
 
 \begin_layout Standard
-You can define a default default for users through sql-ledger administrative
- interface.
+You can define a default default for users using HR--Employees men.
  You can also restrict the user to view and make transactions to his department
  only by setting his role to User.
  Users with role Administrator, Manager, Supervisor always have access to
@@ -1043,6 +1221,7 @@ You can add or change projects through Projects menu.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project1.png
+	scale 50
 
 \end_inset
 
@@ -1052,6 +1231,7 @@ You can add or change projects through Projects menu.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project2.png
+	scale 50
 
 \end_inset
 
@@ -1061,6 +1241,7 @@ You can add or change projects through Projects menu.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project3.png
+	scale 50
 
 \end_inset
 
@@ -1089,8 +1270,14 @@ Project Reports
 \end_layout
 
 \begin_layout Standard
+Project Transactions report will show you a summary report similar to trial
+ balance report with summary of all transactions for the the selected project.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename project4.png
+	scale 50
 
 \end_inset
 
@@ -1100,6 +1287,7 @@ Project Reports
 \begin_layout Standard
 \begin_inset Graphics
 	filename project5.png
+	scale 50
 
 \end_inset
 
@@ -1107,8 +1295,14 @@ Project Reports
 \end_layout
 
 \begin_layout Standard
+You can click on the account number to get the list of individual project
+ transactions for that account.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename project6.png
+	scale 50
 
 \end_inset
 
@@ -1764,6 +1958,10 @@ Services
 \end_layout
 
 \begin_layout Standard
+Services are intangible items which you sell or purchase.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename parts2.png
 	scale 45
@@ -2033,6 +2231,13 @@ Groups have another useful functionality.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+You can also define subgroups for particular groups.
+ To define a subgroup you type of the name of the group followed by a ':'
+ and then the name of the subgroup.
+ You can filter certain reports with group or its subgroup.
 \end_layout
 
 \begin_layout Standard
@@ -3441,6 +3646,11 @@ Transactions Report
 \end_layout
 
 \begin_layout Standard
+Transaction report shows all open or closed transactions for the specified
+ criteria on search screen.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename artrans.png
 	scale 45
@@ -3567,8 +3777,19 @@ Receipts
 \end_layout
 
 \begin_layout Standard
-You can record cash receipts from customer while creating invoices (for
- cash sales) or afterward using Cash--Receipt menu.
+There are two ways to record payment from your customer:
+\end_layout
+
+\begin_layout Standard
+You can put the receipt information at the footer of your invoice when creating
+ the invoice if the invoice has been paid at the time of purchase.
+\end_layout
+
+\begin_layout Standard
+You can use 'Cash--Receipt' menu to record receipt for a particular customer.
+ Using this method is advisible as you do not need to edit invoices to record
+ the receipt.
+ This method also allows you to record a single receipt for multiple invoices.
 \end_layout
 
 \begin_layout Standard
@@ -3582,6 +3803,11 @@ You can record cash receipts from customer while creating invoices (for
 \end_layout
 
 \begin_layout Standard
+The 'Cash--Receipts' menu allows you to quickly record receipts for multiple
+ invocies for multiple customers.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename receipt2.png
 	scale 45
@@ -3589,6 +3815,11 @@ You can record cash receipts from customer while creating invoices (for
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Receipts report show you receipts for the particular period according to
+ your bank account.
 \end_layout
 
 \begin_layout Standard
@@ -3747,6 +3978,22 @@ Vendor History
 
 \begin_layout Section
 Payments
+\end_layout
+
+\begin_layout Standard
+There are two ways to record payment from your vendor.
+\end_layout
+
+\begin_layout Standard
+You can put the payment information at the footer of your invoice when creating
+ the invoice if the invoice has been paid at the time of purchase.
+\end_layout
+
+\begin_layout Standard
+You can use 'Cash--Payment' menu to record payment for a particular vendor.
+ Using this method is advisible as you do not need to edit invoices to record
+ the payment.
+ This method also allows you to record a single payment for multiple invoices.
 \end_layout
 
 \begin_layout Standard
