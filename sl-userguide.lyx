@@ -119,7 +119,27 @@ Preface
 \end_layout
 
 \begin_layout Standard
-TODO
+I first came across SQL-Ledger in 2004 and although the initial release
+ had been published by Dieter Simader only 5 years earlier, his achievements
+ so far were astonishing and immediately caught my eye.
+ It took me more than a full week to install it, but it was wearth every
+ minute spent.
+ Above all because whilst understanding how to install it, I also started
+ to realize how powerful the software architecture was.
+ But I only saw the true beauty of SQL-Ledger once I started working with
+ it.
+ I have worked with many different ERP and accounting systems before, all
+ from SAP to Quickbooks, but I immediately noticed that SQL-Ledger was different.
+ SQL-Ledger was much smoother and faster to use than any other accounting
+ software I had ever used before.
+\end_layout
+
+\begin_layout Standard
+You will need to try it to know it.
+ I did.
+ And I highly recommend anyone else who is considering to build a business
+ using an ERP or accounting software tool to checkout SQL-Ledger first.
+ The following pages should be of help.
 \end_layout
 
 \begin_layout Chapter
@@ -526,67 +546,7 @@ Disabled incorrect item weight update from orders and invoices
 \end_layout
 
 \begin_layout Enumerate
-Parts group is mandatory if there is at least on group defined.
- 
-\end_layout
-
-\begin_layout Section
-Explanation of bugs and gotchas in official version
-\end_layout
-
-\begin_layout Subsection
-Orders
-\end_layout
-
-\begin_layout Enumerate
-Warehouse information is not updated when you receive orders by editing
- Rcvd quantity on orders.
- 
-\end_layout
-
-\begin_layout Enumerate
-When you make changes to invoice created from an order (add/remove item,
- quantities), inventory onhand count goes out of order.
- This is caused any invoice created from order does not update the inventory
- onhand.
- 
-\end_layout
-
-\begin_layout Standard
-We have fixed these issues by not allowing to receive orders by editing
- them.
- We also do not allow editing invoices created from orders to avoid corrupting
- onhand quantities.
-\end_layout
-
-\begin_layout Subsection
-COGS
-\end_layout
-
-\begin_layout Enumerate
-Incorrect accounting transaction is posted for sale returns.
- COGS gets corrupted when you edit an invoice.
- 
-\end_layout
-
-\begin_layout Enumerate
-We have modified the posting of sale returns to post correct cogs.
- 
-\end_layout
-
-\begin_layout Standard
-We have added a reposting script to correct any corrupted cogs values when
- you edit an invoice.
-\end_layout
-
-\begin_layout Subsection
-Warehouses
-\end_layout
-
-\begin_layout Standard
-Default warehouse functionality is broken in many ways.
- If somebody is successfully using it without ledger123 enhancements, I
- would love to know how?
+Parts group is mandatory if there is at least on group defined
 \end_layout
 
 \begin_layout Chapter
@@ -629,7 +589,7 @@ You will be asked for a password.
 \begin_layout Standard
 \begin_inset Graphics
 	filename admin1.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -645,7 +605,7 @@ Once you have logged-in to the admin interface, you will see the existing
 \begin_layout Standard
 \begin_inset Graphics
 	filename admin2.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -660,7 +620,7 @@ To add your new dataset, you click 'Add Dataset' button and following page
 \begin_layout Standard
 \begin_inset Graphics
 	filename admin3.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -744,7 +704,7 @@ Roles allow you to define which menu option is avilable to which user.
 \begin_layout Standard
 \begin_inset Graphics
 	filename role1.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -760,7 +720,7 @@ To add a new role, click 'Add Role' and check/uncheck the menus under 'Access
 \begin_layout Standard
 \begin_inset Graphics
 	filename role2.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -769,6 +729,16 @@ To add a new role, click 'Add Role' and check/uncheck the menus under 'Access
 
 \begin_layout Subsection
 Users / Employees
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuhr.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -803,7 +773,7 @@ On the screen you can add all your sql-ledger users as well as other employees
 \begin_layout Standard
 \begin_inset Graphics
 	filename user1.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -873,7 +843,7 @@ Here you come.
 \begin_layout Standard
 \begin_inset Graphics
 	filename user4.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -908,6 +878,16 @@ We setup defaults for document numbers as shown on the following screen
 
 \begin_layout Section
 Customers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menucustomers.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -955,6 +935,16 @@ Vendors
 \end_layout
 
 \begin_layout Standard
+\begin_inset Graphics
+	filename menuvendors.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 You need to add at least one vendor before creating invoices.
  Use Vendors–Add Vendor to add new vendors.
 \end_layout
@@ -977,7 +967,7 @@ To change existing vendors, first you list them using Vendors–Reports–Search
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-search2.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -1167,6 +1157,11 @@ Income Statement and Balance sheet can also be compared and displayed by
 \end_layout
 
 \begin_layout Standard
+'Reports--Department Income Statement' report shows income statement for
+ individual departments in columner form.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename department7.png
 	scale 45
@@ -1188,6 +1183,16 @@ Income Statement and Balance sheet can also be compared and displayed by
 
 \begin_layout Section
 Projects
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuprojects.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1219,6 +1224,10 @@ You can add or change projects through Projects menu.
 \end_layout
 
 \begin_layout Standard
+Click on 'Projects--Add Project' to add a new project.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename project1.png
 	scale 50
@@ -1229,6 +1238,14 @@ You can add or change projects through Projects menu.
 \end_layout
 
 \begin_layout Standard
+To change an existing project, first display list of existing projects.
+ For this you use 'Projects--Reports--Projects' menu.
+ Following screen is displayed where you can specifiy some conditions to
+ select the projects of your interest.
+ To view all projects just click the 'Continue' button.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename project2.png
 	scale 50
@@ -1236,6 +1253,11 @@ You can add or change projects through Projects menu.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Once projects are displayed as show below, you can click on the project
+ number to open the project and make required changes.
 \end_layout
 
 \begin_layout Standard
@@ -1270,14 +1292,16 @@ Project Reports
 \end_layout
 
 \begin_layout Standard
-Project Transactions report will show you a summary report similar to trial
- balance report with summary of all transactions for the the selected project.
+'Projects--Reports--Transactions' report will show you a summary report
+ similar to trial balance report with summary of all transactions for the
+ the selected project.
+ First you specify the period of interest before display the report.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename project4.png
-	scale 50
+	scale 45
 
 \end_inset
 
@@ -1285,9 +1309,16 @@ Project Transactions report will show you a summary report similar to trial
 \end_layout
 
 \begin_layout Standard
+Once you display the report, you can see all accounts showing sum of all
+ transactions for that particular project.
+ This report is similar to the trial balance report but shows balances for
+ a particular project only.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename project5.png
-	scale 50
+	scale 45
 
 \end_inset
 
@@ -1302,7 +1333,7 @@ You can click on the account number to get the list of individual project
 \begin_layout Standard
 \begin_inset Graphics
 	filename project6.png
-	scale 50
+	scale 45
 
 \end_inset
 
@@ -1311,6 +1342,36 @@ You can click on the account number to get the list of individual project
 
 \begin_layout Section
 Chart of Accounts
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuchart.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename chart1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename chart2.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1934,6 +1995,20 @@ documentclass with parameters ([a4paper,11pt]{article}) following it.
 \end_layout
 
 \begin_layout Section
+Goods & Services
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menugoods.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Parts
 \end_layout
 
@@ -1953,7 +2028,7 @@ Parts are tangible items you keep in your stock.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Services
 \end_layout
 
@@ -1971,7 +2046,7 @@ Services are intangible items which you sell or purchase.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Labor/Overhead
 \end_layout
 
@@ -1983,6 +2058,14 @@ Labor/Overhead
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Goods & Services Reports
+\end_layout
+
+\begin_layout Standard
+'Goods & Services--Reports--All Items' 
 \end_layout
 
 \begin_layout Section
@@ -2097,6 +2180,11 @@ More Reports--Goods and Services--Stock Assembly gives you a list of your
 \end_layout
 
 \begin_layout Standard
+Following is a summary report of the 'Stock Assembly' action.
+ It shows each action with its referenace and date and other information.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename stock2.png
 	scale 45
@@ -2104,6 +2192,12 @@ More Reports--Goods and Services--Stock Assembly gives you a list of your
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Following is a detail report of the 'Stock Assembly' action.
+ It shows each assembly and its components which have been updated through
+ the 'Stock Assembly' action.
 \end_layout
 
 \begin_layout Standard
@@ -2117,8 +2211,9 @@ More Reports--Goods and Services--Stock Assembly gives you a list of your
 \end_layout
 
 \begin_layout Standard
-Goods and Services--Assemblies gives you list of all or selected assemblies
- with their components.
+'Goods and Services--Reports--Assemblies' gives you list of all or selected
+ assemblies with their components.
+ You wn narrow down your assemblies list by specifiying search criteria.
 \end_layout
 
 \begin_layout Standard
@@ -2129,6 +2224,10 @@ Goods and Services--Assemblies gives you list of all or selected assemblies
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Once you click the 'Continue' button above the following report is displayed.
 \end_layout
 
 \begin_layout Standard
@@ -2224,6 +2323,10 @@ Groups have another useful functionality.
 \end_layout
 
 \begin_layout Standard
+Click on any group name in above list and it will be opened for any change.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename group3.png
 	scale 45
@@ -2234,7 +2337,7 @@ Groups have another useful functionality.
 \end_layout
 
 \begin_layout Standard
-You can also define subgroups for particular groups.
+You can also define subgroups.
  To define a subgroup you type of the name of the group followed by a ':'
  and then the name of the subgroup.
  You can filter certain reports with group or its subgroup.
@@ -2319,6 +2422,16 @@ Open the customer record for editing and set the applicable price group
 
 \begin_layout Section
 Warehouses
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuwarehouses.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2411,7 +2524,96 @@ You can move inventory between warehouses by using 'Warehouses–Add Transfer'
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename warehouse4.jpg
+	filename trf1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transfer Reports
+\end_layout
+
+\begin_layout Standard
+'Warehouses--Reports--Transfers' shows list of all transfers.
+ On search screen you select conditions to select transactions of your interest
+ or just click 'Continue' to display all transactions.
+\end_layout
+
+\begin_layout Standard
+Warehouses–Reports–Transfers gives you a list of transfers.
+ Summary lists transfer transactions and Detail lists all items in each
+ transfer transaction.
+ You can click on transfer number hyper link to edit the transfer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trf4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trf3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Warehouse Onhand Report
+\end_layout
+
+\begin_layout Standard
+Warehouses–Reports–Onhand gives you inventory onhand for all warehouses
+ or for a particular warehouse.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trf4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can see the report shows onhand quantity of selected items at each warehouse.
+ This report can be sorted on item number so that you can qucikly see the
+ onhand quantity of a particular item at each warehouse.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trf5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can click on any item number to display the activity for that item as
+ shown below.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trf6.png
+	scale 50
 
 \end_inset
 
@@ -2451,7 +2653,7 @@ To 'receive' the transfers, click the 'Warehouses–Reports–Deliveries' menu
 \end_layout
 
 \begin_layout Subsection
-Reports
+Other Reports
 \end_layout
 
 \begin_layout Enumerate
@@ -2461,16 +2663,7 @@ Goods & Services–Parts report provides summary of your on hand quantity
 \end_layout
 
 \begin_layout Enumerate
-Warehouses–Reports–Transfers gives you a list of transfers.
- Summary lists transfer transactions and Detail lists all items in each
- transfer transaction.
- You can click on transfer number hyper link to edit the transfer.
-\end_layout
-
-\begin_layout Enumerate
-Warehouses–Reports–Onhand gives you inventory onhand for all warehouses
- or for a particular warehouse.
- 
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -2622,17 +2815,26 @@ Data import from other applications
 \begin_layout Standard
 Sometimes you need to import your sales data into sql-ledger which was produced
  elsewhere.
-\end_layout
-
-\begin_layout Standard
-You might have a web store where you download your daily sales in CSV format
+ You might have a web store where you download your daily sales in CSV format
  and want to import it into Sql-Ledger.
  Or you are just moving to sql-ledger from your legacy accounting software
  and want to move all existing data from old software to sql-ledger.
 \end_layout
 
 \begin_layout Standard
-Following sections provide detailed steps for importing CSV text files.
+\begin_inset Graphics
+	filename dataimport1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In SQL-Ledger, we can import data for almost everything as shown in the
+ image below.
+ Following sections provide detailed steps for importing CSV text files.
 \end_layout
 
 \begin_layout Subsection
@@ -3585,6 +3787,16 @@ Running your business on SQL-Ledger
 AR
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuar.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 AR Transaction
 \end_layout
@@ -3777,6 +3989,16 @@ Receipts
 \end_layout
 
 \begin_layout Standard
+\begin_inset Graphics
+	filename menucash.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 There are two ways to record payment from your customer:
 \end_layout
 
@@ -3844,6 +4066,16 @@ Receipts report show you receipts for the particular period according to
 
 \begin_layout Section
 AP
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuap.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4042,6 +4274,16 @@ recon
 
 \begin_layout Section
 General Ledger
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menugl.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4270,20 +4512,88 @@ RFQ
 Sales Order
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuorders.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Add sales order
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename so1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sales order with item details
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename so2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sales order reports search screen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename so3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sales order report
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename so4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Purchase Order
 \end_layout
 
 \begin_layout Standard
-Here is the default work flow to use purchase orders.
+A purchase order allows you to order goods and services from your vendor.
+ SQL-Ledger has very powerful features to manage your purchase orders.
+ You can:
 \end_layout
 
 \begin_layout Enumerate
-Create a purchase order to inform vendor your intent to purchase goods.
+Make a purchase order.
 \end_layout
 
 \begin_layout Enumerate
-To records the goods received, use Shipping–Receive.
+Receive a purchase order fully or partially using 'Shipping--Receive'.
 \end_layout
 
 \begin_layout Enumerate
@@ -4292,15 +4602,200 @@ Create a vendor invoice: Open the order and click the Vendor Invoice button.
  
 \end_layout
 
-\begin_layout Standard
-Note: An alternate work flow is also supported with some code changes (available
- as orders2 branch at github.com/ledger123).
- This allows you to partially/fully receive orders by editing them.
- 'Shipping-Receive' and 'Shipping-Ship' are not available in this branch.
+\begin_layout Enumerate
+If warehouses are enabled, you can receive goods to a particular warehouse.
 \end_layout
 
 \begin_layout Subsection
-Notes
+Add a new purchase order
+\end_layout
+
+\begin_layout Standard
+'Order Entry--Purchase Order' will display the following 'Add Purchase Order'
+ screen.
+ To edit an existing PO, you display list of existing orders using 'Order
+ Entry--Reports--Purchase Orders' and click on PO number to edit that particular
+ PO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename po1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you want to enter more information for each item you can click the checkbox
+ next to the 'Description' column and then 'Update'.
+ Now each detail line will span 5 lines where you can enter lots of information
+ for each item you order.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename po2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When you have saved a PO, you can create an RFQ (request for quotation)
+ or vendor invoice from the PO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename po3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Purchase order reports
+\end_layout
+
+\begin_layout Standard
+'Order Entry--Reports--Purchase Orders' shows you all your purchase orders.
+ You can check/uncheck the 'Open' and 'Closed' checkboxes on search screen
+ before you continue.
+ 'Closed' POs are those which have been fully received OR which have been
+ marked 'Closed' by editing the PO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename poreport1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Receiving a PO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menushipping.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Shipping module allows you to receive goods to warehouses from your orders.
+ 
+\end_layout
+
+\begin_layout Standard
+Once you have created a PO, you use 'Shipping--Receive' to receive your
+ goods.
+ Following screen is displayed which allows you to select POs you want to
+ process.
+ Just 'Continue' button if you want to process all open POs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following screen shows all POs with open quanities.
+ You click on a particular PO to receive goods in it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here on this screen POs is displayed with order quantities and you can put
+ the quantities received in the 'Rcvd' column.
+ If there are any serial numbers associated with received goods you put
+ them in serial number column.
+ You also need to specify correct receiving date.
+\end_layout
+
+\begin_layout Standard
+In the example below we have partially received this PO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you open this PO again (using 'Order Entry--Reports--Purchase Orders')
+ you will see the quantity received in the 'Rcvd' column.
+ This quantity is updated every time you receive goods using 'Shipping--Receive'.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive4.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At this point, you can create a vendor invoice for the quantities received.
+ To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
+ screen will open for received quantities as show below.
+\end_layout
+
+\begin_layout Standard
+Once a vendor invoice has been created for a PO, it is closed.
+ If there were some open quantities in that PO then a new PO with same number
+ and remaining items with open quantities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive5.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Order Entry Notes
 \end_layout
 
 \begin_layout Standard
@@ -4318,95 +4813,6 @@ When you create invoice from a partially received order, this order is marked
  closed and a new order with same number but remaining quantities and new
  order date is created.
  
-\end_layout
-
-\begin_layout Standard
-When you are using the alternate workflow: (using orders2 code branch)
-\end_layout
-
-\begin_layout Enumerate
-Stock onhand is increased when you save a PO with quantity in Rcvd column.
- No accounting entries are made.
- (COGS/expense, Vendor balances etc.) 
-\end_layout
-
-\begin_layout Enumerate
-You can create an invoice directly from PO by entering the qty received
- in Rcvd column and clicking the Vendor Invoice button.
- This automatically saves the order, updates stock and opens Add Vendor
- Invoice screen with information carried forward from the PO.
- 
-\end_layout
-
-\begin_layout Section
-Shipping
-\end_layout
-
-\begin_layout Standard
-Shipping module allows you to ship from and receive to warehouses from your
- orders.
- Here is the work flow to use the shipping module.
-\end_layout
-
-\begin_layout Enumerate
-Create a sales or purchase order.
- 
-\end_layout
-
-\begin_layout Enumerate
-Ship/Receive this order from/to a warehouses.
- 
-\end_layout
-
-\begin_layout Enumerate
-Open the order and create invoice from it.
- 
-\end_layout
-
-\begin_layout Standard
-See also the documentation of orders entry module.
-\end_layout
-
-\begin_layout Standard
-Shipping module serves the same purpose as putting the quantity in Ship
- or Recd column of a sales order or a purchase order but allows a different
- warehouse to be specified and maintain inventory quantities at warehouses.
-\end_layout
-
-\begin_layout Standard
-Following paragraphs discuss the correct work flow to use the shipping module
- for purchases and sales.
-\end_layout
-
-\begin_layout Subsection
-Purchases
-\end_layout
-
-\begin_layout Enumerate
-Create purchase orders for the inventory you want to purchase.
- If you do not specify a warehouse with order, you can receive the order
- to any warehouse.
- 
-\end_layout
-
-\begin_layout Enumerate
-Receive inventory using Shipping–Receive menu option.
- Select the desired warehouse during this process.
- 
-\end_layout
-
-\begin_layout Enumerate
-Create AP/Vendor invoice by opening the purchase order which has been received
- in the above step and clicking the Purchase Invoice button.
- Do not make any change to partnumber or quantity.
- Just click the Post button.
- 
-\end_layout
-
-\begin_layout Standard
-Note: When you create invoice from a partially received order, SL closes
- that order and creates a new one with the remaining order quantities but
- with same order number.
 \end_layout
 
 \begin_layout Subsection
@@ -4457,7 +4863,7 @@ Goods & Services–All Items report.
 Warehouses–Reports–Onhand 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 Inventory receive/ship activity 
 \end_layout
 
@@ -4560,16 +4966,115 @@ You can use this option to remove audit trail from database up to a certain
 Keeping track of your business in SQL-Ledger 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename menureports.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Trial Balance
 \end_layout
 
-\begin_layout Section
-Income Statement 
+\begin_layout Standard
+\begin_inset Graphics
+	filename trial1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trial2.png
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Balance Sheet 
+Income Statement
+\end_layout
+
+\begin_layout Standard
+Income statement can be run for any period.
+ You can also compare the income statement with any previous period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename income1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following income statement is for a single period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename income2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following income statement includes two periods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename income3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Balance Sheet
+\end_layout
+
+\begin_layout Standard
+Balance sheet can be displayed upto any particular date.
+ Like income statement, you can also compare it with balances at some older
+ date.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename balancesheet1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename balancesheet2.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4630,10 +5135,6 @@ Reconciled transactions report.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-List Projects
 \end_layout
 
 \begin_layout Section
