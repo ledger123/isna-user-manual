@@ -1365,6 +1365,7 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Standard
+doctor
 \begin_inset Graphics
 	filename chart2.png
 	scale 50
@@ -1395,7 +1396,53 @@ HTML templates are easier to modify because it of wide spread knowledge
 \end_layout
 
 \begin_layout Standard
-TODO: Attach:templates1.jpg
+\begin_inset Graphics
+	filename menutemplates.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates3a.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates3b.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1409,7 +1456,33 @@ Latex templates are bit complex to understand and modify but offer complete
 \end_layout
 
 \begin_layout Standard
-TODO: Attach:templates3.jpg
+\begin_inset Graphics
+	filename menutemplates2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates5.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1423,7 +1496,33 @@ Text templates are used only for Point-of-Sale receipts printing.
 \end_layout
 
 \begin_layout Standard
-TODO: Attach:templates4.jpg
+\begin_inset Graphics
+	filename menutemplates3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates6.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates7.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3985,6 +4084,60 @@ Customer History Reports
 \end_layout
 
 \begin_layout Section
+Point of Sales (POS)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pos1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pos2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pos3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pos4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pos5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Receipts
 \end_layout
 
@@ -5475,6 +5628,54 @@ Ideally you should never edit an invoice.
 \begin_layout Standard
 If you do need to edit invoices, you can correct COGS transactions by running
  the re-posting of invoices through menu System--Repost COGS.
+\end_layout
+
+\begin_layout Section
+Ledger Doctor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename doctor1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename doctor2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Monitor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename monitor1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename monitor2.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
