@@ -1365,7 +1365,6 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Standard
-doctor
 \begin_inset Graphics
 	filename chart2.png
 	scale 50
@@ -2811,7 +2810,70 @@ TODO: Copy queries and other text here.
 \end_layout
 
 \begin_layout Section
+Languages
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename language.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename language.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename language-print.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Translations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trans-chart.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trans-chart2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trans-chart3.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4654,15 +4716,103 @@ Let us say the exchange rate is 1 GBP = 2.0289 (or reverse 1 USD = 0.4929
 \end_layout
 
 \begin_layout Section
+Quotations and RFQs
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuquotations.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Quotations
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+\begin_inset Graphics
+	filename quotations1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename quotations2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename quotations3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 RFQ
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename rfq1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename rfq2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename rfq3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename rfq4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Section
-Sales Order
+Orders
 \end_layout
 
 \begin_layout Standard
@@ -4673,6 +4823,27 @@ Sales Order
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Here are few points to remember:
+\end_layout
+
+\begin_layout Enumerate
+When you create an invoice from order, you cannot edit the quantities on
+ invoice screen or add or remove items.
+ 
+\end_layout
+
+\begin_layout Enumerate
+When you create invoice from a partially received order, this order is marked
+ closed and a new order with same number but remaining quantities and new
+ order date is created.
+ 
+\end_layout
+
+\begin_layout Subsection
+Sales Orders
 \end_layout
 
 \begin_layout Standard
@@ -4731,7 +4902,7 @@ Sales order report
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Purchase Order
 \end_layout
 
@@ -4759,7 +4930,7 @@ Create a vendor invoice: Open the order and click the Vendor Invoice button.
 If warehouses are enabled, you can receive goods to a particular warehouse.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Add a new purchase order
 \end_layout
 
@@ -4813,7 +4984,7 @@ When you have saved a PO, you can create an RFQ (request for quotation)
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Purchase order reports
 \end_layout
 
@@ -4835,7 +5006,7 @@ Purchase order reports
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Receiving a PO
 \end_layout
 
@@ -4947,25 +5118,8 @@ Once a vendor invoice has been created for a PO, it is closed.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Order Entry Notes
-\end_layout
-
-\begin_layout Standard
-Here are few points to remember:
-\end_layout
-
-\begin_layout Enumerate
-When you create an invoice from order, you cannot edit the quantities on
- invoice screen or add or remove items.
- 
-\end_layout
-
-\begin_layout Enumerate
-When you create invoice from a partially received order, this order is marked
- closed and a new order with same number but remaining quantities and new
- order date is created.
- 
 \end_layout
 
 \begin_layout Subsection
