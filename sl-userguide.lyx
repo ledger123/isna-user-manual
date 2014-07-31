@@ -74,7 +74,7 @@ Written by
 \begin_inset Newline newline
 \end_inset
 
-Sebastian Weitmann
+
 \begin_inset Newline newline
 \end_inset
 
@@ -82,7 +82,7 @@ Armaghan Saqib
 \begin_inset Newline newline
 \end_inset
 
-
+Sebastian Weitmann
 \begin_inset Newline newline
 \end_inset
 
@@ -203,8 +203,24 @@ To make things simple, we assume that you are using Ledger123 release 3
  because most of the enhancements in Ledger 123 are related to inventory.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Website and other resources on Internet
+\end_layout
+
+\begin_layout Standard
+International SQL-Ledger network association website
+\end_layout
+
+\begin_layout Itemize
+http://www.sql-ledger-network.com/
+\end_layout
+
+\begin_layout Standard
+Github repository for enhanced SQL-Ledger
+\end_layout
+
+\begin_layout Itemize
+https://github.com/ledger123/ledger123
 \end_layout
 
 \begin_layout Standard
@@ -326,7 +342,20 @@ status open
 
 \begin_layout Plain Layout
 
-git checkout master # enhanced sql-ledger
+git checkout rel3 # enhanced sql-ledger version 3
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+git checkout master # enhanced sql-ledger version 2.8
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -748,17 +777,17 @@ One you have defined the roles, it is time to define the actual users.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 In the 'Role' field, select the appropriate role for this user.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 In the login name field, type the login name which should be preferably
  in lower case without '@' sign and without other special characters.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 The 'Sales' checkbox is there to mark whether this user will appear in salespers
 ons list or not.
 \end_layout
@@ -781,9 +810,13 @@ On the screen you can add all your sql-ledger users as well as other employees
 \end_layout
 
 \begin_layout Standard
-To get list of existing employees, you use the 'HR--Reports' menu.
- A search screen is display where you can select which information you need
- to display and click 'Continue'
+To get list of existing employees, you use 
+\series bold
+HR--Employees--Reports
+\series default
+ menu.
+ A search screen is displayed where you can select which information you
+ need to display and click 'Continue' button.
 \end_layout
 
 \begin_layout Standard
@@ -855,13 +888,14 @@ Defaults
 \end_layout
 
 \begin_layout Standard
-System–Defaults menu allows you to setup your company, address and related
- information in SQL-Ledger.
- Document numbering is also controlled by system defaults.
-\end_layout
 
-\begin_layout Standard
-We setup defaults for document numbers as shown on the following screen
+\series bold
+System--Defaults
+\series default
+ menu allows you to setup your company, address and related information
+ in SQL-Ledger.
+ Document numbering is also controlled by system defaults.
+ We setup defaults for document numbers as shown on the following screen
  shot.
  You can change these to your liking or organizational needs.
 \end_layout
@@ -881,6 +915,12 @@ Customers
 \end_layout
 
 \begin_layout Standard
+Customers menu allows you to add new customers or change or delete existing
+ customers.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menucustomers.png
 	scale 50
@@ -892,12 +932,32 @@ Customers
 
 \begin_layout Standard
 You need to add at least one customer before creating invoices.
- Use Customers--Add Customer to add new customers.
+ Use 
+\series bold
+Customers--Add Customer
+\series default
+ to add new customers.
 \end_layout
 
 \begin_layout Standard
-To change existing customers, first you list them using Customers–Reports–Search.
- Customers are listed with hyperlinks to edit each customer.
+\begin_inset Graphics
+	filename customer1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make changes to existing customers, first you list them using 
+\series bold
+Customers--Search
+\series default
+.
+ You can leave this search form blank and click 'Continue' to get all customers
+ or you can specify customer name, phone or any other information to get
+ a specific customer.
+ If there are more than one matching customers, all those will be listed.
 \end_layout
 
 \begin_layout Standard
@@ -911,6 +971,11 @@ To change existing customers, first you list them using Customers–Reports–Se
 \end_layout
 
 \begin_layout Standard
+When you click the customer name in this list, that particular customer
+ record will be shown for editing.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename customer-search2.png
 	scale 45
@@ -920,18 +985,14 @@ To change existing customers, first you list them using Customers–Reports–Se
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Graphics
-	filename customer1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Vendors
+\end_layout
+
+\begin_layout Standard
+Vendors menu allows you to add new vendorss or change or delete existing
+ vendors.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -946,12 +1007,32 @@ Vendors
 
 \begin_layout Standard
 You need to add at least one vendor before creating invoices.
- Use Vendors–Add Vendor to add new vendors.
+ Use 
+\series bold
+Vendors--Add Vendor
+\series default
+ to add new vendors.
 \end_layout
 
 \begin_layout Standard
-To change existing vendors, first you list them using Vendors–Reports–Search.
- Vendors are listed with hyperlinks to edit each vendor.
+\begin_inset Graphics
+	filename vendor1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make changes existing vendors, first you list them using 
+\series bold
+Vendors--Search
+\series default
+.
+ You can leave this search form blank and click 'Continue' to get all vendors
+ or you can specify vendor name, phone or any other information to get a
+ specific customer.
+ If there are more than one matching vendors, all those will be listed.
 \end_layout
 
 \begin_layout Standard
@@ -974,25 +1055,17 @@ To change existing vendors, first you list them using Vendors–Reports–Search
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Graphics
-	filename vendor1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Type of Business
 \end_layout
 
 \begin_layout Standard
-You define type of business using 'System--Type of Business'.
- Type of business allows you to group your customers by a particular type.
- It also allows you to setup default discount percentage for that group
- of customers.
+You can group using customers using 
+\series bold
+System--Type of business
+\series default
+ menu.
+ You can setup default discount percentage for that group of customers.
 \end_layout
 
 \begin_layout Standard
@@ -1013,6 +1086,11 @@ You define type of business using 'System--Type of Business'.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+One you have defined types of business, you select a particular one when
+ you are adding or editing your customer as shown below.
 \end_layout
 
 \begin_layout Standard
@@ -1039,8 +1117,35 @@ Managing Departments
 \end_layout
 
 \begin_layout Standard
-Departments can be added, changed or deleted using 'System–Departments'
- menu option.
+Departments can be added, changed or deleted using 
+\series bold
+System--Departments menu
+\series default
+.
+ When managing deparments, following points are important:
+\end_layout
+
+\begin_layout Enumerate
+Departments lookup does not appear on transaction forms unless you define
+ at least one department.
+\end_layout
+
+\begin_layout Enumerate
+SQL-Ledger departments can be mapped to the various departments (sales,
+ purchase etc.), branches (London, Oxford etc.) or product divisions (Product
+ 1, Product2 etc.) within your organization.
+\end_layout
+
+\begin_layout Enumerate
+Departments can be marked as 'Cost Center' or 'Profit Center'.
+ Cost center departments appear only in purchasing module.
+ Profit center departments appear both in purchasing and sales modules.
+\end_layout
+
+\begin_layout Enumerate
+You can also change 'Department' to anything you like (eg.Branch) using the
+ sql-ledger language customization feature.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1063,31 +1168,16 @@ Departments can be added, changed or deleted using 'System–Departments'
 
 \end_layout
 
-\begin_layout Standard
-SQL-Ledger departments can be mapped to the various departments (sales,
- purchase etc.), branches (London, Oxford etc.) or product divisions (Product
- 1, Product2 etc.) within your organization.
-\end_layout
-
-\begin_layout Standard
-Departments can be marked as 'Cost Center' or 'Profit Center'.
- Cost center departments appear only in purchasing module.
- Profit center departments appear both in purchasing and sales modules.
-\end_layout
-
-\begin_layout Standard
-You can also change 'Department' to anything you like (eg.Branch) using the
- sql-ledger language customization feature.
- Note: Departments lookup does not appear on transaction forms unless you
- define at least one department from System→Departments menu option.
-\end_layout
-
 \begin_layout Subsection
 Default Department
 \end_layout
 
 \begin_layout Standard
-You can define a default default for users using HR--Employees men.
+You can define a default department for a particular user using 
+\series bold
+HR--Employees
+\series default
+ menu.
  You can also restrict the user to view and make transactions to his department
  only by setting his role to User.
  Users with role Administrator, Manager, Supervisor always have access to
@@ -1129,6 +1219,8 @@ Reports
 
 \begin_layout Standard
 Reports allow you to view all or department specific transactions.
+ For example you can filter AR Transactions report by specifying a particular
+ department on search screen.
 \end_layout
 
 \begin_layout Standard
@@ -1157,8 +1249,11 @@ Income Statement and Balance sheet can also be compared and displayed by
 \end_layout
 
 \begin_layout Standard
-'Reports--Department Income Statement' report shows income statement for
- individual departments in columner form.
+
+\series bold
+Reports--Department Income Statement
+\series default
+ report shows income statement for individual departments in columner form.
 \end_layout
 
 \begin_layout Standard
@@ -1186,16 +1281,6 @@ Projects
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename menuprojects.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Projects are optional and can be used for following things:
 \end_layout
 
@@ -1215,16 +1300,27 @@ Notes Projects lookup appears on transactions forms only if you have created
  at least one project.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuprojects.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Managing Projects
 \end_layout
 
 \begin_layout Standard
 You can add or change projects through Projects menu.
-\end_layout
-
-\begin_layout Standard
-Click on 'Projects--Add Project' to add a new project.
+ Click on 
+\series bold
+Projects--Add Project
+\series default
+ to add a new project.
 \end_layout
 
 \begin_layout Standard
@@ -1239,7 +1335,11 @@ Click on 'Projects--Add Project' to add a new project.
 
 \begin_layout Standard
 To change an existing project, first display list of existing projects.
- For this you use 'Projects--Reports--Projects' menu.
+ For this you use 
+\series bold
+Projects--Reports--Projects
+\series default
+ menu.
  Following screen is displayed where you can specifiy some conditions to
  select the projects of your interest.
  To view all projects just click the 'Continue' button.
@@ -1276,6 +1376,13 @@ Using Projects
 
 \begin_layout Standard
 Once you have defined projects, you can use them in sales and purchase invoices.
+ Project lookup appears on extended detail lines of invoice, orders and
+ quotations.
+ To display extended detail for each line, check the checkbox next to descriptio
+n of each line item.
+ If you check the checkbox in the heading, extended detail is show for all
+ the line items.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1292,10 +1399,14 @@ Project Reports
 \end_layout
 
 \begin_layout Standard
-'Projects--Reports--Transactions' report will show you a summary report
- similar to trial balance report with summary of all transactions for the
- the selected project.
- First you specify the period of interest before display the report.
+
+\series bold
+Projects--Reports--Transactions
+\series default
+ report will show you a summary report similar to trial balance report with
+ summary of all transactions for the the selected project.
+ Before displaying the report you can specify date range as well as department
+ for the report.
 \end_layout
 
 \begin_layout Standard
@@ -1345,6 +1456,26 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Standard
+A chart of account is required before you start recording any accounting
+ transaction.
+ When you create your company dataset in SQL-Ledger you are offerred to
+ select one of the provided samples of chart of accounts.
+ Later on you can modify the initial chart of accounts according to your
+ business needs.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+System--Chart of Accounts
+\series default
+ menu is used to manage the chart of accounts.
+ Here you can add new accounts, change existing ones or delete the unwanted
+ ones from sample chart of accounts which have not been used in any transaction.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menuchart.png
 	scale 50
@@ -1352,6 +1483,14 @@ Chart of Accounts
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+System--Chart of Accounts--List Accounts
+\series default
+ shows the existing chart of account.
 \end_layout
 
 \begin_layout Standard
@@ -1365,6 +1504,11 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Standard
+You can click on account number to open the account in detail form where
+ you can make changes to the account.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename chart2.png
 	scale 50
@@ -1375,12 +1519,31 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Section
+GIFI
+\end_layout
+
+\begin_layout Standard
+GIFI stands for General Index for Financial Information.
+ GIFI codes can be created and attached to accounts in chart of accounts.
+ You can add or change GIFI codes just like standard chart of accounts.
+ Once GIFI setup is complete, you can view accounting reports by standard
+ accounts or GIFI accounts.
+\end_layout
+
+\begin_layout Section
 Templates
 \end_layout
 
 \begin_layout Standard
-Print forms for invoices, orders, quotations and financial reports can be
- customized by you by editing form templates.
+Print forms for invoices, orders, quotations and financial reports have
+ been defined as templates.
+ This makes it easy to customize these formas and reports according to your
+ requirements.
+ All these templates can be accessed through 
+\series bold
+System
+\series default
+ menu.
  There are three type of templates:
 \end_layout
 
@@ -1537,7 +1700,25 @@ Templates can be edit through sql-ledger.
 \end_layout
 
 \begin_layout Standard
-Attach:templates2.jpg
+\begin_inset Graphics
+	filename templates2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here this template is opened for editing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates3.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2097,6 +2278,36 @@ Goods & Services
 \end_layout
 
 \begin_layout Standard
+All business sell some goods and services to generate revenue.
+ You need to define the goods and services related to your business before
+ you can start creating invoices, orders or quotations.
+ Goods and services have been defined into following entities:
+\end_layout
+
+\begin_layout Enumerate
+Parts are something which you keep in the inventory and want to track their
+ onhand quantity.
+\end_layout
+
+\begin_layout Enumerate
+Services are something which you provide to your customers or buy from vendors.
+ Services are not 'stored' somewhere and you do not track their onhand quantity.
+\end_layout
+
+\begin_layout Enumerate
+Asseemblies are made up from parts, services and labour/overhead.
+ This feature is used by manufacturing concerns.
+ When you sell an assembly all its associated parts are removed from inventory.
+ COGS for pars and cost of services is recorded.
+ Important note: Assemblies can only be sold.
+\end_layout
+
+\begin_layout Enumerate
+Labor/overhead can be used to allocate the cost of labor or manufacturing
+ overhead to the assemblies.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menugoods.png
 	scale 50
@@ -2149,6 +2360,11 @@ Labor/Overhead
 \end_layout
 
 \begin_layout Standard
+Labor/overhead items are used to allocate labor/overhead charges to an assembly
+ in a manufacturing business.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename parts3.png
 	scale 45
@@ -2156,14 +2372,6 @@ Labor/Overhead
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Goods & Services Reports
-\end_layout
-
-\begin_layout Standard
-'Goods & Services--Reports--All Items' 
 \end_layout
 
 \begin_layout Section
@@ -2206,7 +2414,11 @@ Define assemblies
 \begin_layout Standard
 As assembly is just like any other inventory item in your sql-ledger with
  the additional information about its components.
- You define new assemblies using Goods and Service -- Add Assembly.
+ You define new assemblies using 
+\series bold
+Goods and Service -- Add Assembly
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -2261,8 +2473,11 @@ Reports
 \end_layout
 
 \begin_layout Standard
-More Reports--Goods and Services--Stock Assembly gives you a list of your
- Stock Assembly actions.
+
+\series bold
+Goods and Services--Reports--Stock Assembly
+\series default
+ gives you a list of your Stock Assembly actions.
  This report lists the parts taken out of assembly as well as assemblies
  built.
 \end_layout
@@ -2309,8 +2524,11 @@ Following is a detail report of the 'Stock Assembly' action.
 \end_layout
 
 \begin_layout Standard
-'Goods and Services--Reports--Assemblies' gives you list of all or selected
- assemblies with their components.
+
+\series bold
+Goods and Services--Reports--Assemblies
+\series default
+ gives you list of all or selected assemblies with their components.
  You wn narrow down your assemblies list by specifiying search criteria.
 \end_layout
 
@@ -2339,8 +2557,11 @@ Once you click the 'Continue' button above the following report is displayed.
 \end_layout
 
 \begin_layout Standard
-Goods and Servers--Components gives you a list order by partnumber and the
- assembly in which it is used.
+
+\series bold
+Goods and Servers--Components
+\series default
+ gives you a list order by partnumber and the assembly in which it is used.
 \end_layout
 
 \begin_layout Standard
@@ -2519,6 +2740,115 @@ Open the customer record for editing and set the applicable price group
 \end_layout
 
 \begin_layout Section
+Goods & Services Reports
+\end_layout
+
+\begin_layout Standard
+Here we explain all reports under 
+\series bold
+Goods & Services--Reports
+\series default
+ menu briefly.
+\end_layout
+
+\begin_layout Subsection
+All Items
+\end_layout
+
+\begin_layout Standard
+This report can be used to view list of all items which include parts, services,
+ labor/overhead and assemblies.
+ You can optionally select to view invoices or orders which have been created
+ for each item.
+\end_layout
+
+\begin_layout Subsection
+Parts
+\end_layout
+
+\begin_layout Standard
+This report is similar to the all items report above but only shows parts
+ or tangible item for which you track onhand quantity in your business.
+\end_layout
+
+\begin_layout Subsection
+Requirements
+\end_layout
+
+\begin_layout Standard
+This report will show you what you need to buy based upon following factors:
+\end_layout
+
+\begin_layout Standard
+Onhand quantity
+\end_layout
+
+\begin_layout Standard
+Sales orders
+\end_layout
+
+\begin_layout Standard
+Purchase orders
+\end_layout
+
+\begin_layout Subsection
+Services
+\end_layout
+
+\begin_layout Standard
+This report is similar to all items report above but only shows services.
+\end_layout
+
+\begin_layout Subsection
+Labor/Overhead
+\end_layout
+
+\begin_layout Standard
+This report is similar to all items report but only shows labor/overhead
+ items.
+\end_layout
+
+\begin_layout Subsection
+Groups
+\end_layout
+
+\begin_layout Standard
+This report will show you all the partsgroup you have defined.
+\end_layout
+
+\begin_layout Subsection
+Pricegroups
+\end_layout
+
+\begin_layout Standard
+This report will show you all the price group you have defined.
+\end_layout
+
+\begin_layout Subsection
+Assemblies
+\end_layout
+
+\begin_layout Standard
+This report will show you all the assemblies you have defined.
+\end_layout
+
+\begin_layout Subsection
+Components
+\end_layout
+
+\begin_layout Standard
+This report will show you the components which have been used in the assemblies.
+\end_layout
+
+\begin_layout Subsection
+Stock Assembly
+\end_layout
+
+\begin_layout Standard
+This report will show you the log of stock assembly actions.
+\end_layout
+
+\begin_layout Section
 Warehouses
 \end_layout
 
@@ -2672,8 +3002,11 @@ Warehouse Onhand Report
 \end_layout
 
 \begin_layout Standard
-Warehouses–Reports–Onhand gives you inventory onhand for all warehouses
- or for a particular warehouse.
+
+\series bold
+Warehouses–Reports–Onhand
+\series default
+ gives you inventory onhand for all warehouses or for a particular warehouse.
  
 \end_layout
 
@@ -2726,17 +3059,17 @@ Transfers delivered
 Some companies also need to track the in-transit goods between warehouse
  transfers.
  Delivered date is usually different from transfer date.
-\end_layout
-
-\begin_layout Standard
-When you login, you will see the number of transfers which have been sent
+ When you login, you will see the number of transfers which have been sent
  to your default warehouse but not received by you yet.
 \end_layout
 
 \begin_layout Standard
-To 'receive' the transfers, click the 'Warehouses–Reports–Deliveries' menu
- option, specify criteria and click Continue to display the transfers pending
- to be received.
+To 'receive' the transfers, click the 
+\series bold
+Warehouses--Reports--Deliveries
+\series default
+ menu option, specify criteria and click Continue to display the transfers
+ pending to be received.
  Here you specify the dates when the goods were delivered at 'your' warehouse
  and click 'Save Delivered'.
 \end_layout
@@ -2755,18 +3088,20 @@ Other Reports
 \end_layout
 
 \begin_layout Enumerate
-Goods & Services–Parts report provides summary of your on hand quantity
- at selected or all warehouses.
+
+\series bold
+Goods & Services--Reports--Parts
+\series default
+ report provides summary of your on hand quantity at selected or all warehouses.
  Click 'Warehouse' check box to display onhand by warehouse.
 \end_layout
 
 \begin_layout Enumerate
-.
-\end_layout
 
-\begin_layout Enumerate
-Warehouses–Reports–Activity gives you all activity of a particular item
- or all items.
+\series bold
+Warehouses--Reports--Activity
+\series default
+ gives you all activity of a particular item or all items.
  Select warehouse to see the activity in a particular warehouse.
  Activity report shows activity from purchase invoices, sales invoices and
  transfers.
@@ -2814,6 +3149,34 @@ Languages
 \end_layout
 
 \begin_layout Standard
+SQL-Ledger language feature can be used for two purposes:
+\end_layout
+
+\begin_layout Enumerate
+You can define alternate descriptions, in a foreign language, for parts,
+ services, groups and chart of accounts.
+ This way you can send, for example, invoices in the customers native language.
+\end_layout
+
+\begin_layout Enumerate
+You can also define an alternate set of templates for printing your invoices,
+ orders and quotations.
+ This can be used incombination with the transactions use mentioned above
+ or on its own to define a particular set of documents for a particular
+ customer or market segment.
+\end_layout
+
+\begin_layout Standard
+To define a new language, use 
+\series bold
+System--Language
+\series default
+ menu.
+ Existing list of languages (if any) will be displayed with 'Add Language'
+ button at the bottom of the report.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename language.png
 	scale 50
@@ -2831,6 +3194,11 @@ Languages
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Once you have defined new language, you can see it in a dropdown on invoice
+ (or order or quotation) print options area.
 \end_layout
 
 \begin_layout Standard
@@ -2845,6 +3213,35 @@ Languages
 
 \begin_layout Section
 Translations
+\end_layout
+
+\begin_layout Standard
+Once you have defined a language, you can add transalations to certain things
+ like:
+\end_layout
+
+\begin_layout Enumerate
+Chart of accounts
+\end_layout
+
+\begin_layout Enumerate
+All items
+\end_layout
+
+\begin_layout Enumerate
+Groups
+\end_layout
+
+\begin_layout Enumerate
+Projects
+\end_layout
+
+\begin_layout Standard
+To add a translation, using 
+\series bold
+Translations
+\series default
+ submenu under the respective menu.
 \end_layout
 
 \begin_layout Standard
@@ -3539,7 +3936,11 @@ Upload and preview
 \end_layout
 
 \begin_layout Standard
-Using 'Imports–GL Transaction' load the CSV file into sql-ledger.
+Using 
+\series bold
+Imports–GL Transaction
+\series default
+ load the CSV file into sql-ledger.
  Import script will show the rows which contain valid account number and
  can be imported.
 \end_layout
@@ -3949,6 +4350,10 @@ AR
 \end_layout
 
 \begin_layout Standard
+AR module is used to record invoices and transactions with your customers.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menuar.png
 	scale 50
@@ -3963,7 +4368,11 @@ AR Transaction
 \end_layout
 
 \begin_layout Standard
-AR--Add Transaction menu option is used to create AR Transactions.
+
+\series bold
+AR--Add Transaction
+\series default
+ menu is used to create AR Transactions.
  These transactions allow you to record your sales in correct GL accounts
  without creating an invoice.
 \end_layout
@@ -3983,7 +4392,11 @@ Sales Invoice
 \end_layout
 
 \begin_layout Standard
-Sales invoices are created using AR--Sales Invoice menu option.
+Sales invoices are created using 
+\series bold
+AR--Sales Invoice
+\series default
+ menu option.
  The only mandatory columns are Customer and Invoice Date.
  Rest of the columns can be left blank.
 \end_layout
@@ -4005,6 +4418,17 @@ Once you enter an item (part, service) and click 'Update', a new line opens.
 \end_layout
 
 \begin_layout Standard
+By default only item number, description, qty, unit, price and discount
+ are shown on each line item.
+ You can also display additional input columns for extended information
+ on each line item.
+ To do this, just check the box next to description column of the line item
+ or heading and click update.
+ Now the invoice form will be displayed with extended line items as shown
+ below.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ar3.png
 	scale 45
@@ -4015,12 +4439,30 @@ Once you enter an item (part, service) and click 'Update', a new line opens.
 \end_layout
 
 \begin_layout Subsection
+Credit Note
+\end_layout
+
+\begin_layout Standard
+Credit note is used to record a sale return without creating a credit invoice.
+\end_layout
+
+\begin_layout Subsection
+Credit Invoice
+\end_layout
+
+\begin_layout Standard
+Credit invoice is used to record a sale return with inventory items.
+\end_layout
+
+\begin_layout Subsection
 Transactions Report
 \end_layout
 
 \begin_layout Standard
-Transaction report shows all open or closed transactions for the specified
- criteria on search screen.
+Transaction report shows all open or closed transactions and invoices for
+ the specified criteria on search screen.
+ On search screen you can specify various criteria and select/de-select
+ columns which you want to shown on the screen.
 \end_layout
 
 \begin_layout Standard
@@ -4034,6 +4476,13 @@ Transaction report shows all open or closed transactions for the specified
 \end_layout
 
 \begin_layout Standard
+When you click 'Continue' button after specifing the required criteria,
+ your report is displayed.
+ This is 'Summary' report where each invoice or transaction is shown on
+ single line.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename artrans2.png
 	scale 45
@@ -4041,6 +4490,14 @@ Transaction report shows all open or closed transactions for the specified
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 'Detail' report shows debits and credits of each transaction along with
+ account number.
+ In detail report, a single invoice or transaction is shown on multiple
+ times.
+ You can click 'Subtotal' to subtotal and group this report by invoice number.
 \end_layout
 
 \begin_layout Standard
@@ -4058,6 +4515,11 @@ Aging Report
 \end_layout
 
 \begin_layout Standard
+Aging report shows the outstanding balances of your customers divided into
+ predefined periods of time in the past.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-search.png
 	scale 45
@@ -4068,6 +4530,11 @@ Aging Report
 \end_layout
 
 \begin_layout Standard
+The summary aging report (shown below) shows online for each customer with
+ outstanding balance.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-summ.png
 	scale 45
@@ -4075,6 +4542,11 @@ Aging Report
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The detail aging report (shown below) shows all outstanding invoices for
+ each customer with subtotal by the customer.
 \end_layout
 
 \begin_layout Standard
@@ -4089,6 +4561,15 @@ Aging Report
 
 \begin_layout Subsection
 Reminders
+\end_layout
+
+\begin_layout Standard
+You can print or email reminders to your customers.
+ You can define upto 3 levels of reminders.
+ Level 1 being a polite one and level 3 being a bit harsh one.
+ When you print a reminder, its level is stored in the database.
+ Next time when you print reminder for the same customer, next level of
+ reminder is printed.
 \end_layout
 
 \begin_layout Standard
@@ -4116,6 +4597,12 @@ Customer History Reports
 \end_layout
 
 \begin_layout Standard
+You can use history reports to see which customer is giving you more business.
+ You can filter the report on date range which is applied to the invoices
+ (or orders or quotations)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename customer-history1.png
 	scale 45
@@ -4126,6 +4613,10 @@ Customer History Reports
 \end_layout
 
 \begin_layout Standard
+Customer history summary report shows business activity grouped by item.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename customer-history2.png
 	scale 45
@@ -4133,6 +4624,10 @@ Customer History Reports
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Customer history detail report shows business activity by invoice and item.
 \end_layout
 
 \begin_layout Standard
@@ -4147,6 +4642,15 @@ Customer History Reports
 
 \begin_layout Section
 Point of Sales (POS)
+\end_layout
+
+\begin_layout Standard
+Point of sales (POS) module allows quick invoicing at busy places like a
+ shop or a restaurant.
+ The items and customers you have defined for your invoices can be used
+ for POS invoicing.
+ The only difference with standard AR invoices is a simplified data entry
+ screen and a POS optimized receipts section.
 \end_layout
 
 \begin_layout Standard
@@ -4193,86 +4697,6 @@ Point of Sales (POS)
 \begin_inset Graphics
 	filename pos5.png
 	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Receipts
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menucash.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-There are two ways to record payment from your customer:
-\end_layout
-
-\begin_layout Standard
-You can put the receipt information at the footer of your invoice when creating
- the invoice if the invoice has been paid at the time of purchase.
-\end_layout
-
-\begin_layout Standard
-You can use 'Cash--Receipt' menu to record receipt for a particular customer.
- Using this method is advisible as you do not need to edit invoices to record
- the receipt.
- This method also allows you to record a single receipt for multiple invoices.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The 'Cash--Receipts' menu allows you to quickly record receipts for multiple
- invocies for multiple customers.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Receipts report show you receipts for the particular period according to
- your bank account.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt4.png
-	scale 45
 
 \end_inset
 
@@ -4424,6 +4848,114 @@ Vendor History
 \end_layout
 
 \begin_layout Section
+Cash
+\end_layout
+
+\begin_layout Subsection
+Receipts
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cash--Receipt
+\series default
+ menu can be used to record receipts from your customers against outstanding
+ invoices.
+ Another menu 
+\series bold
+Cash--Receipts
+\series default
+ allows you to enter receipts from multiple customers.
+ Both have same effect but the later one make data entry quick for adding
+ receipts from multiple customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menucash.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are two ways to record payment from your customer:
+\end_layout
+
+\begin_layout Enumerate
+You can put the receipt information at the footer of your invoice when creating
+ the invoice if the invoice has been paid at the time of purchase.
+\end_layout
+
+\begin_layout Enumerate
+You can use 
+\series bold
+Cash--Receipt
+\series default
+ menu to record receipt for a particular customer.
+ Using this method is advisible as you do not need to edit invoices to record
+ the receipt.
+ This method also allows you to record a single receipt for multiple invoices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+Cash--Receipts
+\series default
+ menu allows you to quickly record receipts for multiple invocies for multiple
+ customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Receipts report show you receipts for the particular period according to
+ your bank account.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt4.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Payments
 \end_layout
 
@@ -4431,13 +4963,17 @@ Payments
 There are two ways to record payment from your vendor.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 You can put the payment information at the footer of your invoice when creating
  the invoice if the invoice has been paid at the time of purchase.
 \end_layout
 
-\begin_layout Standard
-You can use 'Cash--Payment' menu to record payment for a particular vendor.
+\begin_layout Enumerate
+You can use 
+\series bold
+Cash--Payment
+\series default
+ menu to record payment for a particular vendor.
  Using this method is advisible as you do not need to edit invoices to record
  the payment.
  This method also allows you to record a single payment for multiple invoices.
@@ -4492,6 +5028,13 @@ General Ledger
 \end_layout
 
 \begin_layout Standard
+General Ledger module is used to add standard accounting journals with debit
+ and credit amounts to some accounts from chart of accounts.
+ You cannot post a transactions until the total of debits is equal to the
+ total of credits.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menugl.png
 	scale 50
@@ -4506,7 +5049,14 @@ Add Transaction
 \end_layout
 
 \begin_layout Standard
-Adding a GL transaction
+Use 
+\series bold
+General Ledger--Add Transaction
+\series default
+ menu to add a new GL transaction.
+ On this screen you can put some reference number in the 'Reference' column.
+ If you leave it blank, SQL-Ledger will assign next number from the scheme
+ defined in defaults.
 \end_layout
 
 \begin_layout Standard
@@ -4524,7 +5074,15 @@ Reports
 \end_layout
 
 \begin_layout Standard
-GL Transactions Report
+
+\series bold
+General Ledger--Reports
+\series default
+ menu is used to view all accounting journals with debits and credits to
+ the particular accounts.
+ Initially this report can be confusing because it shows not only the journals
+ added using 'Add Transaction' menu show above but also all accounting transacti
+ons posted from AR, AP and Cash modules.
 \end_layout
 
 \begin_layout Standard
@@ -4650,6 +5208,13 @@ Defining currencies
 \end_layout
 
 \begin_layout Standard
+To define a new currency use System--Currencies menu.
+ The top-most currency is the default currency.
+ You can move the currencies up and down using the arrows on the currency
+ list.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename curr1.jpg
 
@@ -4663,6 +5228,13 @@ Buying and selling in foreign currencies
 \end_layout
 
 \begin_layout Standard
+When you want to create invoice in currency, just change the currency code
+ from currency dropdown box.
+ SQL-Ledger will show you the last exchange rate for this currency.
+ You can just accept this rate or change it.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename curr2.jpg
 
@@ -4673,6 +5245,10 @@ Buying and selling in foreign currencies
 
 \begin_layout Subsection
 Reports
+\end_layout
+
+\begin_layout Standard
+You can view reports in base currency as well as in the foreign currency.
 \end_layout
 
 \begin_layout Standard
@@ -4717,6 +5293,13 @@ Let us say the exchange rate is 1 GBP = 2.0289 (or reverse 1 USD = 0.4929
 
 \begin_layout Section
 Quotations and RFQs
+\end_layout
+
+\begin_layout Standard
+You can use SQL-Ledger to send quotations to your customers or request your
+ vendors for quotations (RFQs).
+ Later on you can convert quotations to sales orders and RFQs to purchase
+ orders.
 \end_layout
 
 \begin_layout Standard
@@ -4807,12 +5390,13 @@ RFQ
 
 \end_layout
 
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Section
 Orders
+\end_layout
+
+\begin_layout Standard
+Orders module can be used to create purchase orders for your vendors or
+ sales orders to your customers.
 \end_layout
 
 \begin_layout Standard
@@ -4935,11 +5519,16 @@ Add a new purchase order
 \end_layout
 
 \begin_layout Standard
-'Order Entry--Purchase Order' will display the following 'Add Purchase Order'
- screen.
- To edit an existing PO, you display list of existing orders using 'Order
- Entry--Reports--Purchase Orders' and click on PO number to edit that particular
- PO.
+
+\series bold
+Order Entry--Purchase Order
+\series default
+ will display the following 'Add Purchase Order' screen.
+ To edit an existing PO, you display list of existing orders using 
+\series bold
+Order Entry--Reports--Purchase Orders
+\series default
+ and click on PO number to edit that particular PO.
 \end_layout
 
 \begin_layout Standard
@@ -4989,7 +5578,11 @@ Purchase order reports
 \end_layout
 
 \begin_layout Standard
-'Order Entry--Reports--Purchase Orders' shows you all your purchase orders.
+
+\series bold
+Order Entry--Reports--Purchase Orders
+\series default
+ shows you all your purchase orders.
  You can check/uncheck the 'Open' and 'Closed' checkboxes on search screen
  before you continue.
  'Closed' POs are those which have been fully received OR which have been
@@ -5011,6 +5604,11 @@ Receiving a PO
 \end_layout
 
 \begin_layout Standard
+Shipping module allows you to receive goods to warehouses from your orders.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menushipping.png
 	scale 50
@@ -5018,11 +5616,6 @@ Receiving a PO
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Shipping module allows you to receive goods to warehouses from your orders.
- 
 \end_layout
 
 \begin_layout Standard
@@ -5081,8 +5674,11 @@ In the example below we have partially received this PO.
 \end_layout
 
 \begin_layout Standard
-If you open this PO again (using 'Order Entry--Reports--Purchase Orders')
- you will see the quantity received in the 'Rcvd' column.
+If you open this PO again (using 
+\series bold
+Order Entry--Reports--Purchase Orders
+\series default
+) you will see the quantity received in the 'Rcvd' column.
  This quantity is updated every time you receive goods using 'Shipping--Receive'.
 \end_layout
 
@@ -5161,21 +5757,29 @@ Inventory onhand at warehouses:
 \end_layout
 
 \begin_layout Enumerate
-Goods & Services–All Items report.
+
+\series bold
+Goods & Services–All Items
+\series default
+ report.
  Check the 'Warehouse' checkbox on search screen.
  
 \end_layout
 
 \begin_layout Enumerate
-Warehouses–Reports–Onhand 
+
+\series bold
+Warehouses–Reports–Onhand
+\series default
+ 
 \end_layout
 
 \begin_layout Enumerate
-Inventory receive/ship activity 
-\end_layout
-
-\begin_layout Enumerate
-Warehouses–Reports–Activity report.
+Inventory receive/ship activity: 
+\series bold
+Warehouses–Reports–Activity
+\series default
+ report.
  
 \end_layout
 
@@ -5256,7 +5860,11 @@ Activate Audit trail
 
 \begin_layout Standard
 All user activity (adding, changing, deleting transactions) is logged.
- You can view this log using 'Others–Audit Trial' report.
+ You can view this log using 
+\series bold
+System--Audit Trail
+\series default
+ report.
 \end_layout
 
 \begin_layout Subsection*
@@ -5274,6 +5882,11 @@ Keeping track of your business in SQL-Ledger
 \end_layout
 
 \begin_layout Standard
+This sections explains some important reports which are available to you
+ to moniter and track your business once you have recorded all the transactions.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menureports.png
 	scale 50
@@ -5285,6 +5898,12 @@ Keeping track of your business in SQL-Ledger
 
 \begin_layout Section
 Trial Balance
+\end_layout
+
+\begin_layout Standard
+Trial balance is a standard accounting report which shows amounts posted
+ to each account in your chart of accounts.
+ Trial balance is a summary of all transactions posted from all modules.
 \end_layout
 
 \begin_layout Standard
@@ -5388,6 +6007,10 @@ Balance sheet can be displayed upto any particular date.
 Tax Report
 \end_layout
 
+\begin_layout Standard
+TODO
+\end_layout
+
 \begin_layout Section
 Reconciliation
 \end_layout
@@ -5449,7 +6072,11 @@ Year End
 \end_layout
 
 \begin_layout Standard
-'System--Yearend' menu does the period closing in MyLedger.
+
+\series bold
+System--Yearend
+\series default
+ menu does the period closing in SQL-Ledger.
  It creates a GL transaction which clears the income accounts and posts
  the difference (which is income or loss) to the specified retained earnings
  account.
@@ -5504,7 +6131,11 @@ Data backup
 
 \begin_layout Standard
 You can backup your data directly through sql-ledger.
- There are two ways to get your backup using the 'System--Backup' menu.
+ There are two ways to get your backup using the 
+\series bold
+System--Backup
+\series default
+ menu.
 \end_layout
 
 \begin_layout Subsection*
@@ -5545,27 +6176,26 @@ Introduction
 \begin_layout Standard
 Double entry accounting system, although much feared by non-accountants,
  is a very simple but extremely powerful method of managing money.
+ SQL-Ledger does much of the double entry accounting itself linking all
+ parts of the application through a chart of accounts.
+ 
 \end_layout
 
 \begin_layout Standard
-SL does much of the double entry accounting itself linking all parts of
- the application through a chart of accounts.
- You need to know about double entry system only when you are going to make
+You need to know about double entry system only when you are going to make
  general ledger transactions.
- Basic Principle
+ Its basic principle is that every business transaction affects at least
+ two accounts.
+ For example:
 \end_layout
 
-\begin_layout Standard
-Every business transaction affects at least two heads of accounts.
-\end_layout
-
-\begin_layout Standard
-For example:
-\end_layout
-
-\begin_layout Standard
+\begin_layout Itemize
 When you buy a car, you cash is decreased and your assets are increased.
- When you sell a item on cash, your sale is increased and your cash is also
+ 
+\end_layout
+
+\begin_layout Itemize
+When you sell a item on cash, your sale is increased and your cash is also
  increased.
  
 \end_layout
@@ -5688,8 +6318,11 @@ Cost of Goods Sold (COGS) is the purchase price of the goods you just sold.
 
 \begin_layout Standard
 Tip: To view the debit and credit accounting transactions for any sale or
- purchase invoice, enter the invoice number on General Ledger–Reports screen
- and click Continue button.
+ purchase invoice, enter the invoice number on 
+\series bold
+General Ledger–Reports
+\series default
+ screen and click Continue button.
 \end_layout
 
 \begin_layout Subsection
@@ -5789,6 +6422,18 @@ Ledger Doctor
 \end_layout
 
 \begin_layout Standard
+Ledger Doctor is a tool to identify database inconsistancies in the sql-ledger
+ database.
+ Use 
+\series bold
+System--Maintenance--Ledger Doctor
+\series default
+ menu to access it.
+ Ledger Doctor report itself does not corrects any error and just reports
+ inconsistancies with hints on how to correct the inconsistancy.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename doctor1.png
 	scale 50
@@ -5810,6 +6455,19 @@ Ledger Doctor
 
 \begin_layout Section
 Monitor
+\end_layout
+
+\begin_layout Standard
+Using 
+\series bold
+System--Maintenance--Monitor
+\series default
+ menu, you can run any SQL directly to your sql-ledger database.
+ WARNING: Be careful with this option as no checks are made on what you
+ do.
+ You can quickly corrupt your database with a small mistake.
+ If you are not sure how to use it then just ignore it.
+ TIP: Always take a backup before running any SQL using this menu.
 \end_layout
 
 \begin_layout Standard
@@ -7831,7 +8489,7 @@ echo "<pre>$output</pre>";
 \end_layout
 
 \begin_layout Standard
-asdfasdf
+END
 \end_layout
 
 \end_body
