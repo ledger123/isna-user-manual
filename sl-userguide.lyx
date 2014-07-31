@@ -224,6 +224,14 @@ https://github.com/ledger123/ledger123
 \end_layout
 
 \begin_layout Standard
+SQL-Ledger website
+\end_layout
+
+\begin_layout Itemize
+http://www.sql-ledger.com/
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -258,6 +266,27 @@ status open
 \begin_layout Plain Layout
 
 git clone git://github.com/ledger123/ledger123.git 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+You are probably interested in the latest release 3.
+ Following command will switch to it.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git checkout -b rel3 origin/rel3
 \end_layout
 
 \end_inset
@@ -309,66 +338,6 @@ git checkout -b sql-ledger origin/sql-ledger
 \end_layout
 
 \begin_layout Enumerate
-From now onwards upgrading to official sql-ledger from sql-ledger.com is
- as easy as:
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-git pull
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Note that you can always switch back and forth between our enhanced sql-ledger
- and the official one by git checkout as:
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-git checkout rel3 # enhanced sql-ledger version 3
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-git checkout master # enhanced sql-ledger version 2.8
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-git checkout sql-ledger # official sql-ledger
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
 You can switch back to any past sql-ledger version.
  First see a log of all commits and 40 chars hashes:
 \begin_inset Newline newline
@@ -410,7 +379,8 @@ git checkout 7b15e9b
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger Virtual Machine
+Note: To view all code changes, you can visit https://github.com/ledger123/ledger
+123.
 \end_layout
 
 \begin_layout Section
@@ -597,6 +567,7 @@ You need to create a dataset in SQL-Ledger before you start using it to
  manage your business accounts.
  Behind the scenes each dataset is a postgresql database with tables, indexes
  and some seed data like chart of accounts.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -917,7 +888,7 @@ Customers
 \begin_layout Standard
 Customers menu allows you to add new customers or change or delete existing
  customers.
- 
+ You need to add at least one customer before creating invoices.
 \end_layout
 
 \begin_layout Standard
@@ -931,8 +902,7 @@ Customers menu allows you to add new customers or change or delete existing
 \end_layout
 
 \begin_layout Standard
-You need to add at least one customer before creating invoices.
- Use 
+Use 
 \series bold
 Customers--Add Customer
 \series default
@@ -992,7 +962,7 @@ Vendors
 \begin_layout Standard
 Vendors menu allows you to add new vendorss or change or delete existing
  vendors.
- 
+ You need to add at least one vendor before creating invoices.
 \end_layout
 
 \begin_layout Standard
@@ -1006,8 +976,7 @@ Vendors menu allows you to add new vendorss or change or delete existing
 \end_layout
 
 \begin_layout Standard
-You need to add at least one vendor before creating invoices.
- Use 
+Use 
 \series bold
 Vendors--Add Vendor
 \series default
@@ -2592,6 +2561,11 @@ Work Order You can print work order for a sales orders.
 
 \begin_layout Section
 Labour/Overhead
+\end_layout
+
+\begin_layout Standard
+Labor/overhead items are used to record labor/overhead of a manufacturing
+ business in assemblies.
 \end_layout
 
 \begin_layout Standard
@@ -5317,6 +5291,14 @@ Quotations
 \end_layout
 
 \begin_layout Standard
+Use 
+\series bold
+Quotations--Quotation
+\series default
+ menu to add a new quotation for your customer.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename quotations1.png
 	scale 50
@@ -5324,6 +5306,17 @@ Quotations
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To get report of existing quotations or to editing a quoation, use 
+\series bold
+Quotations--Reports--Quotations
+\series default
+ menu.
+ The search screen will be displayed where you can specify any conditions
+ to filter the report or just leave blank and click 'Continue' button to
+ get all existing quotations.
 \end_layout
 
 \begin_layout Standard
@@ -5346,8 +5339,32 @@ Quotations
 
 \end_layout
 
+\begin_layout Standard
+Once a quotation has been made, you can create a purchase order from it.
+ Creating a PO from a quotation will mark it closed.
+ You can also close a quotation just by clicking the 'Closed' radio button
+ when you edit a quotation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename quotations4.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 RFQ
+\end_layout
+
+\begin_layout Standard
+Use 
+\series bold
+Quotations--RFQ
+\series default
+ menu to add a new quotation for your customer.
 \end_layout
 
 \begin_layout Standard
@@ -5358,6 +5375,17 @@ RFQ
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To get report of existing RFQs or to editing an RFQ, use 
+\series bold
+Quotations--Reports--RFQs
+\series default
+ menu.
+ The search screen will be displayed where you can specify any conditions
+ to filter the report or just leave blank and click 'Continue' button to
+ get all existing RFQs.
 \end_layout
 
 \begin_layout Standard
@@ -5378,6 +5406,13 @@ RFQ
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Once an RFQ has been made, you can create a sales order from it.
+ Creating an SO from an RFQ will mark it closed.
+ You can also close an RFQ just by clicking the 'Closed' radio button when
+ you edit it.
 \end_layout
 
 \begin_layout Standard
@@ -5812,7 +5847,11 @@ Shipping sales orders directly by putting the qty shipped in Ship column.
 \end_layout
 
 \begin_layout Section
-Time Cards 
+Time Cards
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout Section
