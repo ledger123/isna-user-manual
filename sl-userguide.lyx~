@@ -74,7 +74,7 @@ Written by
 \begin_inset Newline newline
 \end_inset
 
-Sebastian Weitmann
+
 \begin_inset Newline newline
 \end_inset
 
@@ -82,7 +82,7 @@ Armaghan Saqib
 \begin_inset Newline newline
 \end_inset
 
-
+Sebastian Weitmann
 \begin_inset Newline newline
 \end_inset
 
@@ -119,27 +119,61 @@ Preface
 \end_layout
 
 \begin_layout Standard
-I first came across SQL-Ledger in 2004 and although the initial release
- had been published by Dieter Simader only 5 years earlier, his achievements
- so far were astonishing and immediately caught my eye.
- It took me more than a full week to install it, but it was wearth every
- minute spent.
- Above all because whilst understanding how to install it, I also started
- to realize how powerful the software architecture was.
- But I only saw the true beauty of SQL-Ledger once I started working with
- it.
- I have worked with many different ERP and accounting systems before, all
- from SAP to Quickbooks, but I immediately noticed that SQL-Ledger was different.
- SQL-Ledger was much smoother and faster to use than any other accounting
- software I had ever used before.
+This manual describes how to install and use SQL-Ledger.
+ It gives an overview of the various features that are available in SQL-Ledger
+ and explains how to use them.
+ 
 \end_layout
 
 \begin_layout Standard
-You will need to try it to know it.
- I did.
- And I highly recommend anyone else who is considering to build a business
- using an ERP or accounting software tool to checkout SQL-Ledger first.
- The following pages should be of help.
+We wrote this manual to support the free distribution of SQL-Ledger and
+ to help existing SQL-Ledger users broaden their knowledge base.
+ We have divided it into 6 chapters.
+ 
+\end_layout
+
+\begin_layout Standard
+The first chapter introduces SQL-Ledger and explains how to get it up and
+ running.
+ The second chapter tells you how to set up and adapt SQL-Ledger to fit
+ your own business needs.
+ It explains how to create users, customers, vendors and everything else
+ you need to do before you start working.
+ 
+\end_layout
+
+\begin_layout Standard
+The third chapter highlights how to process your day to day business trans-
+ actions in SQL-Ledger.
+ It will tell you how to register invoices, how to make a general ledger
+ entry and how to enter all your other related business transactions.
+ 
+\end_layout
+
+\begin_layout Standard
+The fourth chapter explaines how to take advantage of all the information
+ you have entered, in other words, how to keep track of your business.
+ You will learn how to start analyzing your business data and transactions
+ that are stored in the database.
+\end_layout
+
+\begin_layout Standard
+The fifth chapter provides you with information about LedgerCart.
+ LedgerCart is a very nice add-on tool that can instantly upgrade your SQL-Ledge
+r installation into a fully functional web-based ordering system and customer
+ portal.
+ The sixth and last chapter gives you an introduction to SQL-Ledger development
+ and customization.
+ 
+\end_layout
+
+\begin_layout Standard
+This user manual is published under the Creative Commons (CC) Attribution
+ and Share-alike (BY-SA) licence, which is one of several public copyright
+ licenses that enable the free distribution of an otherwise copyrighted
+ work.
+ A CC license is used when authors want to give people the right to share,
+ use, and build upon a work that they have created.
 \end_layout
 
 \begin_layout Chapter
@@ -151,34 +185,58 @@ Introducing SQL-Ledger
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger is an open source accounting/ERP solution written by Dieter Simader.
+SQL-Ledger is a free ERP (Enterprise Resource Planning) double entry accounting
+ software with a rich set of management information features.
+ It supports multiple users, multiple languages, multiple currencies, multiple
+ companies, accounts receivable, accounts payable and stock tracking.
+ 
+\end_layout
+
+\begin_layout Standard
+It’s a web-server application that has already been translated into 30 languages
+ and enables business management and administration over the Internet or
+ on a private local network.
+ Any web browser can used as its standard user interface which makes SQL-Ledger
+ platform independent and usable on practically any operating system.
+ 
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger is written in the programming language Perl, runs on any modern
+ web server like Apache and stores all related business data in a SQL database
+ such as PostgreSQL, Oracle or IBM DB2.
  Its version 1.0 was released in Jan.
  29, 1999.
- So as of this writing in 2013, it is 14 years old software which is under
- constant development and enhancement during this period.
+ So as of this writing in 2014, it is 15 years old software which has been
+ under constant development and enhancement during this period.
  This makes it suitable enough for small as well as for large businesses.
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger has an impressive feature set which even many commercial / properieto
-ry ERP solutions don't provide.
- It internal design and user interface are simple which make it easy to
+SQL-Ledger has an impressive feature set which even many commercial / proprietar
+y ERP solutions don't provide.
+ Its internal design and user interface are simple which make it easy to
  learn.
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger is an open source software which means that it comes with full
- source code and you can modify it as you wish and need not to worry about
- discovering any undocumented bug which may cost you tons of money to get
- fixed or force you to some other solution when the company behind it goes
- out of business.
+Invoices, Packing Lists, Income Statements, Balance Sheets, Sales, Work
+ and Purchase Orders, Statements, Receipts and Checks are generated from
+ templates and can be changed to suit individual needs.
+ Templates come in html, xml, tex and text format.
+ The tex templates are processed with LaTex to produce postscript and PDF
+ documents.
+ Documents can be sent to a printer, file or fax, emailed or displayed on
+ screen.
+ The translation mechanism for items and foreign language templates also
+ make it possible to invoice in any foreign language.
 \end_layout
 
 \begin_layout Standard
-Ledger123 is an enhanced version of SQL-Ledger.
- It was created to fix some of the bugs in SQL-Ledger which were not getting
- fixed.
- We still call Ledger123 as 'Enhanced SQL-Ledger'.
+SQL-Ledger is developed by DWS Systems Inc.
+ and the International SQL-Ledger Network Association.
+ It is licensed under the GNU GENERAL PUBLIC LICENSE commonly known as the
+ GPL.
 \end_layout
 
 \begin_layout Subsection
@@ -186,25 +244,64 @@ Versions
 \end_layout
 
 \begin_layout Standard
-The current release of stock SQL-Ledger is 3.0.5.
- Ledger123 is based upon 3.0.3 with its enhancements.
- We call it Ledger123 release 3.
- Ledger123 tries to incorporate all the goodness which comes from stock
- SQL-Ledger.
+The current release of stock SQL-Ledger is 3.0.6.
+ The International SQL-Ledger Network Association also maintains its own
+ version of SQL-Ledger.
+ It’s developed openly by the International SQL-Ledger Network Community
+ on GitHub and is based upon the original SQL-Ledger version 3.0.6 with its
+ enhancements.
+ We call it the SQL-Ledger Network version, or Ledger123 release 3.
+ The SQL-Ledger Network version alias Ledger123 tries to incorporate all
+ the goodness which comes from stock SQL-Ledger.
  So you get best of both worlds.
+ 
 \end_layout
 
 \begin_layout Standard
-To make things simple, we assume that you are using Ledger123 release 3
- (Enhanced SQL-Ledger release 3).
+To make things simple, we assume that you are using the SQL-Ledger Network
+ version (Ledger123 release 3).
  Though most of the sections would apply equally well to the stock SQL-Ledger
- 3 as well as older version.
- This is particularly true if you are not using inventory related functions
- because most of the enhancements in Ledger 123 are related to inventory.
+ 3 as well as older versions.
+ This is particularly true if you are not using inventory related functions,
+ because most of the enhancements in the SQL-Ledger Network version are
+ related to inventory.
+\end_layout
+
+\begin_layout Subsection
+Website and other resources on Internet
 \end_layout
 
 \begin_layout Standard
-Website and other resources on Internet
+International SQL-Ledger Network Association website
+\end_layout
+
+\begin_layout Itemize
+http://www.sql-ledger-network.com/
+\end_layout
+
+\begin_layout Standard
+International SQL-Ledger Network Association Support Forum
+\end_layout
+
+\begin_layout Itemize
+http//forum.sql-ledger-network.com/
+\end_layout
+
+\begin_layout Standard
+Github repository for the SQL-Ledger Network version (Ledger123 release
+ 3)
+\end_layout
+
+\begin_layout Itemize
+https://github.com/ledger123/ledger123
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger website
+\end_layout
+
+\begin_layout Itemize
+http://www.SQL-Ledger.com/
 \end_layout
 
 \begin_layout Standard
@@ -215,20 +312,57 @@ Website and other resources on Internet
 Getting up and running
 \end_layout
 
-\begin_layout Subsection
-Installing enhanced sql-ledger using 'git clone'
+\begin_layout Standard
+Before you install SQL-Ledger on your chosen operating system, you first
+ need to install a set of other software applications that work together
+ with SQL-Ledger and create the base for it to function.
+ SQL-Ledger requires the following:
+\end_layout
+
+\begin_layout Itemize
+Web Server (Apache, NCSA, httpi, thttpd, ...
+ );
+\end_layout
+
+\begin_layout Itemize
+Perl (version 5 or newer);
+\end_layout
+
+\begin_layout Itemize
+Database Server (PostgreSQL version 7.1 or newer)
+\end_layout
+
+\begin_layout Itemize
+Database Driver (DBD-Pg)
+\end_layout
+
+\begin_layout Itemize
+Database Independent Interface (DBI)
+\end_layout
+
+\begin_layout Itemize
+LaTex (optional)
 \end_layout
 
 \begin_layout Standard
-The recommended way to download and install our enhanced SQL-Ledger is to
- use 'git' package.
+You will find various SQL-Ledger step-by-step installation guides on the
+ International SQL-Ledger Network website (www.sql-ledger-network.com).
+\end_layout
+
+\begin_layout Subsection
+Installing the SQL-Ledger Network version using 'git clone'
+\end_layout
+
+\begin_layout Standard
+The recommended way to download and install the SQL-Ledger Network version
+ is to use the 'git' package.
  To install git on Ubuntu, you run 'sudo apt-get install git-core'.
- Once git is successfully installed, you can follow following steps:
+ Once git is successfully installed, you can do the following steps:
 \end_layout
 
 \begin_layout Enumerate
-Download the sql-ledger github repository.
- You will get a fully working sql-ledger installation which includes our
+Download the SQL-Ledger Network GitHub repository.
+ You will get a fully working SQL-Ledger installation which includes our
  enhancements.
  (The default 'master' branch)
 \begin_inset Newline newline
@@ -250,8 +384,29 @@ git clone git://github.com/ledger123/ledger123.git
 \end_layout
 
 \begin_layout Enumerate
+You are probably interested in the latest release 3.
+ The following command will switch to it.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git checkout -b rel3 origin/rel3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 From now onwards you can upgrade to our latest enhancements (which includes
- any latest releases from sql-ledger.com) with the following simple commmand:
+ any latest releases from SQL-Ledger.com) with the following simple command:
 \begin_inset Newline newline
 \end_inset
 
@@ -272,8 +427,8 @@ git pull
 
 \begin_layout Enumerate
 Let us say you are not interested in our enhancements and just want to maintain
- and upgrade to the sql-ledger release from sql-ledger.com.
- Switch to the sql-ledger branch first time:
+ and upgrade to the SQL-Ledger release from SQL-Ledger.com.
+ Switch to the SQL-Ledger branch first time:
 \begin_inset Newline newline
 \end_inset
 
@@ -284,7 +439,7 @@ status open
 
 \begin_layout Plain Layout
 
-git checkout -b sql-ledger origin/sql-ledger
+git checkout -b SQL-Ledger origin/SQL-Ledger
 \end_layout
 
 \end_inset
@@ -293,54 +448,7 @@ git checkout -b sql-ledger origin/sql-ledger
 \end_layout
 
 \begin_layout Enumerate
-From now onwards upgrading to official sql-ledger from sql-ledger.com is
- as easy as:
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-git pull
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Note that you can always switch back and forth between our enhanced sql-ledger
- and the official one by git checkout as:
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-git checkout master # enhanced sql-ledger
-\end_layout
-
-\begin_layout Plain Layout
-
-git checkout sql-ledger # official sql-ledger
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-You can switch back to any past sql-ledger version.
+You can also switch back to any past SQL-Ledger version.
  First see a log of all commits and 40 chars hashes:
 \begin_inset Newline newline
 \end_inset
@@ -361,7 +469,7 @@ git log --pretty=oneline
 \end_layout
 
 \begin_layout Enumerate
-To revert to sql-ledger 2.8.17
+To revert to SQL-Ledger 2.8.17 type
 \begin_inset Newline newline
 \end_inset
 
@@ -381,7 +489,104 @@ git checkout 7b15e9b
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger Virtual Machine
+Note: To view all code changes, you can visit https://github.com/ledger123/ledger
+123 and select the chosen branch.
+\end_layout
+
+\begin_layout Subsection
+Installing Perl modules
+\end_layout
+
+\begin_layout Standard
+Future versions of our enhanced SQL-Ledger release may add dependencies
+ to some Perl modules.
+ Before adding any such dependencies we shall make sure these Perl modules
+ can be installed on most common Linux distributions without much hassle.
+\end_layout
+
+\begin_layout Standard
+There are three ways to install any Perl module:
+\end_layout
+
+\begin_layout Enumerate
+Install the pre-built for your Linux distributiion package manager (apt-get
+ or yum)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+apt-get install libdbix-simple-perl # ubuntu / debian
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Install using cpan command.
+ cpan command comes built-in with the Perl installation on all distributions.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cpan DBIx::Simple
+\end_layout
+
+\end_inset
+
+You may need to answer to few configuration questions when you are running
+ cpan for the first time.
+\end_layout
+
+\begin_layout Enumerate
+Install using cpanm (cpanminus) which is relatively less complicated than
+ cpan.
+ You can install cpanm with following command:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+curl -L http://cpanmin.us | perl - App::cpanminus
+\end_layout
+
+\end_inset
+
+Once installed, you can install Perl module of your choice with:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cpanm DBIx::Simple
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -438,7 +643,7 @@ Warehouse is mandatory on invoices if there is at least one warehouse defined.
 \end_layout
 
 \begin_layout Enumerate
-Warehouse onhand and activity reports.
+Warehouse on-hand and activity reports.
  
 \end_layout
 
@@ -457,8 +662,8 @@ Invoice and invoice-item cogs/revenue information with gross profit %age.
 \end_layout
 
 \begin_layout Enumerate
-Onhand value report which shows the inventory onhand quantities and value
- based upon fifo costing.
+On-hand value report which shows the inventory onhand quantities and value
+ based upon FIFO costing.
  
 \end_layout
 
@@ -527,7 +732,11 @@ Enhanced bank reconciliation.
 \end_layout
 
 \begin_layout Enumerate
-Added back the 'Shipping–Transfer' function from sql-ledger 2.6.
+Added back the '
+\series bold
+Shipping–Transfer
+\series default
+' function from SQL-Ledger 2.6.
  
 \end_layout
 
@@ -538,7 +747,9 @@ LedgerDoctor script which identifies potential problems with data entry.
 
 \begin_layout Enumerate
 CSV data import.
- (invoices,transactions,gl,orders,customers,vendors,parts,chart) 
+ (invoices, transactions, general ledger, orders, customers, vendors, parts,
+ chart).
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -556,7 +767,7 @@ Setting up your business on SQL-Ledger
 \begin_layout Standard
 The next step after successful SQL-Ledger installation is to setup your
  initial business data.
- You need do do this before you start making your day to day transactions.
+ You need to do this before you can start making your day to day transactions.
 \end_layout
 
 \begin_layout Section
@@ -566,24 +777,25 @@ Creating your first dataset
 \begin_layout Standard
 You need to create a dataset in SQL-Ledger before you start using it to
  manage your business accounts.
- Behind the scenes each dataset is a postgresql database with tables, indexes
+ Behind the scenes each dataset is a PostgreSQL database with tables, indexes
  and some seed data like chart of accounts.
+ 
 \end_layout
 
 \begin_layout Standard
 To create a new data set, you need to login to the admin interface.
- Admin interface is accessible through the following url:
+ The admin interface is accessible through the following URL:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 http://your-server-ip-address/sql-ledger/admin.pl
 \end_layout
 
 \begin_layout Standard
 You will be asked for a password.
  The default password is blank.
- Once you login first time, you are asked to set the password to something
- secure.
+ Once you login for the first time, you are asked to set the password to
+ something secure.
 \end_layout
 
 \begin_layout Standard
@@ -628,15 +840,22 @@ To add your new dataset, you click 'Add Dataset' button and following page
 \end_layout
 
 \begin_layout Standard
-On this page you need to put your database credentials.
- As a best practice you should create a postgresql user for use with SQL-Ledger.
+On this page you need to enter your database credentials.
+ As a best practice you should create a PostgreSQL user for use with SQL-Ledger.
  By default this user is assumed to be 'sql-ledger'.
- If you are not sure how to create this user, you can go ahead with the
- default postgresql superuser which is normally 'postgres' and click 'Continue'
+ In Linux Debian you create an ’sql-ledger’ user by entering the following
+ the command 'su postgres -c "createuser -d -S -R sql-ledger"'.
+ 
 \end_layout
 
 \begin_layout Standard
-All the other defaults on above page seem to work in most cases.
+If you are not sure how to create this user on your own system, you can
+ go ahead with the default PostgreSQL superuser which is normally 'postgres'
+ instead of 'sql-ledger' and click 'Continue'
+\end_layout
+
+\begin_layout Standard
+All the other defaults on the above page will work in most cases.
 \end_layout
 
 \begin_layout Standard
@@ -650,9 +869,9 @@ All the other defaults on above page seem to work in most cases.
 \end_layout
 
 \begin_layout Standard
-Once the above page is displayed, you can enter your company name, name
+Once the above page is displayed, you can enter your company name, a name
  for your dataset (which is in lowercase without any spaces or special character
-s, encoding and one of the default chart of accounts.
+s), the character encoding and one of the default chart of accounts.
  Once you have made all the selections, click 'Continue' to create your
  dataset.
 \end_layout
@@ -668,7 +887,7 @@ s, encoding and one of the default chart of accounts.
 \end_layout
 
 \begin_layout Standard
-Your dataset is now created and added to the list of existing datasets.
+Your dataset should now be created and added to the list of existing datasets.
 \end_layout
 
 \begin_layout Section
@@ -678,15 +897,15 @@ Creating users and roles
 \begin_layout Standard
 A default admin account with name 'admin@datasetname' is created with each
  new dataset.
- Its password is set to blank.
- (Be sure to change it something secure on your first login) Now you need
- to login and create some new users as well as set their access privilages
- using roles.
+ Its password is set to blank, so be sure to change it something secure
+ on your first login.
+ Now you need to login and create some new users as well as set their access
+ privileges using roles.
 \end_layout
 
 \begin_layout Standard
 To login to your newly created dataset visit http://your-server-ip-address/sql-l
-edger/login.pl
+edger/login.pl and login as 'admin@datasetname'
 \end_layout
 
 \begin_layout Subsection
@@ -694,11 +913,14 @@ Roles
 \end_layout
 
 \begin_layout Standard
-Roles allow you to define which menu option is avilable to which user.
- You can group your users into roles and then define the access privilages
+Roles allow you to define which menu option is available to each user.
+ You can group your users into roles and then define the access privileges
  for the roles.
- Click the menu 'System--Roles' to display existing roles, change existing
- one or add a new one.
+ Click the menu 
+\series bold
+'System--Roles'
+\series default
+ to display existing roles, change existing ones or add a new one.
 \end_layout
 
 \begin_layout Standard
@@ -712,9 +934,13 @@ Roles allow you to define which menu option is avilable to which user.
 \end_layout
 
 \begin_layout Standard
-To add a new role, click 'Add Role' and check/uncheck the menus under 'Access
+To add a new role, click 'Add Role' and check/un-check the menus under 'Access
  Control' to allow or disallow that menu to the role.
- Once you have defined the access privilages, click 'Save' to add the role.
+ If you un-check for example ’AR’, all features pertaining to ’AR’, like
+ ’Add Transaction’ , ’Sales.
+ Invoice’ etc.
+ will also be disabled.
+ Once you have defined the access privileges, click 'Save' to add the role.
 \end_layout
 
 \begin_layout Standard
@@ -743,31 +969,35 @@ Users / Employees
 
 \begin_layout Standard
 One you have defined the roles, it is time to define the actual users.
- For this you click on 'HR--Employees--Add Employee'.
+ For this you click on 
+\series bold
+'HR--Employees--Add Employee
+\series default
+'.
  Here you fill all the information for the user.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 In the 'Role' field, select the appropriate role for this user.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 In the login name field, type the login name which should be preferably
  in lower case without '@' sign and without other special characters.
 \end_layout
 
-\begin_layout Standard
-The 'Sales' checkbox is there to mark whether this user will appear in salespers
-ons list or not.
+\begin_layout Itemize
+The 'Sales' check-box is there to mark whether this user is to appear as
+ a salespersons on your quotations, orders and invoices or not.
 \end_layout
 
 \begin_layout Standard
-On the screen you can add all your sql-ledger users as well as other employees
+On the screen you can add all your SQL-Ledger users as well as other employees
  data.
- If you do not want to allow a particular employee to login to sql-ledger,
- just omit its username and password.
+ If you do not want to allow a particular employee to login to SQL-Ledger,
+ just omit the login and password.
 \end_layout
 
 \begin_layout Standard
@@ -781,9 +1011,14 @@ On the screen you can add all your sql-ledger users as well as other employees
 \end_layout
 
 \begin_layout Standard
-To get list of existing employees, you use the 'HR--Reports' menu.
- A search screen is display where you can select which information you need
- to display and click 'Continue'
+To get list of existing employees, you use 
+\series bold
+'HR--Employees--Reports'
+\series default
+ menu.
+ A search screen is displayed where you can select which information you
+ need to display.
+ To display the list click the 'Continue' button.
 \end_layout
 
 \begin_layout Standard
@@ -818,6 +1053,10 @@ Once you have created a user, he or she can login with his or her username.
  For example if you created a user with login 'armaghan' for a dataset named
  'rel3' then the user needs to login with 'armaghan@rel3' as his or her
  username.
+ If you use SQL-Ledger in a multi-company environment and a user has access
+ to various different datasets, by entering only the username without the
+ ’@’ and the name of the dataset, you will get a list of all the different
+ datasets (companies) available to choose from.
 \end_layout
 
 \begin_layout Standard
@@ -831,13 +1070,12 @@ Once you have created a user, he or she can login with his or her username.
 \end_layout
 
 \begin_layout Standard
-Here you come.
- Now you or your user has successfully logged-in to the SQL-Ledger and following
- welcome screen is displayed.
+When you or your user has successfully logged-in to the SQL-Ledger and the
+ following welcome screen is displayed.
  The menu is on the left.
  Only those menu options are visible to the user which have been allowed
- by the assigned role to that user.
- If no role has been created then user has access to all the menus.
+ by the assigned role to that user (see 2.2 above).
+ If no role has been created then user will have access to all the menus.
 \end_layout
 
 \begin_layout Standard
@@ -855,15 +1093,18 @@ Defaults
 \end_layout
 
 \begin_layout Standard
-System–Defaults menu allows you to setup your company, address and related
- information in SQL-Ledger.
+The 
+\series bold
+'System--Defaults'
+\series default
+ menu allows you to setup your company, address and related information
+ in SQL-Ledger.
  Document numbering is also controlled by system defaults.
-\end_layout
-
-\begin_layout Standard
-We setup defaults for document numbers as shown on the following screen
+ We setup defaults for document numbers as shown on the following screen
  shot.
  You can change these to your liking or organizational needs.
+ You can also use various variables in the system default number fields
+ like <%dd%> for day, <%mm%> for month, <%yy%> for year etc
 \end_layout
 
 \begin_layout Standard
@@ -881,6 +1122,13 @@ Customers
 \end_layout
 
 \begin_layout Standard
+The customers menu allows you to add new customers and change or delete
+ existing customers.
+ You need to add at least one customer before creating a quotation, sales
+ order, sales invoice or AR transaction.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menucustomers.png
 	scale 50
@@ -891,13 +1139,32 @@ Customers
 \end_layout
 
 \begin_layout Standard
-You need to add at least one customer before creating invoices.
- Use Customers--Add Customer to add new customers.
+Use 
+\series bold
+'Customers--Add Customer'
+\series default
+ to add new customers.
 \end_layout
 
 \begin_layout Standard
-To change existing customers, first you list them using Customers–Reports–Search.
- Customers are listed with hyperlinks to edit each customer.
+\begin_inset Graphics
+	filename customer1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make changes to existing customers, first you list them using 
+\series bold
+'Customers--Customers Search
+\series default
+'.
+ You can leave this search form blank and click 'Continue' to get all customers
+ or you can specify customer name, phone or any other information to get
+ a specific customer.
+ If there are more than one matching customers, all those will be listed.
 \end_layout
 
 \begin_layout Standard
@@ -911,6 +1178,11 @@ To change existing customers, first you list them using Customers–Reports–Se
 \end_layout
 
 \begin_layout Standard
+When you click the customer name in this list, that particular customer
+ record will be shown for editing.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename customer-search2.png
 	scale 45
@@ -920,18 +1192,15 @@ To change existing customers, first you list them using Customers–Reports–Se
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Graphics
-	filename customer1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Vendors
+\end_layout
+
+\begin_layout Standard
+The vendors menu allows you to add new vendors and change or delete existing
+ vendors.
+ You need to add at least one vendor before creating a request for quotation
+ (RFQ), purchase order, vendor invoice or AP transaction.
 \end_layout
 
 \begin_layout Standard
@@ -945,13 +1214,32 @@ Vendors
 \end_layout
 
 \begin_layout Standard
-You need to add at least one vendor before creating invoices.
- Use Vendors–Add Vendor to add new vendors.
+Use 
+\series bold
+'Vendors--Add Vendor'
+\series default
+ to add new vendors.
 \end_layout
 
 \begin_layout Standard
-To change existing vendors, first you list them using Vendors–Reports–Search.
- Vendors are listed with hyperlinks to edit each vendor.
+\begin_inset Graphics
+	filename vendor1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make changes to existing vendors, first you list them using 
+\series bold
+'Vendors--Vendors Search
+\series default
+'.
+ You can leave this search form blank and click 'Continue' to get all vendors
+ or you can specify vendor name, phone or any other information to get a
+ specific customer.
+ If there are more than one matching vendors, all those will be listed.
 \end_layout
 
 \begin_layout Standard
@@ -974,25 +1262,17 @@ To change existing vendors, first you list them using Vendors–Reports–Search
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Graphics
-	filename vendor1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Type of Business
 \end_layout
 
 \begin_layout Standard
-You define type of business using 'System--Type of Business'.
- Type of business allows you to group your customers by a particular type.
- It also allows you to setup default discount percentage for that group
- of customers.
+You can group your customers using the 
+\series bold
+'System--Type of business'
+\series default
+ menu.
+ You can setup default discount percentage for that group of customers.
 \end_layout
 
 \begin_layout Standard
@@ -1013,6 +1293,11 @@ You define type of business using 'System--Type of Business'.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+One you have defined types of business, you select a particular one when
+ you are adding or editing your customer as shown below.
 \end_layout
 
 \begin_layout Standard
@@ -1039,8 +1324,35 @@ Managing Departments
 \end_layout
 
 \begin_layout Standard
-Departments can be added, changed or deleted using 'System–Departments'
- menu option.
+Departments can be added, changed or deleted using 
+\series bold
+'System--Departments
+\series default
+' menu.
+ When managing departments, following points are important:
+\end_layout
+
+\begin_layout Enumerate
+Departments lookup does not appear on transaction forms unless you define
+ at least one department.
+\end_layout
+
+\begin_layout Enumerate
+SQL-Ledger departments can be mapped to the various departments (sales,
+ purchase etc.), branches (London, Oxford etc.) or product divisions (Product
+ 1, Product2 etc.) within your organization.
+\end_layout
+
+\begin_layout Enumerate
+Departments can be marked as 'Cost Center' or 'Profit Center'.
+ Cost center departments appear only in purchasing module.
+ Profit center departments appear both in purchasing and sales modules.
+\end_layout
+
+\begin_layout Enumerate
+You can also change 'Department' to anything you like (eg.Branch) using the
+ SQL-Ledger language customization feature.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1063,31 +1375,16 @@ Departments can be added, changed or deleted using 'System–Departments'
 
 \end_layout
 
-\begin_layout Standard
-SQL-Ledger departments can be mapped to the various departments (sales,
- purchase etc.), branches (London, Oxford etc.) or product divisions (Product
- 1, Product2 etc.) within your organization.
-\end_layout
-
-\begin_layout Standard
-Departments can be marked as 'Cost Center' or 'Profit Center'.
- Cost center departments appear only in purchasing module.
- Profit center departments appear both in purchasing and sales modules.
-\end_layout
-
-\begin_layout Standard
-You can also change 'Department' to anything you like (eg.Branch) using the
- sql-ledger language customization feature.
- Note: Departments lookup does not appear on transaction forms unless you
- define at least one department from System→Departments menu option.
-\end_layout
-
 \begin_layout Subsection
 Default Department
 \end_layout
 
 \begin_layout Standard
-You can define a default default for users using HR--Employees men.
+You can define a default department for a particular user using 
+\series bold
+'HR--Employees'
+\series default
+ menu.
  You can also restrict the user to view and make transactions to his department
  only by setting his role to User.
  Users with role Administrator, Manager, Supervisor always have access to
@@ -1129,6 +1426,11 @@ Reports
 
 \begin_layout Standard
 Reports allow you to view all or department specific transactions.
+ For example you can filter AR Transactions report '
+\series bold
+AR--Reports--Transactions
+\series default
+' by specifying a particular department on search screen.
 \end_layout
 
 \begin_layout Standard
@@ -1142,8 +1444,15 @@ Reports allow you to view all or department specific transactions.
 \end_layout
 
 \begin_layout Standard
-Income Statement and Balance sheet can also be compared and displayed by
- department.
+'
+\series bold
+Reports--Income Statement
+\series default
+' and '
+\series bold
+Reports--Balance sheet
+\series default
+' can also be compared and displayed by department.
 \end_layout
 
 \begin_layout Standard
@@ -1157,8 +1466,11 @@ Income Statement and Balance sheet can also be compared and displayed by
 \end_layout
 
 \begin_layout Standard
-'Reports--Department Income Statement' report shows income statement for
- individual departments in columner form.
+
+\series bold
+'Reports--Department Income Statement'
+\series default
+ report shows income statement for individual departments in columner form.
 \end_layout
 
 \begin_layout Standard
@@ -1186,16 +1498,6 @@ Projects
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename menuprojects.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Projects are optional and can be used for following things:
 \end_layout
 
@@ -1211,8 +1513,18 @@ Enter time card data.
 \end_layout
 
 \begin_layout Standard
-Notes Projects lookup appears on transactions forms only if you have created
- at least one project.
+Projects only appear on transaction forms if you have created at least one
+ project.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menuprojects.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1221,10 +1533,11 @@ Managing Projects
 
 \begin_layout Standard
 You can add or change projects through Projects menu.
-\end_layout
-
-\begin_layout Standard
-Click on 'Projects--Add Project' to add a new project.
+ Click on 
+\series bold
+Projects--Add Project
+\series default
+ to add a new project.
 \end_layout
 
 \begin_layout Standard
@@ -1238,10 +1551,14 @@ Click on 'Projects--Add Project' to add a new project.
 \end_layout
 
 \begin_layout Standard
-To change an existing project, first display list of existing projects.
- For this you use 'Projects--Reports--Projects' menu.
- Following screen is displayed where you can specifiy some conditions to
- select the projects of your interest.
+To change an existing project, first you need to display a list of your
+ existing projects.
+ For this you use the 
+\series bold
+'Projects--Reports--Projects'
+\series default
+ menu and the following screen is displayed where you can specify some condition
+s to select the projects of your interest.
  To view all projects just click the 'Continue' button.
 \end_layout
 
@@ -1275,7 +1592,15 @@ Using Projects
 \end_layout
 
 \begin_layout Standard
-Once you have defined projects, you can use them in sales and purchase invoices.
+Once you have defined projects, you can use them in quotations, orders,
+ invoices and general ledger entries.
+ In quotations, orders and invoices the project drop-down list only appears
+ on the extended detail lines.
+ To display the extended detail line and the project drop-down list in quotation
+s, orders and invoices, you first need to check the check-box next to the
+ description of each line item.
+ If you check the check-box in the heading as shown here below, extended
+ detail is show for all the line items.
 \end_layout
 
 \begin_layout Standard
@@ -1292,10 +1617,17 @@ Project Reports
 \end_layout
 
 \begin_layout Standard
-'Projects--Reports--Transactions' report will show you a summary report
- similar to trial balance report with summary of all transactions for the
- the selected project.
- First you specify the period of interest before display the report.
+The 
+\series bold
+'Projects--Reports--Transactions'
+\series default
+ report will show you a summary report similar to the '
+\series bold
+Reports--Trial Balance
+\series default
+' report with summary of all transactions for the the selected project.
+ Before displaying the report you can specify a date range as well as a
+ department for the report.
 \end_layout
 
 \begin_layout Standard
@@ -1309,7 +1641,7 @@ Project Reports
 \end_layout
 
 \begin_layout Standard
-Once you display the report, you can see all accounts showing sum of all
+Once you display the report, you will see all accounts showing sum of all
  transactions for that particular project.
  This report is similar to the trial balance report but shows balances for
  a particular project only.
@@ -1345,6 +1677,26 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Standard
+A chart of accounts is required before you can start recording any accounting
+ transaction.
+ When you create your company dataset in SQL-Ledger you have to select one
+ of the provided samples of chart of accounts.
+ Later on you can modify the initial chart of accounts according to your
+ business needs.
+ 
+\end_layout
+
+\begin_layout Standard
+The
+\series bold
+ 'System--Chart of Accounts'
+\series default
+ menu is used to manage the chart of accounts.
+ Here you can add new accounts, change existing ones or delete the unwanted
+ ones from sample chart of accounts which have not been used in any transaction.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menuchart.png
 	scale 50
@@ -1352,6 +1704,14 @@ Chart of Accounts
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'System--Chart of Accounts--List Accounts'
+\series default
+ shows the existing chart of account.
 \end_layout
 
 \begin_layout Standard
@@ -1365,6 +1725,15 @@ Chart of Accounts
 \end_layout
 
 \begin_layout Standard
+You can click on the account number to open the account in detail form where
+ you can make changes to the account.
+ You can safely change the account number at any time to reorganize your
+ accounts.
+ All transactions booked onto the account will remain linked to it and simply
+ change
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename chart2.png
 	scale 50
@@ -1374,13 +1743,86 @@ Chart of Accounts
 
 \end_layout
 
+\begin_layout Standard
+All accounts in SQL-Ledger must be defined as either ’Heading’ or ’Account’.
+ The ’Heading’ accounts help you divide your various accounts into groups.
+ ’Heading’ accounts are mainly for organizational purposes and commonly
+ used to subtotal groups of accounts in the income statement or balance
+ sheet.
+ 
+\end_layout
+
+\begin_layout Standard
+The ’Account Type’ sets the accounting purpose for each account.
+ Accounts marked as ’Contra’ accounts are shown with reversed amounts in
+ the trial balance.
+ Summary accounts are used to record transactions for accounts receivable,
+ accounts payable and inventory.
+ If you mark an account as a summary account, it will be included in the
+ selection drop-down menus available when you process accounts receivable
+ and accounts payable transactions, or when you set up new inventory.
+ 
+\end_layout
+
+\begin_layout Standard
+When you mark an account to be included in the drop-down menus ’AR’, ’AP’
+ or ’Tracking Items’ (parts, assemblies, direct labor) and ’Non-tracking
+ Items’ (services), it will be included in the related modules.
+ For example marking ’Lineitem’ will make the account available as an income
+ or expense account in all AR and AP transactions.
+ Marking ’Payment’ will include it for recording the payment of such transaction
+s.
+ 
+\end_layout
+
+\begin_layout Standard
+Accounts marked to be included for ’Income’, ’COGS’ / ’Expense’ or ’Tax’
+ under ’Tracking Items’ and ’Non-tracking Items’ will become available in
+ the corresponding drop-down menus when you set up new goods and services
+ under ’Goods & Services–Add...’.
+ In SQL-Ledger each tax account has a tax level which can be defined in
+ ’System–Taxes’ for automatic calculation.
+ Tax accounts can also be used for other purposes like commission fees.
+ 
+\end_layout
+
+\begin_layout Standard
+There are six default accounts in SQL-Ledger.
+ Income, expense, inventory, foreign exchange gain, foreign exchange loss
+ and the cash over/short account.
+ You will find them in ’System–Defaults’ and once they have been set up
+ accordingly they cannot be deleted.
+ You must also have at least one account for accounts receivable and one
+ for accounts payable, in order for SQL-Ledger to be able to keep track
+ of any outstanding amounts in the balance sheet.
+\end_layout
+
+\begin_layout Section
+GIFI
+\end_layout
+
+\begin_layout Standard
+GIFI stands for General Index for Financial Information.
+ GIFI codes can be created and attached to accounts in chart of accounts.
+ You can add or change GIFI codes just like standard chart of accounts.
+ Once GIFI setup is complete, you can view accounting reports by standard
+ accounts or GIFI accounts.
+\end_layout
+
 \begin_layout Section
 Templates
 \end_layout
 
 \begin_layout Standard
-Print forms for invoices, orders, quotations and financial reports can be
- customized by you by editing form templates.
+Print forms for invoices, orders, quotations and financial reports have
+ been defined as templates.
+ This makes it easy to customize these forms and reports according to your
+ requirements.
+ All these templates can be accessed through the 
+\series bold
+'System'
+\series default
+ menu.
  There are three type of templates:
 \end_layout
 
@@ -1389,9 +1831,9 @@ HTML Templates
 \end_layout
 
 \begin_layout Standard
-HTML templates are easier to modify because it of wide spread knowledge
+HTML templates are easier to modify because of the wide spread knowledge
  of html.
- Only basic html knowledge is required to edit html templates.
+ Only basic HTML knowledge is required to edit HTML templates.
 \end_layout
 
 \begin_layout Standard
@@ -1449,9 +1891,9 @@ Latex Templates
 \end_layout
 
 \begin_layout Standard
-Latex templates are bit complex to understand and modify but offer complete
- control over printed invoice, order or quotation forms.
- See below for basic introduction to latex.
+LateX templates are bit more complex to understand and modify but offer
+ complete control over printed invoice, order or quotation forms.
+ See below for basic introduction to LateX.
 \end_layout
 
 \begin_layout Standard
@@ -1485,8 +1927,7 @@ Latex templates are bit complex to understand and modify but offer complete
 \end_layout
 
 \begin_layout Subsection
-Text Templates.
- Used only with Point-of-Sale interface
+Text Templates
 \end_layout
 
 \begin_layout Standard
@@ -1529,15 +1970,33 @@ Editing Templates
 \end_layout
 
 \begin_layout Standard
-Templates can be edit through sql-ledger.
- When you click on a template, it is displayed with 'Edit' button at the
- end of the template.
+Templates can be edited directly through SQL-Ledger.
+ When you click on a template, it is displayed with an 'Edit' button at
+ the end of the template.
  Clicking the 'Edit' button will open the template in a text box where it
  can be edited and saved.
 \end_layout
 
 \begin_layout Standard
-Attach:templates2.jpg
+\begin_inset Graphics
+	filename templates2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here this template is opened for editing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates3.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1545,8 +2004,8 @@ Template Variables
 \end_layout
 
 \begin_layout Standard
-Sql-ledger replaces actual data into templates using variables which we
- call template variables.
+SQL-Ledger replaces actual data into templates by using variables which
+ we call template variables.
  Template variables are enclosed within <% and %>.
 \end_layout
 
@@ -1692,9 +2151,9 @@ Template control commands
 \end_layout
 
 \begin_layout Standard
-Template processing engine in sql-ledger allows simple if statement and
- loops.
- Example of these are described below:
+The template processing engine in SQL-Ledger allows simple if statement
+ and loops.
+ Examples of these are described below:
 \end_layout
 
 \begin_layout Subsubsection
@@ -1937,12 +2396,17 @@ An Introduction to Latex
 Latex is a complete collection of software tools to create high quaility
  print documents.
  Latex templates are used in SQL-Ledger to create high quality print forms
- like invoices, purhcase orders etc.
+ like invoices, purchase orders etc.
 \end_layout
 
 \begin_layout Standard
-Latex is included with Redhat distributions (rpm -qa | grep tetex).
- 
+Latex is included with most Linux distributions.
+ In the Red Hat distribution Latex can be installed with the command 'yum
+ install tetex'.
+\end_layout
+
+\begin_layout Standard
+In the Debian distribution it can be installed with 'apt-get install latex'.
 \end_layout
 
 \begin_layout Standard
@@ -1950,7 +2414,7 @@ For FreeBSD, you can install the teTex port from /usr/ports/print/teTeX.
 \end_layout
 
 \begin_layout Standard
-Latex migh seem overwhelming to a new comer but it is really a simple toolkit
+Latex might seem overwhelming to a newcomer but it is really a simple toolkit
  to use for customizing the SQL-Ledger templates.
  In this very short introduction of Latex, we shall go through the basic
  document format and its use in SQL-Ledger.
@@ -2063,7 +2527,7 @@ Latex commands start with a backslash (
  Optional parameters are enclosed in [] while mandatory ones are enclosed
  in {}.
  {} can also be used to terminated a command mixed within some text (to
- make it easier to understand the command for the compiler).
+ make it easier for the compiler to understand the command).
  Special characters in latex (#, $, %, ^, &, _, {, }, ~) are escaped with
  
 \backslash
@@ -2094,6 +2558,36 @@ documentclass with parameters ([a4paper,11pt]{article}) following it.
 
 \begin_layout Section
 Goods & Services
+\end_layout
+
+\begin_layout Standard
+All business sell some goods and services to generate revenue.
+ You need to define the goods and services related to your business before
+ you can start creating invoices, orders or quotations.
+ Goods and services have been defined into following entities:
+\end_layout
+
+\begin_layout Enumerate
+Parts are something which you keep in the inventory and want to track their
+ on-hand quantity.
+\end_layout
+
+\begin_layout Enumerate
+Services are something which you provide to your customers or buy from vendors.
+ Services are not 'stored' somewhere and you do not track their onhand quantity.
+\end_layout
+
+\begin_layout Enumerate
+Assemblies are made up from parts, services and labor/overhead.
+ This feature is used by manufacturing companies.
+ When you sell an assembly all its associated parts are removed from inventory.
+ COGS for parts and cost of services is recorded.
+ Important note: Assemblies can only be sold.
+\end_layout
+
+\begin_layout Enumerate
+Labor/overhead can be used to allocate the cost of labor or manufacturing
+ overhead to the assemblies.
 \end_layout
 
 \begin_layout Standard
@@ -2149,6 +2643,11 @@ Labor/Overhead
 \end_layout
 
 \begin_layout Standard
+Labor/overhead items are used to allocate labor/overhead charges to an assembly
+ in a manufacturing business.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename parts3.png
 	scale 45
@@ -2156,14 +2655,6 @@ Labor/Overhead
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Goods & Services Reports
-\end_layout
-
-\begin_layout Standard
-'Goods & Services--Reports--All Items' 
 \end_layout
 
 \begin_layout Section
@@ -2182,12 +2673,20 @@ Work flow for using assemblies:
 
 \begin_layout Enumerate
 Define assemblies.
- Goods & Services--Add Assembly.
+ '
+\series bold
+Goods & Services--Add Assembly
+\series default
+'.
 \end_layout
 
 \begin_layout Enumerate
 Build assemblies.
- Goods & Services--Stock Assembly.
+ 
+\series bold
+'Goods & Services--Stock Assembly
+\series default
+'.
  Individual parts are removed and assemblies are added to the stock inventory.
 \end_layout
 
@@ -2204,9 +2703,13 @@ Define assemblies
 \end_layout
 
 \begin_layout Standard
-As assembly is just like any other inventory item in your sql-ledger with
+As assembly is just like any other inventory item in your SQL-Ledger with
  the additional information about its components.
- You define new assemblies using Goods and Service -- Add Assembly.
+ You define new assemblies using 
+\series bold
+'Goods and Service -- Add Assembly
+\series default
+'.
 \end_layout
 
 \begin_layout Standard
@@ -2224,7 +2727,7 @@ Stock assemblies
 \end_layout
 
 \begin_layout Standard
-This option reduces the quantities of the components and increases the onhand
+This option reduces the quantities of the components and increases the on-hand
  quantity of the assemblies.
  COGS is not recorded at this point.
 \end_layout
@@ -2261,8 +2764,11 @@ Reports
 \end_layout
 
 \begin_layout Standard
-More Reports--Goods and Services--Stock Assembly gives you a list of your
- Stock Assembly actions.
+The 
+\series bold
+'Goods and Services--Reports--Stock Assembly'
+\series default
+ menu gives you a list of your Stock Assembly actions.
  This report lists the parts taken out of assembly as well as assemblies
  built.
 \end_layout
@@ -2279,7 +2785,7 @@ More Reports--Goods and Services--Stock Assembly gives you a list of your
 
 \begin_layout Standard
 Following is a summary report of the 'Stock Assembly' action.
- It shows each action with its referenace and date and other information.
+ It shows each action with its reference and date and other information.
 \end_layout
 
 \begin_layout Standard
@@ -2309,9 +2815,12 @@ Following is a detail report of the 'Stock Assembly' action.
 \end_layout
 
 \begin_layout Standard
-'Goods and Services--Reports--Assemblies' gives you list of all or selected
- assemblies with their components.
- You wn narrow down your assemblies list by specifiying search criteria.
+The
+\series bold
+ 'Goods and Services--Reports--Assemblies'
+\series default
+ menu gives you list of all or selected assemblies with their components.
+ You can narrow down your assemblies list by specifying search criteria.
 \end_layout
 
 \begin_layout Standard
@@ -2339,8 +2848,12 @@ Once you click the 'Continue' button above the following report is displayed.
 \end_layout
 
 \begin_layout Standard
-Goods and Servers--Components gives you a list order by partnumber and the
- assembly in which it is used.
+The
+\series bold
+ 'Goods and Services--Components'
+\series default
+ menu gives you a list order by part number and the assembly in which it
+ is used.
 \end_layout
 
 \begin_layout Standard
@@ -2355,8 +2868,8 @@ Goods and Servers--Components gives you a list order by partnumber and the
 
 \begin_layout Standard
 Work Order You can print work order for a sales orders.
- Work order lists all component parts required to fullfil a given order
- of assembly items.
+ Work order lists all component parts required to fulfil a given order of
+ assembly items.
 \end_layout
 
 \begin_layout Standard
@@ -2370,7 +2883,12 @@ Work Order You can print work order for a sales orders.
 \end_layout
 
 \begin_layout Section
-Labour/Overhead
+Labor/Overhead
+\end_layout
+
+\begin_layout Standard
+Labor/overhead items are used to record labor/overhead of a manufacturing
+ business in assemblies.
 \end_layout
 
 \begin_layout Standard
@@ -2389,8 +2907,11 @@ Groups
 
 \begin_layout Standard
 Groups are used to group togather the parts and services.
- You can filter parts and services reports by selecting a group on search
- screens.
+ You can filter parts and services in the various '
+\series bold
+Goods & Services--Reports
+\series default
+' reports by selecting a group on search screens.
 \end_layout
 
 \begin_layout Standard
@@ -2421,7 +2942,8 @@ Groups have another useful functionality.
 \end_layout
 
 \begin_layout Standard
-Click on any group name in above list and it will be opened for any change.
+Click on any group name in the list above and it will be opened for any
+ change.
 \end_layout
 
 \begin_layout Standard
@@ -2456,7 +2978,7 @@ Pricegroups
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger has very flexiable pricing mechanism.
+SQL-Ledger has very flexible pricing mechanisms.
  For example:
 \end_layout
 
@@ -2489,8 +3011,12 @@ There are three steps to use price groups:
 \end_layout
 
 \begin_layout Enumerate
-Create three price groups; distributor, dealer and enduser.
- (Goods & Services-Add Pricegroup)
+Create three price groups; distributor, dealer and end-user.
+ (
+\series bold
+'Goods & Services--Add Pricegroup
+\series default
+')
 \end_layout
 
 \begin_layout Enumerate
@@ -2516,6 +3042,118 @@ Open the customer record for editing and set the applicable price group
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Goods & Services Reports
+\end_layout
+
+\begin_layout Standard
+Here we explain all reports under 
+\series bold
+'Goods & Services--Reports'
+\series default
+ menu briefly.
+\end_layout
+
+\begin_layout Subsection
+All Items
+\end_layout
+
+\begin_layout Standard
+This report can be used to view a list of all items which include parts,
+ services, labor/overhead and assemblies.
+ You can optionally select to view invoices or orders which have been created
+ for each item.
+\end_layout
+
+\begin_layout Subsection
+Parts
+\end_layout
+
+\begin_layout Standard
+This report is similar to the all items report above but only shows parts
+ or tangible items for which you track on-hand quantity in your business.
+\end_layout
+
+\begin_layout Subsection
+Requirements
+\end_layout
+
+\begin_layout Standard
+This report will show you what you need to buy based upon following factors:
+\end_layout
+
+\begin_layout Standard
+On-hand quantity
+\end_layout
+
+\begin_layout Standard
+Sales orders
+\end_layout
+
+\begin_layout Standard
+Purchase orders
+\end_layout
+
+\begin_layout Subsection
+Services
+\end_layout
+
+\begin_layout Standard
+This report is similar to all items report above but only shows services.
+\end_layout
+
+\begin_layout Subsection
+Labor/Overhead
+\end_layout
+
+\begin_layout Standard
+This report is similar to all items report but only shows labor/overhead
+ items.
+\end_layout
+
+\begin_layout Subsection
+Groups
+\end_layout
+
+\begin_layout Standard
+This report will show you all the groups you have defined for your various
+ goods and services.
+\end_layout
+
+\begin_layout Subsection
+Pricegroups
+\end_layout
+
+\begin_layout Standard
+This report will show you all the price group you have defined.
+\end_layout
+
+\begin_layout Subsection
+Assemblies
+\end_layout
+
+\begin_layout Standard
+This report will show you all the assemblies you have defined.
+\end_layout
+
+\begin_layout Subsection
+Components
+\end_layout
+
+\begin_layout Standard
+This report will show you all the components which have been used in your
+ assemblies.
+\end_layout
+
+\begin_layout Subsection
+Stock Assembly
+\end_layout
+
+\begin_layout Standard
+This report will show you the log of stock assembly actions (assembly production
+).
 \end_layout
 
 \begin_layout Section
@@ -2557,7 +3195,11 @@ Adding warehouses
 \end_layout
 
 \begin_layout Standard
-You can add, change or delete warehouses through 'System–Warehouses' option.
+You can add, change or delete warehouses through '
+\series bold
+System–Warehouses
+\series default
+' option.
 \end_layout
 
 \begin_layout Standard
@@ -2574,11 +3216,22 @@ Default warehouse
 \end_layout
 
 \begin_layout Standard
-You can define a default warehouse for users through administrative interface.
- You can restrict a user to view and make transactions to his warehouse
+You can define a default warehouse for users through the administrative
+ interface ('
+\series bold
+HR--Employees
+\series default
+').
+ You can restrict a user to view and make transactions to only one warehouse
  by setting his role to User.
  Users with role Administrator, Manager, Supervisor always have access to
  all warehouses.
+ For more information on how to create different ’roles’ see 2.2.1 above.
+\end_layout
+
+\begin_layout Standard
+TODO: Default roles from 2.8 are not in 3.0.
+ We need to check / change code and text above.
 \end_layout
 
 \begin_layout Standard
@@ -2596,8 +3249,8 @@ Using warehouses
 \end_layout
 
 \begin_layout Standard
-Warehouse drop down is enabled on relevant transactions forms once you define
- at least one warehouse.
+The warehouse drop down menu is enabled on relevant transactions forms once
+ you define at least one warehouse.
  When you purchase goods, quantity is added to the specified warehouse.
  When you sell goods, quantity is subtracted from the specified warehouse.
 \end_layout
@@ -2616,8 +3269,15 @@ Warehouse transfers
 \end_layout
 
 \begin_layout Standard
-You can move inventory between warehouses by using 'Warehouses–Add Transfer'
- menu option.
+You can move inventory between warehouses by using the '
+\series bold
+Warehouses
+\size small
+--
+\size default
+Add Transfer
+\series default
+' menu option.
 \end_layout
 
 \begin_layout Standard
@@ -2635,16 +3295,19 @@ Transfer Reports
 \end_layout
 
 \begin_layout Standard
-'Warehouses--Reports--Transfers' shows list of all transfers.
- On search screen you select conditions to select transactions of your interest
- or just click 'Continue' to display all transactions.
+The '
+\series bold
+Warehouses--Reports--Transfers
+\series default
+' report shows a list of all transfers.
+ On the search screen you can select conditions to see only transactions
+ of your interest or just click 'Continue' to display all transactions.
 \end_layout
 
 \begin_layout Standard
-Warehouses–Reports–Transfers gives you a list of transfers.
- Summary lists transfer transactions and Detail lists all items in each
+'Summary' lists transfer transactions and 'Detail' lists all items in each
  transfer transaction.
- You can click on transfer number hyper link to edit the transfer.
+ You can click on the transfer number hyper link to edit the transfer.
 \end_layout
 
 \begin_layout Standard
@@ -2672,8 +3335,12 @@ Warehouse Onhand Report
 \end_layout
 
 \begin_layout Standard
-Warehouses–Reports–Onhand gives you inventory onhand for all warehouses
- or for a particular warehouse.
+The 
+\series bold
+'Warehouses--Reports--Onhand'
+\series default
+ report gives you inventory on-hand for all warehouses or for a particular
+ warehouse.
  
 \end_layout
 
@@ -2688,9 +3355,10 @@ Warehouses–Reports–Onhand gives you inventory onhand for all warehouses
 \end_layout
 
 \begin_layout Standard
-You can see the report shows onhand quantity of selected items at each warehouse.
- This report can be sorted on item number so that you can qucikly see the
- onhand quantity of a particular item at each warehouse.
+As you can see the report shows the onhand quantity of selected items at
+ each warehouse.
+ This report can be sorted on item number so that you can quickly see the
+ on-hand quantity of a particular item at each warehouse.
 \end_layout
 
 \begin_layout Standard
@@ -2725,19 +3393,24 @@ Transfers delivered
 \begin_layout Standard
 Some companies also need to track the in-transit goods between warehouse
  transfers.
- Delivered date is usually different from transfer date.
+ The delivery date is sometimes different from the transfer date.
+ When you login to SQL-Ledger, you will see the number of transfers which
+ have been sent to your default warehouse but not 'received' by you yet.
+ 
 \end_layout
 
 \begin_layout Standard
-When you login, you will see the number of transfers which have been sent
- to your default warehouse but not received by you yet.
+TODO: This function needs to be ported to rel3
 \end_layout
 
 \begin_layout Standard
-To 'receive' the transfers, click the 'Warehouses–Reports–Deliveries' menu
- option, specify criteria and click Continue to display the transfers pending
- to be received.
- Here you specify the dates when the goods were delivered at 'your' warehouse
+To 'receive' the transfers, click the 
+\series bold
+'Warehouses--Reports--Deliveries'
+\series default
+ menu option, specify criteria and click 'Continue' to display the transfers
+ pending to be received.
+ Then you specify the dates when the goods were delivered at 'your' warehouse
  and click 'Save Delivered'.
 \end_layout
 
@@ -2755,21 +3428,24 @@ Other Reports
 \end_layout
 
 \begin_layout Enumerate
-Goods & Services–Parts report provides summary of your on hand quantity
- at selected or all warehouses.
- Click 'Warehouse' check box to display onhand by warehouse.
+The 
+\series bold
+'Goods & Services--Reports--Parts'
+\series default
+ report provides a summary of your on-hand quantity at selected or all warehouse
+s.
+ Click the 'Warehouse' check box to display the on-hand quantities by warehouse.
 \end_layout
 
 \begin_layout Enumerate
-.
-\end_layout
 
-\begin_layout Enumerate
-Warehouses–Reports–Activity gives you all activity of a particular item
- or all items.
- Select warehouse to see the activity in a particular warehouse.
- Activity report shows activity from purchase invoices, sales invoices and
- transfers.
+\series bold
+'Warehouses--Reports--Activity'
+\series default
+ gives you a report of all activity of a particular item or all items.
+ Select 'warehouse' to see the activity in a particular warehouse.
+ Activity report shows all the activity from purchase invoices, sales invoices,
+ shipped purchase orders, shipped sales orders and transfers.
 \end_layout
 
 \begin_layout Standard
@@ -2786,15 +3462,16 @@ Enabling multiple warehouses for old dataset
 \end_layout
 
 \begin_layout Standard
-If you have upgraded your sql-ledger installation with our enhanced version,
+If you have upgraded your SQL-Ledger installation with our enhanced version,
  you need to run few queries to bring your old data in sync with the new
  warehouses structure.
 \end_layout
 
 \begin_layout Standard
 Assemblies are a special case.
- In standard sql-ledger, 'Stock Assembly' action does not create any transaction
-/log and directly updates the onhand quantities in parts table.
+ In the standard SQL-Ledger, a 'Stock Assembly' action does not create any
+ transaction/log and directly updates the on-hand quantities in the parts
+ table.
  If you are using assemblies, you will almost always need to adjust the
  components and assemblies quantities after running these queries.
  See step 4 below.
@@ -2806,7 +3483,9 @@ Important: Make sure you have a current backup before doing this.
 
 \begin_layout Standard
 TODO: Copy queries and other text here.
- See how code can be formatted properly
+ See how code can be formatted properly.
+ Suggest to use ’System–Maintainance–Monitor’ to insert queries.
+ 
 \end_layout
 
 \begin_layout Section
@@ -2814,6 +3493,61 @@ Languages
 \end_layout
 
 \begin_layout Standard
+When you add a new language to your dataset, SQL-Ledger will add a complete
+ alternate set of templates and simultaneously open up the possibility for
+ you to translate the descriptions of your parts, services, groups, chart
+ of accounts and projects.
+ The SQL-Ledger language feature can be used for for main purposes:
+\end_layout
+
+\begin_layout Enumerate
+You can define alternate descriptions, in a foreign language, for parts,
+ services and groups ('Goods & Services--Translations').
+ This way you can send, for example, invoices to your customers with the
+ description of your goods and services in their native language.
+ 
+\end_layout
+
+\begin_layout Enumerate
+You can also translate the complete alternate set of templates which is
+ created when you add a new language (see 2.11 above).
+ This way you can send, for example, invoices to your customers where also
+ the standard template content is translated into a foreign language This
+ can be used in combination with the alternate descriptions for parts, services
+ and groups mentioned above, or on its own to define a particular set of
+ documents for a particular customer or market segment.
+\end_layout
+
+\begin_layout Enumerate
+You can translate your chart of accounts if you want to be able to print
+ your ’Balance Sheet’ and/or ’Income Statement’ in a foreign language (’
+\series bold
+System--Chart of Accounts--Translations
+\series default
+’).
+ 
+\end_layout
+
+\begin_layout Enumerate
+You can translate your chart of accounts if you want to be able to print
+ your ’Balance Sheet’ and/or ’Income Statement’ in a foreign language (’
+\series bold
+System--Chart of Accounts--Translations
+\series default
+’).
+\end_layout
+
+\begin_layout Standard
+To define a new language, use the 
+\series bold
+'System--Language'
+\series default
+ menu.
+ An existing list of languages (if any) will be displayed with the 'Add
+ Language' button at the bottom of the report.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename language.png
 	scale 50
@@ -2831,6 +3565,11 @@ Languages
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Once you have defined a new language, you can see it on a drop-down in the
+ invoice, order and quotation print options area.
 \end_layout
 
 \begin_layout Standard
@@ -2845,6 +3584,35 @@ Languages
 
 \begin_layout Section
 Translations
+\end_layout
+
+\begin_layout Standard
+Once you have defined a language, you can add translations to certain things
+ like:
+\end_layout
+
+\begin_layout Enumerate
+Chart of accounts
+\end_layout
+
+\begin_layout Enumerate
+All items
+\end_layout
+
+\begin_layout Enumerate
+Groups
+\end_layout
+
+\begin_layout Enumerate
+Projects
+\end_layout
+
+\begin_layout Standard
+To add a translation, using 
+\series bold
+Translations
+\series default
+ sub-menu under the respective menu.
 \end_layout
 
 \begin_layout Standard
@@ -2868,6 +3636,11 @@ Translations
 \end_layout
 
 \begin_layout Standard
+\begin_inset Graphics
+	filename trans-chart3.png
+
+\end_inset
+
 
 \end_layout
 
@@ -2876,7 +3649,7 @@ Taxes
 \end_layout
 
 \begin_layout Standard
-Defining and using taxes in sql-ledger is a four step process:
+Defining and using taxes in SQL-Ledger is a four step process:
 \end_layout
 
 \begin_layout Subsection
@@ -2884,8 +3657,11 @@ Define tax accounts in chart
 \end_layout
 
 \begin_layout Standard
-You create (or edit) tax accounts in chart of accounts using System–Accounts
- menu option.
+You create (or edit) tax accounts in the chart of accounts using the '
+\series bold
+System--Accounts
+\series default
+' menu option.
 \end_layout
 
 \begin_layout Standard
@@ -2913,7 +3689,11 @@ Define tax percentages
 \end_layout
 
 \begin_layout Standard
-You set percentages for each tax using System–Taxes menu option.
+You set percentages for each tax using the '
+\series bold
+System--Taxes
+\series default
+' menu.
 \end_layout
 
 \begin_layout Standard
@@ -2927,12 +3707,16 @@ You set percentages for each tax using System–Taxes menu option.
 \end_layout
 
 \begin_layout Subsection
-Mark Items/services as taxable
+Mark Items/Services as taxable
 \end_layout
 
 \begin_layout Standard
-You mark each part or service taxable during add or edit process.
- You do this using Goods & Services menu option.
+You mark each part or service as taxable during the 'add' or 'edit' process.
+ You do this using '
+\series bold
+Goods & Services
+\series default
+' menu option.
 \end_layout
 
 \begin_layout Standard
@@ -2946,12 +3730,17 @@ You mark each part or service taxable during add or edit process.
 \end_layout
 
 \begin_layout Subsection
-Mark customers/vendors for applicable taxes
+Mark Customers/Vendors for applicable taxes
 \end_layout
 
 \begin_layout Standard
 Tax will not be calculated for your customers or vendors unless you mark
  them as taxable.
+ You do this using 
+\series bold
+'Customers'/'Vendors'
+\series default
+ menu option.
 \end_layout
 
 \begin_layout Standard
@@ -2969,12 +3758,12 @@ Data import from other applications
 \end_layout
 
 \begin_layout Standard
-Sometimes you need to import your sales data into sql-ledger which was produced
- elsewhere.
+Sometimes you need to import your sales data which was produced elsewhere
+ into SQL-Ledger.
  You might have a web store where you download your daily sales in CSV format
- and want to import it into Sql-Ledger.
- Or you are just moving to sql-ledger from your legacy accounting software
- and want to move all existing data from old software to sql-ledger.
+ and want to import it into SQL-Ledger.
+ Or you are just moving to SQL-Ledger from your legacy accounting software
+ and want to move all existing data from your old software to SQL-Ledger.
 \end_layout
 
 \begin_layout Standard
@@ -2989,8 +3778,9 @@ Sometimes you need to import your sales data into sql-ledger which was produced
 
 \begin_layout Standard
 In SQL-Ledger, we can import data for almost everything as shown in the
- image below.
- Following sections provide detailed steps for importing CSV text files.
+ image above.
+ The following sections provide detailed information about the steps to
+ take for importing data from CSV text files into SQL-Ledger.
 \end_layout
 
 \begin_layout Subsection
@@ -2998,7 +3788,7 @@ Sale invoices
 \end_layout
 
 \begin_layout Standard
-Sales invoices can be imported from text files.
+Sales invoices can be imported from CSV text files.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3006,7 +3796,7 @@ Format your data
 \end_layout
 
 \begin_layout Standard
-Here is a sample import data.
+Here is a sample of sales invoice import data.
  You prepare data in this format and save it in a text file.
  The last column AR is accounts receivable account number which is 1100
  in UK chart of accounts.
@@ -3086,7 +3876,11 @@ Upload and preview
 \end_layout
 
 \begin_layout Standard
-Using Impor--Sales Invoices menu option, upload this file into Sql-Ledger.
+Use the '
+\series bold
+Import--Sales Invoices
+\series default
+' menu option to upload your file into SQL-Ledger.
  You will be shown what will be imported before actual import is done.
  At this point you can check and uncheck the invoices to be imported.
 \end_layout
@@ -3125,7 +3919,8 @@ Additional data which can be imported
 \end_layout
 
 \begin_layout Standard
-Sample csv file provided above contains only the most commonly used columns.
+The sample CSV file provided above contains only the most commonly used
+ columns.
  Here is the complete list.
 \end_layout
 
@@ -3254,13 +4049,17 @@ Receipts and Payments
 \end_layout
 
 \begin_layout Standard
-You can import payments and match them to invoices using 'Import–Payments'.
- Following points should be kept in mind.
+You can import payments and match them to invoices using the '
+\series bold
+Import--Payments
+\series default
+' menu.
+ The following points should be kept in mind.
 \end_layout
 
 \begin_layout Enumerate
-Payments are matched first on Invoice DCN column and then, if no match is
- found, on payment amount.
+Payments are matched first on the Invoice DCN column and then, if no match
+ is found, on the payment amount.
  
 \end_layout
 
@@ -3278,8 +4077,8 @@ Format your data
 \end_layout
 
 \begin_layout Standard
-Create or format the data in a CSV file with structure similar to the given
- below.
+Create or format the data in a CSV file with structure similar to the one
+ given below.
 \end_layout
 
 \begin_layout Standard
@@ -3318,14 +4117,15 @@ Upload and perview
 \end_layout
 
 \begin_layout Standard
-Import script will read the CSV file and match the payments to AR or AP
- invoices first on DCN Number and then on invoice due amount, if needed.
+The import script will read the CSV file and match the payments to AR or
+ AP invoices first on the DCN Number and then on the invoice due amount,
+ if needed.
 \end_layout
 
 \begin_layout Standard
-In this example, one AP invoice is matched on amount and the other one is
- matched on DCN number.
- The other two are AR invoices which are matched on amount.
+In this example, one AP invoice is matched on the amount and the other one
+ is matched on the DCN number.
+ The other two are AR invoices which are matched on the amount.
 \end_layout
 
 \begin_layout Standard
@@ -3364,13 +4164,13 @@ Advanced receipts/payments import
 \begin_layout Enumerate
 You can easily change the script to match the payments on other invoice
  columns like invoice number.
- The procedures to modify are 'sub payments' in 'SL/IM.pm' and 'sub im_payment'
- in 'bin/mozilla/im.pl'.
+ The procedures to modify are located in 'sub payments' in 'SL/IM.pm' and
+ 'sub im_payment' in the 'bin/mozilla/im.pl' file.
 \end_layout
 
 \begin_layout Enumerate
 To match payments only to AR (or AP) invoices, change the UNION queries
- in SL/IM.pm to select invoices from AR or AP only as required.
+ in the 'SL/IM.pm' file to select invoices from AR or AP only as required.
 \end_layout
 
 \begin_layout Subsection
@@ -3378,11 +4178,11 @@ AR/AP Transactions
 \end_layout
 
 \begin_layout Standard
-You can import AR and AP transactions.
+You can import both AR and AP transactions.
 \end_layout
 
 \begin_layout Standard
-For AR transactions, format your data using following sample:
+For AR transactions, format your data using the following sample:
 \end_layout
 
 \begin_layout Standard
@@ -3417,7 +4217,7 @@ invnumber,customernumber,transdate,amount,description,notes,source,memo
 \end_layout
 
 \begin_layout Standard
-For AP transactions, format your data using following sample:
+For AP transactions, format your data using the following sample:
 \end_layout
 
 \begin_layout Standard
@@ -3457,7 +4257,7 @@ General Ledger
 
 \begin_layout Standard
 This feature will help you to move your data from most of the accounting
- software to sql-ledger in few easy steps:
+ software to SQL-Ledger in just a few easy steps:
 \end_layout
 
 \begin_layout Subsubsection
@@ -3465,23 +4265,25 @@ Format your data
 \end_layout
 
 \begin_layout Standard
-Format your data according to following sample.
+Format your data according to the following sample.
  Keep in mind that:
 \end_layout
 
 \begin_layout Enumerate
-Import script creates one GL transaction for each unique 'reference' number.
- 
+The import script will create one GL transaction for each unique 'reference'
+ number.
 \end_layout
 
 \begin_layout Enumerate
 There can be any number of lines (rows) in each transaction.
- 
 \end_layout
 
 \begin_layout Enumerate
-Account must exist in chart of accounts Debits and credits must be equal
- before the CSV file can be imported.
+The imported account must also exist in the SQL-Ledger chart of accounts.
+\end_layout
+
+\begin_layout Enumerate
+Debits and credits must be equal before the CSV file can be imported.
 \end_layout
 
 \begin_layout Standard
@@ -3534,9 +4336,16 @@ Upload and preview
 \end_layout
 
 \begin_layout Standard
-Using 'Imports–GL Transaction' load the CSV file into sql-ledger.
- Import script will show the rows which contain valid account number and
- can be imported.
+Use the 
+\series bold
+'Imports--GL Transaction'
+\series default
+ to load the CSV file into SQL-Ledger.
+ The import script will show ’****’ in the ’Account Description’ column,
+ if the row to be imported doesn’t contain a valid account number.
+ Only account numbers that exists in the SQL-Ledger chart of accounts are
+ valid account numbers.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3573,8 +4382,8 @@ Customers and Vendors
 \end_layout
 
 \begin_layout Standard
-Customer and Vendor import is similar (except the number column which is
- customernumber or vendornumber).
+Customer and Vendor import is similar (except for the number column which
+ is either 'customernumber' or 'vendornumber').
 \end_layout
 
 \begin_layout Standard
@@ -3619,8 +4428,8 @@ Format your data according to following sample format.
 \end_layout
 
 \begin_layout Enumerate
-Import procedure assigns a unique parts_id to each part imported or group
- created.
+The import procedure assigns a unique parts_id to each part imported or
+ group created.
 \end_layout
 
 \begin_layout Enumerate
@@ -3667,14 +4476,18 @@ Upload and preview
 \end_layout
 
 \begin_layout Standard
-To start the import process, click 'Data Import–Parts' in the menu.
- Following page will be displayed.
- Click 'Browse' to select your CSV file, mark the taxes applicable and select
- the account links (Defaults are enough most of the time) Click 'Continue'
- when done.
+To start the import process, click '
+\series bold
+Data Import--Parts
+\series default
+' in the menu.
+ The following page will be displayed.
+ Click 'Browse...' to select your CSV file, mark the taxes applicable and select
+ the account links (The defaults are usually enough) Click 'Continue' when
+ done.
  You will be presented with the following screen.
  On this screen you can mark the parts to be imported by checking or un-checking
- the checkbox on each line.
+ the check-box on each line.
 \end_layout
 
 \begin_layout Standard
@@ -3682,13 +4495,13 @@ Please note:
 \end_layout
 
 \begin_layout Enumerate
-The parts which are already in the system (based on partnumber) will not
+Any parts which are already in SQL-Ledger (based on 'partnumber') will not
  imported.
- (You will not see a check box with them)
+ (You will not see a check-box with them)
 \end_layout
 
 \begin_layout Enumerate
-Parts groups which are new will be added.
+Parts 'groups' which are new will be added.
  These are marked by a '+' sign after group name.
 \end_layout
 
@@ -3767,11 +4580,16 @@ Upload and preview
 \end_layout
 
 \begin_layout Standard
-Click 'Data Import–Parts Vendors', specify the file with the 'Browse' button
- and click 'Import Parts Vendors' button.
- Following page will be displayed.
+To start the import process, click '
+\series bold
+Import–Vendor Price List
+\series default
+' in the menu, specify your CSV file with the 'Browse' button and click
+ the 'Import Parts Vendors' button.
+ The following page will be displayed.
  Here you can un-check the rows which you do not want to import.
- Rows with invalid vendor number or partnumber will not have the checkbox.
+ Rows with an invalid 'vendor number' or 'partnumber' will not have the
+ check-box.
 \end_layout
 
 \begin_layout Standard
@@ -3833,11 +4651,16 @@ Upload and preview
 \end_layout
 
 \begin_layout Standard
-Click 'Data Import–Parts Customers', specify the file with the 'Browse'
- button and click 'Import Parts Customers' button.
- Following page will be displayed.
+To start the import process, click '
+\series bold
+Import–Customer Price List
+\series default
+' in the menu, specify your CSV file with the 'Browse...' button and click
+ the 'Import Parts Customers' button.
+ The following page will be displayed.
  Here you can un-check the rows which you do not want to import.
- Rows with invalid customer number or partnumber will not have the checkbox.
+ Rows with an invalid 'customer number' or 'partnumber' will not have the
+ check-box.
 \end_layout
 
 \begin_layout Standard
@@ -3865,13 +4688,17 @@ Prepare your chart of accounts in your spreadsheet software according to
 \end_layout
 
 \begin_layout Enumerate
-Upload the chart csv file using 'Import–Chart' menu option.
+Upload the chart CSV file using '
+\series bold
+Import--Chart
+\series default
+' menu option.
  
 \end_layout
 
 \begin_layout Enumerate
-Check/uncheck the accounts to be imported and click continue to import the
- selected accounts.
+Check/un-check the accounts to be imported and click 'Continue' to import
+ the selected accounts.
 \end_layout
 
 \begin_layout Standard
@@ -3944,6 +4771,36 @@ AR
 \end_layout
 
 \begin_layout Standard
+AR stands for 'Accounts Receivable'.
+ AR module is used to record your sales with your customers.
+ You can record your sales in two possible ways:
+\end_layout
+
+\begin_layout Itemize
+First one is through 'AR Transaction' entry which is a simplified way to
+ book your sales and receipts using chart of accounts.
+ This method is quick and requires no setup except adjusting / adding to
+ the chart of accounts for your sales accounts.
+\end_layout
+
+\begin_layout Itemize
+Second method is using 'Sales Invoice' where you specify the goods and/or
+ services you have sold to your customer.
+ This method requires setup of goods and services using the '
+\series bold
+Goods & Services
+\series default
+' menu.
+ You can print the invoice and send it to your customer.
+ If you are managing your inventory, you should use this method to reduce
+ the inventory when you sell something.
+\end_layout
+
+\begin_layout Standard
+Both methods can be mixed and matched based upon nature of transactions.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menuar.png
 	scale 50
@@ -3958,7 +4815,11 @@ AR Transaction
 \end_layout
 
 \begin_layout Standard
-AR--Add Transaction menu option is used to create AR Transactions.
+The 
+\series bold
+'AR--Add Transaction'
+\series default
+ menu is used to create AR Transactions.
  These transactions allow you to record your sales in correct GL accounts
  without creating an invoice.
 \end_layout
@@ -3978,15 +4839,20 @@ Sales Invoice
 \end_layout
 
 \begin_layout Standard
-Sales invoices are created using AR--Sales Invoice menu option.
- The only mandatory columns are Customer and Invoice Date.
+Sales invoices are created using the 
+\series bold
+'AR--Sales Invoice'
+\series default
+ menu option.
+ The only mandatory columns in the header section of this screen are 'Customer'
+ and 'Invoice Date'.
  Rest of the columns can be left blank.
 \end_layout
 
 \begin_layout Standard
-Once you enter an item (part, service) and click 'Update', a new line opens.
- This way you can enter any number of items (parts, services etc.) in the
- detail portion of the invoice.
+Once you enter an item (part, service) and click 'Update', a new line appears.
+ This way you can enter any number of items (parts, services or labor) in
+ the detail portion of the invoice.
 \end_layout
 
 \begin_layout Standard
@@ -4000,6 +4866,17 @@ Once you enter an item (part, service) and click 'Update', a new line opens.
 \end_layout
 
 \begin_layout Standard
+By default only 'item number', 'description', 'qty', 'unit', 'price' and
+ 'discount' are shown on each line item.
+ You can also display additional input columns for extended information
+ on each line item.
+ To do this, just check the check-box next to 'Description' column of the
+ line item or heading and click update.
+ Now the invoice form will be displayed with extended line items as shown
+ below.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ar3.png
 	scale 45
@@ -4010,12 +4887,48 @@ Once you enter an item (part, service) and click 'Update', a new line opens.
 \end_layout
 
 \begin_layout Subsection
+Credit Note
+\end_layout
+
+\begin_layout Standard
+Credit note is used to record a sale return without creating a credit invoice.
+ A credit note typically a reversal of 'AR Transaction' though it can also
+ be used to reverse part or all of a sales invoice but be aware that inventory
+ onhand is not increased with a credit note.
+ So it is good to reverse any services sale but not for reversing tangible
+ goods' sale.
+ 
+\end_layout
+
+\begin_layout Standard
+Screen to record a credit note is exactly like that of 'AR Transaction'
+ with the only difference of 'Credit Note' in the title.
+\end_layout
+
+\begin_layout Subsection
+Credit Invoice
+\end_layout
+
+\begin_layout Standard
+Credit invoice is used to record a sale return recorded earlier with a sales
+ invoice.
+ A credit invoice will also add the items sold back to the inventory for
+ re-sale as well as update your accounts receivable and sales accounts.
+\end_layout
+
+\begin_layout Subsection
+Adjusting credit note or invoice
+\end_layout
+
+\begin_layout Subsection
 Transactions Report
 \end_layout
 
 \begin_layout Standard
-Transaction report shows all open or closed transactions for the specified
- criteria on search screen.
+Transaction report shows all open or closed transactions and invoices for
+ the specified criteria on search screen.
+ On search screen you can specify various criteria and select/de-select
+ columns which you want to shown on the screen.
 \end_layout
 
 \begin_layout Standard
@@ -4029,6 +4942,13 @@ Transaction report shows all open or closed transactions for the specified
 \end_layout
 
 \begin_layout Standard
+When you click 'Continue' button after specifying the required criteria,
+ your report is displayed.
+ This is 'Summary' report where each invoice or transaction is shown on
+ single line.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename artrans2.png
 	scale 45
@@ -4036,6 +4956,14 @@ Transaction report shows all open or closed transactions for the specified
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 'Detail' report shows debits and credits of each transaction along with
+ account number.
+ In detail report, a single invoice or transaction is shown on multiple
+ times.
+ You can click 'Subtotal' to subtotal and group this report by invoice number.
 \end_layout
 
 \begin_layout Standard
@@ -4053,6 +4981,11 @@ Aging Report
 \end_layout
 
 \begin_layout Standard
+Aging report shows the outstanding balances of your customers divided into
+ predefined periods of time in the past.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-search.png
 	scale 45
@@ -4063,6 +4996,11 @@ Aging Report
 \end_layout
 
 \begin_layout Standard
+The summary aging report (shown below) shows on-line for each customer with
+ outstanding balance.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-summ.png
 	scale 45
@@ -4070,6 +5008,11 @@ Aging Report
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The detail aging report (shown below) shows all outstanding invoices for
+ each customer with subtotal by the customer.
 \end_layout
 
 \begin_layout Standard
@@ -4084,6 +5027,20 @@ Aging Report
 
 \begin_layout Subsection
 Reminders
+\end_layout
+
+\begin_layout Standard
+You can print or email reminders to your customers.
+ You can define up to 3 levels of reminders.
+ Level 1 being a polite one and level 3 being a bit harsh one.
+ 
+\end_layout
+
+\begin_layout Standard
+When you print a reminder, its level is stored in the database.
+ Next time when you print reminder for the same customer, next level of
+ reminder is printed.
+ You also have the option to change the reminder level yourself.
 \end_layout
 
 \begin_layout Standard
@@ -4111,6 +5068,12 @@ Customer History Reports
 \end_layout
 
 \begin_layout Standard
+You can use history reports to see which customer is giving you more business.
+ You can filter the report on date range which is applied to the invoices
+ (or orders or quotations)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename customer-history1.png
 	scale 45
@@ -4121,6 +5084,10 @@ Customer History Reports
 \end_layout
 
 \begin_layout Standard
+Customer history summary report shows business activity grouped by item.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename customer-history2.png
 	scale 45
@@ -4128,6 +5095,10 @@ Customer History Reports
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Customer history detail report shows business activity by invoice and item.
 \end_layout
 
 \begin_layout Standard
@@ -4142,6 +5113,15 @@ Customer History Reports
 
 \begin_layout Section
 Point of Sales (POS)
+\end_layout
+
+\begin_layout Standard
+Point of sales (POS) module allows quick invoicing at busy places like a
+ shop or a restaurant.
+ The items and customers you have defined for your invoices can be used
+ for POS invoicing.
+ The only difference with standard AR invoices is a simplified data entry
+ screen and a POS optimized receipts section.
 \end_layout
 
 \begin_layout Standard
@@ -4188,86 +5168,6 @@ Point of Sales (POS)
 \begin_inset Graphics
 	filename pos5.png
 	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Receipts
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menucash.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-There are two ways to record payment from your customer:
-\end_layout
-
-\begin_layout Standard
-You can put the receipt information at the footer of your invoice when creating
- the invoice if the invoice has been paid at the time of purchase.
-\end_layout
-
-\begin_layout Standard
-You can use 'Cash--Receipt' menu to record receipt for a particular customer.
- Using this method is advisible as you do not need to edit invoices to record
- the receipt.
- This method also allows you to record a single receipt for multiple invoices.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The 'Cash--Receipts' menu allows you to quickly record receipts for multiple
- invocies for multiple customers.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Receipts report show you receipts for the particular period according to
- your bank account.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receipt4.png
-	scale 45
 
 \end_inset
 
@@ -4419,6 +5319,114 @@ Vendor History
 \end_layout
 
 \begin_layout Section
+Cash
+\end_layout
+
+\begin_layout Subsection
+Receipts
+\end_layout
+
+\begin_layout Standard
+The
+\series bold
+ 'Cash--Receipt'
+\series default
+ menu is used to record receipts from your customers against outstanding
+ invoices.
+ Another menu 
+\series bold
+'Cash--Receipts'
+\series default
+ allows you to enter receipts from multiple customers.
+ Both have same effect but the later one make data entry quick for adding
+ receipts from multiple customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menucash.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are two ways to record payment from your customer:
+\end_layout
+
+\begin_layout Enumerate
+You can put the receipt information at the footer of your invoice when creating
+ the invoice if the invoice has been paid at the time of purchase.
+\end_layout
+
+\begin_layout Enumerate
+You can use 
+\series bold
+'Cash--Receipt'
+\series default
+ menu to record receipt for a particular customer.
+ Using this method is advisible as you do not need to edit invoices to record
+ the receipt.
+ This method also allows you to record a single receipt for multiple invoices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'Cash--Receipts'
+\series default
+ menu allows you to quickly record receipts for multiple invoices for multiple
+ customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Receipts report show you receipts for the particular period according to
+ your bank account.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receipt4.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Payments
 \end_layout
 
@@ -4426,14 +5434,18 @@ Payments
 There are two ways to record payment from your vendor.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 You can put the payment information at the footer of your invoice when creating
  the invoice if the invoice has been paid at the time of purchase.
 \end_layout
 
-\begin_layout Standard
-You can use 'Cash--Payment' menu to record payment for a particular vendor.
- Using this method is advisible as you do not need to edit invoices to record
+\begin_layout Enumerate
+You can use 
+\series bold
+'Cash--Payment'
+\series default
+ menu to record payment for a particular vendor.
+ Using this method is advisable as you do not need to edit invoices to record
  the payment.
  This method also allows you to record a single payment for multiple invoices.
 \end_layout
@@ -4487,6 +5499,13 @@ General Ledger
 \end_layout
 
 \begin_layout Standard
+General Ledger module is used to add standard accounting journals with debit
+ and credit amounts to some accounts from chart of accounts.
+ You cannot post a transactions until the total of debits is equal to the
+ total of credits.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menugl.png
 	scale 50
@@ -4501,7 +5520,14 @@ Add Transaction
 \end_layout
 
 \begin_layout Standard
-Adding a GL transaction
+Use 
+\series bold
+'General Ledger--Add Transaction'
+\series default
+ menu to add a new GL transaction.
+ On this screen you can put some reference number in the 'Reference' column.
+ If you leave it blank, SQL-Ledger will assign next number from the scheme
+ defined in defaults.
 \end_layout
 
 \begin_layout Standard
@@ -4519,7 +5545,15 @@ Reports
 \end_layout
 
 \begin_layout Standard
-GL Transactions Report
+The
+\series bold
+ 'General Ledger--Reports'
+\series default
+ menu is used to view all accounting journals with debits and credits to
+ the particular accounts.
+ Initially this report can be confusing because it shows not only the journals
+ added using 'Add Transaction' menu show above but also all accounting transacti
+ons posted from AR, AP and Cash modules.
 \end_layout
 
 \begin_layout Standard
@@ -4561,8 +5595,8 @@ Recurring Transactions
 \end_layout
 
 \begin_layout Standard
-Recurring Transactions allow you to auto-generate pre-defined invoices,
- transactions and orders.
+Recurring Transactions allow you to auto-generate predefined invoices, transacti
+ons and orders.
 \end_layout
 
 \begin_layout Standard
@@ -4616,7 +5650,7 @@ Generating
 \end_layout
 
 \begin_layout Standard
-When recurring transactions are due you are reminded when you login to sql-ledge
+When recurring transactions are due you are reminded when you login to SQL-Ledge
 r.
  With a single click you can generate all recurring transactions, print
  or email invoices and orders.
@@ -4645,6 +5679,13 @@ Defining currencies
 \end_layout
 
 \begin_layout Standard
+To define a new currency use System--Currencies menu.
+ The top-most currency is the default currency.
+ You can move the currencies up and down using the arrows on the currency
+ list.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename curr1.jpg
 
@@ -4658,6 +5699,13 @@ Buying and selling in foreign currencies
 \end_layout
 
 \begin_layout Standard
+When you want to create invoice in currency, just change the currency code
+ from currency dropdown box.
+ SQL-Ledger will show you the last exchange rate for this currency.
+ You can just accept this rate or change it.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename curr2.jpg
 
@@ -4668,6 +5716,10 @@ Buying and selling in foreign currencies
 
 \begin_layout Subsection
 Reports
+\end_layout
+
+\begin_layout Standard
+You can view reports in base currency as well as in the foreign currency.
 \end_layout
 
 \begin_layout Standard
@@ -4715,6 +5767,13 @@ Quotations and RFQs
 \end_layout
 
 \begin_layout Standard
+You can use SQL-Ledger to send quotations to your customers or request your
+ vendors for quotations (RFQs).
+ Later on you can convert quotations to sales orders and RFQs to purchase
+ orders.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menuquotations.png
 	scale 50
@@ -4729,6 +5788,14 @@ Quotations
 \end_layout
 
 \begin_layout Standard
+Use 
+\series bold
+'Quotations--Quotation'
+\series default
+ menu to add a new quotation for your customer.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename quotations1.png
 	scale 50
@@ -4736,6 +5803,18 @@ Quotations
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To get report of existing quotations or to editing a quotation, use the
+ 
+\series bold
+'Quotations--Reports--Quotations'
+\series default
+ menu.
+ The search screen will be displayed where you can specify any conditions
+ to filter the report or just leave blank and click 'Continue' button to
+ get all existing quotations.
 \end_layout
 
 \begin_layout Standard
@@ -4758,8 +5837,32 @@ Quotations
 
 \end_layout
 
+\begin_layout Standard
+Once a quotation has been made, you can create a purchase order from it.
+ Creating a PO from a quotation will mark it closed.
+ You can also close a quotation just by clicking the 'Closed' radio button
+ when you edit a quotation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename quotations4.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 RFQ
+\end_layout
+
+\begin_layout Standard
+Use the 
+\series bold
+'Quotations--RFQ'
+\series default
+ menu to add a new quotation for your customer.
 \end_layout
 
 \begin_layout Standard
@@ -4770,6 +5873,17 @@ RFQ
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To get report of existing RFQs or to editing an RFQ, use the 
+\series bold
+'Quotations--Reports--RFQs'
+\series default
+ menu.
+ The search screen will be displayed where you can specify any conditions
+ to filter the report or just leave blank and click 'Continue' button to
+ get all existing RFQs.
 \end_layout
 
 \begin_layout Standard
@@ -4793,6 +5907,13 @@ RFQ
 \end_layout
 
 \begin_layout Standard
+Once an RFQ has been made, you can create a sales order from it.
+ Creating an SO from an RFQ will mark it closed.
+ You can also close an RFQ just by clicking the 'Closed' radio button when
+ you edit it.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename rfq4.png
 	scale 50
@@ -4802,12 +5923,14 @@ RFQ
 
 \end_layout
 
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Section
 Orders
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger has very powerful 'Orders' module.
+ Orders module can be used to create purchase orders for your vendors or
+ sales orders to your customers.
 \end_layout
 
 \begin_layout Standard
@@ -4842,7 +5965,37 @@ Sales Orders
 \end_layout
 
 \begin_layout Standard
-Add sales order
+A purchase order allows you to order goods and services from your vendor.
+ You can:
+\end_layout
+
+\begin_layout Enumerate
+Make a sales order.
+\end_layout
+
+\begin_layout Enumerate
+Receive a sales order fully or partially using 'Shipping--Ship'.
+\end_layout
+
+\begin_layout Enumerate
+Create a customer invoice from a partially or fully received sales order.
+\end_layout
+
+\begin_layout Enumerate
+If warehouses are enabled, you can ship goods from a particular warehouse.
+\end_layout
+
+\begin_layout Subsubsection
+Add a new sales order
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'Order Entry--Sales Order'
+\series default
+ will display the following 'Add Sales Order' screen.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4856,7 +6009,10 @@ Add sales order
 \end_layout
 
 \begin_layout Standard
-Sales order with item details
+If you want to enter more information for each item you can click the checkbox
+ next to the 'Description' column and then 'Update'.
+ Now each detail line will span 5 lines where you can enter lots of information
+ for each item you order.
 \end_layout
 
 \begin_layout Standard
@@ -4869,8 +6025,197 @@ Sales order with item details
 
 \end_layout
 
+\begin_layout Subsubsection
+Editing a SO
+\end_layout
+
 \begin_layout Standard
-Sales order reports search screen
+To edit an existing SO, you display list of existing orders using the 
+\series bold
+'Order Entry--Reports--Sales Order'
+\series default
+ and click on SO number to edit that particular SO.
+\end_layout
+
+\begin_layout Subsubsection
+Creating a quotation or customer invoice from an SO
+\end_layout
+
+\begin_layout Standard
+When you have saved a SO, you can open it in editing and create a quotation.
+ When you have received quantities you can directly create vendor invoice
+ from the SO.
+ (Also see below to see how to use 'Shipping' menu to partially receive
+ a PO.)
+\end_layout
+
+\begin_layout Standard
+TODO: Screen shot with quotation and vendor invoice buttons.
+\end_layout
+
+\begin_layout Subsubsection
+Receiving an SO
+\end_layout
+
+\begin_layout Standard
+There are two ways to receive a SO.
+\end_layout
+
+\begin_layout Enumerate
+Open the SO and click 'Customer Invoice' button.
+ The SO will be received in full, marked 'closed' and a customer invoice
+ will be created for it.
+ Inventory on-hand will be updated.
+\end_layout
+
+\begin_layout Enumerate
+Use '
+\series bold
+Shipping--Receive
+\series default
+' to receive a PO fully or partially.
+ Inventory on-hand will be updated.
+ Later on you can open the PO and create vendor invoice.
+ 
+\end_layout
+
+\begin_layout Standard
+Let us see how it is done using the '
+\series bold
+Shipping
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menushipping.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following screen is displayed when you click '
+\series bold
+Shipping--Ship
+\series default
+'.
+ Here you can select SOs you want to process or just 'Continue' button if
+ you want to process all open SOs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following screen shows all SOs with open quantities.
+ You click on a particular SO to receive goods in it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The selected SO is displayed with order quantities and you can put the quantitie
+s received in the 'Ship' column.
+ If there are any serial numbers associated with shipped goods you put them
+ in serial number column.
+ You also need to specify correct receiving date.
+ In the example below we are partially receiving this SO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you open this SO again (using 
+\series bold
+'Order Entry--Reports--Sales Orders
+\series default
+') you will see the quantity received in the 'Ship' column.
+ Received quantity gets updated every time you receive goods using the '
+\series bold
+Shipping--Ship
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Creating customer invoice from an SO
+\end_layout
+
+\begin_layout Standard
+You can create a customer invoice from an SO for the quantities received
+ so far.
+ To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
+ screen will open up with data from that SO as well as received quantities
+ as show below.
+\end_layout
+
+\begin_layout Standard
+Once a vendor invoice has been created for a SO, that SO is closed.
+ If there were some open quantities in that SO then a new SO with same number
+ and remaining items with open quantities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sales order reports
+\end_layout
+
+\begin_layout Standard
+The
+\series bold
+ 'Order Entry--Reports--Sales Orders'
+\series default
+ menu shows you all your purchase orders.
+ You can check/uncheck the 'Open' and 'Closed' check boxes on search screen
+ before you continue.
+ 'Closed' SOs are those which have been fully received OR which have been
+ marked 'Closed' by editing the PO.
 \end_layout
 
 \begin_layout Standard
@@ -4903,7 +6248,6 @@ Purchase Order
 
 \begin_layout Standard
 A purchase order allows you to order goods and services from your vendor.
- SQL-Ledger has very powerful features to manage your purchase orders.
  You can:
 \end_layout
 
@@ -4916,9 +6260,7 @@ Receive a purchase order fully or partially using 'Shipping--Receive'.
 \end_layout
 
 \begin_layout Enumerate
-Create a vendor invoice: Open the order and click the Vendor Invoice button.
- You can create invoice from a partially received order.
- 
+Create a vendor invoice from a partially or fully received order.
 \end_layout
 
 \begin_layout Enumerate
@@ -4930,11 +6272,12 @@ Add a new purchase order
 \end_layout
 
 \begin_layout Standard
-'Order Entry--Purchase Order' will display the following 'Add Purchase Order'
- screen.
- To edit an existing PO, you display list of existing orders using 'Order
- Entry--Reports--Purchase Orders' and click on PO number to edit that particular
- PO.
+The 
+\series bold
+'Order Entry--Purchase Order'
+\series default
+ will display the following 'Add Purchase Order' screen.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4964,9 +6307,29 @@ If you want to enter more information for each item you can click the checkbox
 
 \end_layout
 
+\begin_layout Subsubsection
+Editing a PO
+\end_layout
+
 \begin_layout Standard
-When you have saved a PO, you can create an RFQ (request for quotation)
- or vendor invoice from the PO.
+To edit an existing PO, you display list of existing orders using the 
+\series bold
+'Order Entry--Reports--Purchase Orders'
+\series default
+ and click on PO number to edit that particular PO.
+\end_layout
+
+\begin_layout Subsubsection
+Creating an RFQ or vendor invoice from a PO
+\end_layout
+
+\begin_layout Standard
+When you have saved a PO, you can open it in editing and create an RFQ (request
+ for quotation).
+ When you have received quantities you can directly create vendor invoice
+ from the PO.
+ (Also see below to see how to use 'Shipping' menu to partially receive
+ a PO.)
 \end_layout
 
 \begin_layout Standard
@@ -4980,11 +6343,162 @@ When you have saved a PO, you can create an RFQ (request for quotation)
 \end_layout
 
 \begin_layout Subsubsection
+Receiving a PO
+\end_layout
+
+\begin_layout Standard
+There are two ways to receive a PO.
+\end_layout
+
+\begin_layout Enumerate
+Open the PO and click 'Vendor Invoice' button.
+ The PO will be received in full, marked 'closed' and a vendor invoice will
+ be created for it.
+ Inventory on-hand will be updated.
+\end_layout
+
+\begin_layout Enumerate
+Use '
+\series bold
+Shipping--Receive
+\series default
+' to receive a PO fully or partially.
+ Inventory on-hand will be updated.
+ Later on you can open the PO and create vendor invoice.
+ 
+\end_layout
+
+\begin_layout Standard
+Let us see how it is done using the '
+\series bold
+Shipping
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menushipping.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following screen is displayed when you click '
+\series bold
+Shipping--Receive
+\series default
+'.
+ Here you can select POs you want to process or just 'Continue' button if
+ you want to process all open POs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following screen shows all POs with open quantities.
+ You click on a particular PO to receive goods in it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The selected PO is displayed with order quantities and you can put the quantitie
+s received in the 'Rcvd' column.
+ If there are any serial numbers associated with received goods you put
+ them in serial number column.
+ You also need to specify correct receiving date.
+ In the example below we are partially receiving this PO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you open this PO again (using 
+\series bold
+'Order Entry--Reports--Purchase Orders
+\series default
+') you will see the quantity received in the 'Rcvd' column.
+ Received quantity gets updated every time you receive goods using the '
+\series bold
+Shipping--Receive
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Creating vendor invoice from PO
+\end_layout
+
+\begin_layout Standard
+You can create a vendor invoice for the quantities received so far.
+ To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
+ screen will open for received quantities as show below.
+\end_layout
+
+\begin_layout Standard
+Once a vendor invoice has been created for a PO, that PO is closed.
+ If there were some open quantities in that PO then a new PO with same number
+ and remaining items with open quantities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Purchase order reports
 \end_layout
 
 \begin_layout Standard
-'Order Entry--Reports--Purchase Orders' shows you all your purchase orders.
+The
+\series bold
+ 'Order Entry--Reports--Purchase Orders'
+\series default
+ menu shows you all your purchase orders.
  You can check/uncheck the 'Open' and 'Closed' checkboxes on search screen
  before you continue.
  'Closed' POs are those which have been fully received OR which have been
@@ -5002,208 +6516,82 @@ Purchase order reports
 \end_layout
 
 \begin_layout Subsubsection
-Receiving a PO
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menushipping.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Shipping module allows you to receive goods to warehouses from your orders.
- 
-\end_layout
-
-\begin_layout Standard
-Once you have created a PO, you use 'Shipping--Receive' to receive your
- goods.
- Following screen is displayed which allows you to select POs you want to
- process.
- Just 'Continue' button if you want to process all open POs.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The following screen shows all POs with open quanities.
- You click on a particular PO to receive goods in it.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Here on this screen POs is displayed with order quantities and you can put
- the quantities received in the 'Rcvd' column.
- If there are any serial numbers associated with received goods you put
- them in serial number column.
- You also need to specify correct receiving date.
-\end_layout
-
-\begin_layout Standard
-In the example below we have partially received this PO.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If you open this PO again (using 'Order Entry--Reports--Purchase Orders')
- you will see the quantity received in the 'Rcvd' column.
- This quantity is updated every time you receive goods using 'Shipping--Receive'.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive4.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-At this point, you can create a vendor invoice for the quantities received.
- To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
- screen will open for received quantities as show below.
-\end_layout
-
-\begin_layout Standard
-Once a vendor invoice has been created for a PO, it is closed.
- If there were some open quantities in that PO then a new PO with same number
- and remaining items with open quantities.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive5.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
 Order Entry Notes
 \end_layout
 
+\begin_layout Enumerate
+Normally inventory on-hand quantities are updated when you create a vendor
+ or customer invoice.
+ This default behavior is changed if you are using orders module.
+ See below.
+\end_layout
+
+\begin_layout Enumerate
+When you receive or ship an order through '
+\series bold
+Shipping
+\series default
+' menu your inventory on-hand is immediately updated.
+ You can confirm this by viewing '
+\series bold
+Warehouses--Reports--Onhand
+\series default
+' immediately after you receive or ship an order.
+ Your AR or AP is updated only when you create an invoice from a partially
+ or fully received order.
+\end_layout
+
+\begin_layout Enumerate
+You cannot change item quantities or add new items when an invoice is created
+ from a partially or fully shipped/received order.
+ This feature to keep the invoices and orders data in sync.
+\end_layout
+
+\begin_layout Enumerate
+When you create invoice from a partially shipped or received order, SQL-Ledger
+ closes that order and creates a new one with the remaining order quantities
+ but with same order number.
+\end_layout
+
 \begin_layout Subsection
-Sales
-\end_layout
-
-\begin_layout Enumerate
-Create a sales order for the inventory you want to sell.
- If you do not specify a warehouse with order, you can ship the order from
- any warehouse.
- 
-\end_layout
-
-\begin_layout Enumerate
-Ship the order using Shipping–Ship.
- Shipping warehouse cannot be changed if you have specified one on the order.
- 
-\end_layout
-
-\begin_layout Enumerate
-Create AR/Customer invoice by opening the sales order which has been shipped
- in the above step and clicking the Sale Invoice button.
- Do not make any change to partnumber or quantity.
- Just click the Post button.
+Important inventory on-hand reports from orders
 \end_layout
 
 \begin_layout Standard
-Note: When you create from a partially received order, SL closes that order
- and creates a new one with the remaining order quantities but with same
- order number.
-\end_layout
-
-\begin_layout Subsection
-Reports
-\end_layout
-
-\begin_layout Standard
-Inventory onhand at warehouses: 
+Inventory on hand at warehouses:
 \end_layout
 
 \begin_layout Enumerate
-Goods & Services–All Items report.
+The 
+\series bold
+'Goods & Services–All Items'
+\series default
+ report.
  Check the 'Warehouse' checkbox on search screen.
  
 \end_layout
 
 \begin_layout Enumerate
-Warehouses–Reports–Onhand 
+The 
+\series bold
+'Warehouses–Reports–Onhand'
 \end_layout
 
 \begin_layout Enumerate
-Inventory receive/ship activity 
-\end_layout
-
-\begin_layout Enumerate
-Warehouses–Reports–Activity report.
+Inventory receive/ship activity: The 
+\series bold
+'Warehouses–Reports–Activity'
+\series default
+ report.
  
-\end_layout
-
-\begin_layout Subsection
-Precautions
-\end_layout
-
-\begin_layout Standard
-Do not do any of the following things when using the shipping module.
- It will make your inventory records incorrect.
-\end_layout
-
-\begin_layout Enumerate
-Creating any new sale or purchase invoices directly (that is, without going
- through the order/ship/receive steps) 
-\end_layout
-
-\begin_layout Enumerate
-Editing any existing invoices.
- 
-\end_layout
-
-\begin_layout Enumerate
-Receiving purchase orders directly by putting the qty received in Recd column.
- 
-\end_layout
-
-\begin_layout Enumerate
-Shipping sales orders directly by putting the qty shipped in Ship column.
 \end_layout
 
 \begin_layout Section
-Time Cards 
+Time Cards
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout Section
@@ -5251,7 +6639,11 @@ Activate Audit trail
 
 \begin_layout Standard
 All user activity (adding, changing, deleting transactions) is logged.
- You can view this log using 'Others–Audit Trial' report.
+ You can view this log using 
+\series bold
+System--Audit Trail
+\series default
+ report.
 \end_layout
 
 \begin_layout Subsection*
@@ -5269,6 +6661,11 @@ Keeping track of your business in SQL-Ledger
 \end_layout
 
 \begin_layout Standard
+This sections explains some important reports which are available to you
+ to moniter and track your business once you have recorded all the transactions.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menureports.png
 	scale 50
@@ -5280,6 +6677,12 @@ Keeping track of your business in SQL-Ledger
 
 \begin_layout Section
 Trial Balance
+\end_layout
+
+\begin_layout Standard
+Trial balance is a standard accounting report which shows amounts posted
+ to each account in your chart of accounts.
+ Trial balance is a summary of all transactions posted from all modules.
 \end_layout
 
 \begin_layout Standard
@@ -5354,7 +6757,7 @@ Balance Sheet
 \end_layout
 
 \begin_layout Standard
-Balance sheet can be displayed upto any particular date.
+Balance sheet can be displayed up to any particular date.
  Like income statement, you can also compare it with balances at some older
  date.
 \end_layout
@@ -5381,6 +6784,10 @@ Balance sheet can be displayed upto any particular date.
 
 \begin_layout Section
 Tax Report
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout Section
@@ -5444,7 +6851,11 @@ Year End
 \end_layout
 
 \begin_layout Standard
-'System--Yearend' menu does the period closing in MyLedger.
+The 
+\series bold
+'System--Yearend'
+\series default
+ menu does the period closing in SQL-Ledger.
  It creates a GL transaction which clears the income accounts and posts
  the difference (which is income or loss) to the specified retained earnings
  account.
@@ -5498,8 +6909,12 @@ Data backup
 \end_layout
 
 \begin_layout Standard
-You can backup your data directly through sql-ledger.
- There are two ways to get your backup using the 'System--Backup' menu.
+You can backup your data directly through SQL-Ledger.
+ There are two ways to get your backup using the 
+\series bold
+System--Backup
+\series default
+ menu.
 \end_layout
 
 \begin_layout Subsection*
@@ -5508,7 +6923,11 @@ System--Backup--Send by Email
 
 \begin_layout Standard
 Backup is sent to your email address through email.
- You can add or change this email address through Preferences.
+ You can add or change this email address through '
+\series bold
+Preferences
+\series default
+' menu.
 \end_layout
 
 \begin_layout Standard
@@ -5540,27 +6959,26 @@ Introduction
 \begin_layout Standard
 Double entry accounting system, although much feared by non-accountants,
  is a very simple but extremely powerful method of managing money.
+ SQL-Ledger does much of the double entry accounting itself linking all
+ parts of the application through a chart of accounts.
+ 
 \end_layout
 
 \begin_layout Standard
-SL does much of the double entry accounting itself linking all parts of
- the application through a chart of accounts.
- You need to know about double entry system only when you are going to make
+You need to know about double entry system only when you are going to make
  general ledger transactions.
- Basic Principle
+ Its basic principle is that every business transaction affects at least
+ two accounts.
+ For example:
 \end_layout
 
-\begin_layout Standard
-Every business transaction affects at least two heads of accounts.
-\end_layout
-
-\begin_layout Standard
-For example:
-\end_layout
-
-\begin_layout Standard
+\begin_layout Itemize
 When you buy a car, you cash is decreased and your assets are increased.
- When you sell a item on cash, your sale is increased and your cash is also
+ 
+\end_layout
+
+\begin_layout Itemize
+When you sell a item on cash, your sale is increased and your cash is also
  increased.
  
 \end_layout
@@ -5683,8 +7101,11 @@ Cost of Goods Sold (COGS) is the purchase price of the goods you just sold.
 
 \begin_layout Standard
 Tip: To view the debit and credit accounting transactions for any sale or
- purchase invoice, enter the invoice number on General Ledger–Reports screen
- and click Continue button.
+ purchase invoice, enter the invoice number on 
+\series bold
+General Ledger–Reports
+\series default
+ screen and click Continue button.
 \end_layout
 
 \begin_layout Subsection
@@ -5784,6 +7205,22 @@ Ledger Doctor
 \end_layout
 
 \begin_layout Standard
+Ledger Doctor is a tool to identify database inconsistencies in the SQL-Ledger
+ database.
+ Use the 
+\series bold
+'System--Maintenance--Ledger Doctor'
+\series default
+ menu to access it.
+ '
+\series bold
+Ledger Doctor
+\series default
+' report itself does not corrects any error and just reports inconsistencies
+ with hints on how to correct the inconsistency.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename doctor1.png
 	scale 50
@@ -5805,6 +7242,19 @@ Ledger Doctor
 
 \begin_layout Section
 Monitor
+\end_layout
+
+\begin_layout Standard
+Using the 
+\series bold
+'System--Maintenance--Monitor'
+\series default
+ menu, you can run any SQL directly to your SQL-Ledger database.
+ WARNING: Be careful with this option as no checks are made on what you
+ do.
+ You can quickly corrupt your database with a small mistake.
+ If you are not sure how to use it then just ignore it.
+ TIP: Always take a backup before running any SQL using this menu.
 \end_layout
 
 \begin_layout Standard
@@ -5836,9 +7286,9 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-LedgerCart instantly creates an online store and order system using information
+LedgerCart instantly creates an on-line store and order system using information
  in your SQL-Ledger.
- You just drop the cgi scripts into your webserver, install few cpan modules,
+ You just drop the cgi scripts into your web server, install few CPAN modules,
  configure your db connection and you are ready to go.
 \end_layout
 
@@ -5853,7 +7303,7 @@ Features
 \end_layout
 
 \begin_layout Enumerate
-Extemely simple to install and configure.
+Extremely simple to install and configure.
  
 \end_layout
 
@@ -5864,7 +7314,7 @@ Can be installed on dedicated or shared hosting.
 
 \begin_layout Enumerate
 No additional database required.
- Retrieves and saves all data from/to sql-ledger dataset.
+ Retrieves and saves all data from/to SQL-Ledger dataset.
  
 \end_layout
 
@@ -5935,7 +7385,7 @@ Using LedgerCart as an online store
 \end_layout
 
 \begin_layout Standard
-LedgerCart can instantly turn your SL installation into an online store
+LedgerCart can instantly turn your SL installation into an on-line store
  with little or no effort.
  Customers can place order using the familiar shopping cart interface.
  Your existing customers can generate a new password using 'Forgot password'
@@ -6234,7 +7684,7 @@ You can create your own functions or override any existing function by creating
  custom scripts in custom_xx.pl files and putting them in bin/mozilla folder.
  For example, to add new functions to gl.pl file, add these functions to
  custom_gl.pl file and put this file into bin/mozilla/ folder.
- This file will be automatically loaded by sql-ledger before running any
+ This file will be automatically loaded by SQL-Ledger before running any
  functions in gl.pl files.
 \end_layout
 
@@ -6243,11 +7693,11 @@ Once your new functions are there, you can call them using your own custom
  menu.
  Custom menu entries are put in custom_menu.ini and follow the same syntax
  as that of menu.ini.
- This method of extending the sql-ledger is upgrade-safe and is the recommended
+ This method of extending the SQL-Ledger is upgrade-safe and is the recommended
  way.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Custom Modules
 \end_layout
 
@@ -6257,18 +7707,18 @@ You can build your own modules.
 \end_layout
 
 \begin_layout Enumerate
-Module back-end code which will reside in ./sql-ledger/SL/MyModule.pm 
+Module back-end code which will reside in ./SQL-Ledger/SL/MyModule.pm 
 \end_layout
 
 \begin_layout Enumerate
-Module front-end code which will reside in ./sql-ledger/bin/mozilla/mymodule.pl
+Module front-end code which will reside in ./SQL-Ledger/bin/mozilla/mymodule.pl
  
 \end_layout
 
 \begin_layout Enumerate
-Gateway script in ./sql-ledger.
+Gateway script in ./SQL-Ledger.
  (You just need to make a copy of an existing one.
- For example cp gl.pl mymodule.pl in ./sql-ledger/ folder.
+ For example cp gl.pl mymodule.pl in ./SQL-Ledger/ folder.
  
 \end_layout
 
@@ -6281,7 +7731,7 @@ Modify the source code
 \end_layout
 
 \begin_layout Standard
-Sometimes there is a need to directly alter the sql-ledger source code for
+Sometimes there is a need to directly alter the SQL-Ledger source code for
  particular needs.
  We have, for example, modified few reports (GL Transactions, All Items)
  in this way.
@@ -6293,7 +7743,7 @@ Sometimes there is a need to directly alter the sql-ledger source code for
 A bit discipline and an SCM software like GIT can help manage such changes
  or patches with easy.
  We, at ledger123.com, use GIT to track and manage such changes across newer
- versions of sql-ledger.
+ versions of SQL-Ledger.
 \end_layout
 
 \begin_layout Section
@@ -6301,7 +7751,7 @@ SQL Queries
 \end_layout
 
 \begin_layout Standard
-These sql queries for sql-ledger can be used in phpPgAdmin or psql.
+These sql queries for SQL-Ledger can be used in phpPgAdmin or psql.
 \end_layout
 
 \begin_layout Subsection
@@ -6723,7 +8173,7 @@ Advanced SQL Queries
 \end_layout
 
 \begin_layout Subsubsection
-Inventory onhand on specific date
+Inventory on hand on specific date
 \end_layout
 
 \begin_layout Standard
@@ -7548,9 +8998,9 @@ Correcting Assemblies Onhand
 \end_layout
 
 \begin_layout Standard
-Due to a bug/gotcha in orders handling in official sql-ledger, parts onhand
- can go out of sync from actual transactions.
- Following query will help you find the correct onhand quantity for a given
+Due to a bug/gotcha in orders handling in official SQL-Ledger, parts on
+ hand can go out of sync from actual transactions.
+ Following query will help you find the correct on hand quantity for a given
  assembly.
 \end_layout
 
@@ -7705,13 +9155,13 @@ API Uses
 \end_layout
 
 \begin_layout Standard
-API can be used to “simulate” any sql-ledger function from command line.
+API can be used to “simulate” any SQL-Ledger function from command line.
  You can add customers, vendors, parts as well as any type of transaction
  (invoices, cash receipts and payments etc.)
 \end_layout
 
 \begin_layout Standard
-This makes it very easy to integrate sql-ledger with any other application.
+This makes it very easy to integrate SQL-Ledger with any other application.
  For example you can integrate it with your CRM solution, POS system, or
  e-commerce solutions like AgoraCart or Interchange.
 \end_layout
@@ -7723,7 +9173,7 @@ API also allows you to add new data entry interfaces with ease.
 \end_layout
 
 \begin_layout Standard
-Import invoices and payment functions built in new versions of sql-ledger
+Import invoices and payment functions built in new versions of SQL-Ledger
  are in fact “newer interfaces” built using the API.
 \end_layout
 
@@ -7826,7 +9276,7 @@ echo "<pre>$output</pre>";
 \end_layout
 
 \begin_layout Standard
-asdfasdf
+END
 \end_layout
 
 \end_body

@@ -493,6 +493,102 @@ Note: To view all code changes, you can visit https://github.com/ledger123/ledge
 123 and select the chosen branch.
 \end_layout
 
+\begin_layout Subsection
+Installing Perl modules
+\end_layout
+
+\begin_layout Standard
+Future versions of our enhanced SQL-Ledger release may add dependencies
+ to some Perl modules.
+ Before adding any such dependencies we shall make sure these Perl modules
+ can be installed on most common Linux distributions without much hassle.
+\end_layout
+
+\begin_layout Standard
+There are three ways to install any Perl module:
+\end_layout
+
+\begin_layout Enumerate
+Install the pre-built for your Linux distributiion package manager (apt-get
+ or yum)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+apt-get install libdbix-simple-perl # ubuntu / debian
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Install using cpan command.
+ cpan command comes built-in with the Perl installation on all distributions.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cpan DBIx::Simple
+\end_layout
+
+\end_inset
+
+You may need to answer to few configuration questions when you are running
+ cpan for the first time.
+\end_layout
+
+\begin_layout Enumerate
+Install using cpanm (cpanminus) which is relatively less complicated than
+ cpan.
+ You can install cpanm with following command:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+curl -L http://cpanmin.us | perl - App::cpanminus
+\end_layout
+
+\end_inset
+
+Once installed, you can install Perl module of your choice with:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cpanm DBIx::Simple
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Our enhancements to standard SQL-Ledger
 \end_layout
@@ -1831,8 +1927,7 @@ LateX templates are bit more complex to understand and modify but offer
 \end_layout
 
 \begin_layout Subsection
-Text Templates.
- Used only with Point-of-Sale interface
+Text Templates
 \end_layout
 
 \begin_layout Standard
@@ -4676,7 +4771,33 @@ AR
 \end_layout
 
 \begin_layout Standard
-AR module is used to record invoices and transactions with your customers.
+AR stands for 'Accounts Receivable'.
+ AR module is used to record your sales with your customers.
+ You can record your sales in two possible ways:
+\end_layout
+
+\begin_layout Itemize
+First one is through 'AR Transaction' entry which is a simplified way to
+ book your sales and receipts using chart of accounts.
+ This method is quick and requires no setup except adjusting / adding to
+ the chart of accounts for your sales accounts.
+\end_layout
+
+\begin_layout Itemize
+Second method is using 'Sales Invoice' where you specify the goods and/or
+ services you have sold to your customer.
+ This method requires setup of goods and services using the '
+\series bold
+Goods & Services
+\series default
+' menu.
+ You can print the invoice and send it to your customer.
+ If you are managing your inventory, you should use this method to reduce
+ the inventory when you sell something.
+\end_layout
+
+\begin_layout Standard
+Both methods can be mixed and matched based upon nature of transactions.
 \end_layout
 
 \begin_layout Standard
@@ -4694,9 +4815,9 @@ AR Transaction
 \end_layout
 
 \begin_layout Standard
-
+The 
 \series bold
-AR--Add Transaction
+'AR--Add Transaction'
 \series default
  menu is used to create AR Transactions.
  These transactions allow you to record your sales in correct GL accounts
@@ -4723,14 +4844,15 @@ Sales invoices are created using the
 'AR--Sales Invoice'
 \series default
  menu option.
- The only mandatory columns are Customer and Invoice Date.
+ The only mandatory columns in the header section of this screen are 'Customer'
+ and 'Invoice Date'.
  Rest of the columns can be left blank.
 \end_layout
 
 \begin_layout Standard
 Once you enter an item (part, service) and click 'Update', a new line appears.
- This way you can enter any number of items (parts, services etc.) in the
- detail portion of the invoice.
+ This way you can enter any number of items (parts, services or labor) in
+ the detail portion of the invoice.
 \end_layout
 
 \begin_layout Standard
@@ -4770,6 +4892,17 @@ Credit Note
 
 \begin_layout Standard
 Credit note is used to record a sale return without creating a credit invoice.
+ A credit note typically a reversal of 'AR Transaction' though it can also
+ be used to reverse part or all of a sales invoice but be aware that inventory
+ onhand is not increased with a credit note.
+ So it is good to reverse any services sale but not for reversing tangible
+ goods' sale.
+ 
+\end_layout
+
+\begin_layout Standard
+Screen to record a credit note is exactly like that of 'AR Transaction'
+ with the only difference of 'Credit Note' in the title.
 \end_layout
 
 \begin_layout Subsection
@@ -4777,7 +4910,14 @@ Credit Invoice
 \end_layout
 
 \begin_layout Standard
-Credit invoice is used to record a sale return with inventory items.
+Credit invoice is used to record a sale return recorded earlier with a sales
+ invoice.
+ A credit invoice will also add the items sold back to the inventory for
+ re-sale as well as update your accounts receivable and sales accounts.
+\end_layout
+
+\begin_layout Subsection
+Adjusting credit note or invoice
 \end_layout
 
 \begin_layout Subsection
@@ -4802,7 +4942,7 @@ Transaction report shows all open or closed transactions and invoices for
 \end_layout
 
 \begin_layout Standard
-When you click 'Continue' button after specifing the required criteria,
+When you click 'Continue' button after specifying the required criteria,
  your report is displayed.
  This is 'Summary' report where each invoice or transaction is shown on
  single line.
@@ -4856,7 +4996,7 @@ Aging report shows the outstanding balances of your customers divided into
 \end_layout
 
 \begin_layout Standard
-The summary aging report (shown below) shows online for each customer with
+The summary aging report (shown below) shows on-line for each customer with
  outstanding balance.
 \end_layout
 
@@ -4891,11 +5031,16 @@ Reminders
 
 \begin_layout Standard
 You can print or email reminders to your customers.
- You can define upto 3 levels of reminders.
+ You can define up to 3 levels of reminders.
  Level 1 being a polite one and level 3 being a bit harsh one.
- When you print a reminder, its level is stored in the database.
+ 
+\end_layout
+
+\begin_layout Standard
+When you print a reminder, its level is stored in the database.
  Next time when you print reminder for the same customer, next level of
  reminder is printed.
+ You also have the option to change the reminder level yourself.
 \end_layout
 
 \begin_layout Standard
@@ -5186,7 +5331,7 @@ The
 \series bold
  'Cash--Receipt'
 \series default
- menu can be used to record receipts from your customers against outstanding
+ menu is used to record receipts from your customers against outstanding
  invoices.
  Another menu 
 \series bold
@@ -5242,7 +5387,7 @@ The
 \series bold
 'Cash--Receipts'
 \series default
- menu allows you to quickly record receipts for multiple invocies for multiple
+ menu allows you to quickly record receipts for multiple invoices for multiple
  customers.
 \end_layout
 
@@ -5300,7 +5445,7 @@ You can use
 'Cash--Payment'
 \series default
  menu to record payment for a particular vendor.
- Using this method is advisible as you do not need to edit invoices to record
+ Using this method is advisable as you do not need to edit invoices to record
  the payment.
  This method also allows you to record a single payment for multiple invoices.
 \end_layout
@@ -5450,8 +5595,8 @@ Recurring Transactions
 \end_layout
 
 \begin_layout Standard
-Recurring Transactions allow you to auto-generate pre-defined invoices,
- transactions and orders.
+Recurring Transactions allow you to auto-generate predefined invoices, transacti
+ons and orders.
 \end_layout
 
 \begin_layout Standard
@@ -5645,7 +5790,7 @@ Quotations
 \begin_layout Standard
 Use 
 \series bold
-Quotations--Quotation
+'Quotations--Quotation'
 \series default
  menu to add a new quotation for your customer.
 \end_layout
@@ -5661,7 +5806,8 @@ Quotations--Quotation
 \end_layout
 
 \begin_layout Standard
-To get report of existing quotations or to editing a quoation, use the 
+To get report of existing quotations or to editing a quotation, use the
+ 
 \series bold
 'Quotations--Reports--Quotations'
 \series default
@@ -5782,7 +5928,8 @@ Orders
 \end_layout
 
 \begin_layout Standard
-Orders module can be used to create purchase orders for your vendors or
+SQL-Ledger has very powerful 'Orders' module.
+ Orders module can be used to create purchase orders for your vendors or
  sales orders to your customers.
 \end_layout
 
@@ -5818,7 +5965,37 @@ Sales Orders
 \end_layout
 
 \begin_layout Standard
-Add sales order
+A purchase order allows you to order goods and services from your vendor.
+ You can:
+\end_layout
+
+\begin_layout Enumerate
+Make a sales order.
+\end_layout
+
+\begin_layout Enumerate
+Receive a sales order fully or partially using 'Shipping--Ship'.
+\end_layout
+
+\begin_layout Enumerate
+Create a customer invoice from a partially or fully received sales order.
+\end_layout
+
+\begin_layout Enumerate
+If warehouses are enabled, you can ship goods from a particular warehouse.
+\end_layout
+
+\begin_layout Subsubsection
+Add a new sales order
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'Order Entry--Sales Order'
+\series default
+ will display the following 'Add Sales Order' screen.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5832,7 +6009,10 @@ Add sales order
 \end_layout
 
 \begin_layout Standard
-Sales order with item details
+If you want to enter more information for each item you can click the checkbox
+ next to the 'Description' column and then 'Update'.
+ Now each detail line will span 5 lines where you can enter lots of information
+ for each item you order.
 \end_layout
 
 \begin_layout Standard
@@ -5845,8 +6025,197 @@ Sales order with item details
 
 \end_layout
 
+\begin_layout Subsubsection
+Editing a SO
+\end_layout
+
 \begin_layout Standard
-Sales order reports search screen
+To edit an existing SO, you display list of existing orders using the 
+\series bold
+'Order Entry--Reports--Sales Order'
+\series default
+ and click on SO number to edit that particular SO.
+\end_layout
+
+\begin_layout Subsubsection
+Creating a quotation or customer invoice from an SO
+\end_layout
+
+\begin_layout Standard
+When you have saved a SO, you can open it in editing and create a quotation.
+ When you have received quantities you can directly create vendor invoice
+ from the SO.
+ (Also see below to see how to use 'Shipping' menu to partially receive
+ a PO.)
+\end_layout
+
+\begin_layout Standard
+TODO: Screen shot with quotation and vendor invoice buttons.
+\end_layout
+
+\begin_layout Subsubsection
+Receiving an SO
+\end_layout
+
+\begin_layout Standard
+There are two ways to receive a SO.
+\end_layout
+
+\begin_layout Enumerate
+Open the SO and click 'Customer Invoice' button.
+ The SO will be received in full, marked 'closed' and a customer invoice
+ will be created for it.
+ Inventory on-hand will be updated.
+\end_layout
+
+\begin_layout Enumerate
+Use '
+\series bold
+Shipping--Receive
+\series default
+' to receive a PO fully or partially.
+ Inventory on-hand will be updated.
+ Later on you can open the PO and create vendor invoice.
+ 
+\end_layout
+
+\begin_layout Standard
+Let us see how it is done using the '
+\series bold
+Shipping
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menushipping.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following screen is displayed when you click '
+\series bold
+Shipping--Ship
+\series default
+'.
+ Here you can select SOs you want to process or just 'Continue' button if
+ you want to process all open SOs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following screen shows all SOs with open quantities.
+ You click on a particular SO to receive goods in it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The selected SO is displayed with order quantities and you can put the quantitie
+s received in the 'Ship' column.
+ If there are any serial numbers associated with shipped goods you put them
+ in serial number column.
+ You also need to specify correct receiving date.
+ In the example below we are partially receiving this SO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you open this SO again (using 
+\series bold
+'Order Entry--Reports--Sales Orders
+\series default
+') you will see the quantity received in the 'Ship' column.
+ Received quantity gets updated every time you receive goods using the '
+\series bold
+Shipping--Ship
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Creating customer invoice from an SO
+\end_layout
+
+\begin_layout Standard
+You can create a customer invoice from an SO for the quantities received
+ so far.
+ To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
+ screen will open up with data from that SO as well as received quantities
+ as show below.
+\end_layout
+
+\begin_layout Standard
+Once a vendor invoice has been created for a SO, that SO is closed.
+ If there were some open quantities in that SO then a new SO with same number
+ and remaining items with open quantities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sales order reports
+\end_layout
+
+\begin_layout Standard
+The
+\series bold
+ 'Order Entry--Reports--Sales Orders'
+\series default
+ menu shows you all your purchase orders.
+ You can check/uncheck the 'Open' and 'Closed' check boxes on search screen
+ before you continue.
+ 'Closed' SOs are those which have been fully received OR which have been
+ marked 'Closed' by editing the PO.
 \end_layout
 
 \begin_layout Standard
@@ -5879,7 +6248,6 @@ Purchase Order
 
 \begin_layout Standard
 A purchase order allows you to order goods and services from your vendor.
- SQL-Ledger has very powerful features to manage your purchase orders.
  You can:
 \end_layout
 
@@ -5892,9 +6260,7 @@ Receive a purchase order fully or partially using 'Shipping--Receive'.
 \end_layout
 
 \begin_layout Enumerate
-Create a vendor invoice: Open the order and click the Vendor Invoice button.
- You can create invoice from a partially received order.
- 
+Create a vendor invoice from a partially or fully received order.
 \end_layout
 
 \begin_layout Enumerate
@@ -5911,11 +6277,7 @@ The
 'Order Entry--Purchase Order'
 \series default
  will display the following 'Add Purchase Order' screen.
- To edit an existing PO, you display list of existing orders using the 
-\series bold
-'Order Entry--Reports--Purchase Orders'
-\series default
- and click on PO number to edit that particular PO.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5945,15 +6307,185 @@ If you want to enter more information for each item you can click the checkbox
 
 \end_layout
 
+\begin_layout Subsubsection
+Editing a PO
+\end_layout
+
 \begin_layout Standard
-When you have saved a PO, you can create an RFQ (request for quotation)
- or vendor invoice from the PO.
+To edit an existing PO, you display list of existing orders using the 
+\series bold
+'Order Entry--Reports--Purchase Orders'
+\series default
+ and click on PO number to edit that particular PO.
+\end_layout
+
+\begin_layout Subsubsection
+Creating an RFQ or vendor invoice from a PO
+\end_layout
+
+\begin_layout Standard
+When you have saved a PO, you can open it in editing and create an RFQ (request
+ for quotation).
+ When you have received quantities you can directly create vendor invoice
+ from the PO.
+ (Also see below to see how to use '
+\series bold
+Shipping
+\series default
+' menu to partially receive a PO.)
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename po3.png
 	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Receiving a PO
+\end_layout
+
+\begin_layout Standard
+There are two ways to receive a PO.
+\end_layout
+
+\begin_layout Enumerate
+Open the PO and click 'Vendor Invoice' button.
+ The PO will be received in full, marked 'closed' and a vendor invoice will
+ be created for it.
+ Inventory on-hand will be updated.
+\end_layout
+
+\begin_layout Enumerate
+Use '
+\series bold
+Shipping--Receive
+\series default
+' to receive a PO fully or partially.
+ Inventory on-hand will be updated.
+ Later on you can open the PO and create vendor invoice.
+ 
+\end_layout
+
+\begin_layout Standard
+Let us see how it is done using the '
+\series bold
+Shipping
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menushipping.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following screen is displayed when you click '
+\series bold
+Shipping--Receive
+\series default
+'.
+ Here you can select POs you want to process or just 'Continue' button if
+ you want to process all open POs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following screen shows all POs with open quantities.
+ You click on a particular PO to receive goods in it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The selected PO is displayed with order quantities and you can put the quantitie
+s received in the 'Rcvd' column.
+ If there are any serial numbers associated with received goods you put
+ them in serial number column.
+ You also need to specify correct receiving date.
+ In the example below we are partially receiving this PO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you open this PO again (using 
+\series bold
+'Order Entry--Reports--Purchase Orders
+\series default
+') you will see the quantity received in the 'Rcvd' column.
+ Received quantity gets updated every time you receive goods using the '
+\series bold
+Shipping--Receive
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Creating vendor invoice from PO
+\end_layout
+
+\begin_layout Standard
+You can create a vendor invoice for the quantities received so far.
+ To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
+ screen will open for received quantities as show below.
+\end_layout
+
+\begin_layout Standard
+Once a vendor invoice has been created for a PO, that PO is closed.
+ If there were some open quantities in that PO then a new PO with same number
+ and remaining items with open quantities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename receive5.png
+	scale 50
 
 \end_inset
 
@@ -5987,163 +6519,49 @@ The
 \end_layout
 
 \begin_layout Subsubsection
-Receiving a PO
-\end_layout
-
-\begin_layout Standard
-Shipping module allows you to receive goods to warehouses from your orders.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menushipping.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Once you have created a PO, you use '
-\series bold
-Shipping--Receive
-\series default
-' to receive your goods.
- Following screen is displayed which allows you to select POs you want to
- process.
- Just 'Continue' button if you want to process all open POs.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The following screen shows all POs with open quanities.
- You click on a particular PO to receive goods in it.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Here on this screen POs is displayed with order quantities and you can put
- the quantities received in the 'Rcvd' column.
- If there are any serial numbers associated with received goods you put
- them in serial number column.
- You also need to specify correct receiving date.
-\end_layout
-
-\begin_layout Standard
-In the example below we have partially received this PO.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If you open this PO again (using 
-\series bold
-'Order Entry--Reports--Purchase Orders
-\series default
-') you will see the quantity received in the 'Rcvd' column.
- This quantity is updated every time you receive goods using 'Shipping--Receive'.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive4.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-At this point, you can create a vendor invoice for the quantities received.
- To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
- screen will open for received quantities as show below.
-\end_layout
-
-\begin_layout Standard
-Once a vendor invoice has been created for a PO, it is closed.
- If there were some open quantities in that PO then a new PO with same number
- and remaining items with open quantities.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename receive5.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
 Order Entry Notes
 \end_layout
 
+\begin_layout Enumerate
+Normally inventory on-hand quantities are updated when you create a vendor
+ or customer invoice.
+ This default behavior is changed if you are using orders module.
+ See below.
+\end_layout
+
+\begin_layout Enumerate
+When you receive or ship an order through '
+\series bold
+Shipping
+\series default
+' menu your inventory on-hand is immediately updated.
+ You can confirm this by viewing '
+\series bold
+Warehouses--Reports--Onhand
+\series default
+' immediately after you receive or ship an order.
+ Your AR or AP is updated only when you create an invoice from a partially
+ or fully received order.
+\end_layout
+
+\begin_layout Enumerate
+You cannot change item quantities or add new items when an invoice is created
+ from a partially or fully shipped/received order.
+ This feature to keep the invoices and orders data in sync.
+\end_layout
+
+\begin_layout Enumerate
+When you create invoice from a partially shipped or received order, SQL-Ledger
+ closes that order and creates a new one with the remaining order quantities
+ but with same order number.
+\end_layout
+
 \begin_layout Subsection
-Sales
-\end_layout
-
-\begin_layout Enumerate
-Create a sales order for the inventory you want to sell.
- If you do not specify a warehouse with order, you can ship the order from
- any warehouse.
- 
-\end_layout
-
-\begin_layout Enumerate
-Ship the order using Shipping–Ship.
- Shipping warehouse cannot be changed if you have specified one on the order.
- 
-\end_layout
-
-\begin_layout Enumerate
-Create AR/Customer invoice by opening the sales order which has been shipped
- in the above step and clicking the Sale Invoice button.
- Do not make any change to partnumber or quantity.
- Just click the Post button.
+Important inventory on-hand reports from orders
 \end_layout
 
 \begin_layout Standard
-Note: When you create from a partially received order, SL closes that order
- and creates a new one with the remaining order quantities but with same
- order number.
-\end_layout
-
-\begin_layout Subsection
-Reports
-\end_layout
-
-\begin_layout Standard
-Inventory onhand at warehouses:
+Inventory on hand at warehouses:
 \end_layout
 
 \begin_layout Enumerate
@@ -6169,34 +6587,6 @@ Inventory receive/ship activity: The
 \series default
  report.
  
-\end_layout
-
-\begin_layout Subsection
-Precautions
-\end_layout
-
-\begin_layout Standard
-Do not do any of the following things when using the shipping module.
- It will make your inventory records incorrect.
-\end_layout
-
-\begin_layout Enumerate
-Creating any new sale or purchase invoices directly (that is, without going
- through the order/ship/receive steps) 
-\end_layout
-
-\begin_layout Enumerate
-Editing any existing invoices.
- 
-\end_layout
-
-\begin_layout Enumerate
-Receiving purchase orders directly by putting the qty received in Recd column.
- 
-\end_layout
-
-\begin_layout Enumerate
-Shipping sales orders directly by putting the qty shipped in Ship column.
 \end_layout
 
 \begin_layout Section
@@ -6370,7 +6760,7 @@ Balance Sheet
 \end_layout
 
 \begin_layout Standard
-Balance sheet can be displayed upto any particular date.
+Balance sheet can be displayed up to any particular date.
  Like income statement, you can also compare it with balances at some older
  date.
 \end_layout
@@ -6536,7 +6926,11 @@ System--Backup--Send by Email
 
 \begin_layout Standard
 Backup is sent to your email address through email.
- You can add or change this email address through Preferences.
+ You can add or change this email address through '
+\series bold
+Preferences
+\series default
+' menu.
 \end_layout
 
 \begin_layout Standard
@@ -6814,7 +7208,7 @@ Ledger Doctor
 \end_layout
 
 \begin_layout Standard
-Ledger Doctor is a tool to identify database inconsistancies in the SQL-Ledger
+Ledger Doctor is a tool to identify database inconsistencies in the SQL-Ledger
  database.
  Use the 
 \series bold
@@ -6825,8 +7219,8 @@ Ledger Doctor is a tool to identify database inconsistancies in the SQL-Ledger
 \series bold
 Ledger Doctor
 \series default
-' report itself does not corrects any error and just reports inconsistancies
- with hints on how to correct the inconsistancy.
+' report itself does not corrects any error and just reports inconsistencies
+ with hints on how to correct the inconsistency.
 \end_layout
 
 \begin_layout Standard
@@ -6895,9 +7289,9 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-LedgerCart instantly creates an online store and order system using information
+LedgerCart instantly creates an on-line store and order system using information
  in your SQL-Ledger.
- You just drop the cgi scripts into your webserver, install few cpan modules,
+ You just drop the cgi scripts into your web server, install few CPAN modules,
  configure your db connection and you are ready to go.
 \end_layout
 
@@ -6912,7 +7306,7 @@ Features
 \end_layout
 
 \begin_layout Enumerate
-Extemely simple to install and configure.
+Extremely simple to install and configure.
  
 \end_layout
 
@@ -6994,7 +7388,7 @@ Using LedgerCart as an online store
 \end_layout
 
 \begin_layout Standard
-LedgerCart can instantly turn your SL installation into an online store
+LedgerCart can instantly turn your SL installation into an on-line store
  with little or no effort.
  Customers can place order using the familiar shopping cart interface.
  Your existing customers can generate a new password using 'Forgot password'
@@ -7306,7 +7700,7 @@ Once your new functions are there, you can call them using your own custom
  way.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Custom Modules
 \end_layout
 
@@ -7782,7 +8176,7 @@ Advanced SQL Queries
 \end_layout
 
 \begin_layout Subsubsection
-Inventory onhand on specific date
+Inventory on hand on specific date
 \end_layout
 
 \begin_layout Standard
@@ -8607,9 +9001,9 @@ Correcting Assemblies Onhand
 \end_layout
 
 \begin_layout Standard
-Due to a bug/gotcha in orders handling in official SQL-Ledger, parts onhand
- can go out of sync from actual transactions.
- Following query will help you find the correct onhand quantity for a given
+Due to a bug/gotcha in orders handling in official SQL-Ledger, parts on
+ hand can go out of sync from actual transactions.
+ Following query will help you find the correct on hand quantity for a given
  assembly.
 \end_layout
 
