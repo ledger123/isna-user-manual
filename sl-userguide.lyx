@@ -370,10 +370,12 @@ Download the SQL-Ledger Network GitHub repository.
 
 
 \begin_inset listings
+lstparams "language=bash,showstringspaces=false"
 inline false
 status open
 
 \begin_layout Plain Layout
+\align left
 
 git clone git://github.com/ledger123/ledger123.git 
 \end_layout
@@ -395,6 +397,7 @@ inline false
 status open
 
 \begin_layout Plain Layout
+\align left
 
 git checkout -b rel3 origin/rel3
 \end_layout
@@ -434,6 +437,7 @@ Let us say you are not interested in our enhancements and just want to maintain
 
 
 \begin_inset listings
+lstparams "language=bash"
 inline false
 status open
 
@@ -570,7 +574,7 @@ curl -L http://cpanmin.us | perl - App::cpanminus
 
 \end_inset
 
-Once installed, you can install Perl module of your choice with:
+Once installed, you can install Perl module of your choice with:
 \begin_inset Newline newline
 \end_inset
 
@@ -6664,8 +6668,42 @@ Keeping track of your business in SQL-Ledger
 \end_layout
 
 \begin_layout Standard
-This sections explains some important reports which are available to you
- to moniter and track your business once you have recorded all the transactions.
+This sections explains the various reports which are available in SQL-Ledger
+ to monitor and track your business once you have started recording your
+ business transactions.
+ SQL-Ledger stores all your business data in an SQL database.
+ SQL, which stands for Structured Query Language, is a special purpose programmi
+ng language designed for managing data held in a relation database management
+ system.
+ SQL is also a standard of the International Organization for Standardization
+ (ISO).
+\end_layout
+
+\begin_layout Standard
+Running SQL queries on a business database can be a very complex matter
+ and usually also requires basic knowledge regarding the individual database
+ structure.
+ The developers of SQL-Ledger made it one of their major goals to simplify
+ this process of SQL queries and were able to find a unique way to make
+ it an easy task for anyone to analyze the business data stored inside the
+ database, even without knowledge in SQL.
+\end_layout
+
+\begin_layout Standard
+The way this is done is actually rather simple.
+ There are many different reports in SQL-Ledger and this is one of its unique
+ strengths.
+ All reports in SQL-Ledger can be divided into two main groups:
+\end_layout
+
+\begin_layout Standard
+a.) financial statement reports
+\end_layout
+
+\begin_layout Standard
+b.) Module reports.
+ re are two kinds of reports in SQL-Ledger the financial and each report
+ can be individually.
 \end_layout
 
 \begin_layout Standard
