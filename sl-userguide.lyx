@@ -4770,6 +4770,11 @@ accno,description,charttype,category,link
 Running your business on SQL-Ledger 
 \end_layout
 
+\begin_layout Standard
+In this chapter we explain all the modules which are there in SQL-Ledger
+ and how you can use them for your business.
+\end_layout
+
 \begin_layout Section
 AR
 \end_layout
@@ -4780,16 +4785,10 @@ AR stands for 'Accounts Receivable'.
  You can record your sales in two possible ways:
 \end_layout
 
-\begin_layout Itemize
-First one is through 'AR Transaction' entry which is a simplified way to
- book your sales and receipts using chart of accounts.
- This method is quick and requires no setup except adjusting / adding to
- the chart of accounts for your sales accounts.
-\end_layout
-
-\begin_layout Itemize
-Second method is using 'Sales Invoice' where you specify the goods and/or
- services you have sold to your customer.
+\begin_layout Enumerate
+'Sales Invoice' is a standard way to record sales.
+ In a sales invoice you specify the goods and/or services you have sold
+ to your customer.
  This method requires setup of goods and services using the '
 \series bold
 Goods & Services
@@ -4798,6 +4797,13 @@ Goods & Services
  You can print the invoice and send it to your customer.
  If you are managing your inventory, you should use this method to reduce
  the inventory when you sell something.
+\end_layout
+
+\begin_layout Enumerate
+'AR Transaction' is a simplified way to book your sales and receipts using
+ chart of accounts.
+ This method is quick and requires no setup except adjusting / adding to
+ the chart of accounts for your sales accounts.
 \end_layout
 
 \begin_layout Standard
@@ -4847,14 +4853,15 @@ Sales invoices are created using the
 \series bold
 'AR--Sales Invoice'
 \series default
- menu option.
+ menu.
  The only mandatory columns in the header section of this screen are 'Customer'
  and 'Invoice Date'.
  Rest of the columns can be left blank.
 \end_layout
 
 \begin_layout Standard
-Once you enter an item (part, service) and click 'Update', a new line appears.
+Your invoice can contain multiple parts and services.
+ Once you enter an item (part, service) and click 'Update', a new line appears.
  This way you can enter any number of items (parts, services or labor) in
  the detail portion of the invoice.
 \end_layout
@@ -4894,23 +4901,8 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
 Credit Note
 \end_layout
 
-\begin_layout Standard
-Credit note is used to record a sale return without creating a credit invoice.
- A credit note typically a reversal of 'AR Transaction' though it can also
- be used to reverse part or all of a sales invoice but be aware that inventory
- onhand is not increased with a credit note.
- So it is good to reverse any services sale but not for reversing tangible
- goods' sale.
- 
-\end_layout
-
-\begin_layout Standard
-Screen to record a credit note is exactly like that of 'AR Transaction'
- with the only difference of 'Credit Note' in the title.
-\end_layout
-
 \begin_layout Subsection
-Credit Invoice
+Credit Invoice and Credit Note
 \end_layout
 
 \begin_layout Standard
@@ -4920,8 +4912,97 @@ Credit invoice is used to record a sale return recorded earlier with a sales
  re-sale as well as update your accounts receivable and sales accounts.
 \end_layout
 
-\begin_layout Subsection
-Adjusting credit note or invoice
+\begin_layout Standard
+Credit note is used to record a sale return without creating a credit invoice.
+ A credit note is typically used to record reversal of 'AR Transaction'.
+ though it can also be used to reverse all or part of a sales invoice but
+ be aware that inventory is not added back to your stock with a credit note.
+ So it is good to reverse any service sale but not for reversing tangible
+ goods' sale.
+\end_layout
+
+\begin_layout Subsubsection
+Creating a credit invoice
+\end_layout
+
+\begin_layout Standard
+Use 'AR--Credit Invoice' menu to create your credit invoice.
+ Creating a credit invoice is similar to creating a sales invoice.
+ See above for details.
+\end_layout
+
+\begin_layout Subsubsection
+Creating a credit note
+\end_layout
+
+\begin_layout Standard
+Use 'AR--Credit Note' menu to create your credit note.
+ Creating a credit note is very similar to creating an AR transaction.
+ See above for details.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Adjusting credit note or credit invoice
+\end_layout
+
+\begin_layout Standard
+Once you have an open invoice as well as a credit note or credit invoice,
+ you can adjust them to each other.
+ To do this:
+\end_layout
+
+\begin_layout Enumerate
+You go to 'Cash--Receipt' menu, select the customer and click 'Update' button.
+ This will show all invoices as shown below.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename invoice-adjustment.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now you can click to check the invoices which you want to adjust to each
+ other.
+ and click 'Update'.
+ If the amounts of both open invoice and credit invoice are equal, there
+ will be no amount in the 'Amount' column in header.
+ For your reference you can put something like 'adjustment' in source column.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename invoice-adjustment2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now you just click 'Post'.
+ Your credit invoice will be adjusted against the open invoice.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename invoice-adjustment3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+AR Reports
 \end_layout
 
 \begin_layout Subsection
@@ -5123,9 +5204,58 @@ Point of Sales (POS)
 Point of sales (POS) module allows quick invoicing at busy places like a
  shop or a restaurant.
  The items and customers you have defined for your invoices can be used
- for POS invoicing.
- The only difference with standard AR invoices is a simplified data entry
- screen and a POS optimized receipts section.
+ for POS invoicing too.
+ The only difference of POS invoice creation with standard AR invoice creation
+ is a simplified data entry screen and a POS optimized receipts section.
+\end_layout
+
+\begin_layout Subsection
+Creating a POS invoice
+\end_layout
+
+\begin_layout Standard
+You use '
+\series bold
+POS--Sale
+\series default
+' to create a new POS invoice.
+ The screen below is shown.
+ Here you select a customer and then add items (parts or services) which
+ you going to sell to a particular customer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Hint: If you cater to walk-in customers and don't want to create a customer
+ record for each walk-in customer then you can just add a customer with
+ 'Walk-in' customer as name.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Item groups are shown as buttons on POS screen to make it easier to select
+ the item you want to sell.
+ Make sure click the checkbox 'POS Button' to show that group as a button
+ on the screen.
+ You can click this group button to display all the items in this group
+ and you can select or all items in that group.
 \end_layout
 
 \begin_layout Standard
@@ -5148,6 +5278,37 @@ Point of sales (POS) module allows quick invoicing at busy places like a
 
 \end_layout
 
+\begin_layout Subsection
+Viewing open invoices
+\end_layout
+
+\begin_layout Standard
+In places like retail shops a POS invoice is created and closed in one step.
+ In places like restaurant, there is a considerable time period when an
+ invoice is created and when it is closed.
+ In later scenearioes, you create a POS invoice when the customer has ordered
+ food.
+ Once the customer has consumed the food and is ready to pay you locate
+ the invoice and then add the payment to it.
+\end_layout
+
+\begin_layout Standard
+To do this, you view the open invoices using '
+\series bold
+POS--Sale
+\series default
+' menu and then open that invoice.
+ In the payment section, you put the payment received from the customer
+ as well as the account which could be cash or credit card or something
+ else.
+\end_layout
+
+\begin_layout Standard
+If you will add more payment than the invoice amount then the rest of the
+ amount will be shown as 'change' which needs to be returned back to the
+ customer and invoice will be closed with payment equal to the invoice amount.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos3.png
@@ -5156,6 +5317,16 @@ Point of sales (POS) module allows quick invoicing at busy places like a
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Receipts
+\end_layout
+
+\begin_layout Standard
+This is a report which will show the receipts done so far with your POS
+ module.
+ Use 'POS--Receipts' menu for this report.
 \end_layout
 
 \begin_layout Standard
@@ -5228,6 +5399,10 @@ Purchase Invoice
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+AP Reports
 \end_layout
 
 \begin_layout Subsection
@@ -5356,6 +5531,10 @@ The
 
 \end_layout
 
+\begin_layout Subsubsection
+Recording receipts from one customer at a time
+\end_layout
+
 \begin_layout Standard
 There are two ways to record payment from your customer:
 \end_layout
@@ -5384,6 +5563,10 @@ You can use
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Recording receipts from multiple customers in one go.
 \end_layout
 
 \begin_layout Standard
@@ -6663,6 +6846,164 @@ You can use this option to remove audit trail from database up to a certain
  Useful to make your backups small.
 \end_layout
 
+\begin_layout Section
+Reconciliation
+\end_layout
+
+\begin_layout Standard
+Bank reconciliation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marking reconciled transactions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reconciled transactions report.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco4.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Year End
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'System--Yearend'
+\series default
+ menu does the period closing in SQL-Ledger.
+ It creates a GL transaction which clears the income accounts and posts
+ the difference (which is income or loss) to the specified retained earnings
+ account.
+\end_layout
+
+\begin_layout Standard
+Please note that:
+\end_layout
+
+\begin_layout Enumerate
+Year-end process can be run daily, weekly, monthly, quarterly or yearly.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Year-end GL transaction is not included in the income statement which covers
+ period containing a closing transactions.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The year-end GL transaction can be viewed through GL reports and edited
+ or deleted as required.
+\end_layout
+
+\begin_layout Standard
+This is year end screen and the GL transaction created by year-end process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename yearend.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename yearend2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data backup
+\end_layout
+
+\begin_layout Standard
+You can backup your data directly through SQL-Ledger.
+ There are two ways to get your backup using the 
+\series bold
+System--Backup
+\series default
+ menu.
+\end_layout
+
+\begin_layout Subsection*
+System--Backup--Send by Email
+\end_layout
+
+\begin_layout Standard
+Backup is sent to your email address through email.
+ You can add or change this email address through '
+\series bold
+Preferences
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename backup.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+System--Backup--Save to File
+\end_layout
+
+\begin_layout Standard
+When you click this menu option your browser will display the save file
+ dialog and you can save backup file on your computer.
+\end_layout
+
 \begin_layout Chapter
 Keeping track of your business in SQL-Ledger 
 \end_layout
@@ -6829,164 +7170,6 @@ Tax Report
 
 \begin_layout Standard
 TODO
-\end_layout
-
-\begin_layout Section
-Reconciliation
-\end_layout
-
-\begin_layout Standard
-Bank reconciliation
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Marking reconciled transactions.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Reconciled transactions report.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco4.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Year End
-\end_layout
-
-\begin_layout Standard
-The 
-\series bold
-'System--Yearend'
-\series default
- menu does the period closing in SQL-Ledger.
- It creates a GL transaction which clears the income accounts and posts
- the difference (which is income or loss) to the specified retained earnings
- account.
-\end_layout
-
-\begin_layout Standard
-Please note that:
-\end_layout
-
-\begin_layout Enumerate
-Year-end process can be run daily, weekly, monthly, quarterly or yearly.
- 
-\end_layout
-
-\begin_layout Enumerate
-Year-end GL transaction is not included in the income statement which covers
- period containing a closing transactions.
- 
-\end_layout
-
-\begin_layout Enumerate
-The year-end GL transaction can be viewed through GL reports and edited
- or deleted as required.
-\end_layout
-
-\begin_layout Standard
-This is year end screen and the GL transaction created by year-end process.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename yearend.jpg
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename yearend2.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Data backup
-\end_layout
-
-\begin_layout Standard
-You can backup your data directly through SQL-Ledger.
- There are two ways to get your backup using the 
-\series bold
-System--Backup
-\series default
- menu.
-\end_layout
-
-\begin_layout Subsection*
-System--Backup--Send by Email
-\end_layout
-
-\begin_layout Standard
-Backup is sent to your email address through email.
- You can add or change this email address through '
-\series bold
-Preferences
-\series default
-' menu.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename backup.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-System--Backup--Save to File
-\end_layout
-
-\begin_layout Standard
-When you click this menu option your browser will display the save file
- dialog and you can save backup file on your computer.
 \end_layout
 
 \begin_layout Section
