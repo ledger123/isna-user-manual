@@ -7004,6 +7004,10 @@ When you click this menu option your browser will display the save file
  dialog and you can save backup file on your computer.
 \end_layout
 
+\begin_layout Standard
+l.
+\end_layout
+
 \begin_layout Chapter
 Keeping track of your business in SQL-Ledger 
 \end_layout
@@ -7031,45 +7035,109 @@ Running SQL queries on a business database can be a very complex matter
 \end_layout
 
 \begin_layout Standard
-The way this is done is actually rather simple.
- There are many different reports in SQL-Ledger and this is one of its unique
- strengths.
- All reports in SQL-Ledger can be divided into two main groups:
+There are many different reports in SQL-Ledger and they can all be divided
+ into two main groups: 
+\end_layout
+
+\begin_layout Itemize
+a.) 
+\series bold
+Financial Reports
+\series default
+, which reflect the financial effects of your business transactions and
+\end_layout
+
+\begin_layout Itemize
+b.) 
+\series bold
+Module Reports
+\series default
+, which enable you to analyze the various details behind your business transacti
+ons.
 \end_layout
 
 \begin_layout Standard
-a.) financial statement reports
-\end_layout
-
-\begin_layout Standard
-b.) Module reports.
- re are two kinds of reports in SQL-Ledger the financial and each report
- can be individually.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menureports.png
-	scale 50
-
-\end_inset
-
-
+The Financial Statements are listed in the menu under '
+\series bold
+Financial Reports
+\series default
+' and the module reports are listed under '
+\series bold
+Reports
+\series default
+' in the menu of each individual module.
+ For example, the Accounts Receivable module reports are listed in the menu
+ under '
+\series bold
+AR--Reports'
+\series default
+ and the Goods & Services module reports are listed in the menu under 
+\series bold
+'Goods & Services--Reports
+\series default
+'.
 \end_layout
 
 \begin_layout Section
-Trial Balance
+Financial Report
 \end_layout
 
 \begin_layout Standard
-Trial balance is a standard accounting report which shows amounts posted
- to each account in your chart of accounts.
- Trial balance is a summary of all transactions posted from all modules.
+There are seven different financial reports in the '
+\series bold
+Financial Reports
+\series default
+' menu.
+ The first two, '
+\series bold
+Financial Reports--Chart of Accounts
+\series default
+' and '
+\series bold
+Financial Reports--Trial Balance
+\series default
+', are very similar and explained in chapter 4.1.1.
+ The two last reports '
+\series bold
+Financial Reports--Project Income Statement
+\series default
+' and '
+\series bold
+Financial Reports--Department Income Statement
+\series default
+' are also very similar and explained in chapter 4.1.4.
+ The '
+\series bold
+Financial Reports--Tax Report
+\series default
+' is explained in chapter 4.1.5.
+\end_layout
+
+\begin_layout Subsection
+Chart of Accounts & Trial Balance
+\end_layout
+
+\begin_layout Standard
+The chart of accounts report and the trial balance report are both standard
+ accounting reports which show amounts posted to each individual account
+ in your chart of accounts.
+ They show all transactions posted on the individual accounts from all modules.
+ The chart of accounts report will show the total amounts booked in debit
+ and credit, whereas the trial balance report will also show the beginning
+ balance and ending balance of each single account.
+ 
+\end_layout
+
+\begin_layout Standard
+In the chart of accounts report you first choose the individual account
+ and then set the period to be shown.
+ In the trial balance report you start by choosing the period and then select
+ the individual account.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename trial1.png
+	filename /home/armaghan/Documents/isna-user-manual/trial1.png
 	scale 45
 
 \end_inset
@@ -7079,7 +7147,7 @@ Trial balance is a standard accounting report which shows amounts posted
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename trial2.png
+	filename /home/armaghan/Documents/isna-user-manual/trial2.png
 	scale 45
 
 \end_inset
@@ -7087,18 +7155,25 @@ Trial balance is a standard accounting report which shows amounts posted
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Income Statement
 \end_layout
 
 \begin_layout Standard
-Income statement can be run for any period.
- You can also compare the income statement with any previous period.
+The Income Statement is a financial report that lists income, expenses and
+ profit or loss for a given period of time.
+ Income statements can be run for any period and you can also compare the
+ results with previous periods.
+ The structure and presentation of your income statement can be changed
+ to suit your individual needs, either by linking each individual account
+ to a GIFI account, or by including headers in your chart of accounts.
+ See chapter 2.9 for more information on how to setup GIFI accounts and account
+ headings.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename income1.png
+	filename /home/armaghan/Documents/isna-user-manual/income1.png
 	scale 50
 
 \end_inset
@@ -7112,7 +7187,7 @@ The following income statement is for a single period.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename income2.png
+	filename /home/armaghan/Documents/isna-user-manual/income2.png
 	scale 50
 
 \end_inset
@@ -7126,7 +7201,7 @@ The following income statement includes two periods.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename income3.png
+	filename /home/armaghan/Documents/isna-user-manual/income3.png
 	scale 50
 
 \end_inset
@@ -7134,19 +7209,21 @@ The following income statement includes two periods.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Balance Sheet
 \end_layout
 
 \begin_layout Standard
-Balance sheet can be displayed up to any particular date.
- Like income statement, you can also compare it with balances at some older
- date.
+The balance sheet is a financial statement that lists the assets, liabilities,
+ and the ownership equity of a business entity as of a specific date.
+ The balance sheet can be displayed as of any particular date.
+ Like the income statement, you can also compare it with the account totals
+ of previous dates.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename balancesheet1.png
+	filename /home/armaghan/Documents/isna-user-manual/balancesheet1.png
 	scale 50
 
 \end_inset
@@ -7156,8 +7233,168 @@ Balance sheet can be displayed up to any particular date.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename balancesheet2.png
+	filename /home/armaghan/Documents/isna-user-manual/balancesheet2.png
 	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tax Report
+\end_layout
+
+\begin_layout Standard
+The tax report is a consolidated statement of all taxable and non-taxable
+ accounts payable (AP) and accounts receivable (AR) transactions.
+ Tax reports can be shown and printed for a certain month, quarter, year
+ or any other defined period of time.
+ At the top of the tax report you will find the consolidated totals for
+ each account and below that you will see the individual accounts, single
+ transactions and their totals.
+\end_layout
+
+\begin_layout Subsection
+Project & Department Income Statement
+\end_layout
+
+\begin_layout Standard
+The project income statement will list income, expenses and profit or loss
+ for selected projects, and the department income statement will do the
+ same for selected departments.
+ 
+\end_layout
+
+\begin_layout Section
+Module Reports
+\end_layout
+
+\begin_layout Standard
+All module reports in SQL-Ledger have been preconditioned to display the
+ basic information usually required when analyzing data in each related
+ module.
+ For example, the preconditioned module report in '
+\series bold
+AR-Reports-Transactions
+\series default
+' will automatically display the 
+\begin_inset Quotes eld
+\end_inset
+
+Date, Invoice Number, Description, Customer, Total and Paid Amounts
+\begin_inset Quotes erd
+\end_inset
+
+ of the open account receivables.
+ One of the major strengths of SQL-Ledger is that all module reports can
+ easily be customized to fit individual needs or requirements.
+ To adapt a module report to your individual requirements, all you need
+ to do is to enter criteria and 
+\end_layout
+
+\begin_layout Subsection
+AR Reports
+\end_layout
+
+\begin_layout Subsection
+Customer Reports
+\end_layout
+
+\begin_layout Subsection
+AP Reports
+\end_layout
+
+\begin_layout Subsection
+Vendor Reports
+\end_layout
+
+\begin_layout Subsection
+Cash Reports
+\end_layout
+
+\begin_layout Subsection
+Voucher Reports
+\end_layout
+
+\begin_layout Subsection
+HR Reports
+\end_layout
+
+\begin_layout Subsection
+Order Entry Reports
+\end_layout
+
+\begin_layout Subsection
+Warehouse Reports
+\end_layout
+
+\begin_layout Subsection
+Quotation Reports
+\end_layout
+
+\begin_layout Subsection
+General Ledger Reports
+\end_layout
+
+\begin_layout Subsection
+Project Reports
+\end_layout
+
+\begin_layout Subsection
+Exchange Rates
+\end_layout
+
+\begin_layout Section
+Reconciliation
+\end_layout
+
+\begin_layout Standard
+Bank reconciliation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/reco1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marking reconciled transactions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/reco2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reconciled transactions report.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/reco3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/reco4.png
+	scale 45
 
 \end_inset
 
@@ -7165,11 +7402,105 @@ Balance sheet can be displayed up to any particular date.
 \end_layout
 
 \begin_layout Section
-Tax Report
+Year End
 \end_layout
 
 \begin_layout Standard
-TODO
+The 
+\series bold
+'System--Yearend'
+\series default
+ menu does the period closing in SQL-Ledger.
+ It creates a GL transaction which clears the income accounts and posts
+ the difference (which is income or loss) to the specified retained earnings
+ account.
+\end_layout
+
+\begin_layout Standard
+Please note that:
+\end_layout
+
+\begin_layout Enumerate
+Year-end process can be run daily, weekly, monthly, quarterly or yearly.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Year-end GL transaction is not included in the income statement which covers
+ period containing a closing transactions.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The year-end GL transaction can be viewed through GL reports and edited
+ or deleted as required.
+\end_layout
+
+\begin_layout Standard
+This is year end screen and the GL transaction created by year-end process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/yearend.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/yearend2.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data backup
+\end_layout
+
+\begin_layout Standard
+You can backup your data directly through SQL-Ledger.
+ There are two ways to get your backup using the 
+\series bold
+System--Backup
+\series default
+ menu.
+\end_layout
+
+\begin_layout Subsection*
+System--Backup--Send by Email
+\end_layout
+
+\begin_layout Standard
+Backup is sent to your email address through email.
+ You can add or change this email address through '
+\series bold
+Preferences
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Documents/isna-user-manual/backup.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+System--Backup--Save to File
+\end_layout
+
+\begin_layout Standard
+When you click this menu option your browser will display the save file
+ dialog and you can save backup file on your computer.
 \end_layout
 
 \begin_layout Section
@@ -7446,7 +7777,7 @@ Ledger Doctor
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename doctor1.png
+	filename /home/armaghan/Documents/isna-user-manual/doctor1.png
 	scale 50
 
 \end_inset
@@ -7456,7 +7787,7 @@ Ledger Doctor
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename doctor2.png
+	filename /home/armaghan/Documents/isna-user-manual/doctor2.png
 	scale 50
 
 \end_inset
@@ -7483,7 +7814,7 @@ Using the
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename monitor1.png
+	filename /home/armaghan/Documents/isna-user-manual/monitor1.png
 	scale 50
 
 \end_inset
@@ -7493,7 +7824,7 @@ Using the
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename monitor2.png
+	filename /home/armaghan/Documents/isna-user-manual/monitor2.png
 	scale 50
 
 \end_inset
