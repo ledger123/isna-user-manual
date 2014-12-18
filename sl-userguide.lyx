@@ -75,14 +75,14 @@ Written by
 \end_inset
 
 
+\end_layout
+
+\begin_layout Author
+Sebastian Weitmann
 \begin_inset Newline newline
 \end_inset
 
 Armaghan Saqib
-\begin_inset Newline newline
-\end_inset
-
-Sebastian Weitmann
 \begin_inset Newline newline
 \end_inset
 
@@ -4786,6 +4786,13 @@ AR stands for 'Accounts Receivable'.
 \end_layout
 
 \begin_layout Enumerate
+'AR Transaction' is a simplified way to book your sales and receipts using
+ chart of accounts.
+ This method is quick and requires no setup except adjusting / adding to
+ the chart of accounts for your sales accounts.
+\end_layout
+
+\begin_layout Enumerate
 'Sales Invoice' is a standard way to record sales.
  In a sales invoice you specify the goods and/or services you have sold
  to your customer.
@@ -4797,13 +4804,6 @@ Goods & Services
  You can print the invoice and send it to your customer.
  If you are managing your inventory, you should use this method to reduce
  the inventory when you sell something.
-\end_layout
-
-\begin_layout Enumerate
-'AR Transaction' is a simplified way to book your sales and receipts using
- chart of accounts.
- This method is quick and requires no setup except adjusting / adding to
- the chart of accounts for your sales accounts.
 \end_layout
 
 \begin_layout Standard
@@ -4822,6 +4822,13 @@ Both methods can be mixed and matched based upon nature of transactions.
 
 \begin_layout Subsection
 AR Transaction
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:AR-Transaction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4830,8 +4837,8 @@ The
 'AR--Add Transaction'
 \series default
  menu is used to create AR Transactions.
- These transactions allow you to record your sales in correct GL accounts
- without creating an invoice.
+ These transactions allow you to record your sales in GL accounts without
+ creating an invoice.
 \end_layout
 
 \begin_layout Standard
@@ -4846,6 +4853,13 @@ The
 
 \begin_layout Subsection
 Sales Invoice
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Sales-Invoice"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4860,8 +4874,11 @@ Sales invoices are created using the
 \end_layout
 
 \begin_layout Standard
-Your invoice can contain multiple parts and services.
- Once you enter an item (part, service) and click 'Update', a new line appears.
+Your invoice can contain multiple items (parts, assemblies, services and
+ labor etc.) Once you enter an item and click 'Update', the item description
+ and price is shown from database.
+ You then enter the quantity you want to sell.
+ A new line also appears so that you can also add one more item and so on.
  This way you can enter any number of items (parts, services or labor) in
  the detail portion of the invoice.
 \end_layout
@@ -4898,27 +4915,23 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
 \end_layout
 
 \begin_layout Subsection
-Credit Note
-\end_layout
-
-\begin_layout Subsection
 Credit Invoice and Credit Note
 \end_layout
 
 \begin_layout Standard
-Credit invoice is used to record a sale return recorded earlier with a sales
- invoice.
- A credit invoice will also add the items sold back to the inventory for
- re-sale as well as update your accounts receivable and sales accounts.
+Credit invoice is used to record a sale return which was recorded earlier
+ with a sales invoice.
+ A credit invoice will also add the items you sold earlier back to the inventory
+ for re-sale as well as update your accounts receivable and sales accounts.
 \end_layout
 
 \begin_layout Standard
 Credit note is used to record a sale return without creating a credit invoice.
- A credit note is typically used to record reversal of 'AR Transaction'.
+ A credit note is typically used to record reversal of 'AR Transaction'
  though it can also be used to reverse all or part of a sales invoice but
  be aware that inventory is not added back to your stock with a credit note.
- So it is good to reverse any service sale but not for reversing tangible
- goods' sale.
+ So credit note is good tool to reverse any service sale but not for reversing
+ tangible goods' sale.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4928,7 +4941,14 @@ Creating a credit invoice
 \begin_layout Standard
 Use 'AR--Credit Invoice' menu to create your credit invoice.
  Creating a credit invoice is similar to creating a sales invoice.
- See above for details.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Sales-Invoice"
+
+\end_inset
+
+ for details on how to do that.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4938,8 +4958,14 @@ Creating a credit note
 \begin_layout Standard
 Use 'AR--Credit Note' menu to create your credit note.
  Creating a credit note is very similar to creating an AR transaction.
- See above for details.
- 
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:AR-Transaction"
+
+\end_inset
+
+ for details on how to do that.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4988,7 +5014,7 @@ Now you can click to check the invoices which you want to adjust to each
 
 \begin_layout Enumerate
 Now you just click 'Post'.
- Your credit invoice will be adjusted against the open invoice.
+ Your credit invoice will be adjusted against the open sales invoice.
 \begin_inset Newline newline
 \end_inset
 
@@ -5118,7 +5144,6 @@ Reminders
 You can print or email reminders to your customers.
  You can define up to 3 levels of reminders.
  Level 1 being a polite one and level 3 being a bit harsh one.
- 
 \end_layout
 
 \begin_layout Standard
@@ -5155,7 +5180,7 @@ Customer History Reports
 \begin_layout Standard
 You can use history reports to see which customer is giving you more business.
  You can filter the report on date range which is applied to the invoices
- (or orders or quotations)
+ (or orders or quotations).
 \end_layout
 
 \begin_layout Standard
@@ -5169,7 +5194,7 @@ You can use history reports to see which customer is giving you more business.
 \end_layout
 
 \begin_layout Standard
-Customer history summary report shows business activity grouped by item.
+Summary for customer history report shows business activity grouped by item.
 \end_layout
 
 \begin_layout Standard
@@ -5183,7 +5208,8 @@ Customer history summary report shows business activity grouped by item.
 \end_layout
 
 \begin_layout Standard
-Customer history detail report shows business activity by invoice and item.
+Detail for customer history report shows business activity by invoice and
+ individual item.
 \end_layout
 
 \begin_layout Standard
@@ -5252,25 +5278,15 @@ Hint: If you cater to walk-in customers and don't want to create a customer
 \begin_layout Standard
 Item groups are shown as buttons on POS screen to make it easier to select
  the item you want to sell.
- Make sure click the checkbox 'POS Button' to show that group as a button
+ Make sure check the checkbox 'POS Button' to show that group as a button
  on the screen.
- You can click this group button to display all the items in this group
- and you can select or all items in that group.
+ You can then click this group button on POS screen to display all the items
+ in that group and can select or all items in that group.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename pos2.png
 	scale 50
 
 \end_inset
@@ -5293,7 +5309,16 @@ In places like retail shops a POS invoice is created and closed in one step.
 \end_layout
 
 \begin_layout Standard
-To do this, you view the open invoices using '
+\begin_inset Graphics
+	filename pos2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To open a one particular POS invoice, you view the open invoices using '
 \series bold
 POS--Sale
 \series default
@@ -5324,9 +5349,8 @@ Receipts
 \end_layout
 
 \begin_layout Standard
-This is a report which will show the receipts done so far with your POS
- module.
- Use 'POS--Receipts' menu for this report.
+This report shows the receipts done so far with your POS module.
+ Use 'POS--Receipts' menu to view this report.
 \end_layout
 
 \begin_layout Standard
@@ -5354,6 +5378,36 @@ AP
 \end_layout
 
 \begin_layout Standard
+AP stands for 'Accounts Payable'.
+ AP module is used to record your sales with your customers.
+ You can record your sales in two possible ways:
+\end_layout
+
+\begin_layout Enumerate
+'AP Transaction' is a simplified way to book your purchases, expenses and
+ payments using chart of accounts.
+ This method is quick and requires no setup except adjusting / adding to
+ the chart of accounts for your purchase and expense accounts.
+\end_layout
+
+\begin_layout Enumerate
+'Vendor Invoice' is a standard way to record purchases.
+ In a vendor invoice you specify the goods and/or services you have purchased
+ from your vendor.
+ This method requires setup of goods and services using the '
+\series bold
+Goods & Services
+\series default
+' menu.
+ If you are managing your inventory, you should use this method to increase
+ the inventory when you buy something.
+\end_layout
+
+\begin_layout Standard
+Both methods can be mixed and matched based upon nature of transactions.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename menuap.png
 	scale 50
@@ -5365,6 +5419,23 @@ AP
 
 \begin_layout Subsection
 AP Transactions
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:AP-Transactions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'AP--Add Transaction'
+\series default
+ menu is used to create AP Transactions.
+ These transactions allow you to record your purchases and expenses using
+ GL accounts and without creating an invoice.
 \end_layout
 
 \begin_layout Standard
@@ -5378,7 +5449,35 @@ AP Transactions
 \end_layout
 
 \begin_layout Subsection
-Purchase Invoice
+Vendor Invoice
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Vendor-Invoice"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vendor invoices are created using the 
+\series bold
+'AP--Vendor Invoice'
+\series default
+ menu.
+ The only mandatory columns in the header section of this screen are 'Vendor'
+ and 'Invoice Date'.
+ Rest of the columns can be left blank.
+\end_layout
+
+\begin_layout Standard
+Your invoice can contain multiple items (parts, services and labor etc.)
+ Once you enter an item and click 'Update', the item description and price
+ is shown from database.
+ You then enter the quantity you want to sell.
+ A new line also appears so that you can also add one more item and so on.
+ This way you can enter any number of items (parts, services or labor) in
+ the detail portion of the invoice.
 \end_layout
 
 \begin_layout Standard
@@ -5392,9 +5491,139 @@ Purchase Invoice
 \end_layout
 
 \begin_layout Standard
+By default only 'item number', 'description', 'qty', 'unit', 'price' and
+ 'discount' are shown on each line item.
+ You can also display additional input columns for extended information
+ on each line item.
+ To do this, just check the check-box next to 'Description' column of the
+ line item or heading and click update.
+ Now the invoice form will be displayed with extended line items as shown
+ below.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ap3.png
 	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Debit Note and Debit Invoice
+\end_layout
+
+\begin_layout Standard
+Debit invoice is used to record a purchase return which was recorded earlier
+ with a vendor invoice.
+ A debit invoice will also remove the items, you purchased earlier, from
+ your stock inventory as well as update your accounts payable and purchase
+ accounts.
+\end_layout
+
+\begin_layout Standard
+Debit note is used to record a sale return without creating a debit invoice.
+ A credit note is typically used to record reversal of 'AP Transaction'
+ though it can also be used to reverse all or part of a vendor invoice but
+ be aware that inventory is not removed from your stock with a debit note.
+ So debit note is good tool to reverse any service purchases but not for
+ reversing tangible goods purchase.
+\end_layout
+
+\begin_layout Subsubsection
+Creating a debit note
+\end_layout
+
+\begin_layout Standard
+Use '
+\series bold
+AP--Debit Note
+\series default
+' menu to create your debit note.
+ Creating a debit note is very similar to creating an AP transaction.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:AP-Transactions"
+
+\end_inset
+
+ for details on how to do that.
+\end_layout
+
+\begin_layout Subsubsection
+Creating a debit invoice
+\end_layout
+
+\begin_layout Standard
+Use 'AP--Debit Invoice' menu to create your debit invoice.
+ Creating a debit invoice is similar to creating a vendor invoice.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Vendor-Invoice"
+
+\end_inset
+
+ for details on how to do that.
+\end_layout
+
+\begin_layout Subsubsection
+Adjusting debit note or debit invoice
+\end_layout
+
+\begin_layout Standard
+Once you have an open vendor invoice as well as a debit note or debit invoice,
+ you can adjust them to each other.
+ To do this:
+\end_layout
+
+\begin_layout Enumerate
+You go to 'Cash--Payment' menu, select the vendor and click 'Update' button.
+ This will show all invoices as shown below.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename invoice-adjustment.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now you can click to check the invoices which you want to adjust to each
+ other.
+ and click 'Update'.
+ If the amounts of both open vendor invoice and debit invoice are equal,
+ there will be no amount in the 'Amount' column in header.
+ For your reference you can put something like 'adjustment' in source column.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename invoice-adjustment2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now you just click 'Post'.
+ Your debit invoice will be adjusted against the open vendor invoice and
+ both the debit invoice/note and vendor invoice will be closed.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename invoice-adjustment3.png
 
 \end_inset
 
@@ -5410,6 +5639,13 @@ Transactions Report
 \end_layout
 
 \begin_layout Standard
+Transaction report shows all open or closed transactions and invoices for
+ the specified criteria on search screen.
+ On search screen you can specify various criteria and select/de-select
+ columns which you want to shown on the screen.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename aptrans.png
 	scale 45
@@ -5417,6 +5653,13 @@ Transactions Report
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+When you click 'Continue' button after specifying the required criteria,
+ your report is displayed.
+ This is 'Summary' report where each invoice or transaction is shown on
+ single line.
 \end_layout
 
 \begin_layout Standard
@@ -5429,8 +5672,25 @@ Transactions Report
 
 \end_layout
 
+\begin_layout Standard
+The 'Detail' report shows debits and credits of each transaction along with
+ account number.
+ In detail report, a single invoice or transaction is shown on multiple
+ times.
+ You can click 'Subtotal' to subtotal and group this report by invoice number.
+\end_layout
+
+\begin_layout Standard
+TODO: Detail report screen shots
+\end_layout
+
 \begin_layout Subsection
 Aging Report
+\end_layout
+
+\begin_layout Standard
+Aging report shows the outstanding balances of your vendors divided into
+ predefined periods of time in the past.
 \end_layout
 
 \begin_layout Standard
@@ -5444,6 +5704,11 @@ Aging Report
 \end_layout
 
 \begin_layout Standard
+The summary aging report (shown below) shows on-line for each vendor with
+ outstanding balance.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename ap-aging2.png
 	scale 45
@@ -5451,6 +5716,11 @@ Aging Report
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The detail aging report (shown below) shows all outstanding invoices for
+ each vendor with subtotal by the vendor.
 \end_layout
 
 \begin_layout Standard
@@ -5464,7 +5734,14 @@ Aging Report
 \end_layout
 
 \begin_layout Subsection
-Vendor History
+Vendor History Reports
+\end_layout
+
+\begin_layout Standard
+You can use history reports to see which vendor you buy most from and which
+ vendor you buy less from and what.
+ You can filter the report on date range which is applied to the invoices
+ (or orders or quotations)
 \end_layout
 
 \begin_layout Standard
@@ -5478,6 +5755,10 @@ Vendor History
 \end_layout
 
 \begin_layout Standard
+Vendor history summary report shows purchase activity grouped by item.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename vendor-history2.png
 	scale 45
@@ -5485,6 +5766,10 @@ Vendor History
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Vendor history detail report shows purchasing activity by invoice and item.
 \end_layout
 
 \begin_layout Standard
