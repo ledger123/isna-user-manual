@@ -1806,7 +1806,7 @@ GIFI
 \end_layout
 
 \begin_layout Standard
-GIFI stands for General Index for Financial Information.
+GIFI stands for 'General Index for Financial Information'.
  GIFI codes can be created and attached to accounts in chart of accounts.
  You can add or change GIFI codes just like standard chart of accounts.
  Once GIFI setup is complete, you can view accounting reports by standard
@@ -4771,8 +4771,8 @@ Running your business on SQL-Ledger
 \end_layout
 
 \begin_layout Standard
-In this chapter we explain all the modules which are there in SQL-Ledger
- and how you can use them for your business.
+In this chapter we explain all SQL-Ledger modules one by one.
+ You will also learn how can use them for your business.
 \end_layout
 
 \begin_layout Section
@@ -7188,6 +7188,62 @@ Reconciled transactions report.
 \end_layout
 
 \begin_layout Section
+Reconciliation
+\end_layout
+
+\begin_layout Standard
+Bank reconciliation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marking reconciled transactions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reconciled transactions report.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco3.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reco4.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Year End
 \end_layout
 
@@ -7274,505 +7330,6 @@ Preferences
 \begin_layout Standard
 \begin_inset Graphics
 	filename backup.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-System--Backup--Save to File
-\end_layout
-
-\begin_layout Standard
-When you click this menu option your browser will display the save file
- dialog and you can save backup file on your computer.
-\end_layout
-
-\begin_layout Standard
-l.
-\end_layout
-
-\begin_layout Chapter
-Keeping track of your business in SQL-Ledger 
-\end_layout
-
-\begin_layout Standard
-This sections explains the various reports which are available in SQL-Ledger
- to monitor and track your business once you have started recording your
- business transactions.
- SQL-Ledger stores all your business data in an SQL database.
- SQL, which stands for Structured Query Language, is a special purpose programmi
-ng language designed for managing data held in a relation database management
- system.
- SQL is also a standard of the International Organization for Standardization
- (ISO).
-\end_layout
-
-\begin_layout Standard
-Running SQL queries on a business database can be a very complex matter
- and usually also requires basic knowledge regarding the individual database
- structure.
- The developers of SQL-Ledger made it one of their major goals to simplify
- this process of SQL queries and were able to find a unique way to make
- it an easy task for anyone to analyze the business data stored inside the
- database, even without knowledge in SQL.
-\end_layout
-
-\begin_layout Standard
-There are many different reports in SQL-Ledger and they can all be divided
- into two main groups: 
-\end_layout
-
-\begin_layout Itemize
-a.) 
-\series bold
-Financial Reports
-\series default
-, which reflect the financial effects of your business transactions and
-\end_layout
-
-\begin_layout Itemize
-b.) 
-\series bold
-Module Reports
-\series default
-, which enable you to analyze the various details behind your business transacti
-ons.
-\end_layout
-
-\begin_layout Standard
-The Financial Statements are listed in the menu under '
-\series bold
-Financial Reports
-\series default
-' and the module reports are listed under '
-\series bold
-Reports
-\series default
-' in the menu of each individual module.
- For example, the Accounts Receivable module reports are listed in the menu
- under '
-\series bold
-AR--Reports'
-\series default
- and the Goods & Services module reports are listed in the menu under 
-\series bold
-'Goods & Services--Reports
-\series default
-'.
-\end_layout
-
-\begin_layout Section
-Financial Report
-\end_layout
-
-\begin_layout Standard
-There are seven different financial reports in the '
-\series bold
-Financial Reports
-\series default
-' menu.
- The first two, '
-\series bold
-Financial Reports--Chart of Accounts
-\series default
-' and '
-\series bold
-Financial Reports--Trial Balance
-\series default
-', are very similar and explained in chapter 4.1.1.
- The two last reports '
-\series bold
-Financial Reports--Project Income Statement
-\series default
-' and '
-\series bold
-Financial Reports--Department Income Statement
-\series default
-' are also very similar and explained in chapter 4.1.4.
- The '
-\series bold
-Financial Reports--Tax Report
-\series default
-' is explained in chapter 4.1.5.
-\end_layout
-
-\begin_layout Subsection
-Chart of Accounts & Trial Balance
-\end_layout
-
-\begin_layout Standard
-The chart of accounts report and the trial balance report are both standard
- accounting reports which show amounts posted to each individual account
- in your chart of accounts.
- They show all transactions posted on the individual accounts from all modules.
- The chart of accounts report will show the total amounts booked in debit
- and credit, whereas the trial balance report will also show the beginning
- balance and ending balance of each single account.
- 
-\end_layout
-
-\begin_layout Standard
-In the chart of accounts report you first choose the individual account
- and then set the period to be shown.
- In the trial balance report you start by choosing the period and then select
- the individual account.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/trial1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/trial2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Income Statement
-\end_layout
-
-\begin_layout Standard
-The Income Statement is a financial report that lists income, expenses and
- profit or loss for a given period of time.
- Income statements can be run for any period and you can also compare the
- results with previous periods.
- The structure and presentation of your income statement can be changed
- to suit your individual needs, either by linking each individual account
- to a GIFI account, or by including headers in your chart of accounts.
- See chapter 2.9 for more information on how to setup GIFI accounts and account
- headings.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/income1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The following income statement is for a single period.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/income2.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The following income statement includes two periods.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/income3.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Balance Sheet
-\end_layout
-
-\begin_layout Standard
-The balance sheet is a financial statement that lists the assets, liabilities,
- and the ownership equity of a business entity as of a specific date.
- The balance sheet can be displayed as of any particular date.
- Like the income statement, you can also compare it with the account totals
- of previous dates.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/balancesheet1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/balancesheet2.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Tax Report
-\end_layout
-
-\begin_layout Standard
-The tax report is a consolidated statement of all taxable and non-taxable
- accounts payable (AP) and accounts receivable (AR) transactions.
- Tax reports can be shown and printed for a certain month, quarter, year
- or any other defined period of time.
- At the top of the tax report you will find the consolidated totals for
- each account and below that you will see the individual accounts, single
- transactions and their totals.
-\end_layout
-
-\begin_layout Subsection
-Project & Department Income Statement
-\end_layout
-
-\begin_layout Standard
-The project income statement will list income, expenses and profit or loss
- for selected projects, and the department income statement will do the
- same for selected departments.
- 
-\end_layout
-
-\begin_layout Section
-Module Reports
-\end_layout
-
-\begin_layout Standard
-All module reports in SQL-Ledger have been preconditioned to display the
- basic information usually required when analyzing data in each related
- module.
- For example, the preconditioned module report in '
-\series bold
-AR-Reports-Transactions
-\series default
-' will automatically display the 
-\begin_inset Quotes eld
-\end_inset
-
-Date, Invoice Number, Description, Customer, Total and Paid Amounts
-\begin_inset Quotes erd
-\end_inset
-
- of the open account receivables.
- One of the major strengths of SQL-Ledger is that all module reports can
- easily be customized to fit individual needs or requirements.
- To adapt a module report to your individual requirements, all you need
- to do is to enter criteria and 
-\end_layout
-
-\begin_layout Subsection
-AR Reports
-\end_layout
-
-\begin_layout Subsection
-Customer Reports
-\end_layout
-
-\begin_layout Subsection
-AP Reports
-\end_layout
-
-\begin_layout Subsection
-Vendor Reports
-\end_layout
-
-\begin_layout Subsection
-Cash Reports
-\end_layout
-
-\begin_layout Subsection
-Voucher Reports
-\end_layout
-
-\begin_layout Subsection
-HR Reports
-\end_layout
-
-\begin_layout Subsection
-Order Entry Reports
-\end_layout
-
-\begin_layout Subsection
-Warehouse Reports
-\end_layout
-
-\begin_layout Subsection
-Quotation Reports
-\end_layout
-
-\begin_layout Subsection
-General Ledger Reports
-\end_layout
-
-\begin_layout Subsection
-Project Reports
-\end_layout
-
-\begin_layout Subsection
-Exchange Rates
-\end_layout
-
-\begin_layout Section
-Reconciliation
-\end_layout
-
-\begin_layout Standard
-Bank reconciliation
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/reco1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Marking reconciled transactions.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/reco2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Reconciled transactions report.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/reco3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/reco4.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Year End
-\end_layout
-
-\begin_layout Standard
-The 
-\series bold
-'System--Yearend'
-\series default
- menu does the period closing in SQL-Ledger.
- It creates a GL transaction which clears the income accounts and posts
- the difference (which is income or loss) to the specified retained earnings
- account.
-\end_layout
-
-\begin_layout Standard
-Please note that:
-\end_layout
-
-\begin_layout Enumerate
-Year-end process can be run daily, weekly, monthly, quarterly or yearly.
- 
-\end_layout
-
-\begin_layout Enumerate
-Year-end GL transaction is not included in the income statement which covers
- period containing a closing transactions.
- 
-\end_layout
-
-\begin_layout Enumerate
-The year-end GL transaction can be viewed through GL reports and edited
- or deleted as required.
-\end_layout
-
-\begin_layout Standard
-This is year end screen and the GL transaction created by year-end process.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/yearend.jpg
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/yearend2.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Data backup
-\end_layout
-
-\begin_layout Standard
-You can backup your data directly through SQL-Ledger.
- There are two ways to get your backup using the 
-\series bold
-System--Backup
-\series default
- menu.
-\end_layout
-
-\begin_layout Subsection*
-System--Backup--Send by Email
-\end_layout
-
-\begin_layout Standard
-Backup is sent to your email address through email.
- You can add or change this email address through '
-\series bold
-Preferences
-\series default
-' menu.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/backup.jpg
 
 \end_inset
 
@@ -7943,7 +7500,7 @@ Cost of Goods Sold (COGS) is the purchase price of the goods you just sold.
 Tip: To view the debit and credit accounting transactions for any sale or
  purchase invoice, enter the invoice number on 
 \series bold
-General Ledger–Reports
+'General Ledger--Reports'
 \series default
  screen and click Continue button.
 \end_layout
@@ -8115,6 +7672,710 @@ Using the
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+Keeping track of your business in SQL-Ledger 
+\end_layout
+
+\begin_layout Standard
+This sections explains the various reports which are available in SQL-Ledger
+ to monitor and track your business once you have started recording your
+ business transactions.
+ SQL-Ledger stores all your business data in an SQL database.
+ SQL, which stands for Structured Query Language, is a special purpose programmi
+ng language designed for managing data held in a relation database management
+ system.
+ SQL is also a standard of the International Organization for Standardization
+ (ISO).
+\end_layout
+
+\begin_layout Standard
+Running SQL queries on a business database can be a very complex matter
+ and usually also requires basic knowledge regarding the individual database
+ structure.
+ The developers of SQL-Ledger made it one of their major goals to simplify
+ this process of SQL queries and were able to find a unique way to make
+ it an easy task for anyone to analyze the business data stored inside the
+ database, even without knowledge in SQL.
+\end_layout
+
+\begin_layout Standard
+There are many different reports in SQL-Ledger and they can all be divided
+ into two main groups: 
+\end_layout
+
+\begin_layout Itemize
+a.) 
+\series bold
+Financial Reports
+\series default
+, which reflect the financial effects of your business transactions and
+\end_layout
+
+\begin_layout Itemize
+b.) 
+\series bold
+Module Reports
+\series default
+, which enable you to analyze the various details behind your business transacti
+ons.
+\end_layout
+
+\begin_layout Standard
+The Financial Statements are listed in the menu under '
+\series bold
+Financial Reports
+\series default
+' and the module reports are listed under '
+\series bold
+Reports
+\series default
+' in the menu of each individual module.
+ For example, the Accounts Receivable module reports are listed in the menu
+ under '
+\series bold
+AR--Reports'
+\series default
+ and the Goods & Services module reports are listed in the menu under 
+\series bold
+'Goods & Services--Reports
+\series default
+'.
+\end_layout
+
+\begin_layout Section
+Financial Report
+\end_layout
+
+\begin_layout Standard
+There are seven different financial reports in the '
+\series bold
+Financial Reports
+\series default
+' menu.
+ The first two, '
+\series bold
+Financial Reports--Chart of Accounts
+\series default
+' and '
+\series bold
+Financial Reports--Trial Balance
+\series default
+', are very similar and explained in chapter 4.1.1.
+ The two last reports '
+\series bold
+Financial Reports--Project Income Statement
+\series default
+' and '
+\series bold
+Financial Reports--Department Income Statement
+\series default
+' are also very similar and explained in chapter 4.1.4.
+ The '
+\series bold
+Financial Reports--Tax Report
+\series default
+' is explained in chapter 4.1.5.
+\end_layout
+
+\begin_layout Subsection
+Chart of Accounts & Trial Balance
+\end_layout
+
+\begin_layout Standard
+The chart of accounts report and the trial balance report are both standard
+ accounting reports which show amounts posted to each individual account
+ in your chart of accounts.
+ They show all transactions posted on the individual accounts from all modules.
+ The chart of accounts report will show the total amounts booked in debit
+ and credit, whereas the trial balance report will also show the beginning
+ balance and ending balance of each single account.
+ 
+\end_layout
+
+\begin_layout Standard
+In the chart of accounts report you first choose the individual account
+ and then set the period to be shown.
+ In the trial balance report you start by choosing the period and then select
+ the individual account.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trial1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trial2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Income Statement
+\end_layout
+
+\begin_layout Standard
+The Income Statement is a financial report that lists income, expenses and
+ profit or loss for a given period of time.
+ Income statements can be run for any period and you can also compare the
+ results with previous periods.
+ The structure and presentation of your income statement can be changed
+ to suit your individual needs, either by linking each individual account
+ to a GIFI account, or by including headers in your chart of accounts.
+ See chapter 2.9 for more information on how to setup GIFI accounts and account
+ headings.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename income1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following income statement is for a single period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename income2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following income statement includes two periods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename income3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Balance Sheet
+\end_layout
+
+\begin_layout Standard
+The balance sheet is a financial statement that lists the assets, liabilities,
+ and the ownership equity of a business entity as of a specific date.
+ The balance sheet can be displayed as of any particular date.
+ Like the income statement, you can also compare it with the account totals
+ of previous dates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename balancesheet1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename balancesheet2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tax Report
+\end_layout
+
+\begin_layout Standard
+The tax report is a consolidated statement of all taxable and non-taxable
+ accounts payable (AP) and accounts receivable (AR) transactions.
+ Tax reports can be shown and printed for a certain month, quarter, year
+ or any other defined period of time.
+ At the top of the tax report you will find the consolidated totals for
+ each account and below that you will see the individual accounts, single
+ transactions and their totals.
+\end_layout
+
+\begin_layout Subsection
+Project & Department Income Statement
+\end_layout
+
+\begin_layout Standard
+The project income statement will list income, expenses and profit or loss
+ for selected projects, and the department income statement will do the
+ same for selected departments.
+ 
+\end_layout
+
+\begin_layout Section
+Module Reports
+\end_layout
+
+\begin_layout Standard
+All module reports in SQL-Ledger have been preconditioned to display the
+ basic information usually required when analyzing data in each related
+ module.
+ For example, the preconditioned module report in '
+\series bold
+AR--Reports--Transactions
+\series default
+' will automatically display the 
+\begin_inset Quotes eld
+\end_inset
+
+Date, Invoice Number, Description, Customer, Total and Paid Amounts
+\begin_inset Quotes erd
+\end_inset
+
+ of the open account receivables.
+ One of the major strengths of SQL-Ledger is that all module reports can
+ easily be customized to fit individual needs or requirements.
+ To adapt a module report to your individual requirements, all you need
+ to do is to enter criteria and 
+\end_layout
+
+\begin_layout Subsection
+AR Reports
+\end_layout
+
+\begin_layout Standard
+There are six main AR reports in SQL-Ledger; Transactions, Outstanding,
+ AR aging, Reminder, Tax collected and Non-taxable.
+ You will find all these reports in the menu under 
+\series bold
+'AR--Reports'
+\series default
+.
+ The first thing you will see when you select one of these reports is the
+ search screen.
+ In the search screen you can enter different criteria for your report and
+ also select which specific data you want to display in the report.
+ All reports are preset to display the information which is most commonly
+ required, so if you simply click on the 'Continue' button without defining
+ any criteria or selecting specific data, the standard report will be displayed.
+\end_layout
+
+\begin_layout Subsubsection
+Transactions Report
+\end_layout
+
+\begin_layout Standard
+Transaction report shows all currently open or closed transactions and invoices
+ for the specified criteria on search screen.
+ On search screen you can specify various criteria and select/ de-select
+ columns which you want to shown on the screen.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When you click ’Continue’ button after specifying the required criteria,
+ your report is displayed.
+ This is ’Summary’ report where each invoice or transaction is shown on
+ single line.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ’Detail’ report shows debits and credits of each transaction along with
+ account number.
+ In detail report, a single invoice or transaction is shown on multiple
+ times.
+ You can click ’Subtotal’ to subtotal and group this report by invoice number.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename artrans3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Outstanding Report
+\end_layout
+
+\begin_layout Standard
+The difference between the Outstanding report and the Transactions report,
+ is that the latter will show you only the selected open or closed invoices
+ and transactions as of today.
+ Instead, the Outstanding report will show you the selected open and closed
+ invoices and transactions as on a chosen date or as within a chosen time
+ frame.
+ If you for example want to create a report for an auditor to show which
+ invoices and transactions where still open on the 31.
+ December of last year, you need to use the Outstanding report, since the
+ Transactions report only shows the selected open invoices and transactions
+ as of today.
+ On the Outstanding report search screen you can specify various criteria
+ and select/ de-select columns which you want to shown on the screen.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+TODO: insert picture displaying 'AR--Outstanding search screen'
+\end_layout
+
+\begin_layout Subsubsection
+AR Aging Report
+\end_layout
+
+\begin_layout Standard
+AR Aging Report shows the outstanding balances of your customers divided
+ into predefined periods of time in the past.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-search.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The summary aging report (shown below) shows one line for each customer
+ with outstanding balance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-summ.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The detail aging report (shown below) shows all outstanding invoices for
+ each customer with subtotal by the customer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ar-aging-detail.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Reminder Report
+\end_layout
+
+\begin_layout Standard
+The Reminder Report search screen can be set to show selected departments
+ or selected customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reminder1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If neither is selected it will display all outstanding customer invoices
+ and divide them by currency.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename reminder2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the Reminder Report you can also print or email reminders to your customers.
+ 
+\end_layout
+
+\begin_layout Standard
+You can define up to 3 levels of reminders.
+ Level 1 being a polite one and level 3 being a bit harsh one.
+ When you print a reminder, its level is stored in the database.
+ Next time when you run the Reminder Report, the next level of reminder
+ for that customer is displayed.
+ You also have the option to change the reminder level manually and click
+ on 'Save Level'.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Tax collected and Non-taxable Reports
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+'AR--Reports--Tax collected'
+\series default
+ and 
+\series bold
+'AR--Reports--Non-taxable'
+\series default
+ reports are statements of all taxable and non-taxable customers (AP) transactio
+ns.
+ These tax reports will display a statement with the single transactions
+ and their totals for a chosen month, quarter, year or any other defined
+ period of time.
+ 
+\end_layout
+
+\begin_layout Subsection
+Customers Reports
+\end_layout
+
+\begin_layout Standard
+There are two customer reports in SQL-Ledger; 
+\series bold
+'Customers--Reports--Search'
+\series default
+ and '
+\series bold
+Customers--Reports--History
+\series default
+'.
+ The Search Report is used to display customer master data and can also
+ display the customer related business transactions.
+ The History Report is used to display customer related totals for selected
+ business transactions.
+ The Search Report is based on the total value of customer business transactions
+, whereas the History Report is based on the total quantities of customer
+ business transactions.
+\end_layout
+
+\begin_layout Subsubsection
+Customer Search Report
+\end_layout
+
+\begin_layout Standard
+The customer search report can be used either to find and make changes to
+ existing customers or to list the individual business transactions for
+ selected customers.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+TODO: enter picture showing 'AR--Reports--Search' search screen.
+\end_layout
+
+\begin_layout Standard
+If you select the 'Sales Invoice' checkbox in the Customer Search Report
+ search screen, SQL-Ledger will display all sales invoices that have been
+ issued for the selected customer and their respective amount, tax and total
+ values.
+ You can also click ’Subtotal’ in the search screen to subtotal the values
+ by customer.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+TODO: enter picture showing 'AR--Reports--Search' search results for selected
+ customer with Subtotals.
+\end_layout
+
+\begin_layout Subsubsection
+Customer History Report
+\end_layout
+
+\begin_layout Standard
+You can use history reports to see which customer is giving you more business.
+ You can filter the report on date range which is applied to the invoices
+ (or orders or quotations).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-history1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Customer history summary report shows business activity grouped by item.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-history2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Customer history detail report shows business activity by invoice and item.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename customer-history3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+AP Reports
+\end_layout
+
+\begin_layout Standard
+There are five main AP reports in SQL-Ledger; Transactions, Outstanding,
+ AR aging, Tax collected and Non-taxable.
+ You will find all these reports in the menu under 
+\series bold
+'AP--Reports'
+\series default
+.
+ The first thing you will see when you select one of these reports is the
+ search screen.
+ In the search screen you can enter different criteria for your report and
+ also select which specific data you want to display in the report.
+ All reports are preset to display the information which is most commonly
+ required, so if you simply click on the 'Continue' button without defining
+ any criteria or selecting specific data, the standard report will be displayed.
+\end_layout
+
+\begin_layout Subsubsection
+Transactions Report
+\end_layout
+
+\begin_layout Subsubsection
+Outstanding Report
+\end_layout
+
+\begin_layout Subsubsection
+AP Aging Report
+\end_layout
+
+\begin_layout Subsubsection
+Tax paid and Non-taxable Reports
+\end_layout
+
+\begin_layout Subsection
+Vendor Reports
+\end_layout
+
+\begin_layout Standard
+There are two Vendor Reports in SQL-Ledger; 
+\series bold
+'Vendors--Reports--Search'
+\series default
+ and '
+\series bold
+Vendors--Reports--History
+\series default
+'.
+ The Search Report is used to display vendor master data and can also display
+ the vendor related business transactions.
+ The History Report is used to display vendor related totals for selected
+ business transactions.
+ The Search Report is based on the total value of vendor business transactions,
+ whereas the History Report is based on the total quantities of vendor business
+ transactions.
+\end_layout
+
+\begin_layout Subsection
+Cash Reports
+\end_layout
+
+\begin_layout Subsection
+Voucher Reports
+\end_layout
+
+\begin_layout Subsection
+HR Reports
+\end_layout
+
+\begin_layout Subsection
+Order Entry Reports
+\end_layout
+
+\begin_layout Subsection
+Warehouse Reports
+\end_layout
+
+\begin_layout Subsection
+Quotation Reports
+\end_layout
+
+\begin_layout Subsection
+General Ledger Reports
+\end_layout
+
+\begin_layout Subsection
+Project Reports
+\end_layout
+
+\begin_layout Subsection
+Exchange Rates
 \end_layout
 
 \begin_layout Chapter
