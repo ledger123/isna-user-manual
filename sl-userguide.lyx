@@ -65,6 +65,15 @@ figs-within-sections
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/armaghan/Desktop/sql-ledger.gif
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
 SQL-Ledger User Guide
 \end_layout
@@ -103,6 +112,30 @@ Armaghan Saqib
 \end_inset
 
 International SQL-Ledger Network Association
+\begin_inset Newline newline
+\end_inset
+
+Grundstrasse 16b 8712 Stäfa,
+\begin_inset Newline newline
+\end_inset
+
+Switzerland
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -112,6 +145,109 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter*
+About authors
+\end_layout
+
+\begin_layout Section*
+Sebastian Weitmann
+\end_layout
+
+\begin_layout Standard
+Sebastian Weitmann has been associated with SQL-Ledger since 2004.
+ He has done masters in law and has been implementing SQL-Ledger for his
+ clients in Germany and other parts of the Europe.
+ His clients range from small companies to big corporation using SQL-Ledger
+ to its full potential with all the features.
+ 
+\end_layout
+
+\begin_layout Standard
+Sebastian strongly believes in the merits of free software for the businesses
+ and for the society in general.
+ In 2010 he and Thomas Brändle founded 'International SQL-Ledger Network
+ Association' (ISNA), a non-profit to fund and support the further development
+ of SQL-Ledger.
+\end_layout
+
+\begin_layout Standard
+Sebastian lives in Koln, German and can be reached through his email sweitmann@e
+-accountant.de.
+\end_layout
+
+\begin_layout Section*
+Armaghan Saqib
+\end_layout
+
+\begin_layout Standard
+Armaghan Saqib is using SQL-Ledger since 2004.
+ He is primarily a computer programmer.
+ In 2004 he was looking for an open source accounting solution and he discovered
+ SQL-Ledger.
+ He immediately realized that SQL-Ledger was the next best thing since sliced
+ bread invention.
+ The simplicity of SQL-Ledger while still being feature rich made him a
+ fan of this ERP solution.
+ Since then he has written lots of code for SQL-Ledger which encompasses
+ many enhancements and new modules for the original SQL-Ledger.
+ He is the lead developer and maintainer of his SQL-Ledger fork (ledger123)
+ which is official SQL-Ledger version of International SQL-Ledger Network.
+ 
+\end_layout
+
+\begin_layout Standard
+His consulting company Ledger123.com provides SQL-Ledger development and
+ implementation services to clients all over the world.
+ 
+\end_layout
+
+\begin_layout Standard
+Armaghan lives in Lahore, Pakistan and can be contacted via saqib@ledger123.com.
+\end_layout
+
+\begin_layout Chapter*
+Corporate sponsors
+\end_layout
+
+\begin_layout Subsection*
+Run my Accounts AG
+\end_layout
+
+\begin_layout Standard
+Run my Accounts (RMA) is the biggest corporate sponsor of all new SQL-Ledger
+ development for many years now.
+ RMA is headed by Thomas Brändle and situated in Stäfa, Switzerland and
+ is the biggest SQL-Ledger success story.
+ Run my Accounts has contributed to the project in terms of a pleasant looking
+ theme, code as well as financed the development of many features which
+ are available to everyone through the github repository.
+ Thomas Brändle is using SQL-Ledger since for 2006 for his business.
+\end_layout
+
+\begin_layout Chapter*
+SQL-Ledger User Guide
+\end_layout
+
+\begin_layout Standard
+Written by Sebastian Weitmann and Armaghan Saqib
+\end_layout
+
+\begin_layout Standard
+Copyright © 2015 Sebastian Weitmann and Armaghan Saqib.
+ All rights reserved.
+\end_layout
+
+\begin_layout Standard
+Published by International SQL-Ledger Network Association, Grundstrasse
+ 16b 8712 Stäfa, Switzerland.
+\end_layout
+
+\begin_layout Standard
+While every precaution has been taken in the preparation of this book, the
+ publisher and authors assume no responsibility for errors or omissions,
+ or for damages resulting from the use of the information contained herein.
 \end_layout
 
 \begin_layout Chapter*
@@ -302,10 +438,6 @@ SQL-Ledger website
 
 \begin_layout Itemize
 http://www.SQL-Ledger.com/
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Section
@@ -1217,6 +1349,10 @@ The vendors menu allows you to add new vendors and change or delete existing
 
 \end_layout
 
+\begin_layout Subsection
+Adding a new vendor
+\end_layout
+
 \begin_layout Standard
 Use 
 \series bold
@@ -1232,6 +1368,10 @@ Use
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Editing or deleting an existing vendor
 \end_layout
 
 \begin_layout Standard
@@ -1264,6 +1404,14 @@ To make changes to existing vendors, first you list them using
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+On this report you can click on the vendor name and its details will be
+ opened in a new screen where you can make changes to existing data or delete
+ the vendor.
+ Please note that you cannot delete a vendor once you have posted some invoices
+ or transactions to this vendor.
 \end_layout
 
 \begin_layout Section
@@ -1747,6 +1895,10 @@ You can click on the account number to open the account in detail form where
 
 \end_layout
 
+\begin_layout Subsection
+Heading accounts
+\end_layout
+
 \begin_layout Standard
 All accounts in SQL-Ledger must be defined as either ’Heading’ or ’Account’.
  The ’Heading’ accounts help you divide your various accounts into groups.
@@ -1754,6 +1906,10 @@ All accounts in SQL-Ledger must be defined as either ’Heading’ or ’Account
  used to subtotal groups of accounts in the income statement or balance
  sheet.
  
+\end_layout
+
+\begin_layout Subsection
+Account types
 \end_layout
 
 \begin_layout Standard
@@ -1765,7 +1921,10 @@ The ’Account Type’ sets the accounting purpose for each account.
  If you mark an account as a summary account, it will be included in the
  selection drop-down menus available when you process accounts receivable
  and accounts payable transactions, or when you set up new inventory.
- 
+\end_layout
+
+\begin_layout Subsection
+Marking accounts
 \end_layout
 
 \begin_layout Standard
@@ -1790,6 +1949,10 @@ Accounts marked to be included for ’Income’, ’COGS’ / ’Expense’ or �
  
 \end_layout
 
+\begin_layout Subsection
+Mandatory default accounts
+\end_layout
+
 \begin_layout Standard
 There are six default accounts in SQL-Ledger.
  Income, expense, inventory, foreign exchange gain, foreign exchange loss
@@ -1809,8 +1972,12 @@ GIFI
 GIFI stands for 'General Index for Financial Information'.
  GIFI codes can be created and attached to accounts in chart of accounts.
  You can add or change GIFI codes just like standard chart of accounts.
- Once GIFI setup is complete, you can view accounting reports by standard
- accounts or GIFI accounts.
+\end_layout
+
+\begin_layout Standard
+GIFI accounts can be used to re-group the accounts for reporting purposes.
+ All financial reports can be displayed with regular accounts or with gifi
+ accounts.
 \end_layout
 
 \begin_layout Section
@@ -2711,7 +2878,7 @@ As assembly is just like any other inventory item in your SQL-Ledger with
  the additional information about its components.
  You define new assemblies using 
 \series bold
-'Goods and Service -- Add Assembly
+'Goods & Service--Add Assembly
 \series default
 '.
 \end_layout
@@ -5558,7 +5725,11 @@ Creating a debit invoice
 \end_layout
 
 \begin_layout Standard
-Use 'AP--Debit Invoice' menu to create your debit invoice.
+Use '
+\series bold
+AP--Debit Invoice
+\series default
+' menu to create your debit invoice.
  Creating a debit invoice is similar to creating a vendor invoice.
  See 
 \begin_inset CommandInset ref
@@ -5581,7 +5752,11 @@ Once you have an open vendor invoice as well as a debit note or debit invoice,
 \end_layout
 
 \begin_layout Enumerate
-You go to 'Cash--Payment' menu, select the vendor and click 'Update' button.
+You go to '
+\series bold
+Cash--Payment
+\series default
+' menu, select the vendor and click 'Update' button.
  This will show all invoices as shown below.
 \begin_inset Newline newline
 \end_inset
@@ -7066,7 +7241,159 @@ Time Cards
 \end_layout
 
 \begin_layout Standard
-TODO
+Time cards module allows you to record the time you have spent to provide
+ service to your customer.
+ Work flow for using time cards goes like this:
+\end_layout
+
+\begin_layout Enumerate
+Create a project for the customer.
+\end_layout
+
+\begin_layout Enumerate
+Create time card entries.
+\end_layout
+
+\begin_layout Enumerate
+Create a sales order.
+\end_layout
+
+\begin_layout Standard
+We go through each of these steps using screen shots below.
+\end_layout
+
+\begin_layout Subsection
+Create a project for the customer
+\end_layout
+
+\begin_layout Standard
+You can create a new project using 'Projects--Add Project' menu.
+ Here you will need the select the name of the customer for whom you or
+ your staff is working.
+ You can also specify start and stop dates as desired.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard4.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Create time card entries
+\end_layout
+
+\begin_layout Standard
+Now you are reading to create time card entries.
+ Use '
+\series bold
+Projects--Add Time Card
+\series default
+' to add new time card entries.
+ On this screen you need to select employee name, project, date and time
+ worked.
+ You also need to select one of the service codes you have defined using
+ '
+\series bold
+Goods & Services--Add Service
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once you have added time cards, you can view a report for the selected time
+ cards using '
+\series bold
+Projects--Reports--Time Cards
+\series default
+' report.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By clicking on the link on ID, you can edit a time card.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Create a sales order
+\end_layout
+
+\begin_layout Standard
+The third step in using time cards is to create a sales order from time
+ cards.
+ For this you use '
+\series bold
+Projects--Generate--Sales Orders
+\series default
+' menu to select the projects for which you want to create time cards.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard5.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard6.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once you have selected the required sales orders you can click on the 'Generate
+ Sales Orders' button to create your sales order.
+ Once an SO is generated you can view it using '
+\series bold
+Order Entry--Reports--Sales Orders
+\series default
+' menu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename timecard8.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -7136,7 +7463,22 @@ Reconciliation
 \end_layout
 
 \begin_layout Standard
-Bank reconciliation
+Bank reconciliation function in Cash module allows you to match your SQL-Ledger
+ transactions with your bank statement and them mark them as reconcilied.
+ This way you can be sure that your account balance in bank matches that
+ with your account balance in SQL-Ledger.
+\end_layout
+
+\begin_layout Subsection
+Marking transactions
+\end_layout
+
+\begin_layout Standard
+To match and mark your transactions with your bank statement, you open the
+ reconciliation input screen using 'Cash-Reonciliation' menu.
+ Here you select your bank account and click continue.
+ Carefully read the 'usage notes' section on this screen to display your
+ account data as you desire.
 \end_layout
 
 \begin_layout Standard
@@ -7150,7 +7492,12 @@ Bank reconciliation
 \end_layout
 
 \begin_layout Standard
-Marking reconciled transactions.
+Once you have displayed your account data, you can check/uncheck the checkbox
+ which is next to description column.
+ If the transaction is reconciled, check this box, if not then uncheck this
+ box.
+ Once you have checked all the reconciled transactions you can mark click
+ the 'Done' button to save the updates.
 \end_layout
 
 \begin_layout Standard
@@ -7164,63 +7511,7 @@ Marking reconciled transactions.
 \end_layout
 
 \begin_layout Standard
-Reconciled transactions report.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco3.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco4.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Reconciliation
-\end_layout
-
-\begin_layout Standard
-Bank reconciliation
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco1.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Marking reconciled transactions.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename reco2.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Reconciled transactions report.
+Reconciliation report allows you to view your reconciled account with balance.
 \end_layout
 
 \begin_layout Standard
@@ -7723,7 +8014,7 @@ ons.
 \end_layout
 
 \begin_layout Standard
-The Financial Statements are listed in the menu under '
+The Financial Reports are listed in the menu under '
 \series bold
 Financial Reports
 \series default
@@ -7744,12 +8035,12 @@ AR--Reports'
 '.
 \end_layout
 
-\begin_layout Section
-Financial Report
+\begin_layout Section*
+Financial Reports
 \end_layout
 
 \begin_layout Standard
-There are seven different financial reports in the '
+There are seven different Financial Reports in the '
 \series bold
 Financial Reports
 \series default
@@ -7762,7 +8053,7 @@ Financial Reports--Chart of Accounts
 \series bold
 Financial Reports--Trial Balance
 \series default
-', are very similar and explained in chapter 4.1.1.
+', are very similar and explained in chapter 4.1.
  The two last reports '
 \series bold
 Financial Reports--Project Income Statement
@@ -7771,15 +8062,15 @@ Financial Reports--Project Income Statement
 \series bold
 Financial Reports--Department Income Statement
 \series default
-' are also very similar and explained in chapter 4.1.4.
+' are also very similar and explained in chapter 4.4.
  The '
 \series bold
 Financial Reports--Tax Report
 \series default
-' is explained in chapter 4.1.5.
+' is explained in chapter 4.5.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Chart of Accounts & Trial Balance
 \end_layout
 
@@ -7821,7 +8112,7 @@ In the chart of accounts report you first choose the individual account
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Income Statement
 \end_layout
 
@@ -7875,7 +8166,7 @@ The following income statement includes two periods.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Balance Sheet
 \end_layout
 
@@ -7907,7 +8198,7 @@ The balance sheet is a financial statement that lists the assets, liabilities,
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Tax Report
 \end_layout
 
@@ -7921,7 +8212,7 @@ The tax report is a consolidated statement of all taxable and non-taxable
  transactions and their totals.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Project & Department Income Statement
 \end_layout
 
@@ -7932,7 +8223,7 @@ The project income statement will list income, expenses and profit or loss
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Section*
 Module Reports
 \end_layout
 
@@ -7959,7 +8250,7 @@ Date, Invoice Number, Description, Customer, Total and Paid Amounts
  to do is to enter criteria and 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 AR Reports
 \end_layout
 
@@ -7980,7 +8271,7 @@ There are six main AR reports in SQL-Ledger; Transactions, Outstanding,
  any criteria or selecting specific data, the standard report will be displayed.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Transactions Report
 \end_layout
 
@@ -7995,6 +8286,7 @@ Transaction report shows all currently open or closed transactions and invoices
 \begin_layout Standard
 \begin_inset Graphics
 	filename artrans.png
+	scale 40
 
 \end_inset
 
@@ -8012,6 +8304,7 @@ When you click ’Continue’ button after specifying the required criteria,
 \begin_layout Standard
 \begin_inset Graphics
 	filename artrans2.png
+	scale 40
 
 \end_inset
 
@@ -8030,13 +8323,14 @@ The ’Detail’ report shows debits and credits of each transaction along with
 \begin_layout Standard
 \begin_inset Graphics
 	filename artrans3.png
+	scale 40
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Outstanding Report
 \end_layout
 
@@ -8063,7 +8357,7 @@ The difference between the Outstanding report and the Transactions report,
 TODO: insert picture displaying 'AR--Outstanding search screen'
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 AR Aging Report
 \end_layout
 
@@ -8075,6 +8369,7 @@ AR Aging Report shows the outstanding balances of your customers divided
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-search.png
+	scale 40
 
 \end_inset
 
@@ -8089,6 +8384,7 @@ The summary aging report (shown below) shows one line for each customer
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-summ.png
+	scale 40
 
 \end_inset
 
@@ -8103,13 +8399,14 @@ The detail aging report (shown below) shows all outstanding invoices for
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-detail.png
+	scale 40
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Reminder Report
 \end_layout
 
@@ -8121,6 +8418,7 @@ The Reminder Report search screen can be set to show selected departments
 \begin_layout Standard
 \begin_inset Graphics
 	filename reminder1.png
+	scale 40
 
 \end_inset
 
@@ -8135,6 +8433,7 @@ If neither is selected it will display all outstanding customer invoices
 \begin_layout Standard
 \begin_inset Graphics
 	filename reminder2.png
+	scale 40
 
 \end_inset
 
@@ -8157,7 +8456,7 @@ You can define up to 3 levels of reminders.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Tax collected and Non-taxable Reports
 \end_layout
 
@@ -8170,7 +8469,7 @@ The
 \series bold
 'AR--Reports--Non-taxable'
 \series default
- reports are statements of all taxable and non-taxable customers (AP) transactio
+ reports are statements of all taxable and non-taxable customers (AR) transactio
 ns.
  These tax reports will display a statement with the single transactions
  and their totals for a chosen month, quarter, year or any other defined
@@ -8178,7 +8477,7 @@ ns.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Customers Reports
 \end_layout
 
@@ -8201,7 +8500,7 @@ Customers--Reports--History
  business transactions.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Customer Search Report
 \end_layout
 
@@ -8235,7 +8534,7 @@ TODO: enter picture showing 'AR--Reports--Search' search results for selected
  customer with Subtotals.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Customer History Report
 \end_layout
 
@@ -8248,6 +8547,7 @@ You can use history reports to see which customer is giving you more business.
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-history1.png
+	scale 40
 
 \end_inset
 
@@ -8262,6 +8562,7 @@ Customer history summary report shows business activity grouped by item.
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-history2.png
+	scale 40
 
 \end_inset
 
@@ -8276,13 +8577,14 @@ Customer history detail report shows business activity by invoice and item.
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-history3.png
+	scale 40
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 AP Reports
 \end_layout
 
@@ -8303,23 +8605,146 @@ There are five main AP reports in SQL-Ledger; Transactions, Outstanding,
  any criteria or selecting specific data, the standard report will be displayed.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Transactions Report
 \end_layout
 
-\begin_layout Subsubsection
-Outstanding Report
+\begin_layout Standard
+Transaction report shows all open or closed transactions and invoices for
+ the specified criteria on search screen.
+ On search screen you can specify various criteria and select/de-select
+ columns which you want to shown on the screen.
+ 
 \end_layout
 
-\begin_layout Subsubsection
-AP Aging Report
+\begin_layout Standard
+\begin_inset Graphics
+	filename aptrans.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsubsection
-Tax paid and Non-taxable Reports
+\begin_layout Standard
+When you click ’Continue’ button after specifying the required criteria,
+ your report is displayed.
+ This is ’Summary’ report where each invoice or transaction is shown on
+ single line.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename aptrans2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ’Detail’ report shows debits and credits of each transaction along with
+ account number.
+ In detail report, a single invoice or transaction is shown on multiple
+ times.
+ You can click ’Subtotal’ to subtotal and group this report by invoice number.
+ 
+\end_layout
+
+\begin_layout Standard
+TODO: Detail report screen shots 
 \end_layout
 
 \begin_layout Subsection
+Outstanding Report
+\end_layout
+
+\begin_layout Standard
+The difference between the Outstanding Report and the Transactions Report,
+ is that the latter will show you only the selected open or closed invoices
+ and transactions as of today.
+ Instead, the Outstanding Report will show you the selected open and closed
+ invoices and transactions as on a chosen date or as within a chosen time
+ frame.
+ If you for example want to create a report for an auditor to show which
+ invoices and transactions where still open on the 31.
+ December of last year, you need to use the Outstanding Report, since the
+ Transactions Report only shows the selected open invoices and transactions
+ as of today.
+ On the Outstanding Report search screen you can specify various criteria
+ and select/ de-select columns which you want to shown on the screen.
+ 
+\end_layout
+
+\begin_layout Subsection
+AP Aging Report
+\end_layout
+
+\begin_layout Standard
+AP Aging Report shows the outstanding balances of your customers divided
+ into predefined periods of time in the past.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap-aging1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The summary aging report (shown below) shows one line for each customer
+ with outstanding balance.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap-aging2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The detail aging report (shown below) shows all outstanding invoices for
+ each customer with subtotal by the customer.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap-aging3.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tax paid and Non-taxable Reports
+\end_layout
+
+\begin_layout Standard
+The ’AP–Reports–Tax collected’ and ’AP–Reports–Non-taxable’ reports are
+ statements of all taxable and non-taxable vendor (AP) transactions.
+ These tax reports will display a statement with the single transactions
+ and their totals for a chosen month, quarter, year or any other defined
+ period of time.
+ 
+\end_layout
+
+\begin_layout Section
 Vendor Reports
 \end_layout
 
@@ -8343,38 +8768,401 @@ Vendors--Reports--History
 \end_layout
 
 \begin_layout Subsection
+Vendor Search Report
+\end_layout
+
+\begin_layout Standard
+The Vendor Search Report can be used either to find and make changes to
+ existing vendors or to list the individual business transactions for selected
+ vendors.
+ 
+\end_layout
+
+\begin_layout Standard
+TODO: enter picture showing ’AP–Reports–Search’ search screen.
+ 
+\end_layout
+
+\begin_layout Standard
+If you select the ’Vendor Invoice’ checkbox in the Vendor Search Report
+ search screen, SQL-Ledger will display all sales invoices that have been
+ issued for the selected vendor and their respective amount, tax and total
+ values.
+ You can also click ’Subtotal’ in the search screen to subtotal the values
+ by vendor.
+ 
+\end_layout
+
+\begin_layout Standard
+TODO: enter picture showing ’AP–Reports–Search’ search results for selected
+ customer with Subtotals.
+ 
+\end_layout
+
+\begin_layout Subsection
+Vendor History Report
+\end_layout
+
+\begin_layout Standard
+You can use history reports to see which vendor you buy most from and which
+ vendor you buy less from and what.
+ You can filter the report on date range which is applied to the invoices
+ (or orders or quotations).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-history1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vendor history summary report shows purchase activity grouped by item.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-history2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vendor history detail report shows purchasing activity by invoice and item.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vendor-history3.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Cash Reports
 \end_layout
 
-\begin_layout Subsection
-Voucher Reports
+\begin_layout Standard
+There are three main Cash Reports in SQL-Ledger; Receipts, Payments and
+ Reconciliation.
+ 
 \end_layout
 
 \begin_layout Subsection
-HR Reports
+Receipts
+\end_layout
+
+\begin_layout Standard
+Receipts report will list all receivables (incoming payments) that have
+ been booked on the available payment accounts.
+\end_layout
+
+\begin_layout Standard
+TODO: Insert picture of Receipts Report.
 \end_layout
 
 \begin_layout Subsection
+Payments
+\end_layout
+
+\begin_layout Standard
+Payments report will list all payables (outgoing payments) that have been
+ booked on the available payment accounts.
+\end_layout
+
+\begin_layout Standard
+TODO: Insert picture of Payments Report.
+\end_layout
+
+\begin_layout Subsection
+Reconciliation
+\end_layout
+
+\begin_layout Standard
+Reconciliation report will list all transactions that have been marked as
+ reconciled on any chosen account.
+ See chapter 3.14.
+ to learn more about how to mark transactions as reconciled.
+\end_layout
+
+\begin_layout Standard
+TODO: Insert picture of Reconciliation report.
+\end_layout
+
+\begin_layout Section
 Order Entry Reports
 \end_layout
 
-\begin_layout Subsection
-Warehouse Reports
+\begin_layout Standard
+There are three main Order Entry Reports in SQL-Ledger; Sales Orders, Requiremen
+ts and Purchase Orders.
 \end_layout
 
 \begin_layout Subsection
-Quotation Reports
+Sales Orders
+\end_layout
+
+\begin_layout Standard
+In the Sales Order search screen you can define criteria for the purchase
+ orders you want to list.
+ For example, you can check/uncheck the ’Open’ and ’Closed’ to list only
+ open or closed sales orders.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename so3.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+’Closed’ sales orders are those which have been fully received or which
+ have been marked ’Closed’ by editing the sales order.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename so1.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+Requirements
+\end_layout
+
+\begin_layout Standard
+The Requirements report will show you which parts and assemblies are low
+ on stock and need to be ordered or assembled.
+ The Reorder Point (ROP) is set individually for each part or assembly by
+ entering the desired minimum quantity in the ROP field.
+ The Requirements report will show which parts and assemblies need to be
+ ordered or assembled based upon the following factors:
+\end_layout
+
+\begin_layout Standard
+On-hand quantity
+\end_layout
+
+\begin_layout Standard
+Open Sales Orders
+\end_layout
+
+\begin_layout Standard
+Open Purchase Orders
+\end_layout
+
+\begin_layout Subsection
+Purchase Orders
+\end_layout
+
+\begin_layout Standard
+In the Purchase Order search screen you can define criteria for the purchase
+ orders you want to list.
+ For example, you can check/uncheck the ’Open’ and ’Closed’ to list only
+ open or closed purchase orders.
+ 
+\end_layout
+
+\begin_layout Standard
+TODO: Insert picture of Purchase order search screen
+\end_layout
+
+\begin_layout Standard
+’Closed’ purchase orders are those which have been fully delivered or which
+ have been marked ’Closed’ by editing the purchase order.
+ 
+\end_layout
+
+\begin_layout Standard
+TODO: Insert picture of 'Edit Purchase order' showing 'open' and 'closed'
+ box.
+ 
+\end_layout
+
+\begin_layout Section
+Warehouses Reports
+\end_layout
+
+\begin_layout Standard
+There are four main Warehouse Reports in SQL-Ledger; Transfers, Deliveries,
+ Onhand and Activity.
+\end_layout
+
+\begin_layout Subsection
+Transfers
+\end_layout
+
+\begin_layout Standard
+You can move inventory between warehouses by using the ’
+\series bold
+Warehouses–Add Transfer
+\series default
+’ menu option.
+ The Transfers report will show you any inventory transfers that have been
+ done between warehouses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename trf3.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Deliveries
+\end_layout
+
+\begin_layout Standard
+Some companies need to track the in-transit goods between warehouse transfers.
+ The delivery date is sometimes different from the transfer date.
+ The Deliveries report will display all the transfers pending to be received.
+ To 'receive' the transfers, specify the dates when the goods were delivered
+ at ’your’ warehouse and click ’Save Delivered’.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename warehouse_pending2.jpg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quotations Reports
+\end_layout
+
+\begin_layout Standard
+There are two main Quotation Reports in SQL-Ledger; Quotations and RFQs
+ (Request For Quotations).
+ 
+\end_layout
+
+\begin_layout Subsection
+Quotations
+\end_layout
+
+\begin_layout Standard
+The Quotation Report will display the existing quotations.
+ You can specify any conditions to filter the report by entering your criteria
+ in the search screen or just leave it blank and click ’Continue’ button
+ to get all existing 'Open' quotations.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename quotations2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+’Closed’ quotations are those which have been used to create a sales order
+ or which have been marked ’Closed’ by editing the quotation.
+\end_layout
+
+\begin_layout Standard
+TODO: Insert picture of 'Edit Quotation' showing 'open' and 'closed' box.
+ 
+\end_layout
+
+\begin_layout Subsection
+RFQs
+\end_layout
+
+\begin_layout Standard
+RFQs are quotation requests that have been sent to your vendors.
+ The RFQs Report will display the existing quotations.
+ You can specify any conditions to filter the report by entering your criteria
+ in the search screen or just leave it blank and click ’Continue’ button
+ to get all existing 'Open' quotations.
+ ’Closed’ quotations are those which have been used to create a purchase
+ order or which have been marked ’Closed’ by editing the quotation.
+\end_layout
+
+\begin_layout Section
 General Ledger Reports
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+The General Ledger Reports is used to view all accounting journals with
+ debits and credits to the particular accounts.
+ Initially this report can be confusing because it shows not only the journals
+ added using ’Add Transaction’ menu show above but also all accounting transacti
+ons posted from AR, AP and Cash modules.
+ You can specify any conditions to filter the report by entering your criteria
+ in the search screen or just leave it blank and click ’Continue’ button
+ to list all existing general ledger transactions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The General Ledger Reports can also be used to export all or only defined
+ transactions in CSV-format.
+ To achieve this, just mark the CSV checkbox before you click on 'Continue'.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gl3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The General Ledger Reports can be sorted on any displayed column.
+ 
+\end_layout
+
+\begin_layout Section
 Project Reports
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Exchange Rates
 \end_layout
 
