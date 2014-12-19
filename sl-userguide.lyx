@@ -66,11 +66,6 @@ figs-within-sections
 \begin_body
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename /home/armaghan/Desktop/sql-ledger.gif
-
-\end_inset
-
 
 \end_layout
 
@@ -7910,7 +7905,7 @@ Ledger Doctor
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/doctor1.png
+	filename doctor1.png
 	scale 50
 
 \end_inset
@@ -7920,7 +7915,7 @@ Ledger Doctor
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/doctor2.png
+	filename doctor2.png
 	scale 50
 
 \end_inset
@@ -7947,7 +7942,7 @@ Using the
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/monitor1.png
+	filename monitor1.png
 	scale 50
 
 \end_inset
@@ -7957,7 +7952,7 @@ Using the
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/armaghan/Documents/isna-user-manual/monitor2.png
+	filename monitor2.png
 	scale 50
 
 \end_inset
