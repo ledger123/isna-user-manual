@@ -105,6 +105,7 @@ Sebastian Weitmann
 
 \begin_inset Graphics
 	filename SQL_Logo_RGB.jpg
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -186,15 +187,14 @@ Armaghan Saqib is using SQL-Ledger since 2004.
  The simplicity of SQL-Ledger while still being feature rich made him a
  fan of this ERP solution.
  Since then he has written lots of code for SQL-Ledger which encompasses
- many enhancements and new modules for the original SQL-Ledger.
- He is the lead developer and maintainer of his SQL-Ledger fork (ledger123)
- which is official SQL-Ledger version of International SQL-Ledger Network
- Association.
+ many enhancements and new modules for the stock SQL-Ledger.
  
 \end_layout
 
 \begin_layout Standard
-His consulting company Ledger123.com provides SQL-Ledger development and
+He is lead developer and maintainer of his SQL-Ledger fork (ledger123) which
+ is the official SQL-Ledger fork of International SQL-Ledger Network Association.
+ His consulting company Ledger123.com provides SQL-Ledger development and
  implementation services to clients all over the world.
  
 \end_layout
@@ -207,19 +207,38 @@ Armaghan lives in Lahore, Pakistan and can be contacted via saqib@ledger123.com.
 Corporate sponsors
 \end_layout
 
-\begin_layout Subsection*
-Run my Accounts AG
+\begin_layout Standard
+\begin_inset Graphics
+	filename RunMyAccounts-Logo_rgb-2000.png
+	lyxscale 10
+	scale 10
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Run my Accounts (RMA) is the biggest corporate sponsor of all new SQL-Ledger
- development for many years now.
- RMA is headed by Thomas Brändle and situated in Stäfa, Switzerland and
- is the biggest SQL-Ledger success story.
- Run my Accounts has contributed to the project in terms of a pleasant looking
- theme, code as well as financed the development of many features which
- are available to everyone through the github repository.
- Thomas Brändle is using SQL-Ledger since for 2006 for his business.
+We would like to thank 
+\series bold
+Run my Accounts AG
+\series default
+ from Switzerland for their work in the past couple of years in contributing
+ modules, improvements and bug fixes for SQL-Ledger.
+ Run my Accounts provides accounting services for Swiss entities on the
+ base of SQL-Ledger.
+ They have developed a highly automated accounting engine, which processes
+ documents and bank feeds very efficiently.
+ Run my Accounts AG is growing at a fast pace in the Swiss market and probably
+ holds the largest SQL-Ledger customer base.
+ For more information please visit 
+\begin_inset CommandInset href
+LatexCommand href
+target "www.runmyaccounts.com"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter*
@@ -442,7 +461,7 @@ There are three ways to get up and running with SQL-Ledger:
 \end_layout
 
 \begin_layout Enumerate
-The quickest way using our free hosted version.
+Hosted version.
 \end_layout
 
 \begin_layout Enumerate
@@ -490,11 +509,80 @@ You will find various SQL-Ledger step-by-step installation guides on the
  International SQL-Ledger Network website (www.sql-ledger-network.com).
 \end_layout
 
+\begin_layout Subsection
+Hosted version
+\end_layout
+
 \begin_layout Standard
-TODO: Finish all methods
+Using the free hosted SQL-Ledger instance, available from ISNA website is
+ the easiest way to get up and running with SQL-Ledger.
+ To get this, visit 
+\begin_inset CommandInset href
+LatexCommand href
+target "sql-ledger-network.com"
+
+\end_inset
+
+ and signup for your free instance.
+ We shall create your free account and will send you user name and password.
+ You can then login and start adding transactions.
 \end_layout
 
 \begin_layout Subsection
+Quick installation script
+\end_layout
+
+\begin_layout Standard
+We have quick installation bash scripts for many Linux distrubitions which
+ will quickly install SQL-Ledger on a freshly installed Linux desktop or
+ server.
+ Visit 
+\begin_inset CommandInset href
+LatexCommand href
+target "sql-ledger-network.com"
+
+\end_inset
+
+ and download the appropriate script for your Linux distribution.
+ Once you have download the script you can run it in the terminal window
+ using the following command:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# bash install_ledger123
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As mentioned above the only per-requisite for this method is freshly installed
+ supported Linux distribution.
+ Once installed you can access your installation on 'http://yourserver_ip/ledger
+123'.
+ where 'yourserver_ip' is the ip address of your server.
+ You can substitute 'localhost' if you are using your machine as your desktop
+ too.
+\end_layout
+
+\begin_layout Subsection
+Manual install
+\end_layout
+
+\begin_layout Standard
+In section how you can install SQL-Ledger on your existing server or desktop
+ by installing and configuring all packages and services yourself.
+\end_layout
+
+\begin_layout Subsubsection
 Installing the SQL-Ledger Network version using 'git clone'
 \end_layout
 
@@ -642,7 +730,7 @@ Note: To view all code changes, you can visit https://github.com/ledger123/ledge
 123 and select the chosen branch.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Installing Perl modules
 \end_layout
 
@@ -742,8 +830,68 @@ cpanm DBIx::Simple
 Our enhancements to standard SQL-Ledger
 \end_layout
 
-\begin_layout Standard
-TODO: Add recent enhancements
+\begin_layout Subsection
+General
+\end_layout
+
+\begin_layout Enumerate
+A new pleasant looking css theme.
+\end_layout
+
+\begin_layout Enumerate
+jQuery based lookups of items, customers, vendors without requiring a screen
+ update to select these items.
+\end_layout
+
+\begin_layout Enumerate
+Calendar for date lookup.
+\end_layout
+
+\begin_layout Enumerate
+'Add Customer', 'Add Vendor' links on invoices/orders/quotes/POS screens.
+ These links appear only if allowed by access control settings.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enhanced assemblies.
+ You can get a report of all stock-assembly actions.
+ Warehouses are correctly updated with any assemblies made and components
+ used.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enhanced bank reconciliation.
+\end_layout
+
+\begin_layout Enumerate
+Added back the '
+\series bold
+Shipping–Transfer
+\series default
+' function from SQL-Ledger 2.6.
+ 
+\end_layout
+
+\begin_layout Enumerate
+LedgerDoctor script which identifies potential problems with data entry.
+ 
+\end_layout
+
+\begin_layout Enumerate
+CSV data import.
+ (invoices, transactions, general ledger, orders, customers, vendors, parts,
+ chart).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Disabled incorrect item weight update from orders and invoices.
+\end_layout
+
+\begin_layout Enumerate
+Parts group is mandatory if there is at least on group defined.
 \end_layout
 
 \begin_layout Subsection
@@ -861,57 +1009,6 @@ Save report search conditions and layout in user menu.
  
 \end_layout
 
-\begin_layout Subsection
-Others
-\end_layout
-
-\begin_layout Enumerate
-'Add Customer', 'Add Vendor' links on invoices/orders/quotes/POS screens.
- These links appear only if allowed by access control settings.
- 
-\end_layout
-
-\begin_layout Enumerate
-Enhanced assemblies.
- You can get a report of all stock-assembly actions.
- Warehouses are correctly updated with any assemblies made and components
- used.
- 
-\end_layout
-
-\begin_layout Enumerate
-Enhanced bank reconciliation.
-\end_layout
-
-\begin_layout Enumerate
-Added back the '
-\series bold
-Shipping–Transfer
-\series default
-' function from SQL-Ledger 2.6.
- 
-\end_layout
-
-\begin_layout Enumerate
-LedgerDoctor script which identifies potential problems with data entry.
- 
-\end_layout
-
-\begin_layout Enumerate
-CSV data import.
- (invoices, transactions, general ledger, orders, customers, vendors, parts,
- chart).
- 
-\end_layout
-
-\begin_layout Enumerate
-Disabled incorrect item weight update from orders and invoices.
-\end_layout
-
-\begin_layout Enumerate
-Parts group is mandatory if there is at least on group defined.
-\end_layout
-
 \begin_layout Chapter
 Setting up your business on SQL-Ledger
 \end_layout
@@ -923,7 +1020,34 @@ The next step after successful SQL-Ledger installation is to setup your
 \end_layout
 
 \begin_layout Standard
-TODO: Write about users who are using free hosted version
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+If you are using free hosted version on ISNA website, you can skip this
+ section and go directly to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Creating-users-and"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -931,15 +1055,12 @@ Creating your first dataset
 \end_layout
 
 \begin_layout Standard
-TODO: Modify it according to selected installation method.
-\end_layout
-
-\begin_layout Standard
-You need to create a dataset in SQL-Ledger before you start using it to
+Following instructions assume that you have installed SQL-Ledger using manual
+ method.
+ You need to create a dataset in SQL-Ledger before you start using it to
  manage your business accounts.
  Behind the scenes each dataset is a PostgreSQL database with tables, indexes
  and some seed data like chart of accounts.
- 
 \end_layout
 
 \begin_layout Standard
@@ -966,10 +1087,6 @@ You will be asked for a password.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-TODO: Change the text of SQL-Ledger website
 \end_layout
 
 \begin_layout Standard
@@ -1016,14 +1133,7 @@ On this page you need to enter your database credentials.
 If you are not sure how to create this user on your own system, you can
  go ahead with the default PostgreSQL superuser which is normally 'postgres'
  instead of 'sql-ledger' and click 'Continue'.
-\end_layout
-
-\begin_layout Standard
-All the other defaults on the above page will work in most cases.
-\end_layout
-
-\begin_layout Standard
-TODO: Remove this ugly screen.
+ All the other defaults on the above page will work in most cases.
 \end_layout
 
 \begin_layout Standard
@@ -1060,6 +1170,13 @@ Your dataset should now be created and added to the list of existing datasets.
 
 \begin_layout Section
 Creating users and roles
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Creating-users-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1270,13 +1387,80 @@ The
  in SQL-Ledger.
  Document numbering is also controlled by system defaults.
  We setup defaults for document numbers as shown on the screen shot below.
- You can change these to your liking or organizational needs.
- You can also use various variables in the system default number fields
- like <%dd%> for day, <%mm%> for month, <%yy%> for year etc.
+ You can change these according to your business needs.
+ You can also use following variables in the system default number fields:
 \end_layout
 
 \begin_layout Standard
-TODO: Add other possibilities
+<%DATE%>
+\end_layout
+
+\begin_layout Standard
+<%YYMMDD%>
+\end_layout
+
+\begin_layout Standard
+<%YEAR%>
+\end_layout
+
+\begin_layout Standard
+<%MONTH%>
+\end_layout
+
+\begin_layout Standard
+<%DAY%>
+\end_layout
+
+\begin_layout Standard
+<%NAME 1 1 3%>
+\end_layout
+
+\begin_layout Standard
+<%BUSINESS%>
+\end_layout
+
+\begin_layout Standard
+<%BUSINESS 10%>
+\end_layout
+
+\begin_layout Standard
+<%CURR...%>
+\end_layout
+
+\begin_layout Standard
+<%DESCRIPTION 1 1 3%>
+\end_layout
+
+\begin_layout Standard
+<%ITEM 1 1 3%>
+\end_layout
+
+\begin_layout Standard
+<%PARTSGROUP 1 1 3%>
+\end_layout
+
+\begin_layout Standard
+<%PHONE%>
+\end_layout
+
+\begin_layout Standard
+<%YY%>
+\end_layout
+
+\begin_layout Standard
+<%MM%>
+\end_layout
+
+\begin_layout Standard
+<%DD%>
+\end_layout
+
+\begin_layout Standard
+<%FDM%>
+\end_layout
+
+\begin_layout Standard
+<%LDM%>
 \end_layout
 
 \begin_layout Standard
@@ -1510,18 +1694,6 @@ Departments
 \begin_layout Standard
 Departments are optional and can be used to classify transactions according
  to a department code.
-\end_layout
-
-\begin_layout Subsection
-Managing Departments
-\end_layout
-
-\begin_layout Standard
-Departments can be added, changed or deleted using the 
-\series bold
-'System--Departments
-\series default
-' menu.
  When managing departments, the following points are important:
 \end_layout
 
@@ -1545,7 +1717,27 @@ Departments can be marked as 'Cost Center' or 'Profit Center'.
 \begin_layout Enumerate
 You can also change 'Department' to anything you like (eg.Branch) using the
  SQL-Ledger language customization feature.
- (TODO: Add language translation feature and reference here)
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Adding-a-new"
+
+\end_inset
+
+ on how to do this.
+\end_layout
+
+\begin_layout Subsection
+Managing Departments
+\end_layout
+
+\begin_layout Standard
+You get a list of existing departments when you click on 
+\series bold
+'System--Departments
+\series default
+' menu.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1556,6 +1748,14 @@ You can also change 'Department' to anything you like (eg.Branch) using the
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Here you can click on department name to change its description or delete
+ it.
+ You can also click on the 'Add Department' button to add a new department.
+ Please note that you cannot delete a department if there are transactions
+ which reference this department.
 \end_layout
 
 \begin_layout Standard
@@ -1573,20 +1773,13 @@ Default Department
 \end_layout
 
 \begin_layout Standard
-You can define a default department for a particular user using the 
+You can restrict a user to a particular department when you add a new user
+ or modify an existing user using the 
 \series bold
 'HR--Employees'
 \series default
  menu.
- You can also restrict the user to view and make transactions to his department
- only by setting his role to User.
- Users with role Administrator, Manager, Supervisor always have access to
- all departments.
-\end_layout
-
-\begin_layout Standard
-TODO: Fix roles usage.
- Also see how you mark admin
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1999,13 +2192,12 @@ Goods & Services–Add...
 \series default
 ’.
  In SQL-Ledger each tax account has a tax level which can be defined in
- ’System–Taxes’ for automatic calculation.
+ ’
+\series bold
+System–Taxes
+\series default
+’ for automatic calculation.
  Tax accounts can also be used for other purposes like commission fees.
- 
-\end_layout
-
-\begin_layout Standard
-TODO: Add references
 \end_layout
 
 \begin_layout Subsection
@@ -2068,7 +2260,25 @@ System--Chart of Accounts--Add GIFI
 \series bold
 System--Chart of Accounts--List GIFI
 \series default
-'.
+' as shown with screen shots below.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gifi1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gifi2.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2079,11 +2289,23 @@ GIFI accounts can be used to re-group the regular accounts for reporting
 \end_layout
 
 \begin_layout Standard
-TODO: Screen shots
+\begin_inset Graphics
+	filename gifi3.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Templates
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Templates"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2096,154 +2318,11 @@ Print forms for invoices, orders, quotations and financial reports have
 'System'
 \series default
  menu.
- There are three type of templates:
-\end_layout
-
-\begin_layout Subsection
-HTML Templates
-\end_layout
-
-\begin_layout Standard
-HTML templates are easier to modify because of the wide spread knowledge
- of HTML.
- Only basic HTML knowledge is required to edit HTML templates.
-\end_layout
-
-\begin_layout Standard
-TODO: Add some text
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menutemplates.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates1.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates3a.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates3b.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-LateX Templates
-\end_layout
-
-\begin_layout Standard
-LaTeX templates are bit more complex to understand and modify, but the most
- powerful tool to generate printed documents in pdf or postscript format.
- See below for a basic introduction to LateX.
- (TODO: Cross reference)
-\end_layout
-
-\begin_layout Standard
-TODO: Letter head and few other lines
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menutemplates2.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates4.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates5.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Text Templates
-\end_layout
-
-\begin_layout Standard
-Text templates are used only for Point-of-Sale receipts printing.
- These templates allow you to print on 40 character receipt printers.
- TODO: some text
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename menutemplates3.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates6.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename templates7.png
-	scale 50
-
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Subsection
 Editing Templates
-\end_layout
-
-\begin_layout Standard
-TODO: Move this before template types
 \end_layout
 
 \begin_layout Standard
@@ -2437,10 +2516,6 @@ Template control commands
 The template processing engine in SQL-Ledger allows simple conditional statement
 s and loops.
  Examples of these are described below:
-\end_layout
-
-\begin_layout Standard
-TODO: Change case of headings on all headings
 \end_layout
 
 \begin_layout Subsubsection
@@ -2676,7 +2751,168 @@ status open
 \end_layout
 
 \begin_layout Subsection
+Three type of templates:
+\end_layout
+
+\begin_layout Subsubsection
+HTML Templates
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menutemplates.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+HTML templates are easier to modify because of the wide spread knowledge
+ of HTML.
+ Only basic HTML knowledge is required to edit HTML templates.
+ The screen shot below shows the html template for sales invoice.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The letterhead.html template is included in all other templates.
+ You can format it to print your company name and other header information
+ in a consistent way across all the templates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates3a.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates3b.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+LateX Templates
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menutemplates2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+LaTeX templates are bit more complex to understand and modify, but are the
+ most powerful tool to generate printed documents in pdf or postscript format.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:An-Introduction-to"
+
+\end_inset
+
+ for a basic introduction to LateX.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As in html templates, the letterhead.tex template allows you to define your
+ company letter head for all templates in a consistent way.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Text Templates
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename menutemplates3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Text templates are used only for Point-of-Sale receipts printing.
+ These templates allow you to print on 40 character receipt printers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates6.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename templates7.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 An Introduction to LateX
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:An-Introduction-to"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2838,10 +3074,6 @@ Every latex document starts with
 documentclass with parameters ([a4paper,11pt]{article}) following it.
 \end_layout
 
-\begin_layout Standard
-TODO: Good link to further latex documentation.
-\end_layout
-
 \begin_layout Section
 Goods & Services
 \end_layout
@@ -2871,8 +3103,15 @@ Assemblies are made up from parts, services and labor/overhead.
 \series bold
 Goods & Services--Stock Assembly
 \series default
-' (TODO: Cross reference) menu all its associated parts are removed from
- inventory and the new assemblies are added to stock.
+' menu (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Assemblies"
+
+\end_inset
+
+) all its associated parts are removed from inventory and the new assemblies
+ are added to stock.
  When you sell an assembly COGS for parts and cost of services is recorded.
  Important note: Assemblies cannot be purchased and only be sold.
 \end_layout
@@ -2951,6 +3190,13 @@ Labor/overhead items are used to allocate labor/overhead charges to an assembly
 
 \begin_layout Section
 Assemblies
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Assemblies"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3200,7 +3446,7 @@ Groups
 \end_layout
 
 \begin_layout Standard
-Groups are used to group together the parts and services.
+Groups are used to group together related parts, services and assemblies.
  You can filter parts and services in the various '
 \series bold
 Goods & Services--Reports
@@ -3242,12 +3488,29 @@ Click on the group name in the list above and it will be opened for change.
 
 \end_layout
 
+\begin_layout Subsection
+Groups as POS buttons
+\end_layout
+
 \begin_layout Standard
 Groups also have another useful functionality.
  When you check the POS button box while adding or changing a group, they
  will also appear as buttons on the POS (point-of-sale) module screen making
  it easier to select items within each group as shown below.
- (TODO: add the POS screen shots)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pos_buttons.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Subgroups
 \end_layout
 
 \begin_layout Standard
@@ -3294,10 +3557,6 @@ And you can specify start and end dates to offer a special price during,
 \end_layout
 
 \begin_layout Standard
-TODO: Price groups pictures
-\end_layout
-
-\begin_layout Standard
 Price groups take this concept further and allow you to define 'groups'
  of special prices.
  Let us say you sell to distributors, dealers and end-users.
@@ -3307,12 +3566,31 @@ Price groups take this concept further and allow you to define 'groups'
 
 \begin_layout Enumerate
 Create your price groups e.g.
- distributor, dealer and end-user.
- (
+ distributor, dealer and end-user using
 \series bold
-'Goods & Services--Add Pricegroup
+ 'Goods & Services--Add Pricegroup
 \series default
-')
+' menu.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename pricegrouplist.png
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename pricegroupadd.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3323,17 +3601,27 @@ Define item prices for these price groups.
  Repeat this for all items.
  Clicking 'Update' will allow you to set prices for multiple pricegroups
  for a single item.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename pricegroupitem.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
 Open the customer record for editing and set the applicable price group
  for that customer.
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Graphics
-	filename pricegroup.png
-	scale 45
+	filename pricegroupcustomer.png
 
 \end_inset
 
@@ -3483,22 +3771,18 @@ Adding warehouses
 \begin_layout Standard
 You can add, change or delete warehouses through the '
 \series bold
-System–Warehouses
+System--Warehouses
 \series default
-' option.
+' menu.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename warehouse1.jpg
+	filename warehouse1.png
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-TODO: New photos
 \end_layout
 
 \begin_layout Subsection
@@ -3506,22 +3790,13 @@ Default warehouse
 \end_layout
 
 \begin_layout Standard
-You can define a default warehouse for users through the administrative
- interface ('
+You can specify a default warehouse for a user through '
 \series bold
 HR--Employees
 \series default
-').
- You can restrict a user to view and make transactions to only one warehouse
- by setting his role to User.
- Users with role Administrator, Manager, Supervisor always have access to
- all warehouses.
- For more information on how to create different ’roles’ see 2.2.1 above.
-\end_layout
-
-\begin_layout Standard
-TODO: Default roles from 2.8 are not in 3.0.
- We need to check / change code and text above.
+' menu.
+ This way user is restricted to his/her department for transaction entry
+ or reports.
 \end_layout
 
 \begin_layout Standard
@@ -3547,7 +3822,7 @@ The warehouse drop down menu is enabled on relevant transactions forms once
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename warehouse2.jpg
+	filename warehouse2.png
 
 \end_inset
 
@@ -3614,42 +3889,6 @@ Warehouses--Reports--Transfers
 \begin_inset Graphics
 	filename trf3.png
 	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Transfers delivered
-\end_layout
-
-\begin_layout Standard
-Some companies also need to track the in-transit goods between warehouse
- transfers.
- The delivery date is sometimes different from the transfer date.
- When you login to SQL-Ledger, you will see the number of transfers which
- have been sent to your default warehouse but not 'received' by you yet.
-\end_layout
-
-\begin_layout Standard
-TODO: This function needs to be ported to rel3
-\end_layout
-
-\begin_layout Standard
-To 'receive' the transfers, click the 
-\series bold
-'Warehouses--Reports--Deliveries'
-\series default
- menu, specify any criteria and click 'Continue' to display the transfers
- pending to be received.
- Then you specify the dates when the goods were delivered at 'your' warehouse
- and click 'Save Delivered'.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename warehouse_pending2.jpg
 
 \end_inset
 
@@ -3748,8 +3987,14 @@ You can define alternate descriptions, in a foreign language, for parts,
 
 \begin_layout Enumerate
 You can also translate the complete alternate set of templates which is
- created when you add a new language (TODO: Cross reference.
- see 2.11 above).
+ created when you add a new language (See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Templates"
+
+\end_inset
+
+).
  This way you can send, for example, invoices to your customers where also
  the standard template content is translated into a foreign language.
  This can be used in combination with the alternate descriptions for parts,
@@ -3759,16 +4004,23 @@ You can also translate the complete alternate set of templates which is
 
 \begin_layout Enumerate
 You can translate your chart of accounts if you want to be able to print
- your ’Balance Sheet’ and/or ’Income Statement’ in a foreign language (’
+ your ’Balance Sheet’ and/or ’Income Statement’ in a foreign language using
+ ’
 \series bold
 System--Chart of Accounts--Translations
 \series default
-’).
+’ menu.
 \end_layout
 
 \begin_layout Enumerate
 You can also translate the balance sheet and income statement templates
- for a foreign language using 'System--html templates--Income Statement'.
+ for a foreign language using '
+\series bold
+System--html templates--Income Statement
+\series default
+' and 
+\series bold
+'System--html templates--Income Statement'
 \end_layout
 
 \begin_layout Standard
@@ -5910,15 +6162,21 @@ When you click 'Continue' button after specifying the required criteria,
 \end_layout
 
 \begin_layout Standard
-The 'Detail' report shows debits and credits of each transaction along with
- account number.
+The 'Detail' report (see below for screen shot) shows debits and credits
+ of each transaction along with account number.
  In detail report, a single invoice or transaction is shown on multiple
  times.
  You can click 'Subtotal' to subtotal and group this report by invoice number.
 \end_layout
 
 \begin_layout Standard
-TODO: Detail report screen shots
+\begin_inset Graphics
+	filename ap-detail-report.png
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9695,6 +9953,105 @@ A bit discipline and an SCM software like GIT can help manage such changes
  or patches with easy.
  We, at ledger123.com, use GIT to track and manage such changes across newer
  versions of SQL-Ledger.
+\end_layout
+
+\begin_layout Section
+Adding a new translation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Adding-a-new"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+SQL-Ledger can be run in 45 languages.
+ Each user in a single installation can run it in his or her own language.
+ So, for example, users of a company with offices in Germany, Italy and
+ France, can see SQL-Ledger in their own native languages.
+\end_layout
+
+\begin_layout Standard
+If your language is missing then you can add it using language translation
+ feature.
+ This feature can also be used to customize the user interface text to suit
+ your business needs.
+ For example you can translate 'Customers' to 'Students' if you are using
+ SQL-Ledger in a school or college accounting department.
+\end_layout
+
+\begin_layout Standard
+Here the steps you need to take to create a new language:
+\end_layout
+
+\begin_layout Enumerate
+Add a new folder in within 'locale' folder.
+\end_layout
+
+\begin_layout Enumerate
+Create a text file LANGUAGE with short description of your language.
+\end_layout
+
+\begin_layout Enumerate
+Copy locales.pl from 'locale/de/' folder to this folder.
+\end_layout
+
+\begin_layout Enumerate
+Create a text file named 'all' with following format.
+ Here you translate the default English labels to any text in English or
+ your native language:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$self{texts} = {    
+\end_layout
+
+\begin_layout Plain Layout
+
+	'Shipping Point' => 'Shipping Place',
+\end_layout
+
+\begin_layout Plain Layout
+
+	'Ship via' => 'Ship Name',
+\end_layout
+
+\begin_layout Plain Layout
+
+	'Waybill' => 'Bill Number',
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+One you have created this 'all' file with all the required strings for your
+ translations, you will run 'perl locales.pl -m' on command line and the
+ translation files for all modules will be created individually.
+\end_layout
+
+\begin_layout Standard
+Please note that this 'all' file serves as a default for all translation
+ files which are created by running 'perl locales.pl -m'.
+ You can fine tune each module translation by editing that file directly
+ in the text editor and adding the module specific translation in the same
+ format as for 'all' file.
 \end_layout
 
 \begin_layout Section
