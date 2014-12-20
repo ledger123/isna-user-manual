@@ -78,6 +78,14 @@ Version 3.0.6
 \begin_inset Newline newline
 \end_inset
 
+First Edition
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 Written by
 \begin_inset Newline newline
 \end_inset
@@ -100,14 +108,6 @@ Sebastian Weitmann
 
 
 \begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Graphics
-	filename SQL_Logo_RGB.jpg
-	lyxscale 30
-	scale 50
-
 \end_inset
 
 
@@ -178,23 +178,22 @@ Armaghan Saqib
 
 \begin_layout Standard
 Armaghan Saqib is using SQL-Ledger since 2004.
- He has a degree in mathematics.
+ He has a degree in mathematics and is a self taught computer programmer.
  In 2004 he was looking for an open source accounting solution and he discovered
  SQL-Ledger.
- He immediately realized that SQL-Ledger was the next best thing since sliced
- bread invention.
  The simplicity of SQL-Ledger while still being feature rich made him a
  fan of this ERP solution.
- Since then he has written lots of code for SQL-Ledger which encompasses
- many enhancements and new modules for the stock SQL-Ledger.
+ Since then he has written lots of code adding many new modules and enhancements
+ to the stock SQL-Ledger.
  
 \end_layout
 
 \begin_layout Standard
-He is lead developer and maintainer of his SQL-Ledger fork (ledger123) which
- is the official SQL-Ledger fork of International SQL-Ledger Network Association.
- His consulting company Ledger123.com provides SQL-Ledger development and
- implementation services to clients all over the world.
+He is lead developer and maintainer of his SQL-Ledger version (ledger123)
+ which is the official SQL-Ledger fork of International SQL-Ledger Network
+ Association.
+ His consulting company Ledger123.com provides development and implementation
+ services to clients all over the world.
  
 \end_layout
 
@@ -2246,6 +2245,13 @@ System–Defaults
 
 \begin_layout Section
 GIFI
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:GIFI"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7017,7 +7023,13 @@ When you have saved a SO, you can open it in editing and create a quotation.
 \end_layout
 
 \begin_layout Standard
-TODO: Screen shot with quotation and vendor invoice buttons.
+\begin_inset Graphics
+	filename so-invoice-from-quote.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -7780,6 +7792,13 @@ You can use this option to remove audit trail from database up to a certain
 
 \begin_layout Section
 Reconciliation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Reconciliation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8444,8 +8463,14 @@ The income statement is a financial report that lists income, expenses and
  The structure and presentation of your income statement can be changed
  to suit your individual needs, either by linking each individual account
  to a GIFI account, or by including headers in your chart of accounts.
- See chapter 2.9 for more information on how to setup GIFI accounts and account
- headings.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:GIFI"
+
+\end_inset
+
+ for more information on how to setup GIFI accounts and account headings.
 \end_layout
 
 \begin_layout Standard
@@ -8535,7 +8560,13 @@ The tax report is a consolidated statement of all taxable and non-taxable
 \begin_layout Standard
 
 \series bold
-TODO: enter picture showing tax report
+\begin_inset Graphics
+	filename taxreport1.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -8549,10 +8580,66 @@ The project income statement will list income, expenses and profit or loss
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Project Income statement
+\end_layout
 
-\series bold
-TODO: enter picture showing project or department income statement
+\begin_layout Standard
+On search screen you can select which projects you want to include in the
+ report.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project-is1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Click 'Continue' button to view the report for all or selected projects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename project-is2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Department Income statement
+\end_layout
+
+\begin_layout Standard
+On search screen you can select which departments you want to shown income
+ statement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename department-is1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Click 'Continue' button to view the report for all or selected departments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename department-is2.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -8680,13 +8767,18 @@ The difference between the outstanding report and the transactions report,
  as of today.
  On the outstanding report search screen you can specify various criteria
  and select/ de-select columns which you want to shown on the screen.
- 
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-TODO: insert picture displaying 'AR--Outstanding search screen'
+\begin_inset Graphics
+	filename aroutstanding.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8846,7 +8938,13 @@ The customer search report can be used either to find and make changes to
 \begin_layout Standard
 
 \series bold
-TODO: enter picture showing 'AR--Reports--Search' search screen.
+\begin_inset Graphics
+	filename customer-report-search1.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8862,8 +8960,13 @@ If you select the 'Sales Invoice' checkbox in the customer search report
 \begin_layout Standard
 
 \series bold
-TODO: enter picture showing 'AR--Reports--Search' search results for selected
- customer with Subtotals.
+\begin_inset Graphics
+	filename customer-report-search2.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8987,7 +9090,13 @@ The ’Detail’ report shows debits and credits of each transaction along with
 \end_layout
 
 \begin_layout Standard
-TODO: Detail report screen shots 
+\begin_inset Graphics
+	filename ap-detail-report.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9086,7 +9195,21 @@ AP–Reports–Non-taxable
 \begin_layout Standard
 
 \series bold
-TODO: enter picture showing tax report
+\begin_inset Graphics
+	filename ap-tax-report1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ap-tax-report2.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -9124,19 +9247,20 @@ The Vendor search report can be used either to find and make changes to
 \end_layout
 
 \begin_layout Standard
+\begin_inset Graphics
+	filename vendor-report1.png
+	scale 50
 
-\series bold
-TODO: enter picture showing ’AP–Reports–Search’ search screen.
+\end_inset
 
-\series default
- 
+
 \end_layout
 
 \begin_layout Standard
 If you select the ’Vendor Invoice’ checkbox in the vendor search report
- search screen, SQL-Ledger will display all sales invoices that have been
- issued for the selected vendor and their respective amount, tax and total
- values.
+ search screen, SQL-Ledger will display all purcahse invoices that have
+ been issued for the selected vendor and their respective amount, tax and
+ total values.
  You can also click ’Subtotal’ in the search screen to subtotal the values
  by vendor.
  
@@ -9145,9 +9269,13 @@ If you select the ’Vendor Invoice’ checkbox in the vendor search report
 \begin_layout Standard
 
 \series bold
-TODO: enter picture showing ’AP–Reports–Search’ search results for selected
- customer with Subtotals.
- 
+\begin_inset Graphics
+	filename vendor-report2.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9222,7 +9350,12 @@ Receipts report will list all receivables (incoming payments) that have
 \begin_layout Standard
 
 \series bold
-TODO: Insert picture of Receipts Report.
+\begin_inset Graphics
+	filename cashreceipt.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9237,7 +9370,12 @@ Payments report will list all payables (outgoing payments) that have been
 \begin_layout Standard
 
 \series bold
-TODO: Insert picture of Payments Report.
+\begin_inset Graphics
+	filename cashpayment.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9247,14 +9385,25 @@ Reconciliation
 \begin_layout Standard
 Reconciliation report will list all transactions that have been marked as
  reconciled on any chosen account.
- See chapter 3.14.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Reconciliation"
+
+\end_inset
+
  to learn more about how to mark transactions as reconciled.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-TODO: Insert picture of Reconciliation report.
+\begin_inset Graphics
+	filename reco4.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -9344,22 +9493,17 @@ In the purchase order search screen you can define criteria for the purchase
 \begin_layout Standard
 
 \series bold
-TODO: Insert picture of Purchase order search screen
+\begin_inset Graphics
+	filename po1.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 ’Closed’ purchase orders are those which have been fully delivered or which
  have been marked ’Closed’ by editing the purchase order.
- 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-TODO: Insert picture of 'Edit Purchase order' showing 'open' and 'closed'
- box.
-
-\series default
  
 \end_layout
 
@@ -9458,8 +9602,13 @@ The quotation report will display the existing quotations.
 \begin_layout Standard
 
 \series bold
-TODO: Insert picture of 'Edit Quotation' showing 'open' and 'closed' box.
- 
+\begin_inset Graphics
+	filename quote1.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9537,7 +9686,7 @@ Projects
 
 \begin_layout Standard
 The projects reports will display a list of all available projects and their
- respective start- and enddates.
+ respective start and end dates.
 \end_layout
 
 \begin_layout Standard
@@ -9557,7 +9706,7 @@ Transactions
 The transactions report will display the the total amounts booked in debit
  and credit on each account for any chosen project, and include the beginning
  balance and ending balance of each account.
- By clicking on the account number you can also drill down and see the invididua
+ By clicking on the account number you can also drill down and see the individua
 l transactions.
  
 \end_layout
