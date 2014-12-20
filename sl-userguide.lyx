@@ -7699,9 +7699,9 @@ Time Cards
 \end_layout
 
 \begin_layout Standard
-Time cards module allows you to record the time you have spent to provide
- service to your customer.
- Work flow for using time cards goes like this:
+The time card module allows you to record the time you have spent to provide
+ a service to your customer.
+ The work flow for using time cards goes like this:
 \end_layout
 
 \begin_layout Enumerate
@@ -7725,16 +7725,19 @@ Create a project for the customer
 \end_layout
 
 \begin_layout Standard
-You can create a new project using 'Projects--Add Project' menu.
- Here you will need the select the name of the customer for whom you or
- your staff is working.
- You can also specify start and stop dates as desired.
+You can create a new project using the '
+\series bold
+Projects--Add Project
+\series default
+' menu.
+ Here you can also insert the name of the customer for whom you or your
+ staff will be working.
+ You can also specify start- and end dates as desired.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard4.png
-	scale 40
 
 \end_inset
 
@@ -7746,26 +7749,31 @@ Create time card entries
 \end_layout
 
 \begin_layout Standard
-Now you are reading to create time card entries.
- Use '
+Once you have created the project for the customer, you can start creating
+ time card entries.
+ Use the '
 \series bold
 Projects--Add Time Card
 \series default
-' to add new time card entries.
- On this screen you need to select employee name, project, date and time
- worked.
- You also need to select one of the service codes you have defined using
- '
+' to add a new time card entry.
+ On this screen you need to select the employee name, project, date and
+ then specify the time worked.
+ You also need to select the service code (article number) of the service
+ you provided, as you defined it using the '
 \series bold
 Goods & Services--Add Service
 \series default
 ' menu.
+ If you are not sure about the article number for a certain service, just
+ enter '%' and click 'Update'.
+ This will produce a list of all your available services and their respective
+ article number.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard1.png
-	scale 40
 
 \end_inset
 
@@ -7774,7 +7782,7 @@ Goods & Services--Add Service
 
 \begin_layout Standard
 Once you have added time cards, you can view a report for the selected time
- cards using '
+ cards using the '
 \series bold
 Projects--Reports--Time Cards
 \series default
@@ -7785,7 +7793,6 @@ Projects--Reports--Time Cards
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard2.png
-	scale 40
 
 \end_inset
 
@@ -7793,13 +7800,12 @@ Projects--Reports--Time Cards
 \end_layout
 
 \begin_layout Standard
-By clicking on the link on ID, you can edit a time card.
+By clicking on the 'ID' link in the list, you can edit the time card.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard3.png
-	scale 40
 
 \end_inset
 
@@ -7807,23 +7813,22 @@ By clicking on the link on ID, you can edit a time card.
 \end_layout
 
 \begin_layout Subsection
-Create a sales order
+Create a sales order for open time cards
 \end_layout
 
 \begin_layout Standard
-The third step in using time cards is to create a sales order from time
- cards.
- For this you use '
+The third step in using time cards is to create a sales order for your open
+ time cards.
+ To do this you use the '
 \series bold
 Projects--Generate--Sales Orders
 \series default
-' menu to select the projects for which you want to create time cards.
+' menu and select the projects for which you want to create a sales order.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard5.png
-	scale 40
 
 \end_inset
 
@@ -7840,13 +7845,17 @@ Projects--Generate--Sales Orders
 \end_layout
 
 \begin_layout Standard
-Once you have selected the required sales orders you can click on the 'Generate
- Sales Orders' button to create your sales order.
- Once an SO is generated you can view it using '
+Once you have selected the required project you can click on the '
+\series bold
+Generate Sales Orders
+\series default
+' button to create your sales order.
+ Once the sales order has been generated, you can view it using '
 \series bold
 Order Entry--Reports--Sales Orders
 \series default
 ' menu.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7864,79 +7873,86 @@ Audit Control
 \end_layout
 
 \begin_layout Standard
-You can use System-Audit Control menu to enforce transaction control and
- log user activities.
+You can use the '
+\series bold
+System--Audit Control
+\series default
+' menu to enforce transaction control and log user activities.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename auditcontrol.jpg
-	scale 40
+	scale 50
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Enforce transaction reversal for all dates
 \end_layout
 
 \begin_layout Standard
 You can check this option to prevent any change to any transaction.
- You can however add a reverse transaction to correct some mistake.
- This option is highly recommended.
+ If the 'Enforce transaction reversal for all dates' check box has been
+ marked, you need to add a new reverse transaction each time you want to
+ correct some mistake.
+ This option is highly recommended to keep your transactions fully accountable.
 \end_layout
 
-\begin_layout Subsection*
-Close Books up to
-\end_layout
-
-\begin_layout Standard
-When you close books upto a certain date, system does not allow changing
- any transaction prior to this date.
- Please note that this is not a year end process.
-\end_layout
-
-\begin_layout Subsection*
-Activate Audit trail
+\begin_layout Subsection
+Close books up to
 \end_layout
 
 \begin_layout Standard
-All user activity (adding, changing, deleting transactions) is logged.
- You can view this log using 
+When you close your books up to a certain date, SQL-Ledger will not allow
+ the changing of any transaction that has been booked prior to that date.
+ Please note that this is not a year end process, but merely a precaution
+ to prevent changes in periods that have been reconciled.
+ 
+\end_layout
+
+\begin_layout Subsection
+Activate audit trail
+\end_layout
+
+\begin_layout Standard
+When you mark the 'Activate audit trail' check box, all user activities
+ (adding, changing and deleting transactions) are logged.
+ You can view the log by using the 
 \series bold
-System--Audit Trail
+'System--Audit Trail'
 \series default
  report.
 \end_layout
 
-\begin_layout Subsection*
-Remove Audit trail up to
+\begin_layout Subsection
+Remove audit trail up to
 \end_layout
 
 \begin_layout Standard
-You can use this option to remove audit trail from database up to a certain
- date.
- Useful to make your backups small.
+You can use this option to remove the audit trail from your database up
+ to a certain date.
+ Please note that in some countries you may need to be able to provide an
+ audit trail for the last ten years of your accounting.
+ 
 \end_layout
 
 \begin_layout Section
 Reconciliation
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Reconciliation"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-Bank reconciliation function in Cash module allows you to match your SQL-Ledger
- transactions with your bank statement and them mark them as reconcilied.
- This way you can be sure that your account balance in bank matches that
- with your account balance in SQL-Ledger.
+The account reconciliation function in the '
+\series bold
+Cash
+\series default
+' module allows you to match your SQL-Ledger transactions with, for example,
+ your bank statement and then mark them as reconciled.
+ This way you can make sure that your account balance in the bank matches
+ your account balance in SQL-Ledger up to a certain date.
 \end_layout
 
 \begin_layout Subsection
@@ -7944,17 +7960,23 @@ Marking transactions
 \end_layout
 
 \begin_layout Standard
-To match and mark your transactions with your bank statement, you open the
- reconciliation input screen using 'Cash-Reonciliation' menu.
- Here you select your bank account and click continue.
- Carefully read the 'usage notes' section on this screen to display your
- account data as you desire.
+To match and mark your account transactions in SQL-Ledger with, for example,
+ your bank statement you need to open the reconciliation screen using the
+ '
+\series bold
+Cash--Reconciliation
+\series default
+' menu.
+ Here you first select the account you want to reconcile, enter the period
+ and click 'Continue'.
+ Please note the 'Usage Notes' section on this screen, which will help you
+ display the account transactions as you desire.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco1.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -7962,18 +7984,17 @@ To match and mark your transactions with your bank statement, you open the
 \end_layout
 
 \begin_layout Standard
-Once you have displayed your account data, you can check/uncheck the checkbox
- which is next to description column.
- If the transaction is reconciled, check this box, if not then uncheck this
- box.
- Once you have checked all the reconciled transactions you can mark click
- the 'Done' button to save the updates.
+Once you have displayed your account transactions, you can check/uncheck
+ the check box which is next to the description column.
+ If the transaction is reconciled, check this box, if not then don't.
+ Once you have checked all the reconciled transactions you can click the
+ 'Update' followed by the 'Done' button to save the updates.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco2.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -7981,13 +8002,14 @@ Once you have displayed your account data, you can check/uncheck the checkbox
 \end_layout
 
 \begin_layout Standard
-Reconciliation report allows you to view your reconciled account with balance.
+The reconciliation report allows you to view your reconciled account with
+ its balance.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco3.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -7997,7 +8019,7 @@ Reconciliation report allows you to view your reconciled account with balance.
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco4.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -8005,7 +8027,7 @@ Reconciliation report allows you to view your reconciled account with balance.
 \end_layout
 
 \begin_layout Section
-Year End
+Year end
 \end_layout
 
 \begin_layout Standard
@@ -8013,10 +8035,9 @@ The
 \series bold
 'System--Yearend'
 \series default
- menu does the period closing in SQL-Ledger.
- It creates a GL transaction which clears the income accounts and posts
- the difference (which is income or loss) to the specified retained earnings
- account.
+ menu will create a general ledger transaction which clears the income and
+ expense accounts in SQL-Ledger and posts the difference (which is income
+ or loss) to the specified retained earnings account.
 \end_layout
 
 \begin_layout Standard
@@ -8024,23 +8045,33 @@ Please note that:
 \end_layout
 
 \begin_layout Enumerate
-Year-end process can be run daily, weekly, monthly, quarterly or yearly.
+The year-end process can be run daily, weekly, monthly, quarterly or yearly.
  
 \end_layout
 
 \begin_layout Enumerate
-Year-end GL transaction is not included in the income statement which covers
- period containing a closing transactions.
+The year-end general ledger transaction is not included in the income statement
+ which covers the period containing a closing transaction.
  
 \end_layout
 
 \begin_layout Enumerate
-The year-end GL transaction can be viewed through GL reports and edited
- or deleted as required.
+The year-end general ledger transaction can be viewed through the '
+\series bold
+General Ledger--Reports
+\series default
+' menu and edited or deleted as required.
+\end_layout
+
+\begin_layout Enumerate
+The year-end process does not automatically close your books.
+ Please see 3.13.2.
+ above for information on how to close your books up to a certain date.
 \end_layout
 
 \begin_layout Standard
-This is year end screen and the GL transaction created by year-end process.
+This is the year end screen followed by an example of the general ledger
+ entry created during the year-end process.
 \end_layout
 
 \begin_layout Standard
@@ -8067,21 +8098,22 @@ Data backup
 \end_layout
 
 \begin_layout Standard
-You can backup your data directly through SQL-Ledger.
- There are two ways to get your backup using the 
+You can backup your database using the '
 \series bold
 System--Backup
 \series default
- menu.
+' menu.
+ There are two ways to get your backup: 
 \end_layout
 
-\begin_layout Subsection*
-System--Backup--Send by Email
+\begin_layout Subsection
+Send by Email
 \end_layout
 
 \begin_layout Standard
-Backup is sent to your email address through email.
- You can add or change this email address through '
+When you click this menu option, the backup is sent to your email address
+ by email.
+ You can add or change your email address in the '
 \series bold
 Preferences
 \series default
@@ -8097,17 +8129,17 @@ Preferences
 
 \end_layout
 
-\begin_layout Subsection*
-System--Backup--Save to File
+\begin_layout Subsection
+Save to File
 \end_layout
 
 \begin_layout Standard
-When you click this menu option your browser will display the save file
- dialog and you can save backup file on your computer.
+When you click this menu option, your browser will display the save file
+ dialog and you can save the backup file on your local computer.
 \end_layout
 
 \begin_layout Section
-Basics of double-entry accounting system
+Basics of double entry accounting
 \end_layout
 
 \begin_layout Subsection
@@ -8115,16 +8147,16 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Double entry accounting system, although much feared by non-accountants,
- is a very simple but extremely powerful method of managing money.
+The double entry accounting system, although many times feared by non-accountant
+s, is a very simple but extremely powerful method of managing money.
  SQL-Ledger does much of the double entry accounting itself linking all
- parts of the application through a chart of accounts.
+ parts of the application through the chart of accounts.
  
 \end_layout
 
 \begin_layout Standard
-You need to know about double entry system only when you are going to make
- general ledger transactions.
+You only need to know how the double entry accounting system works when
+ you are going to make general ledger transactions.
  Its basic principle is that every business transaction affects at least
  two accounts.
  For example:
@@ -8158,7 +8190,7 @@ Liabilities
 \end_layout
 
 \begin_layout Enumerate
-Capital 
+Equity
 \end_layout
 
 \begin_layout Enumerate
@@ -8174,11 +8206,11 @@ Accounting rules
 \end_layout
 
 \begin_layout Itemize
-Assets (1) and Expenses (5) are increased by debit and decreased by credit
+Assets (1) and Expenses (5) are increased by debit and decreased by credit.
 \end_layout
 
 \begin_layout Itemize
-Liabilities (2), Capital (3) and Sales (4) are increased by credit and decreased
+Liabilities (2), Equity (3) and Sales (4) are increased by credit and decreased
  by debit.
 \end_layout
 
@@ -8191,11 +8223,11 @@ You invest $1000 to start a new business:
 \end_layout
 
 \begin_layout Itemize
-Debit: Your bank account 
+Debit: Your bank account
 \end_layout
 
 \begin_layout Itemize
-Credit: Capital account 
+Credit: Equity account
 \end_layout
 
 \begin_layout Subsubsection*
@@ -8203,11 +8235,11 @@ You pay $100 check for office rent:
 \end_layout
 
 \begin_layout Itemize
-Debit: Office rent expense account 
+Debit: Office rent expense accoun
 \end_layout
 
 \begin_layout Itemize
-Credit: Your bank account 
+Credit: Your bank account
 \end_layout
 
 \begin_layout Subsubsection*
@@ -8216,11 +8248,11 @@ You build a website for a customer asking him to pay $200.
 \end_layout
 
 \begin_layout Itemize
-Debit: Accounts Receivables (Debtors) 
+Debit: Accounts Receivables (Debtors)
 \end_layout
 
 \begin_layout Itemize
-Credit: Sales 
+Credit: Sales
 \end_layout
 
 \begin_layout Subsubsection*
@@ -8247,23 +8279,23 @@ target "http://www.a-systems.net/accounting.htm"
 \end_layout
 
 \begin_layout Section
-Cost of Goods Sold (COGS)
+Cost of goods sold (COGS)
 \end_layout
 
 \begin_layout Standard
-Cost of Goods Sold (COGS) is the purchase price of the goods you just sold.
+Cost of goods sold (COGS) is the purchase price of any goods you sold.
  Your sales minus the COGS is your gross profit.
  COGS is an important accounting information.
- Correct COGS gives you a clear picture of the profitability of your products.
+ Correct COGS gives you a clear picture of the profitability of your sales.
 \end_layout
 
 \begin_layout Standard
 Tip: To view the debit and credit accounting transactions for any sale or
- purchase invoice, enter the invoice number on 
+ purchase invoice, enter the invoice number in the 
 \series bold
 'General Ledger--Reports'
 \series default
- screen and click Continue button.
+ search screen and click the 'Continue' button.
 \end_layout
 
 \begin_layout Subsection
@@ -8275,7 +8307,7 @@ Let us make it clear with an example:
 \end_layout
 
 \begin_layout Standard
-You purchase 10 iPhones for $400 each.
+You purchase 10 Linux computers for $400 each.
 \end_layout
 
 \begin_layout Itemize
@@ -8303,11 +8335,11 @@ So your gross profit is $200.
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger posts COGS automatically with each sale invoice.
- It calculates COGS on First-In First-Out (FIFO) basis.
- This means is that if you purchase 5 more iPhones at $430 each, MyLedger
- will keep calculating COGS @ $400 each until all 10 iPhones of first purchase
- transaction are depleted.
+SQL-Ledger posts COGS automatically with each sales invoice.
+ It calculates COGS based on the First-In First-Out (FIFO) principle.
+ This means is that if you purchase 5 more Linux computers at $430 each,
+ SQL-Ledeger will keep calculating COGS @ $400 each until all 10 Linux computers
+ of the first purchase transaction are depleted.
  Afterward it will calculate COGS @ $430.
 \end_layout
 
@@ -8316,26 +8348,29 @@ Sales before purchases
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger allows you to sell goods without purchasing these in advance.
+SQL-Ledger allows you to sell goods without purchasing them in advance.
  This is a common practice in many businesses where you have received the
- goods but do not have the vendor invoice.
+ goods, but do not yet have the vendor invoice.
 \end_layout
 
 \begin_layout Standard
-This results in negative stock quantity on Goods & Services--Reports--All
- Items report.
+This will results in a negative stock quantity in the '
+\series bold
+Goods & Services--Reports--All Items
+\series default
+' report.
  No COGS is posted for such transactions at the time of sale.
  Later when you record purchases, COGS is automatically recorded for these
  oversold items.
 \end_layout
 
 \begin_layout Subsection
-Editing Sale Invoices
+Editing sale invoices
 \end_layout
 
 \begin_layout Standard
-When you edit and repost an already posted sale invoice, COGS goes out of
- sync and incorrect accounting entries are posted.
+When you edit and repost an already posted invoice, COGS goes out of sync
+ and incorrect accounting entries are posted.
  This causes incorrect income statement.
 \end_layout
 
@@ -8349,13 +8384,21 @@ To confirm this, display your income statement and write down the COGS amount.
 Ideally you should never edit an invoice.
  Instead post a reversal of the invoice (using a credit invoice) and create
  a new invoice.
- Check the box Enforce transaction reversal for all dates on System–Audit
- Control screen.
+ Check the box 'Enforce transaction reversal for all dates' on 
+\series bold
+'System–Audit Control'
+\series default
+ screen.
 \end_layout
 
 \begin_layout Standard
-If you do need to edit invoices, you can correct COGS transactions by running
- the re-posting of invoices through menu System--Repost COGS.
+You can correct the incorrect COGS which was booked when you edited and
+ reposted an already posted invoice transaction, by running the re-posting
+ script in the '
+\series bold
+System--Repost COGS
+\series default
+' menu.
 \end_layout
 
 \begin_layout Section
@@ -8370,12 +8413,12 @@ Ledger Doctor is a tool to identify database inconsistencies in the SQL-Ledger
 'System--Maintenance--Ledger Doctor'
 \series default
  menu to access it.
- '
+ The '
 \series bold
 Ledger Doctor
 \series default
-' report itself does not corrects any error and just reports inconsistencies
- with hints on how to correct the inconsistency.
+' report itself does not correct any error, it only reports inconsistencies
+ with hints on how to correct them.
 \end_layout
 
 \begin_layout Standard
@@ -8407,7 +8450,8 @@ Using the
 \series bold
 'System--Maintenance--Monitor'
 \series default
- menu, you can run any SQL directly to your SQL-Ledger database.
+ menu, you can run any individual SQL query or command directly on your
+ SQL-Ledger database.
  WARNING: Be careful with this option as no checks are made on what you
  do.
  You can quickly corrupt your database with a small mistake.
