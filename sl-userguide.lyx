@@ -49,7 +49,7 @@ figs-within-sections
 \color #008000
 \end_index
 \secnumdepth 3
-\tocdepth 1
+\tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
@@ -5258,8 +5258,9 @@ Running your business on SQL-Ledger
 \end_layout
 
 \begin_layout Standard
-In this chapter we explain all SQL-Ledger modules one by one.
- You will also learn how can use them for your business.
+In this chapter we explain all the SQL-Ledger modules one by one.
+ You will also learn how you can use them to process your various business
+ transactions.
 \end_layout
 
 \begin_layout Section
@@ -5268,33 +5269,34 @@ AR
 
 \begin_layout Standard
 AR stands for 'Accounts Receivable'.
- AR module is used to record your sales with your customers.
+ The AR module is used to record your sales with your customers.
  You can record your sales in two possible ways:
 \end_layout
 
 \begin_layout Enumerate
 'AR Transaction' is a simplified way to book your sales and receipts using
- chart of accounts.
- This method is quick and requires no setup except adjusting / adding to
- the chart of accounts for your sales accounts.
+ pre-defined accounts from the chart of accounts.
+ This method is quick and requires no setup of goods and services.
+ Only in some circumstances it will require the adjustment of the chart
+ of accounts to suit your individual needs.
 \end_layout
 
 \begin_layout Enumerate
-'Sales Invoice' is a standard way to record sales.
- In a sales invoice you specify the goods and/or services you have sold
- to your customer.
- This method requires setup of goods and services using the '
+'Sales Invoice' is the standard way to record sales.
+ In a sales invoice you will specify the goods and/or services you have
+ sold to your customer.
+ This method requires the setup of goods and services using the '
 \series bold
 Goods & Services
 \series default
 ' menu.
- You can print the invoice and send it to your customer.
+ You can print a sales invoice and send it to your customer.
  If you are managing your inventory, you should use this method to reduce
  the inventory when you sell something.
 \end_layout
 
 \begin_layout Standard
-Both methods can be mixed and matched based upon nature of transactions.
+Both methods can be mixed and matched based upon the nature of each transaction.
 \end_layout
 
 \begin_layout Standard
@@ -5323,9 +5325,9 @@ The
 \series bold
 'AR--Add Transaction'
 \series default
- menu is used to create AR Transactions.
- These transactions allow you to record your sales in GL accounts without
- creating an invoice.
+ menu is used to create AR transactions.
+ These transactions allow you to record your sales in general ledger accounts
+ without creating an invoice.
 \end_layout
 
 \begin_layout Standard
@@ -5357,15 +5359,16 @@ Sales invoices are created using the
  menu.
  The only mandatory columns in the header section of this screen are 'Customer'
  and 'Invoice Date'.
- Rest of the columns can be left blank.
+ All other columns in the header section can be left blank.
 \end_layout
 
 \begin_layout Standard
 Your invoice can contain multiple items (parts, assemblies, services and
  labor etc.) Once you enter an item and click 'Update', the item description
- and price is shown from database.
- You then enter the quantity you want to sell.
- A new line also appears so that you can also add one more item and so on.
+ and price that has been stored in the database is shown.
+ You then enter the quantity you want to sell and press return.
+ A new line will then appear so that you can also add another item and so
+ on.
  This way you can enter any number of items (parts, services or labor) in
  the detail portion of the invoice.
 \end_layout
@@ -5385,8 +5388,8 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
  'discount' are shown on each line item.
  You can also display additional input columns for extended information
  on each line item.
- To do this, just check the check-box next to 'Description' column of the
- line item or heading and click update.
+ To do this, just check the check-box next to the 'Description' column of
+ the line item or heading and click update.
  Now the invoice form will be displayed with extended line items as shown
  below.
 \end_layout
@@ -5402,7 +5405,7 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
 \end_layout
 
 \begin_layout Subsection
-Credit Invoice and Credit Note
+Credit invoice and credit note
 \end_layout
 
 \begin_layout Standard
@@ -5413,12 +5416,13 @@ Credit invoice is used to record a sale return which was recorded earlier
 \end_layout
 
 \begin_layout Standard
-Credit note is used to record a sale return without creating a credit invoice.
- A credit note is typically used to record reversal of 'AR Transaction'
- though it can also be used to reverse all or part of a sales invoice but
+Instead credit note is used to record a sale return without creating a credit
+ invoice.
+ A credit note is typically used to record the reversal of a 'AR Transaction',
+ though it can also be used to reverse all or part of a sales invoice, but
  be aware that inventory is not added back to your stock with a credit note.
- So credit note is good tool to reverse any service sale but not for reversing
- tangible goods' sale.
+ So credit note is a good tool to reverse any service sale, but not for
+ reversing tangible a goods' sale.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5426,7 +5430,11 @@ Creating a credit invoice
 \end_layout
 
 \begin_layout Standard
-Use 'AR--Credit Invoice' menu to create your credit invoice.
+Use the '
+\series bold
+AR--Credit Invoice
+\series default
+' menu to create your credit invoice.
  Creating a credit invoice is similar to creating a sales invoice.
  See 
 \begin_inset CommandInset ref
@@ -5443,7 +5451,11 @@ Creating a credit note
 \end_layout
 
 \begin_layout Standard
-Use 'AR--Credit Note' menu to create your credit note.
+Use the '
+\series bold
+AR--Credit Note
+\series default
+' menu to create your credit note.
  Creating a credit note is very similar to creating an AR transaction.
  See 
 \begin_inset CommandInset ref
@@ -5466,8 +5478,12 @@ Once you have an open invoice as well as a credit note or credit invoice,
 \end_layout
 
 \begin_layout Enumerate
-You go to 'Cash--Receipt' menu, select the customer and click 'Update' button.
- This will show all invoices as shown below.
+You go to the '
+\series bold
+Cash--Receipt
+\series default
+' menu, select the customer and click the 'Update' button.
+ This will list all open invoices as shown below.
 \begin_inset Newline newline
 \end_inset
 
@@ -5482,8 +5498,7 @@ You go to 'Cash--Receipt' menu, select the customer and click 'Update' button.
 
 \begin_layout Enumerate
 Now you can click to check the invoices which you want to adjust to each
- other.
- and click 'Update'.
+ other and click 'Update'.
  If the amounts of both open invoice and credit invoice are equal, there
  will be no amount in the 'Amount' column in header.
  For your reference you can put something like 'adjustment' in source column.
@@ -5515,18 +5530,18 @@ Now you just click 'Post'.
 \end_layout
 
 \begin_layout Section
-AR Reports
+AR reports
 \end_layout
 
 \begin_layout Subsection
-Transactions Report
+Transactions report
 \end_layout
 
 \begin_layout Standard
-Transaction report shows all open or closed transactions and invoices for
- the specified criteria on search screen.
- On search screen you can specify various criteria and select/de-select
- columns which you want to shown on the screen.
+The transaction report shows all open or closed transactions and invoices
+ for the specified criteria on search screen.
+ On the search screen you can specify various criteria and select / de-select
+ columns which you want to have shown on the screen.
 \end_layout
 
 \begin_layout Standard
@@ -5540,10 +5555,10 @@ Transaction report shows all open or closed transactions and invoices for
 \end_layout
 
 \begin_layout Standard
-When you click 'Continue' button after specifying the required criteria,
+When you click the 'Continue' button after specifying the required criteria,
  your report is displayed.
- This is 'Summary' report where each invoice or transaction is shown on
- single line.
+ This is the 'Summary' report where each invoice or transaction is shown
+ on a single line.
 \end_layout
 
 \begin_layout Standard
@@ -5557,11 +5572,12 @@ When you click 'Continue' button after specifying the required criteria,
 \end_layout
 
 \begin_layout Standard
-The 'Detail' report shows debits and credits of each transaction along with
- account number.
- In detail report, a single invoice or transaction is shown on multiple
- times.
- You can click 'Subtotal' to subtotal and group this report by invoice number.
+The 'Detail' report shows the debits and credits of each single transaction
+ along with the related account number.
+ In the detail report, a single invoice or transaction is shown on multiple
+ lines.
+ You can also click 'Subtotal' to subtotal and group this report by invoice
+ number.
 \end_layout
 
 \begin_layout Standard
@@ -5575,12 +5591,12 @@ The 'Detail' report shows debits and credits of each transaction along with
 \end_layout
 
 \begin_layout Subsection
-Aging Report
+Aging report
 \end_layout
 
 \begin_layout Standard
-Aging report shows the outstanding balances of your customers divided into
- predefined periods of time in the past.
+The aging report shows the outstanding balances of your customers divided
+ into predefined periods of time in the past.
 \end_layout
 
 \begin_layout Standard
@@ -5594,8 +5610,8 @@ Aging report shows the outstanding balances of your customers divided into
 \end_layout
 
 \begin_layout Standard
-The summary aging report (shown below) shows on-line for each customer with
- outstanding balance.
+The summary aging report (shown below) lists one line for each customer
+ with their outstanding balance.
 \end_layout
 
 \begin_layout Standard
@@ -5609,8 +5625,8 @@ The summary aging report (shown below) shows on-line for each customer with
 \end_layout
 
 \begin_layout Standard
-The detail aging report (shown below) shows all outstanding invoices for
- each customer with subtotal by the customer.
+The detail aging report (shown below) lists all outstanding invoices for
+ each customer with their respective subtotal.
 \end_layout
 
 \begin_layout Standard
@@ -5635,8 +5651,8 @@ You can print or email reminders to your customers.
 
 \begin_layout Standard
 When you print a reminder, its level is stored in the database.
- Next time when you print reminder for the same customer, next level of
- reminder is printed.
+ Next time when you print a reminder for the same customer, the next level
+ of reminder is printed.
  You also have the option to change the reminder level yourself.
 \end_layout
 
@@ -5661,13 +5677,14 @@ When you print a reminder, its level is stored in the database.
 \end_layout
 
 \begin_layout Subsection
-Customer History Reports
+Customer history reports
 \end_layout
 
 \begin_layout Standard
-You can use history reports to see which customer is giving you more business.
- You can filter the report on date range which is applied to the invoices
- (or orders or quotations).
+You can use the history reports to see which customer is giving you more
+ business.
+ You can also filter the report on any date range which is applied to the
+ invoices (or orders or quotations).
 \end_layout
 
 \begin_layout Standard
@@ -5681,7 +5698,8 @@ You can use history reports to see which customer is giving you more business.
 \end_layout
 
 \begin_layout Standard
-Summary for customer history report shows business activity grouped by item.
+The summary report for customer history will show the business activity
+ grouped by item.
 \end_layout
 
 \begin_layout Standard
@@ -5695,8 +5713,8 @@ Summary for customer history report shows business activity grouped by item.
 \end_layout
 
 \begin_layout Standard
-Detail for customer history report shows business activity by invoice and
- individual item.
+The detailed report for customer history will show the business activity
+ by invoice and individual item.
 \end_layout
 
 \begin_layout Standard
@@ -5710,16 +5728,17 @@ Detail for customer history report shows business activity by invoice and
 \end_layout
 
 \begin_layout Section
-Point of Sales (POS)
+Point of sales (POS)
 \end_layout
 
 \begin_layout Standard
-Point of sales (POS) module allows quick invoicing at busy places like a
- shop or a restaurant.
- The items and customers you have defined for your invoices can be used
- for POS invoicing too.
- The only difference of POS invoice creation with standard AR invoice creation
- is a simplified data entry screen and a POS optimized receipts section.
+The point of sales (POS) module allows quick invoicing at busy places like
+ a shop or a restaurant.
+ The items and customers you have defined for your sales invoices can also
+ be used for POS invoicing.
+ The only difference between POS invoice creation and standard AR invoice
+ creation is a simplified data entry screen and a POS optimized receipts
+ section.
 \end_layout
 
 \begin_layout Subsection
@@ -5734,7 +5753,7 @@ POS--Sale
 ' to create a new POS invoice.
  The screen below is shown.
  Here you select a customer and then add items (parts or services) which
- you going to sell to a particular customer.
+ you are going to sell to that customer.
 \end_layout
 
 \begin_layout Standard
@@ -5763,12 +5782,13 @@ Hint: If you cater to walk-in customers and don't want to create a customer
 \end_layout
 
 \begin_layout Standard
-Item groups are shown as buttons on POS screen to make it easier to select
- the item you want to sell.
- Make sure check the checkbox 'POS Button' to show that group as a button
- on the screen.
- You can then click this group button on POS screen to display all the items
- in that group and can select or all items in that group.
+Item groups are shown as buttons on the POS screen to make it easier to
+ select the item you want to sell.
+ You first need to check the checkbox 'POS Button' of each individual group
+ to see it as a button on the POS screen.
+ You can then click this group button on the POS screen to display all the
+ items contained in that group and select the individual items you want
+ to sell.
 \end_layout
 
 \begin_layout Standard
@@ -5787,12 +5807,12 @@ Viewing open invoices
 
 \begin_layout Standard
 In places like retail shops a POS invoice is created and closed in one step.
- In places like restaurant, there is a considerable time period when an
- invoice is created and when it is closed.
- In later scenearioes, you create a POS invoice when the customer has ordered
- food.
- Once the customer has consumed the food and is ready to pay you locate
- the invoice and then add the payment to it.
+ In places like restaurant, there is a considerable time period between
+ when an invoice is created and when it is closed.
+ In the latter scenario, you create a POS invoice when the customer has
+ ordered his food.
+ Once the customer has consumed the food and is ready to pay, you simply
+ locate the invoice and add the payment to it.
 \end_layout
 
 \begin_layout Standard
@@ -5805,20 +5825,20 @@ In places like retail shops a POS invoice is created and closed in one step.
 \end_layout
 
 \begin_layout Standard
-To open a one particular POS invoice, you view the open invoices using '
+To open a particular POS invoice, you view the open invoices using the '
 \series bold
 POS--Sale
 \series default
-' menu and then open that invoice.
- In the payment section, you put the payment received from the customer
- as well as the account which could be cash or credit card or something
- else.
+' menu and then select the invoice to open.
+ In the payment section, you enter the payment received from the customer
+ as well as the account to credit (cash, credit card or something else).
 \end_layout
 
 \begin_layout Standard
-If you will add more payment than the invoice amount then the rest of the
- amount will be shown as 'change' which needs to be returned back to the
- customer and invoice will be closed with payment equal to the invoice amount.
+If you enter a higher payment amount than the total amount of the invoice,
+ the rest of the payment amount will be shown as 'change' which needs to
+ be returned back to the customer and the invoice will be closed with the
+ payment equal to the invoice amount.
 \end_layout
 
 \begin_layout Standard
@@ -5836,8 +5856,12 @@ Receipts
 \end_layout
 
 \begin_layout Standard
-This report shows the receipts done so far with your POS module.
- Use 'POS--Receipts' menu to view this report.
+This report shows all the receipts done so far with your POS module.
+ Use '
+\series bold
+POS--Receipts
+\series default
+' menu to view this report.
 \end_layout
 
 \begin_layout Standard
@@ -5866,22 +5890,23 @@ AP
 
 \begin_layout Standard
 AP stands for 'Accounts Payable'.
- AP module is used to record your sales with your customers.
- You can record your sales in two possible ways:
+ The AP module is used to record your sales to customers.
+ You can record your sales in two different ways:
 \end_layout
 
 \begin_layout Enumerate
 'AP Transaction' is a simplified way to book your purchases, expenses and
- payments using chart of accounts.
- This method is quick and requires no setup except adjusting / adding to
- the chart of accounts for your purchase and expense accounts.
+ payments using the chart of accounts.
+ This method is quick and requires no setup of goods and services.
+ Only in some circumstances it will require the adjustment of the chart
+ of accounts to suit your individual needs.
 \end_layout
 
 \begin_layout Enumerate
-'Vendor Invoice' is a standard way to record purchases.
- In a vendor invoice you specify the goods and/or services you have purchased
- from your vendor.
- This method requires setup of goods and services using the '
+'Vendor Invoice' is the standard way to record purchases.
+ In a vendor invoice you will specify the goods and/or services you have
+ purchased from your vendor.
+ This method requires the setup of goods and services using the '
 \series bold
 Goods & Services
 \series default
@@ -5891,7 +5916,7 @@ Goods & Services
 \end_layout
 
 \begin_layout Standard
-Both methods can be mixed and matched based upon nature of transactions.
+Both methods can be mixed and matched based upon the nature of each transaction.
 \end_layout
 
 \begin_layout Standard
@@ -5905,7 +5930,7 @@ Both methods can be mixed and matched based upon nature of transactions.
 \end_layout
 
 \begin_layout Subsection
-AP Transactions
+AP transactions
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:AP-Transactions"
@@ -5920,9 +5945,9 @@ The
 \series bold
 'AP--Add Transaction'
 \series default
- menu is used to create AP Transactions.
+ menu is used to create AP transactions.
  These transactions allow you to record your purchases and expenses using
- GL accounts and without creating an invoice.
+ general ledger accounts without creating a vendor invoice.
 \end_layout
 
 \begin_layout Standard
@@ -5936,7 +5961,7 @@ The
 \end_layout
 
 \begin_layout Subsection
-Vendor Invoice
+Vendor invoice
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Vendor-Invoice"
@@ -5954,15 +5979,16 @@ Vendor invoices are created using the
  menu.
  The only mandatory columns in the header section of this screen are 'Vendor'
  and 'Invoice Date'.
- Rest of the columns can be left blank.
+ All other columns in the header section can be left blank.
 \end_layout
 
 \begin_layout Standard
 Your invoice can contain multiple items (parts, services and labor etc.)
  Once you enter an item and click 'Update', the item description and price
- is shown from database.
- You then enter the quantity you want to sell.
- A new line also appears so that you can also add one more item and so on.
+ that has been stored in the database is shown.
+ You then enter the quantity you want to sell and press return.
+ A new line will then appear so that you can also add another item and so
+ on.
  This way you can enter any number of items (parts, services or labor) in
  the detail portion of the invoice.
 \end_layout
@@ -5999,7 +6025,7 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
 \end_layout
 
 \begin_layout Subsection
-Debit Note and Debit Invoice
+Debit invoice and debit note
 \end_layout
 
 \begin_layout Standard
@@ -6012,10 +6038,11 @@ Debit invoice is used to record a purchase return which was recorded earlier
 
 \begin_layout Standard
 Debit note is used to record a sale return without creating a debit invoice.
- A credit note is typically used to record reversal of 'AP Transaction'
- though it can also be used to reverse all or part of a vendor invoice but
- be aware that inventory is not removed from your stock with a debit note.
- So debit note is good tool to reverse any service purchases but not for
+ A credit note is typically used to record reversal of a 'AP Transaction'
+ though it can also be used to reverse all or part of a vendor invoice,
+ but be aware that inventory is not removed from your stock with a debit
+ note.
+ So debit note is good tool to reverse any service purchases, but not for
  reversing tangible goods purchase.
 \end_layout
 
@@ -6024,7 +6051,7 @@ Creating a debit note
 \end_layout
 
 \begin_layout Standard
-Use '
+Use the '
 \series bold
 AP--Debit Note
 \series default
@@ -6045,7 +6072,7 @@ Creating a debit invoice
 \end_layout
 
 \begin_layout Standard
-Use '
+Use the '
 \series bold
 AP--Debit Invoice
 \series default
@@ -6072,12 +6099,12 @@ Once you have an open vendor invoice as well as a debit note or debit invoice,
 \end_layout
 
 \begin_layout Enumerate
-You go to '
+You go to the '
 \series bold
 Cash--Payment
 \series default
 ' menu, select the vendor and click 'Update' button.
- This will show all invoices as shown below.
+ This will list all invoices as shown below.
 \begin_inset Newline newline
 \end_inset
 
@@ -6092,8 +6119,7 @@ Cash--Payment
 
 \begin_layout Enumerate
 Now you can click to check the invoices which you want to adjust to each
- other.
- and click 'Update'.
+ other and click 'Update'.
  If the amounts of both open vendor invoice and debit invoice are equal,
  there will be no amount in the 'Amount' column in header.
  For your reference you can put something like 'adjustment' in source column.
@@ -6111,8 +6137,8 @@ Now you can click to check the invoices which you want to adjust to each
 
 \begin_layout Enumerate
 Now you just click 'Post'.
- Your debit invoice will be adjusted against the open vendor invoice and
- both the debit invoice/note and vendor invoice will be closed.
+ Your debit invoice will be adjusted against the open vendor invoice.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -6126,18 +6152,18 @@ Now you just click 'Post'.
 \end_layout
 
 \begin_layout Section
-AP Reports
+AP reports
 \end_layout
 
 \begin_layout Subsection
-Transactions Report
+Transactions report
 \end_layout
 
 \begin_layout Standard
 Transaction report shows all open or closed transactions and invoices for
  the specified criteria on search screen.
- On search screen you can specify various criteria and select/de-select
- columns which you want to shown on the screen.
+ On search screen you can specify various criteria and select / de-select
+ columns which you want to have shown on the screen.
 \end_layout
 
 \begin_layout Standard
@@ -6151,10 +6177,10 @@ Transaction report shows all open or closed transactions and invoices for
 \end_layout
 
 \begin_layout Standard
-When you click 'Continue' button after specifying the required criteria,
+When you click the 'Continue' button after specifying the required criteria,
  your report is displayed.
- This is 'Summary' report where each invoice or transaction is shown on
- single line.
+ This is the 'Summary' report where each invoice or transaction is shown
+ on a single line.
 \end_layout
 
 \begin_layout Standard
@@ -6168,30 +6194,25 @@ When you click 'Continue' button after specifying the required criteria,
 \end_layout
 
 \begin_layout Standard
-The 'Detail' report (see below for screen shot) shows debits and credits
- of each transaction along with account number.
- In detail report, a single invoice or transaction is shown on multiple
+The 'Detail' report shows the debits and credits of each single transaction
+ along with the related account number.
+ In the detail report, a single invoice or transaction is shown on multiple
  times.
- You can click 'Subtotal' to subtotal and group this report by invoice number.
+ You can also click 'Subtotal' to subtotal and group this report by invoice
+ number.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename ap-detail-report.png
-	scale 60
-
-\end_inset
-
-
+TODO: Detail report screen shots
 \end_layout
 
 \begin_layout Subsection
-Aging Report
+Aging report
 \end_layout
 
 \begin_layout Standard
-Aging report shows the outstanding balances of your vendors divided into
- predefined periods of time in the past.
+The aging report shows the outstanding balances of your vendors divided
+ into predefined periods of time in the past.
 \end_layout
 
 \begin_layout Standard
@@ -6205,8 +6226,8 @@ Aging report shows the outstanding balances of your vendors divided into
 \end_layout
 
 \begin_layout Standard
-The summary aging report (shown below) shows on-line for each vendor with
- outstanding balance.
+The summary aging report (shown below) lists one line for each vendor with
+ their outstanding balance.
 \end_layout
 
 \begin_layout Standard
@@ -6220,8 +6241,8 @@ The summary aging report (shown below) shows on-line for each vendor with
 \end_layout
 
 \begin_layout Standard
-The detail aging report (shown below) shows all outstanding invoices for
- each vendor with subtotal by the vendor.
+The detail aging report (shown below) lists all outstanding invoices for
+ each vendor with their respective subtotal.
 \end_layout
 
 \begin_layout Standard
@@ -6235,14 +6256,14 @@ The detail aging report (shown below) shows all outstanding invoices for
 \end_layout
 
 \begin_layout Subsection
-Vendor History Reports
+Vendor history reports
 \end_layout
 
 \begin_layout Standard
-You can use history reports to see which vendor you buy most from and which
- vendor you buy less from and what.
- You can filter the report on date range which is applied to the invoices
- (or orders or quotations)
+You can use the history reports to see which vendor you buy most from and
+ which vendor you buy less from.
+ You can also filter the report on any date range which is applied to the
+ invoices (or orders or quotations).
 \end_layout
 
 \begin_layout Standard
@@ -6256,7 +6277,8 @@ You can use history reports to see which vendor you buy most from and which
 \end_layout
 
 \begin_layout Standard
-Vendor history summary report shows purchase activity grouped by item.
+The summary report for vendors will show the business activity grouped by
+ item.
 \end_layout
 
 \begin_layout Standard
@@ -6270,7 +6292,8 @@ Vendor history summary report shows purchase activity grouped by item.
 \end_layout
 
 \begin_layout Standard
-Vendor history detail report shows purchasing activity by invoice and item.
+The detailed vendor history report will show the business activity by invoice
+ and individual item.
 \end_layout
 
 \begin_layout Standard
@@ -6296,14 +6319,14 @@ The
 \series bold
  'Cash--Receipt'
 \series default
- menu is used to record receipts from your customers against outstanding
- invoices.
+ menu is used to record receipts (payments) from your customers against
+ their outstanding invoices.
  Another menu 
 \series bold
 'Cash--Receipts'
 \series default
  allows you to enter receipts from multiple customers.
- Both have same effect but the later one make data entry quick for adding
+ Both have same effect, but the latter one make data entry quick for adding
  receipts from multiple customers.
 \end_layout
 
@@ -6322,21 +6345,22 @@ Recording receipts from one customer at a time
 \end_layout
 
 \begin_layout Standard
-There are two ways to record payment from your customer:
+There are two ways to record an incoming payment from your customer:
 \end_layout
 
 \begin_layout Enumerate
-You can put the receipt information at the footer of your invoice when creating
- the invoice if the invoice has been paid at the time of purchase.
+If the invoice has already been paid at the time of purchase, you can put
+ the receipt information at the footer of your invoice when creating it.
+ 
 \end_layout
 
 \begin_layout Enumerate
-You can use 
+If the invoice is paid later, you can use the 
 \series bold
 'Cash--Receipt'
 \series default
- menu to record receipt for a particular customer.
- Using this method is advisible as you do not need to edit invoices to record
+ menu to record the receipt for a particular customer.
+ Using this method is advisable as you do not need to edit invoices to record
  the receipt.
  This method also allows you to record a single receipt for multiple invoices.
 \end_layout
@@ -6352,7 +6376,7 @@ You can use
 \end_layout
 
 \begin_layout Subsubsection
-Recording receipts from multiple customers in one go.
+Recording receipts from multiple customers in one go
 \end_layout
 
 \begin_layout Standard
@@ -6360,8 +6384,8 @@ The
 \series bold
 'Cash--Receipts'
 \series default
- menu allows you to quickly record receipts for multiple invoices for multiple
- customers.
+ menu allows you to quickly record receipts for multiple invoices and for
+ multiple customers.
 \end_layout
 
 \begin_layout Standard
@@ -6375,8 +6399,8 @@ The
 \end_layout
 
 \begin_layout Standard
-Receipts report show you receipts for the particular period according to
- your bank account.
+The receipts report will show you all receipts (payments) made to the selected
+ bank account.
 \end_layout
 
 \begin_layout Standard
@@ -6404,16 +6428,16 @@ Payments
 \end_layout
 
 \begin_layout Standard
-There are two ways to record payment from your vendor.
+There are two ways to record a payment from your vendor.
 \end_layout
 
 \begin_layout Enumerate
-You can put the payment information at the footer of your invoice when creating
- the invoice if the invoice has been paid at the time of purchase.
+If the invoice has been paid at the time of purchase, you can put the payment
+ information at the footer of your invoice when creating the invoice.
 \end_layout
 
 \begin_layout Enumerate
-You can use 
+If the payment is done later, you can use 
 \series bold
 'Cash--Payment'
 \series default
@@ -6433,8 +6457,17 @@ You can use
 
 \end_layout
 
+\begin_layout Subsubsection
+Recording multiple payments to multiple vendors in one go
+\end_layout
+
 \begin_layout Standard
-Multiple payments to multiple vendors.
+The 
+\series bold
+'Cash--Payments'
+\series default
+ menu allows you to quickly record payments for multiple invoices and for
+ multiple vendors.
 \end_layout
 
 \begin_layout Standard
@@ -6468,12 +6501,12 @@ recon
 \end_layout
 
 \begin_layout Section
-General Ledger
+General ledger
 \end_layout
 
 \begin_layout Standard
-General Ledger module is used to add standard accounting journals with debit
- and credit amounts to some accounts from chart of accounts.
+The general ledger module is used to add standard accounting entries with
+ debit and credit amounts to accounts selected from the chart of accounts.
  You cannot post a transactions until the total of debits is equal to the
  total of credits.
 \end_layout
@@ -6489,18 +6522,22 @@ General Ledger module is used to add standard accounting journals with debit
 \end_layout
 
 \begin_layout Subsection
-Add Transaction
+Add transaction
 \end_layout
 
 \begin_layout Standard
-Use 
+Use the 
 \series bold
 'General Ledger--Add Transaction'
 \series default
- menu to add a new GL transaction.
+ menu to add a new general ledger transaction.
  On this screen you can put some reference number in the 'Reference' column.
- If you leave it blank, SQL-Ledger will assign next number from the scheme
- defined in defaults.
+ If you leave it blank, SQL-Ledger will assign the next number from the
+ scheme defined in the '
+\series bold
+System--Defaults
+\series default
+' menu.
 \end_layout
 
 \begin_layout Standard
@@ -6522,11 +6559,11 @@ The
 \series bold
  'General Ledger--Reports'
 \series default
- menu is used to view all accounting journals with debits and credits to
- the particular accounts.
- Initially this report can be confusing because it shows not only the journals
- added using 'Add Transaction' menu show above but also all accounting transacti
-ons posted from AR, AP and Cash modules.
+ menu is used to view all accounting journal entries with the debits and
+ credits on the related accounts.
+ Initially this report can be confusing because it shows not only the journal
+ entries added using 'Add Transaction' menu described above, but also lists
+ all other accounting transactions posted from the AR, AP and Cash modules.
 \end_layout
 
 \begin_layout Standard
@@ -6540,7 +6577,7 @@ ons posted from AR, AP and Cash modules.
 \end_layout
 
 \begin_layout Standard
-Report can be sorted on any column.
+The general ledger report can be sorted on any column.
 \end_layout
 
 \begin_layout Standard
@@ -6564,11 +6601,11 @@ Report can be sorted on any column.
 \end_layout
 
 \begin_layout Section
-Recurring Transactions
+Recurring transactions
 \end_layout
 
 \begin_layout Standard
-Recurring Transactions allow you to auto-generate predefined invoices, transacti
+Recurring transactions allow you to auto-generate predefined invoices, transacti
 ons and orders.
 \end_layout
 
@@ -6577,7 +6614,7 @@ This feature can be used for the following:
 \end_layout
 
 \begin_layout Enumerate
-Recurring billing to a customer (For rent, web hosting, school fee, installment
+Recurring billing to a customer (for rent, web hosting, school fee, installment
  etc.) 
 \end_layout
 
@@ -6591,7 +6628,7 @@ Monthly orders to your vendors or from your customers.
 \end_layout
 
 \begin_layout Enumerate
-Monthly payroll posting using GL Recurring Transactions.
+Monthly payroll posting using general ledger recurring transactions.
  
 \end_layout
 
@@ -6604,8 +6641,16 @@ Scheduling
 \end_layout
 
 \begin_layout Standard
-To generate the next number for a given transaction, leave the Next Number
- blank.
+To schedule a recurring transaction, you need to start by manually booking
+ the first transaction.
+ Once you have created the first transaction, you can open it and click
+ on the 'Schedule' button at the bottom of the screen.
+ You will then be able to set the criteria for your recurring transactions.
+ SQL-Ledger will use your manually created transaction as model for the
+ recurring transactions and process it according to the individually chosen
+ settings.
+ To automatically generate the next number for a given transaction, just
+ leave the 'Reference' field blank.
 \end_layout
 
 \begin_layout Standard
@@ -6640,7 +6685,7 @@ r.
 \end_layout
 
 \begin_layout Section
-Exchange Rates
+Exchange rates
 \end_layout
 
 \begin_layout Standard
@@ -6652,8 +6697,12 @@ Defining currencies
 \end_layout
 
 \begin_layout Standard
-To define a new currency use System--Currencies menu.
- The top-most currency is the default currency.
+To define a new currency use the '
+\series bold
+System--Currencies
+\series default
+' menu.
+ The currency listed as No 1 at the top will be your default currency.
  You can move the currencies up and down using the arrows on the currency
  list.
 \end_layout
@@ -6673,9 +6722,11 @@ Buying and selling in foreign currencies
 
 \begin_layout Standard
 When you want to create invoice in currency, just change the currency code
- from currency dropdown box.
- SQL-Ledger will show you the last exchange rate for this currency.
- You can just accept this rate or change it.
+ from currency dropdown box and enter the exchange rate.
+ If the exchange rate for a certain day has already been entered in a previous
+ transaction, SQL-Ledger will automatically show you the set exchange rate
+ for this currency.
+ You can either choose to accept this rate or change it manually.
 \end_layout
 
 \begin_layout Standard
@@ -6692,7 +6743,9 @@ Reports
 \end_layout
 
 \begin_layout Standard
-You can view reports in base currency as well as in the foreign currency.
+You can view all reports in base currency as well as in the foreign currency.
+ To see the the foreign transaction, simply mark the 'Currency' check-box.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6708,13 +6761,31 @@ You can view reports in base currency as well as in the foreign currency.
 Exchange rate difference
 \end_layout
 
+\begin_layout Standard
+Any exchange rate difference that occurs between the time of sale or purchase
+ and the time of receipt or payment, will be automatically booked onto the
+ accounts that have been predefined for foreign exchange gain or loss in
+ the '
+\series bold
+System--Defaults
+\series default
+' menu.
+\end_layout
+
 \begin_layout Subsection
 Funds transfers in foreign currencies
 \end_layout
 
 \begin_layout Standard
-Let us say the exchange rate is 1 GBP = 2.0289 (or reverse 1 USD = 0.4929
- GBP)
+If you want to transfer funds to or from a foreign currency account, you
+ should use the '
+\series bold
+Cash--FX Adjustment
+\series default
+' module.
+ Lets assume that you want to transfer 100 GBP to your USD account and that
+ the exchange rate is 1 GBP = 2.0289 (or reverse 1 USD = 0.4929 GBP).
+ Then should proceed as follows:
 \end_layout
 
 \begin_layout Standard
@@ -6724,6 +6795,10 @@ Let us say the exchange rate is 1 GBP = 2.0289 (or reverse 1 USD = 0.4929
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Or reverse, to transfer 100 USD to your GBP account:
 \end_layout
 
 \begin_layout Standard
@@ -6740,10 +6815,10 @@ Quotations and RFQs
 \end_layout
 
 \begin_layout Standard
-You can use SQL-Ledger to send quotations to your customers or request your
- vendors for quotations (RFQs).
- Later on you can convert quotations to sales orders and RFQs to purchase
- orders.
+You can use SQL-Ledger to send quotations to your customers or request quotation
+s from your vendors (RFQs).
+ Later on you can convert the quotations to sales orders and the RFQs to
+ purchase orders.
 \end_layout
 
 \begin_layout Standard
@@ -6761,9 +6836,9 @@ Quotations
 \end_layout
 
 \begin_layout Standard
-Use 
+Use the
 \series bold
-'Quotations--Quotation'
+ 'Quotations--Quotation'
 \series default
  menu to add a new quotation for your customer.
 \end_layout
@@ -6779,15 +6854,15 @@ Use
 \end_layout
 
 \begin_layout Standard
-To get report of existing quotations or to editing a quotation, use the
+To get a report of existing quotations or to editing a quotation, use the
  
 \series bold
 'Quotations--Reports--Quotations'
 \series default
  menu.
  The search screen will be displayed where you can specify any conditions
- to filter the report or just leave blank and click 'Continue' button to
- get all existing quotations.
+ to filter the report or just leave it blank and click 'Continue' button
+ to get all open quotations.
 \end_layout
 
 \begin_layout Standard
@@ -6813,8 +6888,10 @@ To get report of existing quotations or to editing a quotation, use the
 \begin_layout Standard
 Once a quotation has been made, you can create a purchase order from it.
  Creating a PO from a quotation will mark it closed.
- You can also close a quotation just by clicking the 'Closed' radio button
- when you edit a quotation.
+ You can also close a quotation just by clicking on the 'Closed' radio button
+ and then saving it by clicking on the 'Save' button at the bottom of the
+ screen.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6835,7 +6912,7 @@ Use the
 \series bold
 'Quotations--RFQ'
 \series default
- menu to add a new quotation for your customer.
+ menu to add a new request for a quotation from your vendor.
 \end_layout
 
 \begin_layout Standard
@@ -6849,14 +6926,14 @@ Use the
 \end_layout
 
 \begin_layout Standard
-To get report of existing RFQs or to editing an RFQ, use the 
+To get report of the existing RFQs or to editing an RFQ, use the 
 \series bold
 'Quotations--Reports--RFQs'
 \series default
  menu.
  The search screen will be displayed where you can specify any conditions
  to filter the report or just leave blank and click 'Continue' button to
- get all existing RFQs.
+ get all open RFQs.
 \end_layout
 
 \begin_layout Standard
@@ -6880,10 +6957,11 @@ To get report of existing RFQs or to editing an RFQ, use the
 \end_layout
 
 \begin_layout Standard
-Once an RFQ has been made, you can create a sales order from it.
- Creating an SO from an RFQ will mark it closed.
- You can also close an RFQ just by clicking the 'Closed' radio button when
- you edit it.
+Once an RFQ has been made, you can create a purchase order from it.
+ Creating an PO from an RFQ will mark it closed.
+ You can also close an RFQ just by clicking the 'Closed' radio button and
+ saving it by clicking on the 'Save' button at the bottom of the screen.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6901,9 +6979,9 @@ Orders
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger has very powerful 'Orders' module.
- Orders module can be used to create purchase orders for your vendors or
- sales orders to your customers.
+SQL-Ledger has a very powerful 'Orders' module.
+ The orders module can be used to create purchase orders for your vendors
+ or sales orders for your customers.
 \end_layout
 
 \begin_layout Standard
@@ -6921,24 +6999,25 @@ Here are few points to remember:
 \end_layout
 
 \begin_layout Enumerate
-When you create an invoice from order, you cannot edit the quantities on
- invoice screen or add or remove items.
+When you create an invoice from an order, you cannot edit the quantities
+ on the invoice screen or add or remove items.
  
 \end_layout
 
 \begin_layout Enumerate
 When you create invoice from a partially received order, this order is marked
- closed and a new order with same number but remaining quantities and new
- order date is created.
+ closed and a new order with same number but with the remaining quantities
+ and a new order date is created.
  
 \end_layout
 
 \begin_layout Subsection
-Sales Orders
+Sales orders
 \end_layout
 
 \begin_layout Standard
-A purchase order allows you to order goods and services from your vendor.
+Creating a sales order is often the first step you take when you sell goods
+ and services to your customer.
  You can:
 \end_layout
 
@@ -6947,11 +7026,15 @@ Make a sales order.
 \end_layout
 
 \begin_layout Enumerate
-Receive a sales order fully or partially using 'Shipping--Ship'.
+Receive a sales order fully or partially using the '
+\series bold
+Shipping--Ship
+\series default
+' menu.
 \end_layout
 
 \begin_layout Enumerate
-Create a customer invoice from a partially or fully received sales order.
+Create a customer invoice from a partially or fully shipped sales order.
 \end_layout
 
 \begin_layout Enumerate
@@ -6967,7 +7050,7 @@ The
 \series bold
 'Order Entry--Sales Order'
 \series default
- will display the following 'Add Sales Order' screen.
+ menu will display the following 'Add Sales Order' screen.
  
 \end_layout
 
@@ -6982,10 +7065,10 @@ The
 \end_layout
 
 \begin_layout Standard
-If you want to enter more information for each item you can click the checkbox
- next to the 'Description' column and then 'Update'.
- Now each detail line will span 5 lines where you can enter lots of information
- for each item you order.
+If you want to enter more information for each item you can click the check-box
+ next to the 'Description' column and then click 'Update'.
+ Now each detail line will span 5 lines where you can enter lots of other
+ information for each item you sell.
 \end_layout
 
 \begin_layout Standard
@@ -6999,67 +7082,68 @@ If you want to enter more information for each item you can click the checkbox
 \end_layout
 
 \begin_layout Subsubsection
-Editing a SO
+Editing a sales order
 \end_layout
 
 \begin_layout Standard
-To edit an existing SO, you display list of existing orders using the 
+To edit an existing sales order, you display a list of existing orders using
+ the 
 \series bold
 'Order Entry--Reports--Sales Order'
 \series default
- and click on SO number to edit that particular SO.
+ menu and click on the sales order number to edit that particular sales
+ order.
 \end_layout
 
 \begin_layout Subsubsection
-Creating a quotation or customer invoice from an SO
+Creating a quotation or customer invoice from a sales order
 \end_layout
 
 \begin_layout Standard
-When you have saved a SO, you can open it in editing and create a quotation.
- When you have received quantities you can directly create vendor invoice
- from the SO.
- (Also see below to see how to use 'Shipping' menu to partially receive
- a PO.)
+Once you have saved a sales order, you can open it again in editing mode
+ and use it to create a new quotation.
+ When you have shipped quantities you can also directly create a sales invoice
+ from the sales order.
+ (Also see below to see how to use the '
+\series bold
+Shipping
+\series default
+' menu to partially ship a sales order.)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename so-invoice-from-quote.png
-	scale 50
-
-\end_inset
-
-
+TODO: Screen shot with quotation and sales invoice buttons.
 \end_layout
 
 \begin_layout Subsubsection
-Receiving an SO
+Shipping a sales order
 \end_layout
 
 \begin_layout Standard
-There are two ways to receive a SO.
+There are two ways to ship a sales order.
 \end_layout
 
 \begin_layout Enumerate
-Open the SO and click 'Customer Invoice' button.
- The SO will be received in full, marked 'closed' and a customer invoice
- will be created for it.
- Inventory on-hand will be updated.
+Open the sales order and click 'Customer Invoice' button.
+ The sales order will then automatically be shipped in full, marked 'closed'
+ and a customer invoice will be created.
+ Inventory on-hand will also automatically be updated.
 \end_layout
 
 \begin_layout Enumerate
 Use '
 \series bold
-Shipping--Receive
+Shipping--Ship
 \series default
-' to receive a PO fully or partially.
+' menu to ship a sales order fully or partially.
  Inventory on-hand will be updated.
- Later on you can open the PO and create vendor invoice.
+ Later on you can open the sales order and create the customer invoice using
+ the 'Customer Invoice' button at the bottom of the screen.
  
 \end_layout
 
 \begin_layout Standard
-Let us see how it is done using the '
+This is how it is done using the '
 \series bold
 Shipping
 \series default
@@ -7077,13 +7161,14 @@ Shipping
 \end_layout
 
 \begin_layout Standard
-Following screen is displayed when you click '
+The following screen is displayed when you click '
 \series bold
 Shipping--Ship
 \series default
 '.
- Here you can select SOs you want to process or just 'Continue' button if
- you want to process all open SOs.
+ Here you can define any criteria for the sales orders you want to process
+ or just click the 'Continue' button if you want to list all open sales
+ orders.
 \end_layout
 
 \begin_layout Standard
@@ -7097,8 +7182,8 @@ Shipping--Ship
 \end_layout
 
 \begin_layout Standard
-The following screen shows all SOs with open quantities.
- You click on a particular SO to receive goods in it.
+The following screen shows all the sales orders with open quantities.
+ You click on a particular sales order to ship the goods listed in it.
 \end_layout
 
 \begin_layout Standard
@@ -7112,12 +7197,13 @@ The following screen shows all SOs with open quantities.
 \end_layout
 
 \begin_layout Standard
-The selected SO is displayed with order quantities and you can put the quantitie
-s received in the 'Ship' column.
- If there are any serial numbers associated with shipped goods you put them
- in serial number column.
- You also need to specify correct receiving date.
- In the example below we are partially receiving this SO.
+The selected sales order is displayed with the order quantities and you
+ can enter the quantities shipped in the 'Ship' filed.
+ If there are any serial numbers associated with the shipped goods you can
+ enter them in the serial number field.
+ You need to specify the correct shipping date and click on 'Done' to finish
+ the transaction.
+ In the example below we are only partially shipping this sales order.
 \end_layout
 
 \begin_layout Standard
@@ -7131,12 +7217,13 @@ s received in the 'Ship' column.
 \end_layout
 
 \begin_layout Standard
-If you open this SO again (using 
+If you open this sales order again (using the 
 \series bold
 'Order Entry--Reports--Sales Orders
 \series default
-') you will see the quantity received in the 'Ship' column.
- Received quantity gets updated every time you receive goods using the '
+' menu) you will see the quantity shipped stated in the 'Ship' column.
+ The shipped quantities will be updated every time you ship goods using
+ the '
 \series bold
 Shipping--Ship
 \series default
@@ -7154,21 +7241,24 @@ Shipping--Ship
 \end_layout
 
 \begin_layout Subsubsection
-Creating customer invoice from an SO
+Creating customer invoice from a partially shipped sales order
 \end_layout
 
 \begin_layout Standard
-You can create a customer invoice from an SO for the quantities received
- so far.
- To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
- screen will open up with data from that SO as well as received quantities
- as show below.
+You can also create a customer invoice from a sales order for the quantities
+ shipped so far.
+ To do this just click the 'Customer Invoice' button and the 'Add Customer
+ Invoice' screen will open up with the data from that sales order as well
+ as the shipped quantities as show below.
 \end_layout
 
 \begin_layout Standard
-Once a vendor invoice has been created for a SO, that SO is closed.
- If there were some open quantities in that SO then a new SO with same number
- and remaining items with open quantities.
+Once a customer invoice has been created from a sales order, that sales
+ order is closed.
+ If there are still some open quantities in that sales order, then a new
+ sales order with same number and the remaining items will be automatically
+ created.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7191,10 +7281,10 @@ The
  'Order Entry--Reports--Sales Orders'
 \series default
  menu shows you all your purchase orders.
- You can check/uncheck the 'Open' and 'Closed' check boxes on search screen
- before you continue.
- 'Closed' SOs are those which have been fully received OR which have been
- marked 'Closed' by editing the PO.
+ You can check/uncheck the 'Open' and 'Closed' check boxes on the search
+ screen before you continue.
+ 'Closed' sales orders are those which have been fully received OR which
+ have been marked 'Closed' by editing the sales order.
 \end_layout
 
 \begin_layout Standard
@@ -7208,7 +7298,7 @@ The
 \end_layout
 
 \begin_layout Standard
-Sales order report
+The sales order report will list all your open sales orders.received
 \end_layout
 
 \begin_layout Standard
@@ -7222,12 +7312,13 @@ Sales order report
 \end_layout
 
 \begin_layout Subsection
-Purchase Order
+Purchase orders
 \end_layout
 
 \begin_layout Standard
-A purchase order allows you to order goods and services from your vendor.
- You can:
+Creating a purchase order is often the first step you take when you buy
+ goods and services from your vendor.
+ You can: 
 \end_layout
 
 \begin_layout Enumerate
@@ -7235,11 +7326,15 @@ Make a purchase order.
 \end_layout
 
 \begin_layout Enumerate
-Receive a purchase order fully or partially using 'Shipping--Receive'.
+Receive a purchase order fully or partially using the '
+\series bold
+Shipping--Receive
+\series default
+' menu.
 \end_layout
 
 \begin_layout Enumerate
-Create a vendor invoice from a partially or fully received order.
+Create a vendor invoice from a partially or fully received purchase order.
 \end_layout
 
 \begin_layout Enumerate
@@ -7255,7 +7350,7 @@ The
 \series bold
 'Order Entry--Purchase Order'
 \series default
- will display the following 'Add Purchase Order' screen.
+ menu will display the following 'Add Purchase Order' screen.
  
 \end_layout
 
@@ -7270,10 +7365,10 @@ The
 \end_layout
 
 \begin_layout Standard
-If you want to enter more information for each item you can click the checkbox
+If you want to enter more information for each item you can click the check-box
  next to the 'Description' column and then 'Update'.
- Now each detail line will span 5 lines where you can enter lots of information
- for each item you order.
+ Now each detail line will span 5 lines where you can enter lots of other
+ information for each item you order.
 \end_layout
 
 \begin_layout Standard
@@ -7287,31 +7382,33 @@ If you want to enter more information for each item you can click the checkbox
 \end_layout
 
 \begin_layout Subsubsection
-Editing a PO
+Editing a purchase order
 \end_layout
 
 \begin_layout Standard
-To edit an existing PO, you display list of existing orders using the 
+To edit an existing purchase order, you display a list of existing orders
+ using the 
 \series bold
 'Order Entry--Reports--Purchase Orders'
 \series default
- and click on PO number to edit that particular PO.
+ menu and click on the purchase oder number to edit that particular purchase
+ order.
 \end_layout
 
 \begin_layout Subsubsection
-Creating an RFQ or vendor invoice from a PO
+Creating an RFQ or vendor invoice from a purchase order
 \end_layout
 
 \begin_layout Standard
-When you have saved a PO, you can open it in editing and create an RFQ (request
- for quotation).
- When you have received quantities you can directly create vendor invoice
- from the PO.
- (Also see below to see how to use '
+When you have saved a purchase order, you can open it again and use it to
+ create a RFQ (request for quotation).
+ When you have received quantities you can also directly create a vendor
+ invoice from the purchase order.
+ (Also see below to see how to use the '
 \series bold
 Shipping
 \series default
-' menu to partially receive a PO.)
+' menu to partially receive a purchase order.)
 \end_layout
 
 \begin_layout Standard
@@ -7325,18 +7422,18 @@ Shipping
 \end_layout
 
 \begin_layout Subsubsection
-Receiving a PO
+Receiving a purchase order
 \end_layout
 
 \begin_layout Standard
-There are two ways to receive a PO.
+There are two ways to receive a purchase order.
 \end_layout
 
 \begin_layout Enumerate
-Open the PO and click 'Vendor Invoice' button.
- The PO will be received in full, marked 'closed' and a vendor invoice will
- be created for it.
- Inventory on-hand will be updated.
+Open the purchase order and click 'Vendor Invoice' button.
+ The purchase order will be received in full, marked 'closed' and a vendor
+ invoice will be created.
+ Inventory on-hand will also automatically be updated.
 \end_layout
 
 \begin_layout Enumerate
@@ -7344,14 +7441,15 @@ Use '
 \series bold
 Shipping--Receive
 \series default
-' to receive a PO fully or partially.
+' menu to receive a purchase order fully or partially.
  Inventory on-hand will be updated.
- Later on you can open the PO and create vendor invoice.
+ Later on you can open the purchase order and create the vendor invoice
+ using the 'Vendor Invoice' button at the bottom of the screen.
  
 \end_layout
 
 \begin_layout Standard
-Let us see how it is done using the '
+This is how it is done using the '
 \series bold
 Shipping
 \series default
@@ -7369,13 +7467,14 @@ Shipping
 \end_layout
 
 \begin_layout Standard
-Following screen is displayed when you click '
+The following screen is displayed when you click '
 \series bold
 Shipping--Receive
 \series default
 '.
- Here you can select POs you want to process or just 'Continue' button if
- you want to process all open POs.
+ Here you can define any criteria for the purchase orders you want to process
+ or just click the 'Continue' button if you want to list all open purchase
+ orders.
 \end_layout
 
 \begin_layout Standard
@@ -7389,8 +7488,9 @@ Shipping--Receive
 \end_layout
 
 \begin_layout Standard
-The following screen shows all POs with open quantities.
- You click on a particular PO to receive goods in it.
+The following screen shows all purchase orders with open quantities.
+ You click on a particular purchase order to receive the goods listed in
+ it.
 \end_layout
 
 \begin_layout Standard
@@ -7404,12 +7504,14 @@ The following screen shows all POs with open quantities.
 \end_layout
 
 \begin_layout Standard
-The selected PO is displayed with order quantities and you can put the quantitie
-s received in the 'Rcvd' column.
- If there are any serial numbers associated with received goods you put
- them in serial number column.
- You also need to specify correct receiving date.
- In the example below we are partially receiving this PO.
+The selected purchase order is displayed with the order quantities and you
+ can enter the quantities received in the 'Recd' column.
+ If there are any serial numbers associated with the received goods you
+ can enter them in the serial number field.
+ You need to specify the correct receiving date and click on ’Done’ to finish
+ the transaction.
+ In the example below we are only partially receive this purchase order.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7423,12 +7525,13 @@ s received in the 'Rcvd' column.
 \end_layout
 
 \begin_layout Standard
-If you open this PO again (using 
+If you open this purchase order again (using the 
 \series bold
 'Order Entry--Reports--Purchase Orders
 \series default
-') you will see the quantity received in the 'Rcvd' column.
- Received quantity gets updated every time you receive goods using the '
+' menu) you will see the quantity received stated in the 'Recd' column.
+ The received quantity will be updated every time you receive goods using
+ the '
 \series bold
 Shipping--Receive
 \series default
@@ -7446,19 +7549,23 @@ Shipping--Receive
 \end_layout
 
 \begin_layout Subsubsection
-Creating vendor invoice from PO
+Creating vendor invoice from a partially received purchase order
 \end_layout
 
 \begin_layout Standard
-You can create a vendor invoice for the quantities received so far.
+You can also create a vendor invoice for the quantities received so far.
  To do this just click the 'Vendor Invoice' button and the 'Add Vendor Invoice'
- screen will open for received quantities as show below.
+ screen will open up with the data from that purchase order as well as the
+ received quantities as show below.
 \end_layout
 
 \begin_layout Standard
-Once a vendor invoice has been created for a PO, that PO is closed.
- If there were some open quantities in that PO then a new PO with same number
- and remaining items with open quantities.
+Once a vendor invoice has been created from a purchse order, that purchase
+ order is closed.
+ If there are still some open quantities in that purchase order, then a
+ new purchase order with same number and the remaining items will be automatical
+ly created.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7481,10 +7588,10 @@ The
  'Order Entry--Reports--Purchase Orders'
 \series default
  menu shows you all your purchase orders.
- You can check/uncheck the 'Open' and 'Closed' checkboxes on search screen
+ You can check/uncheck the 'Open' and 'Closed' check boxes on search screen
  before you continue.
- 'Closed' POs are those which have been fully received OR which have been
- marked 'Closed' by editing the PO.
+ 'Closed' purchase orders are those which have been fully received OR which
+ have been marked 'Closed' by editing the purchase order.
 \end_layout
 
 \begin_layout Standard
@@ -7498,7 +7605,11 @@ The
 \end_layout
 
 \begin_layout Subsubsection
-Order Entry Notes
+Order entry notes
+\end_layout
+
+\begin_layout Standard
+Please note that:
 \end_layout
 
 \begin_layout Enumerate
@@ -7509,24 +7620,27 @@ Normally inventory on-hand quantities are updated when you create a vendor
 \end_layout
 
 \begin_layout Enumerate
-When you receive or ship an order through '
+When you receive or ship an order through the '
 \series bold
 Shipping
 \series default
-' menu your inventory on-hand is immediately updated.
+' menu, your inventory on-hand is immediately updated.
  You can confirm this by viewing '
 \series bold
 Warehouses--Reports--Onhand
 \series default
 ' immediately after you receive or ship an order.
- Your AR or AP is updated only when you create an invoice from a partially
- or fully received order.
+ Your accounts receivable and accounts payable are only updated when you
+ create an invoice from a partially or fully received order.
 \end_layout
 
 \begin_layout Enumerate
-You cannot change item quantities or add new items when an invoice is created
- from a partially or fully shipped/received order.
- This feature to keep the invoices and orders data in sync.
+You cannot change the listed item quantities or add new items when an invoice
+ is created from a partially or fully shipped/received order.
+ You can only add services to an invoice created from a partially or fully
+ shipped/recieved order.
+ This feature is needed to keep the invoices and orders quantities data
+ in sync.
 \end_layout
 
 \begin_layout Enumerate
@@ -7536,27 +7650,16 @@ When you create invoice from a partially shipped or received order, SQL-Ledger
 \end_layout
 
 \begin_layout Subsection
-Important inventory on-hand reports from orders
-\end_layout
-
-\begin_layout Standard
-Inventory on hand at warehouses:
+Important inventory on-hand reports
 \end_layout
 
 \begin_layout Enumerate
-The 
+Inventory on hand at warehouses: The 
 \series bold
-'Goods & Services–All Items'
+'Warehouses–Reports–Onhand' 
 \series default
- report.
- Check the 'Warehouse' checkbox on search screen.
+report.
  
-\end_layout
-
-\begin_layout Enumerate
-The 
-\series bold
-'Warehouses–Reports–Onhand'
 \end_layout
 
 \begin_layout Enumerate
