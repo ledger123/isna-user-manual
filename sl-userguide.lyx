@@ -1465,7 +1465,8 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename defaults.png
-	scale 45
+	lyxscale 40
+	scale 40
 
 \end_inset
 
@@ -1504,7 +1505,8 @@ Use
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer1.png
-	scale 50
+	lyxscale 40
+	scale 40
 
 \end_inset
 
@@ -1526,7 +1528,8 @@ To make changes to existing customers, first you list them using
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-search1.png
-	scale 45
+	lyxscale 40
+	scale 40
 
 \end_inset
 
@@ -1544,7 +1547,7 @@ In this report you can click on the customer name and its details will be
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-search2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -1587,7 +1590,7 @@ Use
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -1613,7 +1616,7 @@ To make changes to existing vendors, first you list them using
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-search1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -1623,7 +1626,7 @@ To make changes to existing vendors, first you list them using
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-search2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -1803,7 +1806,7 @@ Once departments are defined you can specify them in your invoices, orders,
 \begin_layout Standard
 \begin_inset Graphics
 	filename department4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -1827,7 +1830,7 @@ AR--Reports--Transactions
 \begin_layout Standard
 \begin_inset Graphics
 	filename department5.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -1938,7 +1941,7 @@ Projects
 \begin_layout Standard
 \begin_inset Graphics
 	filename project1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -1960,7 +1963,7 @@ s to select the projects of your interest.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -1975,7 +1978,7 @@ Once projects are displayed as shown below, you can click on the project
 \begin_layout Standard
 \begin_inset Graphics
 	filename project3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2028,7 +2031,7 @@ Reports--Trial Balance
 \begin_layout Standard
 \begin_inset Graphics
 	filename project4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -2045,7 +2048,7 @@ Once you display the report, you will see all accounts showing sum of all
 \begin_layout Standard
 \begin_inset Graphics
 	filename project5.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -2060,7 +2063,7 @@ You can click on the account number to get the list of individual project
 \begin_layout Standard
 \begin_inset Graphics
 	filename project6.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -2113,7 +2116,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename chart1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2132,7 +2135,7 @@ You can click on the account number to open the account in detail form where
 \begin_layout Standard
 \begin_inset Graphics
 	filename chart2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2342,7 +2345,7 @@ All templates can be edited directly through SQL-Ledger user interface.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2356,7 +2359,7 @@ Here this template is opened for editing.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2785,7 +2788,7 @@ HTML templates are easier to modify because of the wide spread knowledge
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2801,7 +2804,7 @@ The letterhead.html template is included in all other templates.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates3a.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2811,7 +2814,7 @@ The letterhead.html template is included in all other templates.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates3b.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2849,7 +2852,7 @@ reference "sub:An-Introduction-to"
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2864,7 +2867,7 @@ As in html templates, the letterhead.tex template allows you to define your
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates5.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -2903,7 +2906,7 @@ Text templates are used only for Point-of-Sale receipts printing.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates7.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -3150,7 +3153,7 @@ Parts are tangible items you keep in your stock.
 \begin_layout Standard
 \begin_inset Graphics
 	filename parts1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3168,7 +3171,7 @@ Services are intangible items which you sell and/or purchase.
 \begin_layout Standard
 \begin_inset Graphics
 	filename parts2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3187,7 +3190,7 @@ Labor/overhead items are used to allocate labor/overhead charges to an assembly
 \begin_layout Standard
 \begin_inset Graphics
 	filename parts3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3256,7 +3259,7 @@ n about its components.
 \begin_layout Standard
 \begin_inset Graphics
 	filename parts4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3282,7 +3285,7 @@ COGS for the assembly is recorded from individual components when you sell
 \begin_layout Standard
 \begin_inset Graphics
 	filename assembly1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3292,7 +3295,7 @@ COGS for the assembly is recorded from individual components when you sell
 \begin_layout Standard
 \begin_inset Graphics
 	filename assembly2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3316,7 +3319,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename stock1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3331,7 +3334,7 @@ Following is a sample summary report of the 'Stock Assembly' action.
 \begin_layout Standard
 \begin_inset Graphics
 	filename stock2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3347,7 +3350,7 @@ Following is a detail report of the 'Stock Assembly' action.
 \begin_layout Standard
 \begin_inset Graphics
 	filename stock3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3366,7 +3369,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename assembly3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3380,7 +3383,7 @@ Once you click the 'Continue' button above the following report is displayed.
 \begin_layout Standard
 \begin_inset Graphics
 	filename assembly4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3399,7 +3402,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename assembly5.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3440,7 +3443,7 @@ Labor/Overhead items are used to record labor/overhead of a manufacturing
 \begin_layout Standard
 \begin_inset Graphics
 	filename parts3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3463,7 +3466,7 @@ Goods & Services--Reports
 \begin_layout Standard
 \begin_inset Graphics
 	filename group1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3473,7 +3476,7 @@ Goods & Services--Reports
 \begin_layout Standard
 \begin_inset Graphics
 	filename group2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3487,7 +3490,7 @@ Click on the group name in the list above and it will be opened for change.
 \begin_layout Standard
 \begin_inset Graphics
 	filename group3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3508,7 +3511,7 @@ Groups also have another useful functionality.
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos_buttons.png
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -3529,7 +3532,7 @@ You can also define subgroups.
 \begin_layout Standard
 \begin_inset Graphics
 	filename group4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3613,6 +3616,7 @@ Define item prices for these price groups.
 
 \begin_inset Graphics
 	filename pricegroupitem.png
+	scale 40
 
 \end_inset
 
@@ -3628,6 +3632,7 @@ Open the customer record for editing and set the applicable price group
 
 \begin_inset Graphics
 	filename pricegroupcustomer.png
+	scale 40
 
 \end_inset
 
@@ -3808,7 +3813,7 @@ HR--Employees
 \begin_layout Standard
 \begin_inset Graphics
 	filename department3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -3829,6 +3834,7 @@ The warehouse drop down menu is enabled on relevant transactions forms once
 \begin_layout Standard
 \begin_inset Graphics
 	filename warehouse2.png
+	scale 40
 
 \end_inset
 
@@ -3854,7 +3860,7 @@ Add Transfer
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -3884,7 +3890,7 @@ Warehouses--Reports--Transfers
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -3894,7 +3900,7 @@ Warehouses--Reports--Transfers
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -3918,7 +3924,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -3935,7 +3941,7 @@ As you can see the report shows the onhand quantity of selected items at
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf5.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -3950,7 +3956,7 @@ You can click on any item number to display the activity for that item as
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf6.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4042,7 +4048,7 @@ To define a new language, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename language.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4057,7 +4063,7 @@ Once you have defined a new language, you can see it on a drop-down menu
 \begin_layout Standard
 \begin_inset Graphics
 	filename language-print.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4100,7 +4106,7 @@ To add a translation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename trans-chart.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4110,7 +4116,7 @@ To add a translation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename trans-chart2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4120,7 +4126,7 @@ To add a translation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename trans-chart3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4151,7 +4157,7 @@ System--Chart of Accounts
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax0.png
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -4161,7 +4167,7 @@ System--Chart of Accounts
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax2.png
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -4185,7 +4191,7 @@ System--Taxes
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax1.png
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -4209,7 +4215,7 @@ Goods & Services
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4237,7 +4243,7 @@ Tax will not be calculated for your customers or vendors unless you mark
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4379,7 +4385,7 @@ Import--Sales Invoices
 \begin_layout Standard
 \begin_inset Graphics
 	filename import_invoices.jpg
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4398,7 +4404,7 @@ When you click the Import Sales Invoices button, invoices will be imported.
 \begin_layout Standard
 \begin_inset Graphics
 	filename import_invoices2.jpg
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -4842,7 +4848,7 @@ Use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename gl_import2.jpg
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -5333,7 +5339,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5376,7 +5382,7 @@ Your invoice can contain multiple items (parts, assemblies, services and
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5397,7 +5403,7 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5490,6 +5496,7 @@ Cash--Receipt
 
 \begin_inset Graphics
 	filename invoice-adjustment.png
+	scale 40
 
 \end_inset
 
@@ -5508,6 +5515,7 @@ Now you can click to check the invoices which you want to adjust to each
 
 \begin_inset Graphics
 	filename invoice-adjustment2.png
+	scale 40
 
 \end_inset
 
@@ -5523,6 +5531,7 @@ Now you just click 'Post'.
 
 \begin_inset Graphics
 	filename invoice-adjustment3.png
+	scale 40
 
 \end_inset
 
@@ -5547,7 +5556,7 @@ The transaction report shows all open or closed transactions and invoices
 \begin_layout Standard
 \begin_inset Graphics
 	filename artrans.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5564,7 +5573,7 @@ When you click the 'Continue' button after specifying the required criteria,
 \begin_layout Standard
 \begin_inset Graphics
 	filename artrans2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5583,7 +5592,7 @@ The 'Detail' report shows the debits and credits of each single transaction
 \begin_layout Standard
 \begin_inset Graphics
 	filename artrans3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5602,7 +5611,7 @@ The aging report shows the outstanding balances of your customers divided
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-search.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5617,7 +5626,7 @@ The summary aging report (shown below) lists one line for each customer
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-summ.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5632,7 +5641,7 @@ The detail aging report (shown below) lists all outstanding invoices for
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-detail.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5659,7 +5668,7 @@ When you print a reminder, its level is stored in the database.
 \begin_layout Standard
 \begin_inset Graphics
 	filename reminder1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5669,7 +5678,7 @@ When you print a reminder, its level is stored in the database.
 \begin_layout Standard
 \begin_inset Graphics
 	filename reminder2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5690,7 +5699,7 @@ You can use the history reports to see which customer is giving you more
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-history1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5705,7 +5714,7 @@ The summary report for customer history will show the business activity
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-history2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5720,7 +5729,7 @@ The detailed report for customer history will show the business activity
 \begin_layout Standard
 \begin_inset Graphics
 	filename customer-history3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5794,7 +5803,7 @@ Item groups are shown as buttons on the POS screen to make it easier to
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -5818,6 +5827,7 @@ In places like retail shops a POS invoice is created and closed in one step.
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos2.png
+	scale 40
 
 \end_inset
 
@@ -5844,7 +5854,7 @@ If you enter a higher payment amount than the total amount of the invoice,
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -5867,7 +5877,7 @@ POS--Receipts
 \begin_layout Standard
 \begin_inset Graphics
 	filename pos4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -5953,7 +5963,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -5996,7 +6006,7 @@ Your invoice can contain multiple items (parts, services and labor etc.)
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6017,7 +6027,7 @@ By default only 'item number', 'description', 'qty', 'unit', 'price' and
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6111,6 +6121,7 @@ Cash--Payment
 
 \begin_inset Graphics
 	filename invoice-adjustment.png
+	scale 40
 
 \end_inset
 
@@ -6129,6 +6140,7 @@ Now you can click to check the invoices which you want to adjust to each
 
 \begin_inset Graphics
 	filename invoice-adjustment2.png
+	scale 40
 
 \end_inset
 
@@ -6145,6 +6157,7 @@ Now you just click 'Post'.
 
 \begin_inset Graphics
 	filename invoice-adjustment3.png
+	scale 40
 
 \end_inset
 
@@ -6169,7 +6182,7 @@ Transaction report shows all open or closed transactions and invoices for
 \begin_layout Standard
 \begin_inset Graphics
 	filename aptrans.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6186,7 +6199,7 @@ When you click the 'Continue' button after specifying the required criteria,
 \begin_layout Standard
 \begin_inset Graphics
 	filename aptrans2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6203,7 +6216,13 @@ The 'Detail' report shows the debits and credits of each single transaction
 \end_layout
 
 \begin_layout Standard
-TODO: Detail report screen shots
+\begin_inset Graphics
+	filename ap-detail-report.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -6218,7 +6237,7 @@ The aging report shows the outstanding balances of your vendors divided
 \begin_layout Standard
 \begin_inset Graphics
 	filename ar-aging-search.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6233,7 +6252,7 @@ The summary aging report (shown below) lists one line for each vendor with
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap-aging2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6248,7 +6267,7 @@ The detail aging report (shown below) lists all outstanding invoices for
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap-aging3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6269,7 +6288,7 @@ You can use the history reports to see which vendor you buy most from and
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-history1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6284,7 +6303,7 @@ The summary report for vendors will show the business activity grouped by
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-history2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6299,7 +6318,7 @@ The detailed vendor history report will show the business activity by invoice
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-history3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6368,7 +6387,7 @@ If the invoice is paid later, you can use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename receipt1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6391,7 +6410,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename receipt2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6406,7 +6425,7 @@ The receipts report will show you all receipts (payments) made to the selected
 \begin_layout Standard
 \begin_inset Graphics
 	filename receipt3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6416,7 +6435,7 @@ The receipts report will show you all receipts (payments) made to the selected
 \begin_layout Standard
 \begin_inset Graphics
 	filename receipt4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6450,7 +6469,7 @@ If the payment is done later, you can use
 \begin_layout Standard
 \begin_inset Graphics
 	filename payment1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6473,7 +6492,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename payment2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6483,7 +6502,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename payment3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6493,7 +6512,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename payment4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6543,7 +6562,7 @@ System--Defaults
 \begin_layout Standard
 \begin_inset Graphics
 	filename gl1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6569,7 +6588,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename gl2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6583,7 +6602,7 @@ The general ledger report can be sorted on any column.
 \begin_layout Standard
 \begin_inset Graphics
 	filename gl3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6593,7 +6612,7 @@ The general ledger report can be sorted on any column.
 \begin_layout Standard
 \begin_inset Graphics
 	filename gl4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -6656,7 +6675,7 @@ To schedule a recurring transaction, you need to start by manually booking
 \begin_layout Standard
 \begin_inset Graphics
 	filename recurring2.jpg
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6677,7 +6696,7 @@ r.
 \begin_layout Standard
 \begin_inset Graphics
 	filename recurring3.jpg
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6751,6 +6770,7 @@ You can view all reports in base currency as well as in the foreign currency.
 \begin_layout Standard
 \begin_inset Graphics
 	filename curr3.jpg
+	scale 40
 
 \end_inset
 
@@ -6791,6 +6811,7 @@ Cash--FX Adjustment
 \begin_layout Standard
 \begin_inset Graphics
 	filename curr4.jpg
+	scale 40
 
 \end_inset
 
@@ -6804,6 +6825,7 @@ Or reverse, to transfer 100 USD to your GBP account:
 \begin_layout Standard
 \begin_inset Graphics
 	filename curr5.jpg
+	scale 40
 
 \end_inset
 
@@ -6846,7 +6868,7 @@ Use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename quotations1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6868,7 +6890,7 @@ To get a report of existing quotations or to editing a quotation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename quotations2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6878,7 +6900,7 @@ To get a report of existing quotations or to editing a quotation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename quotations3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6897,6 +6919,7 @@ Once a quotation has been made, you can create a purchase order from it.
 \begin_layout Standard
 \begin_inset Graphics
 	filename quotations4.png
+	scale 40
 
 \end_inset
 
@@ -6918,7 +6941,7 @@ Use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename rfq1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6939,7 +6962,7 @@ To get report of the existing RFQs or to editing an RFQ, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename rfq2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6949,7 +6972,7 @@ To get report of the existing RFQs or to editing an RFQ, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename rfq3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6967,7 +6990,7 @@ Once an RFQ has been made, you can create a purchase order from it.
 \begin_layout Standard
 \begin_inset Graphics
 	filename rfq4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7057,7 +7080,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename so1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7074,7 +7097,7 @@ If you want to enter more information for each item you can click the check-box
 \begin_layout Standard
 \begin_inset Graphics
 	filename so2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7174,7 +7197,7 @@ Shipping--Ship
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7189,7 +7212,7 @@ The following screen shows all the sales orders with open quantities.
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7209,7 +7232,7 @@ The selected sales order is displayed with the order quantities and you
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7233,7 +7256,7 @@ Shipping--Ship
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7264,7 +7287,7 @@ Once a customer invoice has been created from a sales order, that sales
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive5.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7290,7 +7313,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename so3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7304,7 +7327,7 @@ The sales order report will list all your open sales orders.received
 \begin_layout Standard
 \begin_inset Graphics
 	filename so4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7357,7 +7380,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename po1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7374,7 +7397,7 @@ If you want to enter more information for each item you can click the check-box
 \begin_layout Standard
 \begin_inset Graphics
 	filename po2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7414,7 +7437,7 @@ Shipping
 \begin_layout Standard
 \begin_inset Graphics
 	filename po3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7480,7 +7503,7 @@ Shipping--Receive
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7496,7 +7519,7 @@ The following screen shows all purchase orders with open quantities.
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7517,7 +7540,7 @@ The selected purchase order is displayed with the order quantities and you
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7541,7 +7564,7 @@ Shipping--Receive
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive4.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7571,7 +7594,7 @@ ly created.
 \begin_layout Standard
 \begin_inset Graphics
 	filename receive5.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7597,7 +7620,7 @@ The
 \begin_layout Standard
 \begin_inset Graphics
 	filename poreport1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7711,6 +7734,7 @@ You can create a new project using 'Projects--Add Project' menu.
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard4.png
+	scale 40
 
 \end_inset
 
@@ -7741,6 +7765,7 @@ Goods & Services--Add Service
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard1.png
+	scale 40
 
 \end_inset
 
@@ -7760,6 +7785,7 @@ Projects--Reports--Time Cards
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard2.png
+	scale 40
 
 \end_inset
 
@@ -7773,6 +7799,7 @@ By clicking on the link on ID, you can edit a time card.
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard3.png
+	scale 40
 
 \end_inset
 
@@ -7796,6 +7823,7 @@ Projects--Generate--Sales Orders
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard5.png
+	scale 40
 
 \end_inset
 
@@ -7843,7 +7871,7 @@ You can use System-Audit Control menu to enforce transaction control and
 \begin_layout Standard
 \begin_inset Graphics
 	filename auditcontrol.jpg
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -7926,7 +7954,7 @@ To match and mark your transactions with your bank statement, you open the
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7945,7 +7973,7 @@ Once you have displayed your account data, you can check/uncheck the checkbox
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7959,7 +7987,7 @@ Reconciliation report allows you to view your reconciled account with balance.
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco3.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -7969,7 +7997,7 @@ Reconciliation report allows you to view your reconciled account with balance.
 \begin_layout Standard
 \begin_inset Graphics
 	filename reco4.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -8537,7 +8565,7 @@ In the chart of accounts report you first choose the individual account
 \begin_layout Standard
 \begin_inset Graphics
 	filename trial1.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -8547,7 +8575,7 @@ In the chart of accounts report you first choose the individual account
 \begin_layout Standard
 \begin_inset Graphics
 	filename trial2.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -8579,7 +8607,7 @@ reference "sec:GIFI"
 \begin_layout Standard
 \begin_inset Graphics
 	filename income1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -8593,7 +8621,7 @@ The following income statement is for a single period.
 \begin_layout Standard
 \begin_inset Graphics
 	filename income2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -8607,7 +8635,7 @@ The following income statement includes two periods.
 \begin_layout Standard
 \begin_inset Graphics
 	filename income3.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -8629,7 +8657,7 @@ The balance sheet is a financial statement that lists the assets, liabilities,
 \begin_layout Standard
 \begin_inset Graphics
 	filename balancesheet1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -8639,7 +8667,7 @@ The balance sheet is a financial statement that lists the assets, liabilities,
 \begin_layout Standard
 \begin_inset Graphics
 	filename balancesheet2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -8665,7 +8693,7 @@ The tax report is a consolidated statement of all taxable and non-taxable
 \series bold
 \begin_inset Graphics
 	filename taxreport1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -8695,6 +8723,7 @@ On search screen you can select which projects you want to include in the
 \begin_layout Standard
 \begin_inset Graphics
 	filename project-is1.png
+	scale 40
 
 \end_inset
 
@@ -8708,6 +8737,7 @@ Click 'Continue' button to view the report for all or selected projects.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project-is2.png
+	scale 40
 
 \end_inset
 
@@ -8726,6 +8756,7 @@ On search screen you can select which departments you want to shown income
 \begin_layout Standard
 \begin_inset Graphics
 	filename department-is1.png
+	scale 40
 
 \end_inset
 
@@ -8739,6 +8770,7 @@ Click 'Continue' button to view the report for all or selected departments.
 \begin_layout Standard
 \begin_inset Graphics
 	filename department-is2.png
+	scale 40
 
 \end_inset
 
@@ -9043,7 +9075,7 @@ The customer search report can be used either to find and make changes to
 \series bold
 \begin_inset Graphics
 	filename customer-report-search1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -9065,7 +9097,7 @@ If you select the 'Sales Invoice' checkbox in the customer search report
 \series bold
 \begin_inset Graphics
 	filename customer-report-search2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -9195,7 +9227,7 @@ The ’Detail’ report shows debits and credits of each transaction along with
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap-detail-report.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -9300,6 +9332,7 @@ AP–Reports–Non-taxable
 \series bold
 \begin_inset Graphics
 	filename ap-tax-report1.png
+	scale 40
 
 \end_inset
 
@@ -9309,6 +9342,7 @@ AP–Reports–Non-taxable
 \begin_layout Standard
 \begin_inset Graphics
 	filename ap-tax-report2.png
+	scale 40
 
 \end_inset
 
@@ -9352,7 +9386,7 @@ The Vendor search report can be used either to find and make changes to
 \begin_layout Standard
 \begin_inset Graphics
 	filename vendor-report1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -9374,7 +9408,7 @@ If you select the ’Vendor Invoice’ checkbox in the vendor search report
 \series bold
 \begin_inset Graphics
 	filename vendor-report2.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -9455,6 +9489,7 @@ Receipts report will list all receivables (incoming payments) that have
 \series bold
 \begin_inset Graphics
 	filename cashreceipt.png
+	scale 40
 
 \end_inset
 
@@ -9475,6 +9510,7 @@ Payments report will list all payables (outgoing payments) that have been
 \series bold
 \begin_inset Graphics
 	filename cashpayment.png
+	scale 40
 
 \end_inset
 
@@ -9503,6 +9539,7 @@ reference "sec:Reconciliation"
 \series bold
 \begin_inset Graphics
 	filename reco4.png
+	scale 40
 
 \end_inset
 
@@ -9598,6 +9635,7 @@ In the purchase order search screen you can define criteria for the purchase
 \series bold
 \begin_inset Graphics
 	filename po1.png
+	scale 40
 
 \end_inset
 
@@ -9636,7 +9674,7 @@ Warehouses–Add Transfer
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf3.png
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -9659,7 +9697,7 @@ Some companies need to track the in-transit goods between warehouse transfers.
 \begin_layout Standard
 \begin_inset Graphics
 	filename warehouse_pending2.jpg
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -9707,7 +9745,7 @@ The quotation report will display the existing quotations.
 \series bold
 \begin_inset Graphics
 	filename quote1.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -9763,6 +9801,7 @@ The General ledger reports can also be used to export all or certain defined
 \begin_layout Standard
 \begin_inset Graphics
 	filename gl3.png
+	scale 40
 
 \end_inset
 
@@ -9795,6 +9834,7 @@ The projects reports will display a list of all available projects and their
 \begin_layout Standard
 \begin_inset Graphics
 	filename project3.png
+	scale 40
 
 \end_inset
 
@@ -9817,6 +9857,7 @@ l transactions.
 \begin_layout Standard
 \begin_inset Graphics
 	filename project5.png
+	scale 40
 
 \end_inset
 
@@ -9836,6 +9877,7 @@ The time card report will display time cards that have been entered for
 \begin_layout Standard
 \begin_inset Graphics
 	filename timecard3.png
+	scale 40
 
 \end_inset
 
