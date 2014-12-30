@@ -8813,6 +8813,13 @@ You can use this option to remove the audit trail from your database up
 
 \begin_layout Section
 Reconciliation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Reconciliation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9484,7 +9491,7 @@ AR--Reports'
 '.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Financial reports
 \end_layout
 
@@ -9498,7 +9505,7 @@ Financial Reports
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Chart of accounts & trial balance
 \end_layout
 
@@ -9507,9 +9514,9 @@ The chart of accounts report and the trial balance report are both standard
  accounting reports which show amounts posted to each individual account
  in your chart of accounts.
  They show all transactions posted on the individual accounts from all modules.
- The chart of accounts report will show the total amounts booked in debit
- and credit, whereas the trial balance report will also show the beginning
- balance and ending balance of each single account.
+ The chart of accounts report shows the total amounts booked in debit and
+ credit, whereas the trial balance report also shows the beginning balance
+ and ending balance of each single account.
  
 \end_layout
 
@@ -9540,7 +9547,7 @@ In the chart of accounts report you first choose the individual account
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Income statement
 \end_layout
 
@@ -9600,7 +9607,7 @@ The following income statement includes two periods.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Balance sheet
 \end_layout
 
@@ -9632,7 +9639,7 @@ The balance sheet is a financial statement that lists the assets, liabilities,
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Tax report
 \end_layout
 
@@ -9641,9 +9648,9 @@ The tax report is a consolidated statement of all taxable and non-taxable
  accounts payable (AP) and accounts receivable (AR) transactions.
  Tax reports can be shown and printed for a certain month, quarter, year
  or any other defined period of time.
- At the top of the tax report you will find the consolidated totals for
- each account and below that you will see the individual accounts, single
- transactions and their totals.
+ At the top of the tax report you can find the consolidated totals for each
+ account and below that you can see the individual accounts, single transactions
+ and their totals.
 \end_layout
 
 \begin_layout Standard
@@ -9658,14 +9665,14 @@ The tax report is a consolidated statement of all taxable and non-taxable
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Project & department income statement
 \end_layout
 
 \begin_layout Standard
-The project income statement will list income, expenses and profit or loss
- for selected projects, and the department income statement will do the
- same for selected departments.
+The project income statement lists income, expenses and profit or loss for
+ selected projects, and the department income statement does the same for
+ selected departments.
  
 \end_layout
 
@@ -9735,14 +9742,13 @@ Click 'Continue' button to view the report for all or selected departments.
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Module reports
 \end_layout
 
 \begin_layout Standard
 All module reports in SQL-Ledger have been preconditioned to display the
- basic information usually required when analyzing data in each related
- module.
+ basic information usually required when analyzing data in that module.
  For example, the preconditioned module report in '
 \series bold
 AR--Reports--Transactions
@@ -9756,13 +9762,18 @@ Date, Invoice Number, Description, Customer, Total and Paid Amounts
 \end_inset
 
  of the open account receivables.
- One of the major strengths of SQL-Ledger is that all module reports can
- easily be customized to fit individual needs or requirements.
- To adapt a module report to your individual requirements, all you need
- to do is to enter criteria and 
+ 
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+One of the major strengths of SQL-Ledger is that all module reports can
+ easily be customized to fit individual needs or requirements.
+ To adapt a module report to your individual requirements, all you need
+ to do is to enter criteria, select report columns with check boxes and
+ click the 'Continue' button to display the report.
+\end_layout
+
+\begin_layout Subsection
 AR reports
 \end_layout
 
@@ -9774,16 +9785,24 @@ There are six main AR reports in SQL-Ledger; transactions, outstanding,
 'AR--Reports'
 \series default
 .
- The first thing you will see when you select one of these reports is the
+ 
+\end_layout
+
+\begin_layout Standard
+The first thing you will see when you select one of these reports is the
  search screen.
  In the search screen you can enter different criteria for your report and
  also select which specific data you want to display in the report.
- All reports are preset to display the information which is most commonly
+ 
+\end_layout
+
+\begin_layout Standard
+All reports are preset to display the information which is most commonly
  required, so if you simply click on the 'Continue' button without defining
  any criteria or selecting specific data, the standard report will be displayed.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Transactions report
 \end_layout
 
@@ -9842,7 +9861,7 @@ The ’Detail’ report shows debits and credits of each transaction along with
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Outstanding report
 \end_layout
 
@@ -9850,11 +9869,15 @@ Outstanding report
 The difference between the outstanding report and the transactions report,
  is that the latter will show you only the selected open or closed invoices
  and transactions as of today.
- Instead, the outstanding report will show you the selected open and closed
- invoices and transactions as on a chosen date or as within a chosen time
- frame.
+ 
+\end_layout
+
+\begin_layout Standard
+The outstanding report, on the other hand, will show you the selected open
+ and closed invoices and transactions as on a chosen date or as within a
+ chosen time frame.
  If you for example want to create a report for an auditor to show which
- invoices and transactions where still open on the 31.
+ invoices and transactions were still open on the 31.
  December of last year, you need to use the outstanding report, since the
  transactions report only shows the selected open invoices and transactions
  as of today.
@@ -9874,7 +9897,7 @@ The difference between the outstanding report and the transactions report,
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 AR aging report
 \end_layout
 
@@ -9923,12 +9946,13 @@ The detail aging report (shown below) shows all outstanding invoices for
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Reminder report
 \end_layout
 
 \begin_layout Standard
-The reminder report search screen can be set to show selected departments
+In the reminder report you can also print or email reminders to your customers.
+ The reminder report search screen can be set to show selected departments
  or selected customers.
 \end_layout
 
@@ -9958,11 +9982,6 @@ If neither is selected it will display all outstanding customer invoices
 \end_layout
 
 \begin_layout Standard
-In the reminder report you can also print or email reminders to your customers.
- 
-\end_layout
-
-\begin_layout Standard
 You can define up to 3 levels of reminders.
  Level 1 being a polite one and level 3 being a bit harsh one.
  When you print a reminder, its level is stored in the database.
@@ -9973,7 +9992,7 @@ You can define up to 3 levels of reminders.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Tax collected and non-taxable reports
 \end_layout
 
@@ -9994,7 +10013,7 @@ ns.
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Customers reports
 \end_layout
 
@@ -10012,12 +10031,16 @@ Customers--History
  display the customer related business transactions.
  The history report is used to display customer related totals for selected
  business transactions.
- The search report is based on the total value of customer business transactions
-, whereas the history report is based on the total quantities of customer
+ 
+\end_layout
+
+\begin_layout Standard
+The search report is based on the total value of customer business transactions,
+ whereas the history report is based on the total quantities of customer
  business transactions.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Customer search report
 \end_layout
 
@@ -10041,10 +10064,9 @@ The customer search report can be used either to find and make changes to
 \end_layout
 
 \begin_layout Standard
-If you select the 'Sales Invoice' checkbox in the customer search report
- search screen, SQL-Ledger will display all sales invoices that have been
- issued for the selected customer and their respective amount, tax and total
- values.
+If you select the 'Sales Invoice' checkbox in the customer report search
+ screen, SQL-Ledger will display all sales invoices that have been issued
+ for the selected customer and their respective amount, tax and total values.
  You can also click ’Subtotal’ in the search screen to subtotal the values
  by customer.
  
@@ -10062,7 +10084,7 @@ If you select the 'Sales Invoice' checkbox in the customer search report
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Customer history report
 \end_layout
 
@@ -10112,7 +10134,7 @@ Customer history detail report shows business activity by invoice and item.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 AP reports
 \end_layout
 
@@ -10124,16 +10146,24 @@ There are five main AP reports in SQL-Ledger; transactions, outstanding,
 'AP--Reports'
 \series default
 .
- The first thing you will see when you select one of these reports is the
+ 
+\end_layout
+
+\begin_layout Standard
+The first thing you will see when you select one of these reports is the
  search screen.
  In the search screen you can enter different criteria for your report and
  also select which specific data you want to display in the report.
- All reports are preset to display the information which is most commonly
+ 
+\end_layout
+
+\begin_layout Standard
+All reports are preset to display the information which is most commonly
  required, so if you simply click on the 'Continue' button without defining
  any criteria or selecting specific data, the standard report will be displayed.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Transactions report
 \end_layout
 
@@ -10192,7 +10222,7 @@ The ’Detail’ report shows debits and credits of each transaction along with
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Outstanding report
 \end_layout
 
@@ -10200,20 +10230,28 @@ Outstanding report
 The difference between the outstanding report and the transactions report,
  is that the latter will show you only the selected open or closed invoices
  and transactions as of today.
- Instead, the outstanding report will show you the selected open and closed
- invoices and transactions as on a chosen date or as within a chosen time
- frame.
+ 
+\end_layout
+
+\begin_layout Standard
+The outstanding report, on the other hand, will show you the selected open
+ and closed invoices and transactions as on a chosen date or as within a
+ chosen time frame.
  If you for example want to create a report for an auditor to show which
  invoices and transactions where still open on the 31.
  December of last year, you need to use the outstanding report, since the
  transactions report only shows the selected open invoices and transactions
  as of today.
- On the outstanding report search screen you can specify various criteria
+ 
+\end_layout
+
+\begin_layout Standard
+On the outstanding report search screen you can specify various criteria
  and select/ de-select columns which you want to shown on the screen.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 AP aging report
 \end_layout
 
@@ -10265,18 +10303,18 @@ The detail aging report (shown below) shows all outstanding invoices for
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Tax paid and non-taxable reports
 \end_layout
 
 \begin_layout Standard
 The ’
 \series bold
-AP–Reports–Tax collected
+AP--Reports--Tax collected
 \series default
 ’ and ’
 \series bold
-AP–Reports–Non-taxable
+AP--Reports--Non-taxable
 \series default
 ’ reports are statements of all taxable and non-taxable vendor (AP) transactions.
  These tax reports will display a statement with the single transactions
@@ -10307,7 +10345,7 @@ AP–Reports–Non-taxable
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Vendor reports
 \end_layout
 
@@ -10321,7 +10359,11 @@ There are two vendor reports in SQL-Ledger;
 Vendors--Reports--History
 \series default
 '.
- The search report is used to display vendor master data and can also display
+ 
+\end_layout
+
+\begin_layout Standard
+The search report is used to display vendor master data and can also display
  the vendor related business transactions.
  The history report is used to display vendor related totals for selected
  business transactions.
@@ -10330,7 +10372,7 @@ Vendors--Reports--History
  transactions.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Vendor search report
 \end_layout
 
@@ -10373,7 +10415,7 @@ If you select the ’Vendor Invoice’ checkbox in the vendor search report
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Vendor history report
 \end_layout
 
@@ -10423,7 +10465,7 @@ Vendor history detail report shows purchasing activity by invoice and item.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Cash reports
 \end_layout
 
@@ -10433,12 +10475,12 @@ There are three main cash reports in SQL-Ledger; receipts, payments and
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Receipts
 \end_layout
 
 \begin_layout Standard
-Receipts report will list all receivables (incoming payments) that have
+Receipts report will list all receivables (incoming) payments that have
  been booked on the available payment accounts.
 \end_layout
 
@@ -10454,12 +10496,12 @@ Receipts report will list all receivables (incoming payments) that have
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Payments
 \end_layout
 
 \begin_layout Standard
-Payments report will list all payables (outgoing payments) that have been
+Payments report will list all payables (outgoing) payments that have been
  booked on the available payment accounts.
 \end_layout
 
@@ -10475,7 +10517,7 @@ Payments report will list all payables (outgoing payments) that have been
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Reconciliation
 \end_layout
 
@@ -10504,7 +10546,7 @@ reference "sec:Reconciliation"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Order entry reports
 \end_layout
 
@@ -10513,7 +10555,7 @@ There are three main order entry reports in SQL-Ledger; sales orders, requiremen
 ts and purchase orders.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sales orders
 \end_layout
 
@@ -10551,7 +10593,7 @@ In the sales order search screen you can define criteria for the purchase
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Requirements
 \end_layout
 
@@ -10576,7 +10618,7 @@ Open Sales Orders
 Open Purchase Orders
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Purchase orders
 \end_layout
 
@@ -10606,7 +10648,7 @@ In the purchase order search screen you can define criteria for the purchase
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Warehouses reports
 \end_layout
 
@@ -10615,7 +10657,7 @@ There are four main warehouse reports in SQL-Ledger; transfers, deliveries,
  onhand and activity.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Transfers
 \end_layout
 
@@ -10639,7 +10681,7 @@ Warehouses–Add Transfer
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Deliveries
 \end_layout
 
@@ -10662,7 +10704,7 @@ Some companies need to track the in-transit goods between warehouse transfers.
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Quotations reports
 \end_layout
 
@@ -10672,7 +10714,7 @@ There are two main quotation reports in SQL-Ledger; quotations and RFQs
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Quotations
 \end_layout
 
@@ -10710,7 +10752,7 @@ The quotation report will display the existing quotations.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 RFQs
 \end_layout
 
@@ -10720,11 +10762,15 @@ RFQs are quotation requests that have been sent to your vendors.
  You can specify any conditions to filter the report by entering your criteria
  in the search screen or just leave it blank and click ’Continue’ button
  to get all existing 'Open' quotations.
- ’Closed’ quotations are those which have been used to create a purchase
+ 
+\end_layout
+
+\begin_layout Standard
+’Closed’ quotations are those which have been used to create a purchase
  order or which have been marked ’Closed’ by editing the quotation.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 General ledger reports
 \end_layout
 
@@ -10734,7 +10780,11 @@ The general ledger reports is used to view all accounting journals with
  Initially this report can be confusing because it shows not only the journals
  added using ’Add Transaction’ menu show above but also all accounting transacti
 ons posted from AR, AP and cash modules.
- You can specify any conditions to filter the report by entering your criteria
+ 
+\end_layout
+
+\begin_layout Standard
+You can specify any conditions to filter the report by entering your criteria
  in the search screen or just leave it blank and click ’Continue’ button
  to list all existing general ledger transactions.
  
@@ -10771,7 +10821,7 @@ General ledger reports can be sorted on any displayed column.
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Project reports
 \end_layout
 
@@ -10780,7 +10830,7 @@ There are three main project reports in SQL-Ledger; projects, transactions
  and time cards.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Projects
 \end_layout
 
@@ -10799,7 +10849,7 @@ The projects reports will display a list of all available projects and their
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Transactions
 \end_layout
 
@@ -10822,7 +10872,7 @@ l transactions.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Time cards
 \end_layout
 
