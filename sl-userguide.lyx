@@ -354,28 +354,122 @@ SQL-Ledger is written in the programming language Perl, runs on any modern
 \end_layout
 
 \begin_layout Standard
+SQL-Ledger is licensed under the GNU GENERAL PUBLIC LICENSE commonly known
+ as the GPL.
+\end_layout
+
+\begin_layout Subsection
+Features
+\end_layout
+
+\begin_layout Standard
 SQL-Ledger has an impressive feature set which even many commercial / proprietar
 y ERP solutions don't provide.
  Its internal design and user interface are simple which make it easy to
  learn.
+ Some of these features are listed below:
 \end_layout
 
-\begin_layout Standard
-Invoices, Packing Lists, Income Statements, Balance Sheets, Sales, Work
- and Purchase Orders, Statements, Receipts and Checks are generated from
- templates and can be changed to suit individual needs.
- Templates come in html, xml, tex and text format.
- The tex templates are processed with LaTex to produce postscript and PDF
- documents.
- Documents can be sent to a printer, file or fax, emailed or displayed on
+\begin_layout Enumerate
+Browse-based interface.
+ Accessible from any browser on desktop PCs or mobile devices.
+\end_layout
+
+\begin_layout Enumerate
+Multi-user and multi-company with a single installation.
+\end_layout
+
+\begin_layout Enumerate
+Fine grained access control for each user.
+ Users see only features/functions which they are allowed to by the admin.
+\end_layout
+
+\begin_layout Enumerate
+Invoices with packing lists and pick lists.
+ Invoices can be emailed in pdf or html formats.
+\end_layout
+
+\begin_layout Enumerate
+Cash management with comprehensive bank reconciliation.
+\end_layout
+
+\begin_layout Enumerate
+Powerful accounts receivables and accounts payable function with aging,
+ outstanding reports, statements as well as multiple reminders for customers.
+\end_layout
+
+\begin_layout Enumerate
+Orders management integrated with invoices with partial or full delivery
+ / shipping function.
+\end_layout
+
+\begin_layout Enumerate
+Quotations and Request for Quotations with full integration with orders
+ and invoices.
+\end_layout
+
+\begin_layout Enumerate
+Projects and time cards to track time and generate sales orders.
+\end_layout
+
+\begin_layout Enumerate
+Vouchers with approval work flow so that payables and cash transactions
+ need to be approved before posting.
+\end_layout
+
+\begin_layout Enumerate
+Inventory / stock management with invoices/orders/shipping/transfers at
+ multiple warehouses.
+\end_layout
+
+\begin_layout Enumerate
+Assemblies with components and sub-assemblies.
+ Suitable for manufacturing businesses.
+\end_layout
+
+\begin_layout Enumerate
+Import data for items, accounts, customers, vendors, invoices and transactions
+ from your old accounting software.
+\end_layout
+
+\begin_layout Enumerate
+Template driven documents (invoices, orders, quotes, financial reports).
+ Documents can be sent to printer, file or fax, emailed or displayed on
  screen.
- The translation mechanism for items and foreign language templates also
- make it possible to invoice in any foreign language.
+ Templates can be created in html, xml, tex, and text format.
+\end_layout
+
+\begin_layout Enumerate
+Multiple currencies with automatic calculations of gain/loss on exchange
+ rate differences.
+\end_layout
+
+\begin_layout Enumerate
+Multi language user interface and templates.
+\end_layout
+
+\begin_layout Enumerate
+Multi language descriptions for items, accounts so that your foreign customers
+ get invoices in their native language.
+\end_layout
+
+\begin_layout Enumerate
+User customizable reports with selection of columns and data filter before
+ running the report.
+\end_layout
+
+\begin_layout Enumerate
+Instant posting of COGS so that you can immediately see the 
+\end_layout
+
+\begin_layout Enumerate
+Financial reports (balance sheet, income statement) with single or multiple
+ months or with comparison with past months or years.
 \end_layout
 
 \begin_layout Standard
-SQL-Ledger is licensed under the GNU GENERAL PUBLIC LICENSE commonly known
- as the GPL.
+...
+ and much more.
 \end_layout
 
 \begin_layout Subsection
@@ -7967,10 +8061,6 @@ Once you have saved a sales order, you can open it again in editing mode
 Shipping
 \series default
 ' menu to partially ship a sales order.)
-\end_layout
-
-\begin_layout Standard
-TODO: Screen shot with quotation and sales invoice buttons.
 \end_layout
 
 \begin_layout Subsubsection
