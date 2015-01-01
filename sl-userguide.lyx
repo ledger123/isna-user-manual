@@ -313,7 +313,11 @@ The fifth chapter provides you with information about LedgerCart.
  LedgerCart is a very nice add-on tool that can instantly upgrade your SQL-Ledge
 r installation into a fully functional web-based ordering system and customer
  portal.
- The sixth and last chapter gives you an introduction to SQL-Ledger development
+ 
+\end_layout
+
+\begin_layout Standard
+The sixth and last chapter gives you an introduction to SQL-Ledger development
  and customization.
  
 \end_layout
@@ -335,11 +339,12 @@ SQL-Ledger is a free ERP (Enterprise Resource Planning) double entry accounting
 \end_layout
 
 \begin_layout Standard
-It’s a web-server application that has already been translated into 30 languages
+It’s a web-server application that has already been translated into 45 languages
  and enables business management and administration over the Internet or
  on a private local network.
- Any web browser can used as its standard user interface which makes SQL-Ledger
- platform independent and usable on practically any operating system.
+ Any web browser can be used as its standard user interface which makes
+ SQL-Ledger platform independent and usable on practically any operating
+ system.
  
 \end_layout
 
@@ -365,8 +370,8 @@ Features
 \begin_layout Standard
 SQL-Ledger has an impressive feature set which even many commercial / proprietar
 y ERP solutions don't provide.
- Its internal design and user interface are simple which make it easy to
- learn.
+ Its internal design and user interface is quite simple which make it easy
+ to learn.
  Some of these features are listed below:
 \end_layout
 
@@ -404,8 +409,15 @@ Orders management integrated with invoices with partial or full delivery
 \end_layout
 
 \begin_layout Enumerate
-Quotations and Request for Quotations with full integration with orders
+Quotations and Request for Quotations which are fully integrated with orders
  and invoices.
+\end_layout
+
+\begin_layout Enumerate
+Departmental accounting.
+ You can restrict users to a specific department so that they can add or
+ view transactions in their respective departments only.
+ Financial reports can be displayed for specific department or all departments.
 \end_layout
 
 \begin_layout Enumerate
@@ -413,8 +425,9 @@ Projects and time cards to track time and generate sales orders.
 \end_layout
 
 \begin_layout Enumerate
-Vouchers with approval work flow so that payables and cash transactions
- need to be approved before posting.
+Vouchers with approval work flow.
+ Vouchers allow you to add payables, payments and general ledger transactions
+ which need to be approved before posting.
 \end_layout
 
 \begin_layout Enumerate
@@ -459,7 +472,8 @@ User customizable reports with selection of columns and data filter before
 \end_layout
 
 \begin_layout Enumerate
-Instant posting of COGS so that you can immediately see the 
+Instant posting of COGS so that you can immediately see the profitability
+ of your business through financial reports.
 \end_layout
 
 \begin_layout Enumerate
@@ -609,11 +623,11 @@ Hosted version.
 \end_layout
 
 \begin_layout Enumerate
-The simplest way to use installation script.
+Quick installation script.
 \end_layout
 
 \begin_layout Enumerate
-Manual installation customized for your already installed Linux distribution.
+Manual install.
 \end_layout
 
 \begin_layout Standard
@@ -708,13 +722,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-As mentioned above the only per-requisite for this method is freshly installed
- supported Linux distribution.
+As mentioned above the only requirement for this method is a freshly installed
+ supported Linux distribution on a PC.
  Once installed you can access your installation on 'http://yourserver_ip/ledger
 123'.
  where 'yourserver_ip' is the ip address of your server.
- You can substitute 'localhost' if you are using your machine as your desktop
- too.
+ You can substitute 'localhost' if you are using your server machine as
+ your desktop too.
 \end_layout
 
 \begin_layout Subsection
@@ -729,8 +743,9 @@ name "sub:Manual-install"
 \end_layout
 
 \begin_layout Standard
-In section how you can install SQL-Ledger on your existing server or desktop
- by installing and configuring all packages and services yourself.
+In section we shall show how you can install SQL-Ledger on your existing
+ server or desktop by installing and configuring all packages and services
+ yourself.
 \end_layout
 
 \begin_layout Subsubsection
@@ -741,7 +756,7 @@ Installing the SQL-Ledger Network version using 'git clone'
 The recommended way to download and install the SQL-Ledger Network version
  is to use the 'git' package.
  To install git on Ubuntu, you run 'sudo apt-get install git-core'.
- Once git is successfully installed, you can do the following steps:
+ Once git is successfully installed, you can follow these steps:
 \end_layout
 
 \begin_layout Enumerate
@@ -792,8 +807,8 @@ git checkout -b rel3 origin/rel3
 \end_layout
 
 \begin_layout Enumerate
-From now onwards you can upgrade to our latest enhancements (which includes
- any latest releases from SQL-Ledger.com) with the following simple command:
+From now onwards you can upgrade to our latest enhancements, as well as
+ new features released by sql-ledger.com, with the following simple command:
 \begin_inset Newline newline
 \end_inset
 
@@ -897,8 +912,8 @@ There are three ways to install any Perl module:
 \end_layout
 
 \begin_layout Enumerate
-Install the pre-built for your Linux distributiion package manager (apt-get
- or yum)
+Install the pre-built module package for your Linux distributiion package
+ manager (apt-get or yum)
 \begin_inset Newline newline
 \end_inset
 
@@ -958,7 +973,8 @@ curl -L http://cpanmin.us | perl - App::cpanminus
 
 \end_inset
 
-Once installed, you can install Perl module of your choice with:
+Once installed, you can install Perl module of your choice using cpanm followed
+ by the module name like:
 \begin_inset Newline newline
 \end_inset
 
@@ -1071,7 +1087,7 @@ rel3
 
 \begin_layout Plain Layout
 This branch is the latest enhancd version of SQL-Ledger which we recommend
- you to use.
+ to use.
  This version contains all the updates by Dieter's SQL-Ledger as well as
  all our enhancements.
  This manual assumes that you are using this version.
@@ -1178,7 +1194,7 @@ reference "sec:Data-backup"
  be done every day or every few hours depending upon the usage of your SQL-Ledge
 r installation.
  It is recommended to setup a cron job to do this backup automatically at
- the prescribed time of the day and copy the backup file to some other computer
+ the scheduled time of the day and copy the backup file to some other computer
  or storage media.
 \begin_inset Newline newline
 \end_inset
@@ -1338,7 +1354,7 @@ To proceed with this you will install SQL-Ledger again (or just untar/unzip
  the existing sql-ledger folder as mentioned in the backup section tip),
  restore your database and then copy users/members file and templates folder
  in the appropriate place.
- You can using commands similar to following to achieve this.
+ You can using commands similar to the following to achieve this.
 \begin_inset Newline newline
 \end_inset
 
@@ -1757,7 +1773,7 @@ To add your new dataset, you click 'Add Dataset' button and following page
 On this page you need to enter your database credentials.
  As a best practice you should create a PostgreSQL user for use with SQL-Ledger.
  By default this user is assumed to be 'sql-ledger'.
- In Debian or Ubuntu distributions you create ’sql-ledger’ user by entering
+ In Debian or Ubuntu distributions you can create this user by entering
  the following the command:
 \end_layout
 
@@ -1831,8 +1847,8 @@ A default admin account with name 'admin@datasetname' is created with each
  new dataset.
  Its password is set to blank so make sure to change it to something secure
  on your first login.
- Now you need to login and create some new users as well as set their access
- privileges using roles.
+ Now you need to login and create some new users as well as set up their
+ access privileges using roles.
 \end_layout
 
 \begin_layout Standard
@@ -1974,10 +1990,10 @@ status open
 
 \begin_layout Plain Layout
 Tip: Instead of using roles you can also define menu access for each user
- individually using the 'Access Control' button.
+ individually using the 'Access Control' button on add/edit employee screen.
  This is particularly useful if you have only 1 or 2 users.
  With large number of users, however, it will become cumbersome to manage
- users access individually and using 'roles' is preferred.
+ users access individually and use of roles is recommended.
 \end_layout
 
 \end_inset
@@ -2038,7 +2054,11 @@ Once you have created a user, he or she can login with his or her username.
  For example if you have created a user with login 'armaghan' for a dataset
  named 'rel3' then the user needs to login with 'armaghan@rel3' as his or
  her username.
- If you use SQL-Ledger in a multi-company environment and a user has access
+ 
+\end_layout
+
+\begin_layout Standard
+If you use SQL-Ledger in a multi-company environment and a user has access
  to various different datasets, by entering only the username without the
  ’@’ and without the name of the dataset, you will get a list of all the
  different datasets (companies) available to choose from.
@@ -2276,7 +2296,7 @@ To make changes to existing customers, first you list them using
 In this report you can click on the customer name and its details will be
  opened in a new screen where you can make changes to existing data or delete
  the customer.
- Please note that you cannot delete a vendor once you have posted some invoices
+ Please note that you cannot delete a customer once you have posted invoices
  or transactions to this customer.
 \end_layout
 
@@ -2556,7 +2576,7 @@ Using Departments in Reports
 \end_layout
 
 \begin_layout Standard
-Various reports allow you to view all or department specific transactions.
+Most reports allow you to view all or department specific transactions.
  For example you can filter AR Transactions report '
 \series bold
 AR--Reports--Transactions
@@ -2583,7 +2603,7 @@ Reports--Income Statement
 \series bold
 Reports--Balance sheet
 \series default
-' can be compared and displayed by department.
+' can be filtered and compared by department.
 \end_layout
 
 \begin_layout Standard
@@ -2635,6 +2655,10 @@ Projects are optional and can be used for the following things:
 
 \begin_layout Enumerate
 Track income and expenses to specific projects using invoices and transactions.
+\end_layout
+
+\begin_layout Enumerate
+Job costing.
 \end_layout
 
 \begin_layout Enumerate
@@ -3116,7 +3140,7 @@ Here this template is opened for editing.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates3.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -3571,7 +3595,7 @@ The letterhead.html template is included in all other templates.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates3b.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -3609,7 +3633,7 @@ reference "sub:An-Introduction-to"
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates4.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -3624,7 +3648,7 @@ As in html templates, the letterhead.tex template allows you to define your
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates5.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -3663,7 +3687,7 @@ Text templates are used only for Point-of-Sale receipts printing.
 \begin_layout Standard
 \begin_inset Graphics
 	filename templates7.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -3685,7 +3709,7 @@ name "sub:An-Introduction-to"
 LaTeX is a complete collection of software tools to create high quality
  print documents like invoices, purchase orders etc.
  LaTeX is included with most Linux distributions.
- In the Red Hat distribution LateX can be installed with the command 'yum
+ In the Red Hat distribution LaTeX can be installed with the command 'yum
  install tetex'.
 \end_layout
 
@@ -3886,7 +3910,11 @@ reference "sec:Assemblies"
 ) all its associated parts are removed from inventory and the new assemblies
  are added to stock.
  When you sell an assembly COGS for parts and cost of services is recorded.
- Important note: Assemblies cannot be purchased and can only be sold.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Important note: Assemblies cannot be purchased and can only be sold.
 \end_layout
 
 \begin_layout Enumerate
@@ -4023,7 +4051,7 @@ n about its components.
 \begin_layout Standard
 \begin_inset Graphics
 	filename parts4.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -4188,7 +4216,7 @@ You can print a work order for sales orders.
 \begin_layout Standard
 \begin_inset Graphics
 	filename workorder1.jpg
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -4605,7 +4633,7 @@ The warehouse drop down menu is enabled on transactions screens once you
 \begin_layout Standard
 \begin_inset Graphics
 	filename warehouse2.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -4661,7 +4689,7 @@ Warehouses--Reports--Transfers
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf4.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -4719,7 +4747,7 @@ As you can see this report shows the onhand quantity of selected items at
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf5.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -4734,7 +4762,7 @@ You can click on any item number to display the activity for that item as
 \begin_layout Standard
 \begin_inset Graphics
 	filename trf6.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -4752,7 +4780,7 @@ name "sub:Activity-Report"
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
 
 \series bold
 'Warehouses--Reports--Activity'
@@ -4768,14 +4796,11 @@ Languages
 \end_layout
 
 \begin_layout Standard
-When you add a new language with '
+Language feature (accessible through '
 \series bold
 System--Language
 \series default
-' menu, SQL-Ledger adds a complete alternate set of templates and allows
- you to translate the descriptions of your parts, services, groups, chart
- of accounts and projects.
- This language feature can be used four for main purposes:
+' menu) of SQL-Ledger can be used for four main purposes:
 \end_layout
 
 \begin_layout Enumerate
@@ -4835,6 +4860,8 @@ To define a new language, use the
  menu.
  An existing list of languages (if any) will be displayed with the 'Add
  Language' button at the bottom of the report.
+ When you add a new language, SQL-Ledger adds a complete alternate set of
+ templates for that language.
 \end_layout
 
 \begin_layout Standard
@@ -4898,7 +4925,7 @@ To add a translation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename trans-chart.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -4918,7 +4945,7 @@ To add a translation, use the
 \begin_layout Standard
 \begin_inset Graphics
 	filename trans-chart3.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -4949,7 +4976,7 @@ System--Chart of Accounts
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax0.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -4983,7 +5010,7 @@ System--Taxes
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax1.png
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -5035,7 +5062,7 @@ Tax will not be calculated for your customers or vendors unless you mark
 \begin_layout Standard
 \begin_inset Graphics
 	filename tax3.png
-	scale 40
+	scale 50
 
 \end_inset
 
